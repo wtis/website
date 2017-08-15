@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}404 Not Found - Wtis{% endblock %}</title>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300,400' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div class="error404">
+    <h1 style="font-size:32px">Ops! <span style="font-size:26px">Não encontramos a página que você solicitou</span> :/</h1>
+    <br>
+    <a href="http://www.wtis.com.br">www.wtis.com.br</a>
+    <br>
+    <!--<a class="pull-right" href="http://www.wtis.com.br"><img src="{{ asset('images/logo.png') }}"></a>-->
+</div>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

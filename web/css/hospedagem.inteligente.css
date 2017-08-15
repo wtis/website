@@ -1,0 +1,135 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.2 stylesheet
+*/
+.homepage__cta {
+    padding-bottom: 0;
+}
+
+.section__larger {
+    padding: 80px 0;
+}
+.u__relative {
+    position: relative;
+}
+.u__o-hidden {
+    overflow: hidden;
+}
+.cta {
+    background: white;
+    border: 1px solid #dde5ed;
+    border-radius: 6px;
+    padding: 48px 50px;
+    max-width: 875px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.homepage__cta-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin-top: 100px;
+    height: 1050px;
+    background: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-035de37638ff5dedbf93b5b0b13396a7cddf9233397258ee591a1165e5052135.jpg) no-repeat center top;
+    background-size: 2450px 100%;
+}
+.cta__hr {
+    border-top: 1px solid #dde5ed;
+    width: calc(100% + 100px);
+    margin: 48px 0 48px -50px;
+}
+.cta__hr2 {
+    border-top: 1px solid #dde5ed;
+    width: 100%;
+    margin: 0;
+}
+.sp__2 {
+    display: block;
+    height: 20px;
+}
+.sp__3 {
+    display: block;
+    height: 30px;
+}
+.f__center {
+    text-align: center;
+}
+.u__center {
+    margin: 0 auto;
+}
+
+.h2.blue{
+    color: #1f8ceb;
+    font-weight: 300;
+}
+.cta .preco span{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    font-weight:400;
+}
+.cta .preco span i{
+    font-size:36px;
+    font-style: normal;
+}
+.preco{
+    font-size: 16px;
+}
+
+/* Card */
+
+.cardBig {
+    width: 80%;
+    display: block;
+    border: 1px solid #e8e8e8;
+    margin: auto;
+}
+.card {
+    background-color: #fdfdfd;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    margin: 10px auto 10px;
+}
+.inteligente {
+    background-color: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e8e8e8;
+
+}
+.branco {
+    color: #fff;
+    font-size: 22px !important;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.primary {
+    color: #2196F3 !important;
+}
+.bg-itens{
+    background-color: #fafafa;
+    margin-top: -8px;
+    padding: 20px 0;
+}
+p.direitos{
+    text-align: center;
+    font-size: 11px;
+    margin-top: 20px;
+}
+.img-itens{
+    margin: 0 10px 30px 0;
+}
+
+@media (max-width: 1400px) {
+    .homepage__cta-bg {
+        background-image: url(https://marketing.intercomassets.com/assets/platform/bg/bg-2-xlg-12b09fbac436d54d45d2cee75d22b32beb570514bda92a2d017186232475ee4b.jpg);
+        background-size: 1400px 100%;
+    }
+
+}

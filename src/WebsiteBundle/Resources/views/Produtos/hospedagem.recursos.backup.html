@@ -1,0 +1,124 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Backup Diário em Storage Grátis - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Backup Diário do seu site em Storage Grátis." />
+<meta property="og:title" content="Serviços Wtis | Backup em Storage Grátis" />
+<meta property="og:description" content="Backup Diário do seu site em Storage Grátis." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-backup').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+		
+        <div class="backup-nuvem"><img src="{{ asset('images/2012/backup-icon.png') }}" style="display:inline-block" /></div>
+        <div class="clearfloat"></div>
+        <h1 class="title0 no-margin-top"><strong>Backup diário</strong> inteligente em storage</h1>
+        <h2 class="title0b">É de extrema importância manter todos os dados do site seguros.</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px; text-align:justify">
+
+                    Os dados atualmente utilizados pelas empresas são tão valiosos ou mais que seu próprio patrimônio. Sendo assim, políticas de integridade dos arquivos digitais devem ser aplicadas rigorosamente, visando à prevenção de incidentes e extravio destas informações. Isso se faz através do uso de ferramentas para auxiliar no gerenciamento de backup assim como elaboração de rotinas de cópias de segurança para o ambiente em questão.<br /><br />
+                    Para garantir a preservação e integridade dos dados, investimos em um sistema inteligente de backups. Um <strong>Storage</strong> fica encarregado de armazenar cópias se segurança de todos os arquivos dos clientes de <a href="{{ path('hospedagem') }}">hospedagem</a> e <a href="{{ path('revenda_hospedagem') }}">revenda</a>.
+                    <br /><br />
+                    Para mais segurança, nosso storage fica em uma estrutura física própria fora da estrutura do datacenter principal, sendo assim se por último caso acontecer algum problema grave no datacenter principal o storage não será afetado e todos os dados estarão disponíveis e seguros.<br /><br />
+                    Veja abaixo um gráfico de como funciona nosso storage:
+                    <br /><br />
+                    <div style="clear:both; display:block"><img src="{{ asset('images/2012/storage_graf.png') }}" style="display:block" /></div>
+                    <div class="clearfloat"></div><br />
+                    Todos os clientes de <a href="{{ path('hospedagem') }}">hospedagem</a> e <a href="{{ path('revenda_hospedagem') }}">revenda</a> contam com este recurso, que não tem custo adicional.<br /><br />
+                    <!-- RECURSOS -->
+                  	<div class="table-default">
+
+                        <div class="recursos-completos">
+                            <!--<h2>Recursos Completos de nossa Hospedagem</h2>	-->
+                            
+                            <div class="relative">
+                            	<span class="ico-so linux painel-so-linux">Linux</span>
+                            	<span class="ico-so windows painel-so-windows">Windows</span>
+                            </div>
+                            <div style="clear:both">
+                            <table class="recursos" summary="Recursos Completos de nossa Hospedagem">
+                                    <tbody> 
+                                    <tr>
+                                        <th colspan="3" class="recurso-destaque">Garantimos a integridade de todos os dados</th>
+                                    </tr>
+                                    <tr>
+                                        <td width="66%">Arquivos do site</td>
+                                        <td width="90"><span class="ico-sim">sim</span></td>
+                                        <td width="90"><span class="ico-sim">sim</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Configurações e definições do painel</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr>
+                                        <td>Banco de dados</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Emails</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                             
+                                </tbody>
+                            </table>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                	</div>
+                    <!-- FIM RECURSOS -->
+                </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+
+<div class="clearfloat"></div>
+
+{% endblock %}

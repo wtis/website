@@ -1,0 +1,364 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Consultoria de TI para negócios - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="WTIS Consulting ajuda a sua organização a buscar controle, capacitação, organização e inovação para alcançar o crescimento e lucratividade." />
+<meta property="og:title" content="Serviços Wtis | Consultoria de TI" />
+<meta property="og:description" content="WTIS Consulting ajuda a sua organização a buscar controle, capacitação, organização e inovação para alcançar o crescimento e lucratividade." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.consultoria.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content consultoria">
+
+    <div class="fullscreen background consultoria-header-bg">
+        <div class="page-options">
+            <ul class="page-options-ul center-977">
+                <li><a href="#price" class="scroll">Preços</a></li>
+                <li><a href="#produtividade-digital" class="scroll">Produtividade Digital</a></li>
+                <li class="selected"><a href="#vantagens" class="scroll">Consultoria</a></li>
+            </ul>
+            <div class="div-bg-center bottom"></div>
+        </div>
+        <div class="header-content">
+            <h1>Consultoria de TI especializada</h1>
+            <h2>WTIS Consulting ajuda a sua organização a buscar controle, capacitação, organização e inovação para alcançar o crescimento e lucratividade.</h2>
+        </div>
+            <div class="pos-header">
+                <div class="div-bg-center top"></div>
+                <div class="content center-977">
+                    <p class="h1">Se preferir podemos <b>apresentar</b> este serviço em sua empresa ou por conferência via telefone ou web.</p>
+                    <a class="meligue meligue-modal" href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Consultoria">Me ligue</a>
+                </div>
+            </div>
+   		</div>
+
+	<section id="service-description" class="center-1156">
+    	<div class="img" data-sr="enter top ease-in-out 6rem wait 0.4s"><img src="{{ asset('images/pages/consultoria/img1.jpg') }}" class="img-responsive" alt="Consultoria de TI"></div>
+        <div class="description">
+            <p class="h1">Uma consultoria que entende o seu negócio</p>
+            <span>As empresas inseridas em um mercado ágil e cheio de possibilidades devem buscar controle, capacitação, organização e inovação para alcançar o crescimento e lucratividade, já que o crescimento não apoiado em um modelo de gestão de negócios pode gerar prejuízos. Com uma equipe de profissionais altamente preparados a WTIS Consulting tem conhecimento para ajudar a sua organização a ter o máximo de desempenho, por meio de uma gestão de processos alinhado com tecnologia e melhores práticas, resultando em um crescimento rápido, organizado e com robustez.</span>
+        </div>
+    </section>
+
+    <div class="clearfloat"></div>
+    <div class="div-center2"></div>
+
+    <section id="vantagens" class="center-1156">
+
+        <div class="default-title">
+        	<h2 class="h1">Conecte a tecnologia da informação à sua empresa</h2>
+            <p class="h2">Com a Gestão de TI da <b>WTIS Consulting</b> sua empresa tem acesso a soluções de tecnologia, aporte metodológico a programas complexos de transformação em sistemas e até suporte a decisões estratégicas de TI, como plano diretor de tecnologia ou seleção de ferramentas de software. </p>
+        </div>
+
+        <ul>
+        	<li class="governanca">
+            	<i data-sr="enter top ease-in-out 6rem wait 0.2s"></i>
+                <h2>Governança de TI</h2>
+                <span>Tendo como principal resultado a implantação de tecnologia alinhada aos objetivos estratégicos da empresa, disponibiliza: revisão dos processos e indicadores da área, desenho da estrutura organizacional, análise de investimentos e definição da arquitetura de sistemas, além da montagem de um PDTI (Plano Diretor de Tecnologia da Informação).</span>
+            </li>
+            <li class="infraestrutura pull-right">
+            	<i data-sr="enter top ease-in-out 6rem wait 0.4s"></i>
+                <h2>Infraestrutura de TI</h2>
+                <span>Monte com a WTIS Consulting para projetar, implementar e manter toda a infraestrutura de TI da sua empresa. Conte com profissionais altamente qualificados para garantir a segurança e bom funcionamento de sua infraestrutura.</span>
+            </li>
+            <li class="bi clearboth">
+            	<i data-sr="enter top ease-in-out 6rem wait 0.6s"></i>
+                <h2>Business Intelligence (BI)</h2>
+                <span>Atualmente as oportunidades de BI permitem a construção de análises oriundas de dados de ERPs, planilhas, mídias sociais e outras fontes. Agregando dados internos e externos em um único relatório, visualizáveis graficamente em dispositivos fixos e móveis, a WTIS Consulting implanta painéis de indicadores na plataforma GoodData em poucas semanas, melhorando a tomada de decisão dos executivos.</span>
+            </li>
+            <li class="dev pull-right">
+            	<i data-sr="enter top ease-in-out 6rem wait 0.8s"></i>
+                <h2>Desenvolvimento de Sistemas Customizados</h2>
+                <span>Voltada à criação de aplicações para automação de processos, essa solução integra sistemas e plataformas a partir de uma metodologia sólida, buscando resolver as questões de negócio. O processo passa por levantamento de requisitos, modelagem e desenho da solução e termina com construção, testes e implantação da aplicação.</span>
+            </li>
+        </ul>
+
+    </section>
+
+    <div class="clearfloat"></div>
+
+    <section id="produtividade-digital" class="center-full cinza">
+    	<div class="center-1156">
+        	<div class="default-title">
+                <h2 class="h1">Produtividade Digital</h2>
+                <p class="h3">Podemos alavancar o seu negócio com soluções de automação de processos, analytics, soluções móveis e ambientes de negócio sociais.</p>
+        	</div>
+            <ul class="produtividade-digital-list">
+                <li class="col-md-4">
+                    <img data-sr="enter left please, and hustle 20px wait 0.4s" src="{{ asset('images/pages/consultoria/img-automacao.jpg') }}" class="img-responsive" alt="Automação de Processos">
+                    <h2 class="h4">Automação de Processos</h2>
+                    <span>Os novos desafios de negócio requerem das empresas uma atuação mais ágil e conectada. A WTIS Consulting conta com uma metodologia própria e plataforma completa de BPM para a implementação de fluxos automatizados aos principais processos da organização, gerando aumento de eficiência operacional e melhoria da cultura de gestão por indicadores. Além disso, a empresa se beneficia de uma maior fluidez nas informações com confiabilidade dos dados.</span>
+                </li>
+                <li class="col-md-4">
+                    <img data-sr="enter left please, and hustle 20px wait 0.8s" src="{{ asset('images/pages/consultoria/img-mobilidade.jpg') }}" class="img-responsive" alt="Mobilidade">
+                    <h2 class="h4">Mobilidade</h2>
+                    <span>Os dispositivos móveis são utilizados de forma intensiva por clientes e colaboradores e já influenciam a forma com que as empresas operam os seus negócios. As soluções estão migrando de aplicativos para apps, que são mais conectados, mais cloud e de implementação simples e ágil. Com a plataforma certa de mobilidade é possível desenvolver aplicações com baixo esforço, eficiência em compatibilidade de versões, segurança de dados e evolução.</span>
+                </li>
+                <li class="col-md-4">
+                    <img data-sr="enter left please, and hustle 20px wait 1.2s" src="{{ asset('images/pages/consultoria/img-analytics.jpg') }}" class="img-responsive" alt="Analytics">
+                    <h2 class="h4">Analytics</h2>
+                    <span>O aumento da adoção de novas tecnologias e a diminuição do custo de armazenamento de dados vem gerando um aumento expressivo na disponibilização de informações. Com o uso de ferramentas de Analytics, a WTIS Consulting implementa soluções para a gestão de indicadores de negócio, análise de informações não estruturadas e otimização de custos operacionais.</span>
+                </li>
+                <li class="col-md-4">
+                    <img data-sr="enter left please, and hustle 20px wait 1.6s" src="{{ asset('images/pages/consultoria/img-social.jpg') }}" class="img-responsive" alt="Social">
+                    <h2 class="h4">Social</h2>
+                    <span>As redes sociais corporativas criaram um ambiente colaborativo de negócios, com uma interface amigável e simples. A WTIS implementa um ambiente social que, em conjunto com automação de processos, analytics e mobilidade, geram maior essencialidade da empresa com seus clientes e colaboradores.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+
+    <section id="recursos" class="center-1156">
+    	<p class="h1">Principais recursos</p>
+        <hr>
+        <div class="col1">
+        	<dl>
+            	<dt>Governança</dt>
+                <dd>
+                	<ul>
+                        <li>Criação, desenhos e revisão de Catálogos de Serviço de TI</li>
+                        <li>Criação, desenho e revisão de matrizes RACI</li>
+                        <li>Elaborar, validar e acompanhar políticas de processos</li>
+                        <li>Criar, validar e acompanhar procedimentos técnicos</li>
+                        <li>Integração de processos</li>
+                        <li>Criar, estruturar e manter bases de conhecimento</li>
+                        <li>Criar, alterar e manter métricas de processos (KPI’s)</li>
+                        <li>Implementação de processos do framework ITIL</li>
+                        <li>Implementação de ANS, aferição e análise de resultados</li>
+                        <li>Criação, alteração e manutenção do Livro de Serviço do Ambiente de TI</li>
+                        <li>Melhoria contínua dos processos ITIL</li>
+                        <li>Treinamento e capacitação organizacional</li>
+                        <li>Realizar diagnósticos organizacionais para os processos ITIL e COBIT</li>
+                        <li>Elaborar benchmark (estudo comparativo) de maturidade organizacional</li>
+                        <li>Realizar operação assistida da implantação de processos</li>
+                        <li>Acompanhar e mensurar metas de PDTI</li>
+                        <li>Realizar auditorias de processos de TI e de negócios com impacto nas operações organizacionais</li>
+                        <li>Elaborar relatórios de feedback e pesquisa de satisfação</li>
+                        <li>Realizar a implementação de controles com base no framework COBIT</li>
+                        <li>Criação de relatórios técnicos e gerenciais corporativos</li>
+                        <li>Realizar acompanhamento de conformidades em relação às práticas do framework ITIL e COBIT</li>
+                        <li>Gerenciamento de serviço de TI – GSTI e ISO 20.000</li>
+                        <li>Estruturação e operação de processos para inventário de Ativos de TI (Hardware e Softwares)</li>
+                    </ul>
+                </dd>
+            </dl>
+          <dl>
+            	<dt>Plataforma Windows</dt>
+                <dd>
+                	<ul>
+                        <li>Windows Server</li>
+                        <li>Instalação, implantação, projeto, configuração e administração de redes Windows (AD, DNS, DHCP, TS, VPN, FILE SERVER, DOMINIOS)</li>
+                        <li>Implantação de políticas (GPOs)</li>
+                        <li>Exchange (Implantação, Projeto, Configuração e Administração)</li>
+                        <li>HYPER-V (Implantação, Projeto, Configuração e Administração)</li>
+                        <li>System Center (Implantação, Projeto, Configuração e Administração)</li>
+                        <li>Sharepoint (Implantação, Projeto, Configuração e Administração)</li>
+                        <li>Suporte a processos de migração de Servidores</li>
+                        <li>Lync Server</li>
+                        <li>Backup</li>
+                        <li>Office 365 e família Office</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+            	<dt>Plataforma Linux e Software Livre</dt>
+                <dd>
+                	<ul>
+                        <li>Linux Server</li>
+                        <li>Alta disponibilidade (Cluster Suite ou HeartBeat - com controle e geração de relatórios)</li>
+                        <li>Balanceamento de carga (Cluster Suite - com controle e geração de relatórios)</li>
+                        <li>Backup (bácula, scritps)</li>
+                        <li>Banco de dados Mysql (Tunning e replicação)</li>
+                        <li>DNS (Bind 9)</li>
+                        <li>DNSSEC</li>
+                        <li>Compartilhamento de arquivos</li>
+                        <li>VPN</li>
+                        <li>Controlador de domínio (Samba 3, Samba 4)</li>
+                        <li>Autenticação single sign-on (Samba 3, Samba 4, Open LDAP, Kerberos)</li>
+                        <li>Comunicadores (Jabber)</li>
+                        <li>Virtualização (Xen, KVM e Virtual Box)</li>
+                        <li>Soluções de e-mails</li>
+                        <li>File System (LVM, NFS, EXT4, JFS)</li>
+                        <li>Solução de armazenamento de dados (storage)</li>
+                        <li>Compartilhamento de Link’s e acesso à internet (com controle e geração de relatórios)</li>
+                        <li>Servidores WEB (Apache, Nginx, Lighthttp, Tunning de servidores web, Instalação e compilação de módulos específicos de PHP)</li>
+                        <li>Servidores de Aplicação (Jboss, Tomcat)</li>
+                        <li>Suporte a processos de migração de Servidores</li>
+                        <li>Consultoria na realização de validações e testes</li>
+                        <li>Consultoria na elaboração de manuais e normas internas de acessibilidade</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+            	<dt>Monitoramento de servidores</dt>
+                <dd>
+                	<ul>
+                        <li>Implantação de soluções de monitoramento com Nagios ou Zabbix</li>
+                        <li>Avaliação de soluções de monitoramento</li>
+                        <li>Implantação de Checks Verificadores de serviços</li>
+                        <li>Implantação de soluções de monitoramento com mapas</li>
+                        <li>Configuração de alertas de monitoração de recursos e sistemas corporativos</li>
+                        <li>Integração com outros sistemas</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="col2">
+        	<dl>
+            	<dt>Gestão de Continuidade de Negócios</dt>
+                <dd>
+                	<ul>
+                        <li>Gestão de Continuidade dos Negócios (Diagnóstico e suporte à implantação: conforme ABNT NBR ISO 22.301, antiga 15.999, Normativas do Governo Federal, Resolução do Banco Central 3380, ISO/IEC 27.002)</li>
+                        <li>Diagnóstico e estruturação de Governança de Tecnologia da Informação (Plano de negócios e Planejamento Estratégico de TI)</li>
+                        <li>Análise de estruturação de Data Centers com utilização das melhores práticas e normas internacionais sobre o assunto (EIA/TIA 942, ASHRAE)</li>
+                        <li>Auditoria e Consultoria de Tecnologia da Informação e Comunicação (TIC)</li>
+                        <li>Estruturação e documentação de processos de backup e restauração de informações (com base em normas ISO e melhores práticas de mercado)</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+            	<dt>BPM</dt>
+                <dd>
+                	<ul>
+                        <li>Mapeamento e desenho de processos de TI e negócios</li>
+                        <li>Modelagem de processos de TI e de negócios com objetivo de otimizar operações corporativas e de TI</li>
+                        <li>Criar fluxos operacionais e estratégicos de TI e negócios</li>
+                        <li>Realizar entrevistas técnicas, operacionais e de negócios</li>
+                        <li>Fazer descoberta de processo As Is (Situação atual)</li>
+                        <li>Propor alterações para processos To be (Situação futura)</li>
+                        <li>Elaboração e documentação de procedimentos técnicos</li>
+                        <li>Criar matriz RACI para os processos modelados</li>
+                        <li>Criação, alteração e manutenção do Livro de Processos de Trabalho Organizacional - LPTO</li>
+                        <li>Realizar interface e integração ou segregação de atividades em processos e áreas</li>
+                        <li>Realizar treinamentos e capacitações para operação de processos modelados</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+            	<dt>Portais/Intranet</dt>
+                <dd>
+                	<ul>
+                        <li class="separator">Portal</li>
+                        <li>Projeto de Portal Corporativo, Portal de Conteúdo e outros:
+                            <li class="tree">Criação de identidade visual, layout, interface de aplicações e marca</li>
+                            <li class="tree">Implementação e/ou Implantação</li>
+                        <li>Auditoria e Tunning de Infraestrutura</li>
+                        <li>Otimização de performance de aplicações</li>
+                        <li>Elaboração relatórios técnicos de problemas no Portal</li>
+                        <li class="separator">Intranet/Sharepoint</li>
+                        <li>Projeto de Intranet, Extranet, Gerenciador eletrônico de documentos, entre outros, utilizando Sharepoint:</li>
+                            <li class="tree">Criação de identidade visual, layout, interface de aplicações e marca</li>
+                            <li class="tree">Implementação e/ou Implantação</li>
+                        <li>Consultoria na auditoria e Tunning de Infraestrutura</li>
+                        <li>Consultoria na otimização de performances de aplicações</li>
+                        <li>GED – Gerenciador Eletrônico de Documentos</li>
+                        <li class="separator">Acessibilidade de Portais</li>
+                        <li>Definição das melhores estratégias para tornar seu portal acessível</li>
+                        <li>Reestruturação de portais para torná-los acessíveis</li>
+                        <li>Desenvolvimento de APPS (plugins) acessíveis</li>
+                        <li>Consultoria na aplicação das diretrizes de acessibilidade do W3C e do Governo Eletrônico</li>
+                        <li>Consultoria na realização de validações e testes</li>
+                        <li>Consultoria na elaboração de manuais e normas internas de acessibilidade</li>
+                        <li class="separator">Segurança da Informação</li>
+                        <li>Pentest (testes de invasão)</li>
+                        <li>Análise de vulnerabilidades em aplicações WEB</li>
+                        <li>Auditoria em regras de Firewall</li>
+                        <li>Perícia Forense Computacional</li>
+                        <li>Análise de vulnerabilidades de servidores por meio de recursos de Port Scan</li>
+                        <li>Análise e diagnóstico de controles de Segurança da Informação e Comunicação (com base nas normas da família ABNT NBR ISO/IEC 27.000)</li>
+                        <li>Revisão de Perfis de Acesso a sistemas aplicativos</li>
+                        <li>Análise de vulnerabilidades físicas e lógicas (ERPs, Data Center, Mainframes)</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+            	<dt>B.I. – Business Intelligence</dt>
+                <dd>
+                	<ul>
+                        <li class="separator">QlikView</li>
+                        <li>Infraestrutura</li>
+                        <li>Design</li>
+                        <li>Segurança</li>
+                        <li>Migração</li>
+                        <li>Dimensionamento</li>
+                        <li>Estratégia corporativa</li>
+
+                        <li class="separator">Desenvolvimento</li>
+
+                        <li>Scripts de carga de dados (ODBC, ADO, Arq. Textos, Excel)</li>
+                        <li>Configurações gerais de objetos</li>
+                        <li>Tabelas e Tabelas dinâmicas</li>
+                        <li>Gráficos e Gráficos Multi-dimensionais</li>
+                        <li>Funções de Script</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </section>
+
+    <div class="clearfloat"></div>
+
+    <section id="price" class="center-1156">
+    	<p class="h1">Preço</p>
+        <table class="table table-price">
+          <thead>
+          	<tr>
+            	<th class="item"></th>
+                <th class="descricao">Detalhes</th>
+                <th class="preco text-center">Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+          	<tr>
+            	<td>Primeira visita</td>
+                <td>Conhecer o cliente e coletar informações sobre o negócio para fazer uma primeira análise e apresentar um projeto de melhorias e relatórios convincentes para que o cliente contrate nossos serviços de consultoria.</td>
+                <td class="text-center">Grátis</td>
+            </tr>
+            <tr>
+            	<td>Estudo minucioso sobre o cliente</td>
+                <td>Conhecer detalhadamente o cliente, rotinas diárias, processos de negócio, tecnologia utilizada, pontos fortes, fraquezas, independente do negócio, e apresentar um relatório completo para propor o máximo de melhorias possíveis, aperfeiçoando suas práticas e operações, seja no cumprimento de normas e regulamentos ou na aplicação de melhores práticas existentes no mercado. Propor soluções empresariais e de governança para automação e redução de custos e agilidade nos processos de negócio do cliente. Buscar controle, lucratividade e capacitação para o cliente já que o crescimento não apoiado em um modelo de gestão de negócios pode gerar prejuízos.</td>
+                <td class="text-center">Custo da hora por cada profissional envolvido</td>
+            </tr>
+            <tr>
+            	<td>Execução, Teste e Capacitação</td>
+                <td>Executar, Testar e Capacitar todos os itens propostos e aprovados pelo cliente.</td>
+                <td class="text-center">Custo da hora por cada profissional envolvido</td>
+            </tr>
+            <tr>
+            	<td>Suporte</td>
+                <td>Manter, Prevenir e Atualizar todos os itens executados</td>
+                <td class="text-center">Custo da hora por cada profissional envolvido</td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+
+    <section id="contact" class="center-1156">
+    	<div class="default-title">
+            <p class="h1">Fale conosco</p>
+            <p class="h3">Deixe-nos entender a sua necessidade e faremos uma análise e orçamento sem compromisso.</p>
+            {% include "WebsiteBundle:Contato:inc.contato.html.twig" %}
+        </div>
+    </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,163 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>MeProteja - Backup Presencial para Empresas - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Backup de todos os dados dos sistemas de sua empresa. Mantenha os dados da sua empresa seguros. Backup presencial exclusivo. Backup em Storage com Criptografia." />
+<meta property="og:title" content="Produtos Wtis | MeProteja Backup" />
+<meta property="og:description" content="Softwares Livres para a Administração Pública. A Wtis tem Soluções para Governo Federal, Estadual e Municipal." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.meproteja.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content meproteja">
+
+    <div class="background meproteja-header">
+    	<div id="service-description" class="center-977">
+            <h2>MeProteja</h2>
+            <h1>Mantenha os dados da sua empresa seguros, oferecemos um backup presencial exclusivo.</h1>
+            <ul class="features">
+            	<li><a href="#ntd"><i class="el i1"></i>Nosso técnico vai até sua empresa diariamente</a></li>
+                <li><a href="#ntd"><i class="el i2"></i>Faz um backup dos dados dos seus sistemas</a></li>
+                <li><a href="#ntd"><i class="el i3"></i>Envia seus dados para um servidor privado com criptografia</a></li>
+            </ul>
+            <div class="clearboth"></div>
+            <a href="#contratar" class="contrate scroll">Contrate</a> <a href="#chat" class="contrate contato init-chat">Fale conosco via chat</a>
+        </div>
+    </div>
+    
+    <div class="full-description center-977">
+    	
+        <div class="item-desc">
+        	<img src="{{ asset('images/pages/meproteja/cloud.png') }}" alt="Cloud" class="pull-right img-responsive" />
+        	<h2>Esteja realmente seguro</h2>
+            <p>
+            Recentemente invasões e roubo de dados estão mais frequentes. Chamado <a href="http://blogs.technet.com/b/risco/archive/2016/02/29/locky-malware-como-evit-225-lo.aspx" target="_blank" class="link">Locky Malware</a>, invasores se aproveitam de brechas para invadirem redes e computadores de empresas, roubam e bloqueiam todos os dados dos sistemas, muitas vezes levando à paralisação da empresa afetada e prejuízos inestimáveis. Esses invasores cobram altos valores para que possam devolver os dados da empresa e a mesma volte a funcionar normalmente.<br /><br />
+            É uma prática comum em pequenas e médias empresas fazerem backups somente copiando os dados dos softwares para um pendrive ou para outro computador, ou até mesmo não fazem nenhum backup, simplesmente por falta de informação sobre o assunto. Acontece que estas práticas são muito arriscadas, pois uma cópia para um pendrive ou laptop além de tornar os dados dependentes somente de um hardware, não fornecem nenhuma segurança para os dados e muito menos um histórico automático dos backups. Os gestores acabam esquecendo que a vida financeira da empresa e vários outros dados estão nestes sistemas e que são de muita importância.
+            </p>
+        </div>
+        
+        <div class="item-desc">
+        	<img src="{{ asset('images/pages/meproteja/cloud2.png') }}" alt="Cloud" class="pull-left img-responsive" />
+        	<h2>Conte com profissionais que vão lhe auxiliar e fazer o melhor</h2>
+            <p>
+            Com esta necessidade, a Wtis criou o serviço MeProteja, onde nosso técnico vai até a sua empresa, efetua uma cópia de segurança dos seus dados, retorna para a Wtis e envia para um serviço em nuvem confiável, com alta proteção e privacidade dos seus dados utilizando criptografia. Os dados da sua empresa estarão seguros e disponíveis sempre que você precisar, e é possível solicitar dados anteriores como, por exemplo, de 6 meses atrás, para compará-los com dados recentes ou dados de 1 ano atrás. A cada novo backup nosso serviço não substitui o backup anterior, criamos uma nova versão do backup.<br /><br />
+            Se você quer ainda mais segurança e que somente você tenha acesso ao conteúdo dos dados, é possível que antes do técnico coletar e compactar os dados você informe uma senha particular. Com isso, somente com esta senha será possível visualizar os dados futuramente.
+            </p>
+        </div>
+        
+    </div>
+    
+    <div class="div-bg"></div>
+    
+    <a name="contratar"></a>
+    <section id="quanto-custa">
+        	<div class="default-title">
+                <p class="h1">Quanto custa?</p>
+                <p class="h2">Escolha um plano mensal que melhor encaixa no perfil do seu negócio</p>
+            </div>
+        	<div class="box box1 quanto-custa">
+            	
+                <!-- PRICE -->
+                <div class="table-price-new">
+                    <div class="ul-border"></div>
+                    <div class="ptable">
+                    <ul>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">visita</p>
+                                <p class="h1">Mensal</p>
+                                <p class="h2">uma vez por mês o técnico faz o backup</p>
+                                <div class="price">R$ 29/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=51" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    <span>1 ano de histórico</span>
+                                    <span>100 GB de armazenamento</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">visita</p>
+                                <p class="h1">Quinzenal</p>
+                                <p class="h2">backup de 15 em 15 dias</p>
+                                <div class="price">R$ 49/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=52" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    <span>1 ano de histórico</span>
+                                    <span>100 GB de armazenamento</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">visita</p>
+                                <p class="h1">Semanal</p>
+                                <p class="h2">backup uma vez por semana</p>
+                                <div class="price">R$ 69/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=53" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    <span>1 ano de histórico</span>
+                                    <span>100 GB de armazenamento</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">visita</p>
+                                <p class="h1">Diária</p>
+                                <p class="h2">backup uma vez por dia, somente dias úteis</p>
+                                <div class="price">R$ 199/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=54" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    <span>1 ano de histórico</span>
+                                    <span>1.000 GB de armazenamento</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">visita</p>
+                                <p class="h1">Diária 2</p>
+                                <p class="h2">backup duas vezes por dia</p>
+                                <div class="price">R$ 299/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=55" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    <span>1 ano de histórico</span>
+                                    <span>1.000 GB de armazenamento</span>
+                                </div>
+                             </div>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="text-left">
+                    Taxa de R$ 1,00 por cada GB de armazenamento de dados excedido<br />
+                    Plano com limite máximo de 1 GB de dados por visita, para planos superiores <a href="#chat" class="init-chat">consulte nossa equipe de vendas</a>.
+                    </div>                   
+                    
+                </div>
+                
+                <div class="clearfloat"></div>
+                <!--//// PRICE -->
+                
+            </div>
+          </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Instaladores Grátis de Scripts Automáticos Fantastico e Softaculous - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Instaladores Grátis de Scripts Automáticos Fantastico e Softaculous." />
+<meta property="og:title" content="Produtos Wtis | Instaladores Grátis de Scripts Automáticos" />
+<meta property="og:description" content="Instaladores Grátis de Scripts Automáticos Fantastico e Softaculous." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-instaladores').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>Fantastico e Softaculous</strong></h1>
+        <h2 class="title0b">Instaladores de Scripts Automáticos que facilitam sua vida</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px">
+                    <img src="{{ asset('images/2012/ico_aplicativos.jpg') }}" align="left" style="float:left; padding:0 8px 4px 0" /> <strong>Disponíveis em qualquer plano de hospedagem e revenda em ambiente Linux</strong>, os instaladores <strong>Fantastico DeLuxe</strong> e <strong>Softaculous</strong> possuem diversos scripts pré-instalados que não exigem conhecimento técnico para serem habilitados nos seus sites. O acesso a esta opção pode ser realizado diretamente do painel de controle do servidor.<br />
+                    <br />
+
+Entre dentro do cPanel e com apenas um passo selecione qual script deseja instalar, e o Softaculous ou Fantastico, fará todo o processo para você de instalação do script.
+
+					<br /><br />
+                  	<h1 class="h1 segoeUI">Vantagens</h1>
+                    <br />
+                    <div class="features">
+                        <ul>
+                            <li>Instale scripts com apenas um clique</li>
+                            <li>Mais de 180 scripts instaláveis</li>
+                            <li>Extremamente rápido</li>
+                            <li>Teste uma demonstração antes de usar (Softaculous)</li>
+                            <li><strong>Mantenha seus scripts mais seguros:</strong> o Instalador Softaculous atualiza eles por você</li>
+                    	</ul>
+                    </div>
+                    
+                    <!-- ABA -->
+                    <div class="aba1 comparativoInstaladores">
+                        <ul class="aba">
+                            <li class="selected"><a href="javascript://" rel="comparacoes">Comparativo</a></li>
+                        </ul>
+                        <div class="abas-divs">
+                            <div class="border left"></div>
+                            <div class="border right"></div>
+                            <div class="contentBlock">
+                                <div class="content comparacoes" style="display:block">
+                                    <!-- CONTENT -->
+                                    	{% set noHeader = true %}
+                                        {% include "WebsiteBundle:Produtos:hospedagem.ajax.instaladores.html" %}
+                                    <!-- END CONTENT -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIM ABA -->
+
+              </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

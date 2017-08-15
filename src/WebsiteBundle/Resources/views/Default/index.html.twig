@@ -1,0 +1,471 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+{% block metas %}
+<meta property="robots" content="index,follow" />
+<meta property="googlebot" content="index, follow" />
+<meta property="revisit-after" content="5 days" />
+<meta property="language" content="pt-br" />
+<meta property="rating" content="general" />
+<meta property="page-topic" content="{{ metaPageTopic is defined ? metaPageTopic : 'Wtis Soluções em Tecnologia e Marketing para Web' }}" />
+<meta property="classification" content="{{ metaPageClassification is defined ? metaPageClassification : 'Wtis Soluções em Tecnologia e Marketing para Web' }}" />
+<meta property="distribution" content="Global" />
+<meta property="author" content="Wtis" />
+<meta property="copyright" content="wtis" />
+<meta property="og:type" content="website">
+{% endblock %}
+{% block title %}
+<title>WTIS</title>
+{% endblock %}
+{% block stylesheets %}
+{% if app.environment == 'dev' %}
+<link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
+<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/tipTip.css') }}" rel="stylesheet">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+{% else %}
+<link href="{{ asset('css/app.min.css?201705100415') }}" rel="stylesheet">
+{% endif %}
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600,300,400' rel='stylesheet' type='text/css'>
+{% endblock %}
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69430130-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /GA -->
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.wtis.com.br/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.wtis.com.br/piwik/piwik.php?idsite=1" style="border:0;" alt="Piwik stats" /></p></noscript>
+<!-- End Piwik Code -->
+</head>
+
+<body>
+<!-- Modals -->
+<!-- Modal MeLigue -->
+<div class="modal fade" id="meLigueModal" tabindex="-1" role="dialog" aria-labelledby="meLigueModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="meLigueModalLabel">Nós ligamos para você</h4>
+      </div>
+      <div class="form">
+          <form name="meLigueForm" id="meLigueForm" action="" data-parsley-validate>
+          <div class="modal-body">
+          	<div class="col1">
+            	<p class="desc1">Temos o prazer de falar com você</p>
+                <p class="desc2">Podemos te ajudar e tirar suas dúvidas sem nenhum compromisso.</p>
+                <label for="i-meligue-nome" class="nome default clearboth">
+                    <span>Seu nome</span>
+                    <input type="text" name="i-meligue-nome" id="i-meligue-nome" class="input-default i-nome" required tabindex="1">
+                </label>
+                <label for="i-meligue-email" class="email default">
+                    <span>Seu e-mail</span>
+                    <input type="email" name="i-meligue-email" id="i-meligue-email" class="input-default i-email" required tabindex="2">
+                </label>
+                <label for="i-meligue-telefone-ddd" class="telefone default clearboth">
+                    <span>Telefone</span>
+                    <input type="text" name="i-meligue-telefone-ddd" id="i-meligue-telefone-ddd" class="input-default i-telefone-ddd" required placeholder="DDD" tabindex="3">
+                    <input type="text" name="i-meligue-telefone" id="i-meligue-telefone" class="input-default i-telefone" required tabindex="4">
+                </label>
+                <label for="meligue-celular-ddd" class="celular default">
+                    <span>Celular</span>
+                    <input type="text" name="i-meligue-celular-ddd" id="i-meligue-celular-ddd" class="input-default i-telefone-ddd" placeholder="DDD" tabindex="5">
+                    <input type="text" name="i-meligue-celular" id="i-meligue-celular" class="input-default i-telefone" tabindex="6">
+                </label>
+                <label for="i-meligue-newsletter" class="newsletter full clearboth">
+                    <input type="checkbox" name="i-meligue-newsletter" id="i-meligue-newsletter" value="1" tabindex="7"> Assine nossa newsletter e receba novidades em seu e-mail
+                </label>
+            </div>
+            <div class="col2">
+            	<img id="meLigueStatusPhone" src="{{ asset('images/phone.png') }}" class="img-responsive" alt="Telefone">
+                <div id="meLigueStatus">Informe seu telefone e clique no botão <span>me ligue</span> abaixo</div>
+            </div>
+            <div class="clearfloat"></div>
+          </div>
+          <div class="modal-footer bottom-tab">
+          	<div class="bottom-tab-border"></div>
+            <input type="text" name="i-meligue-produto-interesse" id="i-meligue-produto-interesse" value="" data-nome="Produto de interesse" data-sigla="produto-interesse" data-valor="0" class="form-extra i-produto-interesse">
+            <input type="hidden" name="i-meligue-meLigue" id="i-meligue-meLigue" value="1">
+            <input type="hidden" name="slash" value="i-meligue-">
+            <button id="meLigueFormCancel" type="button" class="btn-bottom white" data-dismiss="modal">Cancelar</button> 
+            <button id="meLigueFormSubmit" type="submit" class="btn-bottom submit-button"><i class="glyphicon glyphicon-earphone"></i>&nbsp; Me ligue</button>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Mais Telefones -->
+<div class="modal fade" id="maisTelefonesModal" tabindex="-1" role="dialog" aria-labelledby="maisTelefonesModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="maisTelefonesModalLabel">Nossos telefones</h4>
+      </div>
+      <div class="modal-body">
+        <strong>Atendimento</strong><br>
+      	{{ telefoneComercial }}<br>
+		Whatsapp: {{ telefoneWhatsapp }}
+      </div>
+      <div class="modal-footer bottom-tab">
+        <button type="button" class="btn-bottom white" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn-bottom submit-button" data-toggle="modal" data-target="#meLigueModal" data-product="Consultoria" data-dismiss="modal"><i class="glyphicon glyphicon-earphone"></i>&nbsp; Me ligue</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Default Modal -->
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="defaultModalLabel">...</h4>
+      </div>
+      <div class="modal-body">        
+      </div>
+     <div class="modal-footer bottom-tab">
+        <button type="button" class="btn-bottom white" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn-bottom submit-button oculto"><i class="glyphicon glyphicon-earphone"></i>&nbsp; <span>Me ligue</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+<div class="header">
+	<div class="menu">
+    	<div class="center-977">
+    	<a href="{{ path('home') }}" class="logo">WTIS - Web TI Solutions</a>
+        <button type="button" class="navbutton">Menu</button>
+        <ul class="menu1">
+        	<li><a href="{{ path('empresa') }}">Empresa</a></li>
+            <li>
+            	<a href="#servicos">Serviços</a>
+                <div class="hover">
+                    <div class="center-977">
+                    	<div class="item-col-left">
+                            <div class="item">
+                                <span>Consultoria</span>
+                                <ul>
+                                    <li><a href="{{ path('consultoria') }}#produtividade-digital">Produtividade Digital</a></li>
+                                    <li><a href="{{ path('consultoria') }}#vantagens">Governança TI</a></li>
+                                    <li><a href="{{ path('consultoria') }}#vantagens">Infraestrutura</a></li>
+                                    <li><a href="{{ path('fabrica-software') }}#custom">Desenvolvimento de sistemas custom</a></li>
+                                    <!--<li><a href="#">Business Intelligence (BI)</a></li>-->
+                                </ul>
+                            </div>
+                            
+                            <div class="item">
+                                <span>Negócios</span>
+                                <ul>
+                                    <li><a href="{{ path('psw') }}">Professional Services <b>(Alocação de profissionais)</b></a></li>
+                                    <li><a href="{{ path('fabrica-software') }}">Fábrica de Software</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="item-col-left">
+                            <div class="item">
+                                <span>Web</span>
+                                <ul>
+                                    <li><a href="{{ path('desenvolvimento-sites') }}">Desenvolvimento de sites</a></li>
+                                    <li><a href="{{ path('pos-venda') }}">Gerenciamento de sites</a></li>
+                                    <li><a href="{{ path('gerenciamento-servidor') }}">Gerenciamento de servidores</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="item ">
+                                <span>Central do Design</span>
+                                <ul>
+                                    <li><a href="{{ path('central-design') }}">Identidade visual</a></li>
+                                    <li><a href="{{ path('central-design') }}">Mídias impressas</a></li>
+                                    <li><a href="{{ path('central-design') }}">Campanhas publicitárias online</a></li>
+                                    <li><a href="{{ path('central-design') }}">Ilustração e Animação 3D</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<a href="#produtos">Produtos</a>
+                <div class="hover">
+                    <div class="center-977">
+                    	<div class="item-col-left">
+                            <div class="item">
+                                <span>Hospedagem e armazenamento</span>
+                                <ul>
+                                    <li><a href="{{ path('hospedagem_inteligente') }}">Hospedagem de sites</a></li>
+                                    <li><a href="{{ path('revenda_hospedagem') }}">Revenda de hospedagem</a></li>
+                                    <li><a href="{{ path('cloud-storage') }}">Cloud storage</a></li>
+                                    <li><a href="{{ path('dedicado') }}">Servidores dedicados e cloud</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="item">
+                                <span>Marketing Online</span>
+                                <ul>
+                                    <li><a href="{{ path('email-marketing') }}">E-mail Marketing</a></li>
+                                    <li><a href="{{ path('sms-marketing') }}">SMS Marketing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="item-col-left">
+                            <!--<div class="item">
+                                <span>Fornecimento de conteúdo</span>
+                                <ul>
+                                    <li><a href="">Streaming de Áudio e Video</a></li>
+                                </ul>
+                            </div>-->
+                            
+                            <div class="item ">
+                                <span>Mais produtos</span>
+                                <ul>
+                                    <!--<li><a href="#">Servidores dedicados e cloud</a></li>-->
+                                    <li><a href="{{ path('email-profissional') }}">E-mail profissional</a></li>
+                                    <li><a href="{{ path('meproteja') }}">Me Proteja - Backup</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<a href="#solucoes">Soluções</a>
+                <div class="hover">
+                    <div class="center-977">
+                    	<div class="item-col-left">
+                            <div class="item">
+                                <span>Soluções completas</span>
+                                <ul>
+                                    <li><a href="{{ path('presenca-web') }}">Presença na Web</a></li>
+                                    <li><a href="{{ path('marketing') }}">Marketing Cloud Services</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="item">
+                                <span>Marketing</span>
+                                <ul>
+                                    <li><a href="{{ path('google-adwords') }}">Divulgue no Google <b>adwords</b></a></li>
+                                    <li><a href="{{ path('facebook') }}">Gerenciamento de Página no Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="item-col-left">
+                            <div class="item">
+                                <span>Governo</span>
+                                <ul>
+                                    <li><a href="{{ path('ecidade') }}">E-cidade</a></li>
+                                </ul>
+                                {#<div class="item">#}
+                                    {#<span>Eleições 2016</span>#}
+                                    {#<ul>#}
+                                        {#<li><a href="{{ path('marketing_eleicoes') }}">Marketing Político</a></li>#}
+                                        {#<li><a href="{{ path('marketing_eleicoes') }}">Gerenciamento da Campanha</a></li>#}
+                                    {#</ul>#}
+                                {#</div>#}
+                                <div class="item">
+                                    <span>Social</span>
+                                    <ul>
+                                        <li><a href="{{ path('social_ong') }}">Site grátis para ONGs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {#<div class="item-col-left">#}
+                            {#<div class="item">#}
+                                {#<span>Social</span>#}
+                                {#<ul>#}
+                                    {#<li><a href="{{ path('social_ong') }}">Site para ONGs</a></li>#}
+                                {#</ul>#}
+                            {#</div>#}
+                        {#</div>#}
+
+                    </div>
+                </div>
+            </li>
+            <li><a href="{{ path('governo') }}">Governo</a></li>
+            <li><a href="{{ path('suporte') }}">Contato</a></li>
+        </ul>
+        <ul class="menu2">
+        	<li class="chat"><a href="#chat" class="init-chat"><i></i>Chat</a></li>
+            <li class="entrar"><a href="https://c.wtis.com.br/login"><i></i>Entrar</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+</header>
+<div class="clearfloat"></div>
+<!--/ HEADER -->
+<!-- CONTENT -->
+<div class="content-overflow">
+{% block body %}{% endblock %}
+</div>
+<!--//// CONTENT -->
+<!-- FOOTER -->
+<div class="footer">
+	<section id="footer" class="center-977">
+    	<ul class="footer-menu">
+        	<li>Empresa
+                <ul>
+                    <li><a href="{{ path('empresa') }}">Sobre</a></li>
+                    <!--<li><a href="#">Privacidade</a></li>-->
+                    <li><a href="{{ path('suporte') }}">Contato</a></li>
+                    <li><a target="_blank" href="http://blog.wtis.com.br">Blog</a></li>
+                    <!--<li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Investidores</a></li>-->
+                </ul>
+            </li>
+            <li>Serviços
+                <ul>
+                    <li><a href="{{ path('consultoria') }}">Consultoria</a></li>
+                    <li><a href="{{ path('psw') }}">Professional Services</a></li>
+                    <li><a href="{{ path('fabrica-software') }}">Fábrica de Software</a></li>
+                    <li><a href="{{ path('desenvolvimento-sites') }}">Desenvolvimento de sites</a></li>
+                    <li><a href="{{ path('gerenciamento-servidor') }}">Gerenciamento de servidores</a></li>
+                    <li><a href="{{ path('central-design') }}">Central do Design</a></li>
+                </ul>
+            </li>
+            <li>Produtos
+            	<ul>
+                    <li><a href="{{ path('hospedagem_inteligente') }}">Hospedagem de sites</a></li>
+                    <li><a href="{{ path('dedicado') }}">Servidores dedicados e cloud</a></li>
+                    <li><a href="{{ path('email-profissional') }}">E-mail profissional</a></li>
+                    <li><a href="{{ path('cloud-storage') }}">Cloud storage</a></li>
+                    <!--<li><a href="">Streaming de Áudio e Video</a></li>-->
+                    <li><a href="{{ path('email-marketing') }}">E-mail Marketing</a></li>
+                    <li><a href="{{ path('sms-marketing') }}">SMS Marketing</a></li>
+                    <li><a href="{{ path('meproteja') }}">Me Proteja - Backup</a></li>
+                </ul>
+            </li>
+            <li>Soluções
+                <ul>
+                    <li><a href="{{ path('presenca-web') }}">Presença na Web</a></li>
+                    <li><a href="{{ path('google-adwords') }}">Divulgue no Google</a></li>
+                    <li><a href="{{ path('facebook') }}">Página no Facebook</a></li>
+                    <li><a href="{{ path('governo') }}">Governo</a></li>
+                    {#<li><a href="{{ path('marketing_eleicoes') }}">Marketing Político</a></li>#}
+                </ul>
+            </li>
+            <li>Suporte
+                <ul>
+                    <li><a href="https://c.wtis.com.br">Contact Center</a></li>
+                    <!--<li><a href="http://wiki.wtis.com.br">Ajuda</a></li>-->
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <div class="clearfloat"></div>
+    <div class="footer-social center-977">
+    	<div class="google"><a href="https://plus.google.com/u/2/b/103554332199024890195/103554332199024890195/" target="_blank">Estamos no Google+</a></div>
+    	<div class="facebook"><a href="https://www.facebook.com/wtisbrasil/" target="_blank">Estamos no Facebook</a></div>
+        <div class="linkedin"><a href="https://www.linkedin.com/company/wtis" target="_blank">Estamos no Linkedin</a></div>
+    </div>
+    <div class="clearfloat"></div>
+    <div class="footer-copyright center-977">© 2015 <strong>W</strong>eb <strong>TI</strong> <strong>S</strong>olutions, todos os direitos reservados. Uma empresa <a href="http://www.tiagofelipe.com">tiagofelipe.com</a></div>
+</div>
+<!--//// FOOTER -->
+
+{% block javascripts %}
+<script type="text/javascript">
+var contatoServiceURL = "{{ path('contato_create') }}";
+var contatoServiceStatusURL = "{{ path('contato_meligue_status', {id:'__ID__'}) }}";
+var services = {};
+services.pswID = 1;
+services.partner = "{{ path('partner_find') }}";
+services.partnerOpen = "{{ path('partner_find_one', {slug:'__ID__'}) }}";
+services.atividade = "{{ path('psw_atividade', {id:'__ID__'}) }}";
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/php-js/number_format.js') }}"></script>
+{% if app.environment == 'dev' %}
+<script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/fullscreenbg.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.parallax-1.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.localscroll-1.2.7-min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.scrollTo-1.4.2-min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.tipTip.minified.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/scrollReveal.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.mask.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/parsley.min.js') }}"></script>
+<script src="{{ asset('js/fixed.js') }}"></script>
+{% else %}
+<script src="{{ asset('js/app.min.js?201705100415') }}"></script>
+{% endif %}
+{#<!--Start of Tawk.to Script#}
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5702adfdfcd353212629e572/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+{#End of Tawk.to Script-->#}
+{#<script>window.intercomSettings = {app_id: "pxlr2rwa"};</script>#}
+{#<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/pxlr2rwa';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>#}
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1559873594307870');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1559873594307870&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- AC -->
+{#<script>
+    (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+        w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://m.wtis.com.br/mtc.js','mt');
+
+    mt('send', 'pageview');
+</script>#}
+{% endblock %}
+</body>
+</html>

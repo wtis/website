@@ -1,0 +1,291 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.fabrica-header-bg {
+    background: url(../images/pages/governo/header-bg2.jpg) center no-repeat;
+    height: 374px;
+    position: relative;
+}
+
+.header-content {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.header-content h1 {
+    color: #FFF;
+    font-size: 38px;
+    padding-top: 120px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header-content h2 {
+    color: #FFF;
+    font-size: 28px;
+    padding-top: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#produtos ul, #produtos ul {
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#produtos ul li {
+    max-width: 200px;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+#produtos ul li:first-child {
+    margin-left: 0;
+}
+
+#produtos ul li a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+#produtos ul li a .ptitle {
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 6px;
+    font-size: 15px;
+}
+
+#produtos ul li a:hover .ptitle {
+    color: #4080ff !important;
+}
+
+#produtos ul li a .pdesc {
+    font-weight: normal;
+    color: #999;
+    padding-bottom: 8px;
+    font-size: 13px;
+}
+
+#service-description .img {
+    float: left;
+    width: 30%;
+    padding-top: 30px;
+}
+
+#service-description .pcontent {
+    float: left;
+    width: 70%;
+    font-size: 16px;
+}
+
+#service-list {
+    margin: 40px auto;
+}
+
+#service-list h1, #service-list .h1 {
+    text-align: center;
+}
+
+#service-list .links {
+    padding-top: 25px;
+    text-align: center;
+}
+
+#service-list .links img {
+    padding-right: 60px;
+}
+
+.div-title h1 {
+    text-align: center;
+    margin: 60px 0 60px 0;
+}
+
+.pres-default.right {
+    background-color: #EEF4F8;
+    padding: 40px 0;
+}
+
+.btn-blue {
+    margin-right: 10px;
+}
+
+#pws .img {
+    margin-top: 30px;
+}
+
+#pws .pcontent {
+    margin-top: -20px;
+}
+
+#hospedagem .pcontent {
+    margin-top: 40px;
+}
+
+#emailpro .img {
+}
+
+#sms .pcontent {
+    margin-top: 60px;
+}
+
+#facebook .pcontent {
+    margin-top: 50px;
+}
+
+#streaming .pcontent {
+    margin-top: 50px;
+}
+
+#streaming .img img {
+    margin-left: -240px
+}
+
+#cdesign .pcontent {
+    margin-top: 30px;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.div-title{
+    margin: 40px auto;
+}
+
+@media screen and (max-width: 887px) {
+
+    #produtos ul{
+        text-align: left;
+        padding: 10px;
+    }
+    #produtos ul li {
+        max-width: none;
+        display: block;
+        margin-left: 0;
+        border-bottom: 1px solid #e9ebee;
+    }
+    #produtos ul li:last-child{
+        border-bottom: none;
+    }
+    #produtos ul li img{
+        float: left;
+    }
+    #produtos ul li .ptitle{
+        padding-top: 30px;
+        padding-bottom: 0;
+        margin-bottom: -4px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fabrica-header-bg {
+        display: none;
+    }
+
+    #service-description .img, #service-description .pcontent {
+        float: none;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    #service-description .pcontent {
+        padding: 15px;
+    }
+
+    #service-list .links img {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .pres-default.large .img {
+        width: 100% !important;
+    }
+
+    .img img {
+        width: 90% !important;
+        margin: auto;
+        display: block;
+    }
+
+    .pres-default .img {
+        float: none !important;
+        width: 100%;
+    }
+
+    .pres-default.large .pcontent {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    .pres-default .pcontent {
+        float: none;
+        width: 100%;
+        padding-top: 25px;
+        margin-top: 20px !important;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .pres-default.right .img img {
+        margin-left: 0;
+        display: block;
+        margin: auto;
+    }
+
+    #sms .img img {
+        width: 60% !important;
+    }
+
+    #streaming .img img {
+        margin-left: 0;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+
+}

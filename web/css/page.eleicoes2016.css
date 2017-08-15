@@ -1,0 +1,286 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.eleicoes-header{
+	background:url(../images/pages/eleicoes2016/header-bg.png) center no-repeat fixed;
+	background-size:cover;
+	height:540px;
+	position:relative;
+	text-align:center;
+}
+.eleicoes-header #service-description{
+	margin-top:100px;
+}
+.eleicoes-header h2, .eleicoes-header h1, .eleicoes-header p{
+	text-align:center;
+	color:#666;
+	margin:0 0 12px;
+}
+.eleicoes-header h2{
+	font-size:50px;
+}
+.eleicoes-header h1{
+	font-size:26px;
+	font-weight:300;
+	margin-bottom:4px;
+}
+.eleicoes-header p{
+	font-size:18px;
+	font-weight:300;
+}
+i.el{
+	display:block;
+	background:url(../images/pages/eleicoes2016/icons.png);
+	height:80px;
+	max-width:100px;
+	margin:auto;
+}
+i.el.i1{
+	background-position:0 0;
+	width:91px;
+}
+i.el.i2{
+	background-position:-91px 0;
+	width:83px;
+}
+i.el.i3{
+	background-position:-174px 0;
+	width:85px;
+}
+i.el.i4{
+	background-position:-259px 0;
+	width:80px;
+}
+i.el.i5{
+	background-position:-339px 0;
+	width:75px;
+}
+i.el.b{
+	height:38px;
+	background:url(../images/pages/eleicoes2016/icons2.png);
+}
+i.el.b.i1{
+	background-position:0 0;
+	width:34px;
+}
+i.el.b.i2{
+	background-position:-34px 0;
+	width:32px;
+}
+i.el.b.i3{
+	background-position:-66px 0;
+	width:36px;
+}
+i.el.b.i4{
+	background-position:-102px 0;
+	width:44px;
+}
+ul.features{
+	text-align:center;
+	display:table;
+	margin:42px auto 0;
+	padding:0;
+}
+ul.features li{
+	display:table-cell;
+	vertical-align:top;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+ul.features li a{
+	display:inline-block;
+	font-size:15px;
+	color:#666;
+	text-decoration:none !important;
+	text-align:center;
+	width:141px;
+	margin-left:48px;
+}
+ul.features li a:hover{
+	opacity:0.8;
+}
+ul.features li:first-child a{
+	margin-left:0;
+}
+ul.features li i{
+	margin-bottom:28px;
+}
+ul.features.m2 li a{
+	width:220px;
+	margin-left:20px;
+}
+ul.features.m2 li a strong{
+	display:block;
+	color:#333;
+}
+ul.features.m2 li a span{
+	display:block;
+	color:#666;
+	font-size:13px;
+}
+.eleicoes-header a.contrate{
+	display:inline-block;
+	background-color:#00B259;
+	margin:40px auto 0;
+	padding:12px 20px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:15px;
+	text-decoration:none !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.eleicoes-header a:hover.contrate{
+	background-color:#00CE67;
+}
+
+.header2{
+	background:url(../images/pages/eleicoes2016/header2.jpg) center no-repeat;
+	background-size:cover;
+	height:364px;
+	position:relative;
+}
+.header2 p{
+	font-size:32px;
+	color:#333333;
+	font-weight:300;
+	padding:113px 299px 0 0;
+	line-height:1;
+}
+.dsection{
+	margin-top:78px;
+}
+.dsection p strong{
+	font-weight:400;
+}
+
+.header-map{
+	background:url(../images/pages/eleicoes2016/mapa-exemplo.png) center no-repeat;
+	height:587px;
+	margin-top:65px;
+}
+.pos-header-map{
+	background-color:#F2F2F2;
+	text-align:center;
+	padding:10px 0;
+}
+.h2destaque{
+	text-align:center;
+	font-size:32px;
+	color:#666;
+	font-weight:300;
+	margin:0;
+}
+.h2subtitle{
+	font-size:18px;
+	color:#333333;
+	text-align:center;
+	margin-top:4px;
+	margin-bottom:38px;
+}
+.pdesc{
+	clear:both;
+	padding-top:40px;
+}
+.pdesc h2{
+	font-size:28px;
+	color:#333;
+}
+.pdesc span{
+	font-size:18px;
+	color:#666;
+}
+.pdesc img.pull-left{
+	padding-right:56px;
+}
+.pdesc img.pull-right{
+	padding-left:56px;
+}
+.sms-marketing{
+	padding-top:40px;
+}
+.sms-marketing img.pull-right{
+	margin-top:-120px;
+}
+.pesquisa-marketing ul.features{
+	clear:both;
+	padding-top:50px;
+}
+.sac{
+	margin-top:50px;
+}
+.sac img{
+	margin-bottom:100px;
+}
+.mmc img.pull-left{
+	margin-bottom:100px;
+}
+.mmc .subitem{
+	font-size:15px;
+	line-height:1;
+	display:table;
+	padding-bottom:20px;
+}
+.mmc .subitem .item{
+	display:table-cell;
+	vertical-align:middle;
+}
+.mmc .subitem img{
+	padding-right:20px;
+}
+
+@media screen and (max-width: 916px) {
+	.eleicoes-header{
+		height:auto;
+		padding:20px;
+	}
+	ul.features li {
+		display: block;
+		float:left;
+	}
+	ul.features li:nth-child(3n+1){
+		clear:left;
+	}
+	ul.features li a {
+		display: block;
+		float:left;
+		margin-left: 0;
+		margin-top:40px;
+	}
+	.eleicoes-header a.contrate {
+		margin-bottom:15px;
+	}
+	.header2 p {
+		padding: 30px 299px 0 20px;
+	}
+	#planeje{
+		padding:20px;
+	}
+	.pdesc{
+		padding:20px;
+	}
+	.pdesc img.pull-left, .pdesc img.pull-right{
+		float:none !important;
+		margin:auto;
+		display:block;
+		margin-bottom:30px;
+	}
+}
+@media screen and (max-width: 767px) {
+	ul.features li:nth-child(3n+1){
+		clear:none;
+	}
+	ul.features li:nth-child(odd){
+		clear:left;
+	}
+	.header2 p {
+		padding: 20px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

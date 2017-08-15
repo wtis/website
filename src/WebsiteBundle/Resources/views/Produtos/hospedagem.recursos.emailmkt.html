@@ -1,0 +1,81 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>E-mail Marketing Grátis - Crie campanhas e envie e-mails para seus contatos - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Crie campanhas e envie e-mails para seus contatos grátis." />
+<meta property="og:title" content="Produtos Wtis | E-mail Marketing Grátis" />
+<meta property="og:description" content="Crie campanhas e envie e-mails para seus contatos grátis." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-emkt').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>E-mail Marketing Grátis</strong></h1>
+        <h2 class="title0b">Clientes de hospedagem podem criar campanhas e enviar e-mail marketing</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px">
+                	<div class="pcontent">
+                    	<div class="img"><img src="{{ asset('images/pages/emkt/chances-de-vender.jpg') }}" class="rimg2" alt="Mais chances de vender"></div>
+                        <h2>Mais chances de vender</h2>
+                        <span>Crie promoções e planeje ações de e-mail marketing para aumentar suas vendas e fazer sua empresa crescer.<br><br>O e-mail marketing é a ferramenta ideal para uma estratégia eficiente, de alto retorno e baixo investimento.</span>
+                    </div><br /><br />
+                    <div class="pcontent">
+                    	<div class="img"><img src="{{ asset('images/pages/emkt/relatorios.jpg') }}" class="rimg2" alt="Relatorios Avancados"></div>
+                        <h2>Relatórios avançados</h2>
+                        <span>Fique sabendo em tempo real onde e quando suas mensagens estão sendo abertas com o relatório geolocalizado.<br><br>Nossos relatórios são fáceis de entender mais ao mesmo tempo bem avançados e apresentam informações importantes sobre sua campanha de envios.<br><br>Saiba a quantidade de usuários que visualizaram sua mensagem, clicaram no e-mail e quais links tiveram melhor desempenho.</span>
+                    </div><br /><br />
+                    <div class="pcontent">
+                    	<div class="img"><img src="{{ asset('images/pages/emkt/sms.jpg') }}" class="rimg2" alt="Multicanal"></div>
+                        <h2>Envie Email e SMS para seus contatos</h2>
+                        <span>Crie campanhas de email e ao mesmo tempo envie por Mobile SMS para os contatos que possuem telefone celular cadastrado.<br><br>Importe facilmente os contatos utilizando sistema de importação que torna o gerenciamento de contatos fácil e eficiente.</span>
+                    </div>
+                    <br />
+                    <a href="{{ path('email-marketing') }}" class="link-img">Saiba mais sobre este produto</a>
+                </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

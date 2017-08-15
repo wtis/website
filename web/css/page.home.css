@@ -1,0 +1,406 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.main-slider{
+	background:url(../images/loadbar.gif) #ECECEC center no-repeat;
+	position:relative !important;
+	margin-bottom: 0px;
+}
+.anim{
+	display:none
+}
+.mdef{
+	position:relative;
+}
+.mdef .pcontent{
+	display:block;
+	width:100%;
+	padding: 8% 4% 12%;
+}
+.mdef .h1{
+	color:#000;
+	padding:60px 100px 20px 100px;
+	text-align:center;
+	font-size:38px;
+}
+.mdef .h2{
+	text-align:center;
+	font-size:22px;
+	color:#666
+}
+a.lnk{
+	display:block;
+	width:237px;
+	text-align:center;
+	padding:8px 10px;
+	border:#FFF 1px solid;
+	font-size:14px;
+	color:#FFF;
+	font-weight:400;
+	text-transform:uppercase;
+	margin-top:30px;
+	text-decoration:none;
+}
+a:hover.lnk{
+	background-color:rgba(255,255,255,0.3);
+}
+
+/* Slides */
+.s-consultoria{
+	background:url(../images/pages/home/s1.jpg) center 0 no-repeat;
+	background-size:cover;
+}
+.s-consultoria .h1{
+	color:#FFF;
+	font-size:52px;
+	font-weight:400;
+}
+.s-consultoria .h2{
+	color:#FFF;
+	font-weight:400;
+}
+.pcontent.def1{
+	/*background:url(../images/pages/home/slide-consultoria-bg.png) center 300px no-repeat;*/
+	padding:8% 19% 8% 6%;
+	color:#FFF;
+}
+.s-mkt{
+	background:url(../images/pages/home/s2.jpg) center 0 no-repeat;
+	background-size:cover;
+}
+.s-mkt .h1{
+	font-size:56px;
+	color:#FFF;
+}
+.s-mkt .h2{
+	color:#FFF;
+}
+.s-psw{
+	background:url(../images/pages/home/s3.jpg) center 0 no-repeat;
+	background-size:cover;
+}
+.s-psw .h1{
+	font-size:56px;
+	color:#FFF;
+}
+.s-psw .h1 strong{
+	font-weight:400
+}
+.s-psw .h2{
+	color:#FFF;
+	font-weight:400;
+}
+
+.s-hospedagem.mdef .pcontent{
+	padding:0 !important;
+	text-align:center;
+}
+.s-hospedagem.mdef .h1{
+	font-size:32px;
+	padding:20px 0 !important;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.4);
+}
+.s-hospedagem.mdef a.lnk{
+	border:#FFF 1px solid;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+	font-weight:600;
+	width:250px;
+}
+.s-hospedagem .img{
+	display:block;
+	text-align:center;
+	margin:30px auto;
+}
+.s-hospedagem .img img{
+	display:inline-block;	
+}
+#servicos-destaque{
+	width:100%;
+	padding:36px 0;
+	background-color:#F1F1F1;
+}
+.pcontent-def{
+	max-width:890px;
+	margin:auto;
+}
+i.dicon{
+	display:block;
+	width:160px;
+	height:160px;
+	background:url(../images/pages/home/icons1.png);
+	text-indent:-5000px;
+	overflow:hidden;
+	margin:auto;
+
+}
+i.dicon.facebook{
+	background-position:-160px 0;
+}
+i.dicon.manutencao-site{
+	background-position:-320px 0;
+}
+i.dicon.emailpro{
+	background-position:-480px 0;
+}
+i.dicon.i2{
+	height:100px;
+}
+i.dicon.i2.hospedagem{
+	background-position:0 -181px;
+	width:125px;
+}
+i.dicon.i2.email{
+	background-position:-125px -181px;
+	width:99px;
+}
+i.dicon.i2.cdn{
+	background-position:-224px -181px;
+	width:100px;
+}
+i.dicon.i2.idc{
+	background-position:-324px -181px;
+	width:134px;
+}
+#servicos-destaque .destaque{
+	text-align:center;
+}
+#servicos-destaque .destaque .h2{
+	display:block;
+	text-align:center;
+	font-size:16px;
+	color:#333333;
+	font-weight:400;
+	padding:8px 0 0;
+	margin:0;
+}
+#servicos-destaque .destaque span{
+	display:block;
+	text-align:center;
+	font-size:14px;
+	padding:0 8px;
+}
+#servicos-destaque .destaque .lnk2{
+	padding-top:8px;
+	display:inline-block;
+}
+#empresa{
+	background-color:#54B1C4;
+	color:#FFF;
+	position:relative;
+	width:60%;
+}
+#empresa .h1{
+	width:70%;
+}
+#empresa .h2{
+	width:80%;
+	font-size:32px;
+	color:#FFF;
+}
+#empresa .decor-top{
+	height:45px;
+	position:absolute;
+	top:-45px;
+	z-index:9;
+	left:0;
+	right:0;
+}
+#empresa .decor-top .decor{
+	fill: #54B1C4;
+	stroke: #54B1C4;
+}
+#empresa .pcontent-def{
+	padding:20px 0 60px;
+}
+#empresa span{
+	display:block;
+	width:90%;
+}
+#sites{
+	background:url(../images/pages/suporte/header-bg.jpg) center bottom;
+	color:#FFF;
+	position:relative;
+	width:40%;
+}
+#marketing{
+	background-color:#EBEBEB;
+	width:50%;
+}
+#fabrica{
+	background-color:#252525;
+}
+#presenca-web{
+	background-color:#504F4F;
+}
+.htab{
+	float:left;
+	min-height:460px;
+	padding:30px;
+	width:25%;
+}
+.htab .h1, .htab h1{
+	font-size:32px;
+	font-weight:400;
+	color:#FFF;
+}
+.htab .h1 strong, .htab h1 strong{
+	font-weight:600;
+}
+.htab span{
+	font-size:16px;
+	color:#FFF;
+}
+.htab a{
+	display:inline-block;
+	clear:both;
+	padding:8px 18px;
+	margin-top:20px;
+	border:#CCC 2px solid;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none !important;
+	font-weight:400;
+}
+.htab a:hover{
+}
+#marketing a{
+	color:#333 !important;
+}
+#marketing .h1, #marketing h1, #marketing span{
+	color:#333;
+}
+#ambiente .h1{
+	display:block;
+	text-align:center;
+	font-size:32px;
+	color:#666666;
+	padding:45px 0 0;
+	margin:0;
+}
+#ambiente .h2{
+	font-size:16px;
+	display:block;
+	text-align:center;
+	color:#666;
+	padding:10px 0 30px;
+	margin:0;
+}
+#ambiente span{
+	display:block;
+	text-align:center;
+	padding:10px 0 10px !important;
+}
+#ambiente span a{
+	color:#666666;
+	font-size:16px;
+	text-decoration:none !important;
+}
+#contato{
+	background-color:#ED9247;
+	margin-top:20px;
+	width:100%;
+	text-align:center;
+}
+#contato .pcontent-def{
+	padding:30px 20px 20px;
+	color:#FFF;
+}
+#contato .h1{
+	font-size:32px;
+	color:#FFF;
+	margin-bottom:10px;
+}
+#contato span{
+	font-size:20px;
+}
+#contato a{
+	display:inline-block;
+	font-size:22px;
+	color:#FFF;
+	background-color:#EFA465;
+	padding:8px 16px;
+	text-decoration:none !important;
+	margin-top:30px;
+}
+#contato a strong{
+	font-weight:400;
+}
+#contato a:hover{
+	background-color:#C26314;
+}
+#servicos-destaque.home-marcas-destaque{
+	padding: 36px 0 20px 0 !important;
+}
+.home-marcas{
+	font-size: 12px;
+	text-align: center;
+	padding-top: 16px;
+}
+@media screen and (max-width: 767px) {
+	.s-consultoria .h1, .s-mkt .h1, .s-psw .h1{
+		font-size:20px;
+	}
+	.s-consultoria .h2, .s-mkt .h2, .s-psw .h2{
+		font-size:24px;
+	}
+	.htab{
+		float:none;
+		clear:both;
+		width:100% !important;
+	}
+	#servicos-destaque .destaque{
+		margin-bottom:20px;
+	}
+}
+@media screen and (max-width: 767px) and (orientation : landscape) {
+	.pcontent.def1 {
+	  padding: 4%;
+	}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+	.s-consultoria .h1, .s-mkt .h1, .s-psw .h1{
+		font-size:20px;
+	}
+	.s-consultoria .h2, .s-mkt .h2, .s-psw .h2{
+		font-size:24px;
+	}
+}
+@media screen and (max-width: 965px) {
+	#empresa .pcontent-def{
+		padding:20px;
+	}
+	#empresa .pcontent-def span{
+		width:100% !important;
+		margin-bottom:40px;
+	}
+	#empresa img{
+		display:none !important;
+	}
+	
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) { 
+    .htab .h1, .htab h1{
+		font-size:22px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 912px) { 
+    #marketing{
+		float:none;
+		clear:both;
+		width:100%;
+	}
+	#fabrica, #presenca-web{
+		width:50%;
+	}
+	.htab .h1{
+		font-size:32px !important;
+	}
+}

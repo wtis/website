@@ -1,0 +1,254 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Servidor Dedicado Windows - Hospedagem - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.dedicado.classico.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//$(".accordion").tabs(".accordion div.accordion-pane", {tabs: 'h5', effect: 'slide', initialIndex: null});
+	//$(".accordion").accordion({ clearStyle: true, icons: { "header": "ui-icon-plus2", "headerSelected": "ui-icon-minus2" } });
+	$('.accordion h5').click(function(){
+		$(this).parent().find('div.accordion-pane.selected').removeClass('selected').slideToggle();
+		$(this).next().slideToggle().addClass('selected');
+	});
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+<div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.jpg') }}" style="float:none; margin:auto" /></div>
+<div class="clearfloat"></div>
+</div>-->
+
+<div class="hospedagemContent windows">
+	
+    <div class="server-img"><img src="{{ asset('images/2012/icons/ico_windows.png') }}" /></div>
+    <div class="clearfloat"></div>
+	<h1 class="title0 no-margin-top">Simplefique com um <strong>Servidor Windows</strong></h1>
+	<h3 class="title0b">Implantação e configuração simplificadas com a interface familiar do sistema operacional mais popular do mundo.</h3>
+	
+    <div class="clearfloat"></div>
+
+<div class="boxesCenter">
+    <div class="boxesCenter box">
+      <div class="boxesCenterPadding" style="min-height:500px">
+        	
+            <!-- TABS -->
+        <div class="table-func dedicado-windows">
+        
+                    <ul class="options">
+                        <li id="selector1" class="active"><a href="javascript:void(0)">Por que escolher Windows?</a></li>
+                        <li id="selector2"><a href="javascript:void(0)">Grande variedade de edições</a></li>
+                        <li id="selector3"><a href="javascript:void(0)">Ferramentas de banco de dados</a></li>
+                        <li id="selector4"><a href="javascript:void(0)">Plataforma Web da Microsoft</a></li>
+                        <li id="selector5"><a href="javascript:void(0)">Instalador fácil de usar</a></li>
+                        <li id="selector6"><a href="javascript:void(0)">Pronto para revender</a></li>
+                        <li id="selector7"><a href="javascript:void(0)">Soluções de alta disponibilidade</a></li>
+                        <li id="selector8" class="disabled"><a href="javascript:void(0)"></a></li>
+                    </ul>
+                    
+                    <div class="content">
+                        <div id="content1">
+                            <div style="position:absolute; z-index:999; width:187px; height:280px; right:0; top:20px;"><img src="{{ asset('images/2012/pages/hospedagem/abas/windowsServer.png') }}" alt="Tab1" /></div>
+                            <div class="tab-content-title segoiUI">Por que escolher o Windows?</div>
+                            <div style="font-size:13px">
+                                Com o Windows Web Server você pode implantar rapidamente sites,<br /> aplicações e web services. Construir aplicações robustas e escaláveis.<br /> O <strong>Parallels ® Plesk Panel</strong> fornece um ambiente totalmente <br />automatizado com acesso a centenas de aplicativos baseados na Web.<br />
+                                <br />
+                                <span class="ok">Confiável e seguro</span>
+                                <span class="ok">Flexível e escalável</span>
+                                <span class="ok">Feito sob medida para os usuários da Web</span>
+                            </div>
+                      </div>
+                        <div id="content2" class="oculto windows">
+                            <div class="tab-content-title segoiUI">Grande variedade de edições</div>
+                            <div style="font-size:13px">
+                                <!-- AC START -->
+                                <div class="accordion">
+                                	
+                                    <h5><font><font>&raquo; Web Edition</font></font></h5>
+                                  <div class="accordion-pane selected" style="display:block">
+                                    <p><font><font>Uma poderosa plataforma  de aplicações e serviços web concebidos exclusivamente como um servidor voltado para a Internet. </font><font>Ela oferece uma administração melhorada e ferramentas de diagnóstico para ajudar a reduzir os custos de infra-estrutura.</font></font></p>
+                                    </div>
+                                    
+                                    <h5><font><font>&raquo; Standard Edition</font></font></h5>
+                                    <div class="accordion-pane">
+                                    <p><font><font>O mais robusto sistema operacional Windows Server até o momento. </font><font>Ele oferece ferramentas poderosas que dão a você mais controle sobre seus servidores, agiliza e simplifica a configuração de tarefas de gestão.</font></font></p>
+                                    </div>
+                                    
+                                    <h5><font><font>&raquo; Enterprise Edition</font></font></h5>
+                                    <div class="accordion-pane">
+                                      <p><font><font>Uma plataforma de servidor avançada que fornece uma solução de custo eficaz e confiável para projetos críticos. </font><font>Ele oferece recursos inovadores para economia de energia e gerenciamento do servidor.</font></font></p>
+                                    </div>
+                                    
+                                    <h5><font><font>&raquo; Datacenter Edition</font></font></h5>
+                                    <div class="accordion-pane"><p><font><font>Uma plataforma de classe empresarial para a implantação de aplicações críticas de negócio em servidores pequenos e grandes. </font><font>Ele melhora a disponibilidade e melhora o gerenciamento de energia.</font></font></p>
+                                    </div>
+                                </div>
+                                <!-- AC END -->
+                            </div>
+                        </div>
+                        <div id="content3" class="oculto" style="position:relative">
+                           <div style="position:absolute; z-index:999; width:248px; height:312px; right:0; top:-22px;"><img src="{{ asset('images/2012/tabs/database.png') }}" alt="Tab3" /></div>
+                            <div class="tab-content-title segoiUI">Ferramentas de banco de dados</div>
+                            <div style="font-size:13px">
+                                <div class="tab-width">
+                                  <font><font>
+                                      Poderoso banco de dados, o Servidor SQL 2008 R2 oferece recursos inovadores que irão permitir que sua empresa expanda com confiança suas operações de bancos de dados, melhore a eficiência de TI e desenvolvimento, e possibilite Business Intelligence altamente expansível e bem gerenciado de maneira self-service para seus usuários.
+                                  </font></font></p>
+                                    <ul class="list-check">
+                                      <li class="ok"><font><font>Plataforma confiável e escalável</font></font></li>
+                                      <li class="ok"><font><font>Mais eficiência para desenvolvedores</font></font></li>
+                                      <li class="ok"><font><font>Baixo custo, mais benefícios</font></font></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content4" class="oculto">
+                            <div class="tab-content-title segoiUI">Plataforma Web da Microsoft</div>
+                            <div style="font-size:13px">
+                                <ul>
+                                	<li>
+                                    	<img alt="Framework ASP.NET" class="pull-left" src="{{ asset('images/2012/icons/boxASP.png') }}">
+                                        <h3>&nbsp; Framework ASP.NET</h3>
+                                        <p>Um completo  framework  que ajuda você a criar soluções de ponta para web facilmente.</p>
+                                    </li>
+                                    <li>
+                                    	<img alt="IIS Web Server" class="pull-left" src="{{ asset('images/2012/icons/boxIIS.png') }}">
+                                        <h3>&nbsp; IIS Web Server</h3>
+                                        <p>Hopede com confiança aplicações em ASP.NET e também aplicações web em PHP.</p>
+                                    </li>
+                                    <li>
+                                    	<img alt="SQL Server" class="pull-left" src="{{ asset('images/2012/icons/boxSQL.png') }}">
+                                        <h3>&nbsp; SQL Server</h3>
+                                        <p>Um poderoso motor de banco de dados completo para executar e criar poderosos bancos dados.</p>
+                                    </li>
+                                    <li>
+                                    	<img alt="Ferramentas de Desenvolvimento" class="pull-left" src="{{ asset('images/2012/icons/boxDevTools.png') }}">
+                                		<h3>&nbsp; Developer Tools</h3>
+                                		<p>Ferramentas (Built-in) de desenvolvimento para construção de sites, aplicações e serviços baseados em padrões web.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="content5" class="oculto">
+                            <div class="tab-content-title segoiUI">Instalador fácil de usar</div>
+                            <div style="font-size:13px">
+                                <div class="tab-width">
+                                	O Microsoft Web Platform Installer é uma ferramenta gratuita que facilita para obter as últimas atualizações de componentes da plataforma da Microsoft. Além disso, facilita a utilização dos mais populares aplicativos web gratuitos para blogs, gerenciamento de conteúdo e muito mais.<br /><br />
+
+                                    <ul>
+                                    	<li class="ok">Disponível para download gratuito</li>
+                                    	<li class="ok">Sempre inclui as atualizações mais recentes</li>
+                                    	<li class="ok">Aplicativos web populares podem ser instalados facilmente</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content6" class="oculto">
+                            <div class="tab-content-title segoiUI">Pronto para Revender</div>
+                            <div style="font-size:13px">
+                                <div class="tab-width">
+                                	Transforme facilmente seu servidor Windows em uma solução completa de Web hosting. O opcional Parallels ® Plesk Panel fornece o faturamento totalmente automatizado, relatórios e acesso a centenas de aplicativos baseados na Web.<br /><br />
+                                    
+                                    <ul>
+                                    	<li class="ok">Projetado para simplificar a administração do site</li>
+                                    	<li class="ok">Interface fácil de usar</li>
+                                    	<li class="ok">Maior segurança e desempenho</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content7" class="oculto">
+                            <div class="tab-content-title segoiUI">Soluções de alta disponibilidade</div>
+                            <div style="font-size:13px">
+                                Se você deseja alcançar alta disponibilidade, o nosso <strong>cluster web gerenciado</strong>, com balanceamento de carga e replicação de dados, é a maneira perfeita para começar. 								Conte com nossos especialistas em infra-estrutura para determinar suas necessidades. Vamos ajudá-lo a projetar e construir a infra-estrutura adequada para você.
+                                <br /><br />
+                              <img src="{{ asset('images/2012/tabs/featureCluster.png') }}" />
+                          </div>
+                        </div>
+                  </div>
+                
+              </div>
+            <!-- END TABS -->
+            
+            <div class="clearfloat"></div>
+            <br />
+            
+           	<a name="comprar"></a>
+        	<h1 class="title0 no-margin-top margin-bottom"><strong>Escolha</strong> seu servidor</h1>
+            
+            <div class="clearfloat"></div>
+          <!-- LISTA PLANOS -->
+            <div class="table-default dedicado">
+                <table class="views-table">
+                    <thead>
+                        <tr>
+                            <th class="views-field views-field-title"><font><font>
+                                Servidor        </font></font></th>
+                            <th class="views-field views-field-field-cpu-specs-value"><font><font>
+                                CPU        </font></font></th>
+                            <th class="views-field views-field-field-ram-value"><font><font>
+                                Memória       </font></font></th>
+                            <th class="views-field views-field-field-storage-value"><font><font>
+                                Armazenamento        </font></font></th>
+                            <th class="views-field views-field-field-traffic-value"><font><font>
+                                Tráfego        </font></font></th>
+                            <th class="server-price"><font><font>
+                                Preço        </font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{% set i = 0 %}
+                    	{% for plano in planos %}
+                        <tr {% if i==1%}class="even"{% endif %}>
+                            <td>
+                            	<font>{{ plano.servidor }}</font> <i class="status-Value"></i>
+                            </td>
+                            <td>
+                            	<font>{{ plano.cpu }}</font>
+                            </td>
+                            <td>
+                            	<font>{{ plano.ram }}</font>
+                            </td>
+                            <td>
+                            	<font>{{ plano.storage }}</font></td>
+                            <td>
+                            	<font>{{ plano.trafego }}</font>
+                            </td>
+                            <td width="200" class="server-price">
+                            	<font>R${{ plano.preco }}</font> <a href="#" class="btn azul" style="margin:0"><i class="glyphicon glyphicon-shopping-cart"></i> <strong>Contratar</strong></a>
+                            </td>
+                        </tr>
+                            {% if i==0 %}
+                                {% set i = i+1 %}
+                            {% else %}
+                                {% set i = 0 %}
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- FIM LISTA PLANOS -->
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

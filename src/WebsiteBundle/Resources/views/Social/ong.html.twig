@@ -1,0 +1,73 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Site e Consultoria de TI para ONGs totalmente grátis - Wtis Social</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+<meta name="description" content="Oferecemos todo apoio tecnológico para Organizações Não Governamentais (ONGs) sem fins lucrativos totalmente gratuito" />
+<meta property="og:title" content="Site e todo aporte tecnológico para ONGs Grátis" />
+<meta property="og:description" content="Site e Consultoria de TI para ONGs totalmente grátis." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/invert-menu.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/page.ong.css') }}" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/ong.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content ong">
+
+    <div class="ong-header">
+    	<div id="service-description" class="center-884">
+        	<div class="spacefix">
+            <h2>A Wtis apoia quem faz o bem para pessoas e para nosso planeta</h2>
+            <h1>Oferecemos todo apoio tecnológico para ONGs sem fins lucrativos totalmente gratuito</h1>
+            </div>
+            <div class="clearboth"></div>
+            <div class="col1" data-sr="enter top ease-in-out wait 4.5s">
+            	<p>Qualquer organização não governamental sem fins lucrativos precisa de aporte tecnológico, como um portal para divulgar suas ações, captar pessoas e doações, integrar com as redes sociais, fazer campanhas online e muito mais.<br /><br />
+                A <strong>Wtis Social</strong> oferece toda consultoria e execução sem nenhum custo, pois apoiamos iniciativas para ajudar pessoas e melhorar nosso planeta :)
+                <br />
+                <a href="#como-inscrever" class="inscricao scroll">Quero inscrever minha ONG</a> </p>
+            </div>
+            <div class="col2" data-sr="enter top ease-in-out wait 4.5s">
+            	<p class="title">O que fazemos</p>
+                <div class="clearboth"></div>
+                <ul>
+                	<li><a href="{{ path('consultoria') }}">Consultoria de TI completa</a></li>
+                    <li><a href="{{ path('presenca-web') }}">Desenvolvimento do website/portal da ONG</a></li>
+                    <li><a href="{{ path('marketing') }}">Disponibilização de ferramentas de marketing</a></li>
+                    <li><a href="{{ path('marketing') }}">Execução de ações de marketing</a></li>
+                </ul>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+    
+    <div class="social-bg" data-sr="enter top ease-in-out"></div>
+    
+    <div class="bgwhite">
+    <div class="center">
+    	<a name="como-inscrever"></a>
+    	Precisamos saber se sua ONG se encaixa no perfil aceito pela Wtis para que possamos oferecer todo aporte tecnológico gratuito, para isto <strong>precisamos que nos envie o máximo de informações possíveis</strong>, conte-nos sobre a organização, o que faz, onde atua, quais os objetivos e qualquer informação, vídeo ou imagem que você considera importante para que possamos avaliar.<br /><br />
+        Com estas informações nossa equipe fará um levantamento para uma possível aprovação, em caso de sucesso, nós vamos oferecer todo apoio, consultoria e infraestrutura de TI para a ONG, que envolve vários serviços principalmente a criação do portal, campanhas online, marketing, integração com redes sociais, criação ou renovação da identidade visual, como logomarca, folders, banners, documentação impressa etc.<br /><br />
+        Junte e envie todas as informações para <a href="mailto:contato@wtis.com.br">contato@wtis.com.br</a>. Em caso de dúvidas <a href="#chat" class="init-chat">fale com um dos nossos consultores via chat</a>.<br /><br />
+        <img src="{{ asset('images/pages/ong/logosocial.png') }}" alt="Wtis Social" />
+
+    </div>
+    </div>
+    
+</div>
+
+{% endblock %}

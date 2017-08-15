@@ -1,0 +1,336 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Servidor Dedicado Inteligente - Instalação em até 15 minutos - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.dedicado.classico.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="pageFullBannerSmart">
+    <div><img src="{{ asset('images/2012/pages/b_smart.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>
+
+<div class="hospedagemContent">
+
+	<!--<div class="titleFull segoiUI dedicado-title">O poder da <span>nuvem</span> em um servidor <span>dedicado</span></div>
+	<div class="subtitleFull segoiUI">Beneficie de grandes vantagens que não estão disponíveis<br />em quaisquer outros dedicados ou soluções de hospedagem.</div>-->
+    <br /><br />
+	
+    <div class="clearfloat"></div>
+    
+	<div class="default-features">
+    	<section class="main-features row grid-12 highlight">
+          <div class="wrapper">
+            <div class="col-3 first text-center">
+              <figure>
+                <img alt="Instalação Relâmpago" src="{{ asset('images/2012/icons/rapid-deployment.png') }}">
+              </figure>
+              <h3><font><font class="">Instalação Relâmpago</font></font></h3>
+              <p><font><font>Disponível em uma ampla gama de configurações de servidores, a nossa plataforma de provisionamento terá seu Servidor Inteligente instalado e funcionando em menos de 15 minutos.</font></font></p>
+            </div>
+            <div class="col-3 text-center">
+              <figure>
+                <img alt="Grande experiência do usuário" src="{{ asset('images/2012/icons/icon-ux.png') }}">
+              </figure>
+              <h3><font><font>Grande experiência do usuário</font></font></h3>
+              <p><font><font>Nós colocamos muito amor em nossa interface do usuário do Centro de Controle. A experiência do gerenciamento do servidor deve ser perfeita.</font></font></p>
+            </div>
+            <div class="col-3 text-center">
+              <figure>
+                <img alt="Tráfego ilimitado" src="{{ asset('images/2012/icons/icon-unmetered.png') }}">
+              </figure>
+              <h3><font><font>Tráfego ilimitado</font></font></h3>
+              <p><font><font>Tenha seu servidor inteligente na WTIS sem se preocupar com taxas de transferência de dados. É ilimitado!</font></font></p>
+            </div>
+            <div class="col-3 last text-center">
+              <figure>
+                <img alt="Múltipla Escolha de OS" src="{{ asset('images/2012/icons/multiple-os.png') }}">
+              </figure>
+              <h3><font><font>Múltipla Escolha de OS</font></font></h3>
+              <p><font><font>Quando você encomendar o seu Servidor Inteligente, você pode escolher entre o Windows Server ou várias distribuições Linux.</font></font></p>
+            </div>
+          </div>
+        </section>
+    </div>
+    
+    <div class="clearfloat"></div>
+
+<div class="boxesCenter">
+    <div class="boxesCenter box">
+        <div class="boxesCenterPadding" style="min-height:500px">
+            
+          	<div class="clearfloat"></div>
+       	  <!-- LISTA PLANOS -->
+            <div class="table-default dedicado">
+                <table class="views-table">
+                    <thead>
+                        <tr>
+                            <th class="views-field views-field-title"><font><font>CPU</font></font></th>
+                            <th class="views-field views-field-field-cpu-specs-value"><font><font>Memória</font></font></th>
+                            <th class="views-field views-field-field-ram-value"><font><font>Storage</font></font></th>
+                            <th class="views-field views-field-field-storage-value"><font><font>
+                                RAID        </font></font></th>
+                            <th class="views-field views-field-field-traffic-value"><font><font>
+                                Tráfego        </font></font>
+                          </th>
+                            <th class="views-field views-field-field-traffic-value"><font><font>
+                          OS        </font></font></th>
+                            <th class="server-price"><font><font>
+                                Preço        </font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{% set i = 0 %}
+                    	{% for plano in planos %}
+                        <tr {% if i==1%}class="even"{% endif %}>
+                            <td><font>{{ plano.cpu }}</font></td>
+                            <td><font><del>{{ plano.ram }}</del> {{ plano.ram2 }}</font></td>
+                            <td><font>{{ plano.storage }}</font></td>
+                            <td>
+                            	<font>{{ plano.raid }}</font></td>
+                            <td>
+                            	<font>{{ plano.trafego }}</font>
+                            </td>
+                            <td width="160">
+                            	{% if 'windows'|test_object(plano.os) %}<i class="ios os-windows tip" title="Windows">Windows</i>{% endif %}
+                                {% if 'centos'|test_object(plano.os) %}<i class="ios os-centos tip" title="CentOS">CentOS</i>{% endif %}
+                                {% if 'debian'|test_object(plano.os) %}<i class="ios os-debian tip" title="Debian">Debian</i>{% endif %}
+                                {% if 'ubuntu'|test_object(plano.os) %}<i class="ios os-ubuntu tip" title="Ubuntu Server LTS">Ubuntu Server LTS</i>{% endif %}
+                            </td>
+                          <td class="server-price" width="170">
+                            	<strong>R${{ plano.preco }}</strong> <a href="#" class="btn btn-primary btn-blue blue2" style="margin:0"><font>Contratar</font></a>
+                            </td>
+                        </tr>
+                            {% if i==0 %}
+                                {% set i = i+1 %}
+                            {% else %}
+                                {% set i = 0 %}
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- FIM LISTA PLANOS -->
+            
+            <a name="o-que-e"></a>
+            <br />
+            <div class="subtitleFull segoiUI" style="margin-bottom:20px; text-align:left">Alimentado por uma camada inteligente</div>
+			Cada Servidor Inteligente é alimentado por uma Camada Inteligente, uma nova tecnologia de servidor de provisionamento desenvolvido com exclusividade.
+			<br />
+			<br />
+            Um Servidor Inteligente é uma nova geração de servidor dedicado trazendo vantagens de computação em nuvem para o servidor dedicado e elimina as limitações de <span class="boxesCenterPadding" style="min-height:500px">recursos</span> da computação em nuvem. O cliente estará comprando e utilizando um Servidor Inteligente da mesma forma que  um Servidor Dedicado clássico, exceto que a Camada Inteligente fica entre o hardware do servidor e do Servidor Inteligente. <br />
+            <br />
+            Na verdade, um Servidor Inteligente é uma máquina virtual que reside dentro da Camada Inteligente, em uma única peça de hardware de servidor e usando 100% dos recursos físicos do servidor. Há sempre um só Servidor Inteligente por servidor físico tornando o produto muito semelhante aos clássicos servidores dedicados.
+            <div class="table-default features">
+            <table class="features-table">
+              <thead>
+                <tr>
+                  <th class="first">&nbsp;
+                    
+                  </th>
+                  <th width="90">
+                    <strong><font><font>Servidores</font></font></strong>
+                    <br><font><font> 
+                    em Nuvem
+                  </font></font></th>
+                  <th width="90" class="featured-cell">
+                    <strong><font><font>Servidores</font></font></strong>
+                    <br><font><font> 
+                    Clássicos
+                  </font></font></th>
+                  <th width="90" class="last">
+                    <strong><font><font>Servidores</font></font></strong>
+                    <br><font><font> 
+                    Inteligentes
+                  </font></font></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="even">
+                  <td class="desc">
+                    <strong><font><font>Instalação rápida</font></font></strong>
+                  </td>
+                  <td width="80" class="text-center">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td width="80" class="text-center featured-cell">&nbsp;</td>
+                  <td width="80" bgcolor="#f2f2f2" class="text-center last">
+                    <span class="ico-sim"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="desc">
+                    <strong><font><font>Hardware dedicado</font></font></strong>
+                  </td>
+                  <td width="80" class="text-center">&nbsp;
+                    
+                  </td>
+                  <td width="80" class="text-center featured-cell">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td width="80" bgcolor="#f2f2f2" class="text-center last">
+                    <span class="ico-sim"></span>
+                  </td>
+                </tr>
+                <tr class="even">
+                  <td class="desc">
+                    <strong><font><font>Fácil migração</font></font></strong>
+                  </td>
+                  <td width="80" class="text-center">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td width="80" class="text-center featured-cell">&nbsp;</td>
+                  <td width="80" bgcolor="#f2f2f2" class="text-center last">
+                    <span class="ico-sim"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="desc">
+                    <strong><font><font>Rede ilimitada</font></font></strong>
+                  </td>
+                  <td width="80" class="text-center">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td width="80" class="text-center featured-cell">&nbsp;</td>
+                  <td width="80" bgcolor="#f2f2f2" class="text-center last">
+                    <span class="ico-sim"></span>
+                  </td>
+                </tr>
+                <tr class="even last">
+                  <td class="desc">
+                    <strong><font><font>Pronto para virtualização</font></font></strong>
+                  </td>
+                  <td width="80" class="text-center">&nbsp;
+                    
+                  </td>
+                  <td width="80" class="text-center featured-cell">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td width="80" bgcolor="#f2f2f2" class="text-center last">&nbsp;
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+            <hr size="1" color="#CCCCCC" />
+
+            <div class="recursos-title segoeUI">Recursos dos Servidores Clássicos</div>
+            <a name="recursos"></a>
+
+            <div class="aba1">
+                <ul class="aba">
+                    <li class="selected"><a href="javascript://" rel="confianca">Economia de tempo</a></li>
+                    <li><a href="javascript://" rel="performace">Performance</a></li>
+                    <li><a href="javascript://" rel="autonomia">Controle total</a></li>
+                    <li><a href="javascript://" rel="solucoes">Flexibilidade</a></li>
+                    <li><a href="javascript://" rel="recwindows">Recursos do Windows</a></li>
+                    <li><a href="javascript://" rel="reclinux">Recursos do Linux</a></li>
+                </ul>
+                <div class="abas-divs">
+                    <div class="border left"></div>
+                    <div class="border right"></div>
+                    <div class="contentBlock">
+                        <div class="content confianca" style="display:block">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Instalação Relâmpago</font></font></h3>
+                                  <p><font><font class="">Disponível em uma ampla gama de configurações de servidores, a nossa plataforma de provisionamento terá seu Servidor Inteligente instalado e funcionando em menos de 15 minutos (a partir do momento em que seu pagamento é confirmado).</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Migração Fácil</font></font></h3>
+                                  <p><font><font>Graças a camada Inteligente, seu ambiente de servidor é independente do hardware, que significa que pode ser facilmente migrado de um servidor dedicado para o outro sem o que se preocupar.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content performace">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Hardware dedicado</font></font></h3>
+                                  <p><font><font>Servidores inteligentes são servidores dedicados cujos recursos de hardware são 100% alocados para você. A segurança e integridade do servidor são reforçados. Seus dados críticos estarão completamente seguros.</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Super Inteligente</font></font></h3>
+                                  <p><font><font>Turbine o LAN em 1000Mbps, crie uma rede privada local, com grupos inteligentes, adicione um firewall para mais segurança, duplique a sua alocação de tráfego para 20TB. Tudo isso por apenas R$ 59/mês.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content autonomia">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Centro de Controle</font></font></h3>
+                                  <p><font><font>Em constante desenvolvimento, o nosso Centro de Controle lhe dá mais controle sobre o seu Servidor Inteligente. Novos recursos serão adicionados com freqüência e nossa equipe de analistas estão sempre atento às necessidades dos nossos clientes.</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Console Virtual</font></font></h3>
+                                  <p><font><font>Disponível em todos os servidores, o console virtual permite que você gerencie o seu servidor como se você estivesse no local. Você pode diagnosticar erros de sistema e controlar o servidor por meio de sua interface de usuário nativa gráfica.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                      </div>
+                        <div class="content solucoes">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Múltipla Escolha de OS</font></font></h3>
+                                  <p><font><font>Disponível em uma ampla gama de configurações de servidores. Quando você encomendar o seu Servidor Inteligente, você poderá escolher entre o Windows Server ou várias distribuições Linux (CentOS, Debian, Ubuntu ou FreeBSD).</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Rede Interna Avançada</font></font></h3>
+                                  <p><font><font>Servidores inteligentes estão prontos para ser configurados comunicando com vários servidores. Eles se beneficiam da conectividade de rede local gratuita e ilimitada, que é ideal para comunicações entre servidores locais.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content recwindows">
+                            <!-- TAB -->
+                          	{% include "WebsiteBundle:Produtos:include.dedicado.recursos.windows.html" %}
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content reclinux">
+                            <!-- TAB -->
+                            {% include "WebsiteBundle:Produtos:include.dedicado.recursos.linux.html" %}
+                            <!-- END TAB -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,348 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Servidor Dedicado Clássico - Hospedagem - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.dedicado.classico.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+<div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.jpg') }}" style="float:none; margin:auto" /></div>
+<div class="clearfloat"></div>
+</div>-->
+
+<div class="hospedagemContent">
+
+	<h1 class="title0">Escolha seu <strong>servidor</strong></h1>
+	<h2 class="title0b">Garantimos a disponibilidade 24 horas por dia, 7 dias por semana</h2>
+	
+    <div class="clearfloat"></div>
+    
+	<div class="default-features">
+    	<section class="main-features row grid-12 highlight">
+          <div class="wrapper">
+            <div class="col-3 first text-center">
+              <figure>
+                <img alt="Bare-metal Hardware" src="{{ asset('images/2012/icons/icon-baremetal.png') }}">
+              </figure>
+              <h3><font><font class="">Desempenho Bare-metal</font></font></h3>
+              <p><font><font>Obtenha todo o desempenho que você precisa da nova geração Xeon. </font><font>Suporte à aplicações I/O-intensive.</font></font></p>
+            </div>
+            <div class="col-3 text-center">
+              <figure>
+                <img alt="Totalmente customizável" src="{{ asset('images/2012/icons/icon-fullycustomizable.png') }}">
+              </figure>
+              <h3><font><font>Totalmente customizável</font></font></h3>
+              <p><font><font>Você escolhe as configurações de hardware e de software que melhor atender às suas necessidades.</font></font></p>
+            </div>
+            <div class="col-3 text-center">
+              <figure>
+                <img alt="Preparado para virtualização" src="{{ asset('images/2012/icons/icon-virtualizationready.png') }}">
+              </figure>
+              <h3><font><font>Preparado para virtualização</font></font></h3>
+              <p><font><font>Economize tempo e dinheiro, riscos operacionais mais baixos e chegar ao mercado mais rapidamente.</font></font></p>
+            </div>
+            <div class="col-3 last text-center">
+              <figure>
+                <img alt="Rock-Solid Network" src="{{ asset('images/2012/icons/icon-solid-network.png') }}">
+              </figure>
+              <h3><font><font>Rock-Solid Network</font></font></h3>
+              <p><font><font>Todos os servidores dedicados garantimos 100% de disponibilidade. Network & Power availability SLA</font></font></p>
+            </div>
+          </div>
+        </section>
+    </div>
+    
+    <div class="clearfloat"></div>
+
+<div class="boxesCenter">
+    <div class="boxesCenter box">
+        <div class="boxesCenterPadding" style="min-height:500px">
+            
+          <!-- LISTA PLANOS -->
+            <div class="table-default dedicado">
+                <table class="views-table">
+                    <thead>
+                        <tr>
+                            <th class="views-field views-field-title"><font><font>
+                                Servidor        </font></font></th>
+                            <th class="views-field views-field-field-cpu-specs-value"><font><font>
+                                CPU        </font></font></th>
+                            <th class="views-field views-field-field-ram-value"><font><font>
+                                Memória       </font></font></th>
+                            <th class="views-field views-field-field-storage-value"><font><font>
+                                Armazenamento        </font></font></th>
+                            <th class="views-field views-field-field-traffic-value"><font><font>
+                                Tráfego        </font></font></th>
+                            <th class="server-price"><font><font>
+                                Preço/mês        </font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{% set i = 0 %}
+                    	{% for plano in planos %}
+                        <tr {% if i==1%}class="even"{% endif %}>
+                            <td>
+                            	<font>{{ plano.servidor }}</font> <i class="status-Value"></i>
+                            </td>
+                            <td>
+                            	<font>{{ plano.cpu }}</font>
+                            </td>
+                            <td>
+                            	<font>{{ plano.ram }}</font>
+                            </td>
+                            <td>
+                            	<font>{{ plano.storage }}</font></td>
+                            <td>
+                            	<font>{{ plano.trafego }}</font>
+                            </td>
+                            <td class="server-price">
+                            	<strong>R${{ plano.preco }}</strong>&nbsp;<a href="#" class="btn btn-primary btn-blue" style="margin:0"><font>Contratar</font></a>
+                            </td>
+                        </tr>
+                            {% if i==0 %}
+                                {% set i = i+1 %}
+                            {% else %}
+                                {% set i = 0 %}
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="extra-features">
+                <p class="text-center">
+                    <strong><font><font>Todos os Servidores Dedicados</font></font></strong><font><font> 
+                    estão disponíveis com uma ampla gama de sistemas operacionais:
+                    </font></font><i class="os-windows"></i>
+                    <i class="os-centos"></i>
+                    <i class="os-debian"></i>
+                    <i class="os-ubuntu"></i>
+                </p>
+            </div>
+            <!-- FIM LISTA PLANOS -->
+            
+            <a name="o-que-e"></a>
+            <br />
+            <h2>O que é um Servidor Clássico?</h2><br />
+			Um Servidor Clássico irá atender às suas necessidades se você está com um orçamento médio ou quer investir em uma solução a nível empresarial.	Para aplicações de tráfego intenso, todos os Servidores Clássicos podem ser hospedados em nossa rede totalmente redundante e ilimitada.
+			<br /><br />
+			Servidores clássicos são ideais para configurações personalizadas.
+            <div class="table-default features">
+            <table class="features-table">
+              <thead>
+                <tr>
+                  <th class="first">&nbsp;
+                    
+                  </th>
+                  <th width="90">
+                    <strong><font><font>Servidores</font></font></strong>
+                    <br><font><font> 
+                    em Nuvem
+                  </font></font></th>
+                  <th width="90" class="featured-cell">
+                    <strong><font><font>Servidores</font></font></strong>
+                    <br><font><font> 
+                    Clássicos
+                  </font></font></th>
+                  <th width="90" class="last">
+                    <strong><font><font>Servidores</font></font></strong>
+                    <br><font><font> 
+                    Inteligentes
+                  </font></font></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="even">
+                  <td class="desc">
+                    <strong><font><font>Instalação rápida</font></font></strong>
+                  </td>
+                  <td class="text-center">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td bgcolor="#f2f2f2" class="text-center featured-cell">&nbsp;
+                    
+                  </td>
+                  <td class="text-center last">
+                    <span class="ico-sim"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="desc">
+                    <strong><font><font>Totalmente customizável</font></font></strong>
+                  </td>
+                  <td class="text-center">&nbsp;
+                    
+                  </td>
+                  <td bgcolor="#f2f2f2" class="text-center featured-cell">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td class="text-center last">&nbsp;
+                    
+                  </td>
+                </tr>
+                <tr class="even">
+                  <td class="desc">
+                    <strong><font><font>Preparado para virtualização</font></font></strong>
+                  </td>
+                  <td class="text-center">&nbsp;
+                    
+                  </td>
+                  <td bgcolor="#f2f2f2" class="text-center featured-cell">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td class="text-center last">&nbsp;
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="desc">
+                    <strong><font><font>Hardware dedicado</font></font></strong>
+                  </td>
+                  <td class="text-center">&nbsp;
+                    
+                  </td>
+                  <td bgcolor="#f2f2f2" class="text-center featured-cell">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td class="text-center last">
+                    <span class="ico-sim"></span>
+                  </td>
+                </tr>
+                <tr class="even last">
+                  <td class="desc">
+                    <strong><font><font>Suporte I / O aplicações intensivas</font></font></strong>
+                  </td>
+                  <td class="text-center">&nbsp;
+                    
+                  </td>
+                  <td bgcolor="#f2f2f2" class="text-center featured-cell">
+                    <span class="ico-sim"></span>
+                  </td>
+                  <td class="text-center last">&nbsp;
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+            <hr size="1" color="#CCCCCC" />
+
+            <div class="recursos-title segoeUI">Recursos dos Servidores Clássicos</div>
+            <a name="recursos"></a>
+
+            <div class="aba1">
+                <ul class="aba">
+                    <li class="selected"><a href="javascript://" rel="confianca">Confiança</a></li>
+                    <li><a href="javascript://" rel="performace">Performance</a></li>
+                    <li><a href="javascript://" rel="autonomia">Autonomia</a></li>
+                    <li><a href="javascript://" rel="solucoes">Soluções avançadas</a></li>
+                    <li><a href="javascript://" rel="recwindows">Recursos do Windows</a></li>
+                    <li><a href="javascript://" rel="reclinux">Recursos do Linux</a></li>
+                </ul>
+                <div class="abas-divs">
+                    <div class="border left"></div>
+                    <div class="border right"></div>
+                    <div class="contentBlock">
+                        <div class="content confianca" style="display:block">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Substituição de Hardware Garatida</font></font></h3>
+                                  <p><font><font class="">Nós montamos o seu servidor com componentes de alta qualidade, mas mesmo o melhor equipamento pode ter problemas. </font><font>Um disco rígido, uma placa-mãe ou uma fonte de alimentação está prestes a falhar? </font><font>Não tem problema! </font><font>Nossos técnicos irão substituir todo o hardware defeituoso em seu servidor no prazo de 4 horas, <strong>nós garantimos.</strong></font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Suporte 24/7/365</font></font></h3>
+                                  <p><font><font>Precisa de ajuda urgente às 3:00 da manhã? </font><font>Não entre em pânico! </font><font>Você não está sozinho. </font><font>Nossa equipe de especialistas está disponível para lidar com emergências 24 horas por dia, 7 dias por semana.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content performace">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Tráfego mensal gigante</font></font></h3>
+                                  <p><font><font>Todos os servidores clássicos são embalados com pelo menos 10 TB de tráfego mensal. </font><font>Se isso não é suficiente, por um preço baixo, você pode atualizar para uma solução com tráfego ilimitado. </font><font>Gráficos de largura de banda também estão disponíveis para que você possa monitorar seu uso.</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>100% Uptime de rede</font></font></h3>
+                                  <p><font><font>Um dos recursos que nossos clientes mais amam é a qualidade da nossa rede. </font><font>Estamos confiantes de que você vai adorar também. </font><font>Todos os servidores dedicados são apoiados por nossa rede e energia com 100%  SLA de disponibilidade.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content autonomia">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Reinicialização remota</font></font></h3>
+                                  <p><font><font>Quando um servidor deixa de responder, ele pode precisar ser reiniciado. </font><font>Felizmente, você não precisa esperar por nossa equipe de suporte  acessar seu servidor <font>fisicamente</font>. </font><font>Em vez disso, você pode usar o comando WTIS de reinicialização remota, a fim de trazer de volta o seu site on-line mais rápido e mais fácil.</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Totalmente customizável</font></font></h3>
+                                  <p><font><font>Servidores clássicos são ideais para configurações personalizadas. </font><font>Você escolhe as configurações de hardware e de software que melhor atender às suas necessidades. </font><font>Servidores clássicos suportam a instalação de tecnologias de virtualização.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                      </div>
+                        <div class="content solucoes">
+                            <!-- TAB -->
+                            <div class="box-container">
+                              <ul class="stars">
+                                <li>
+                                  <h3><font><font>Clusters Web</font></font></h3>
+                                  <p><font><font>Se você deseja alcançar alta disponibilidade, sem queimar o seu orçamento, nossos clusters web gerenciáveis com balanceamento de carga e replicação de dados é a maneira perfeita para começar.</font></font></p>
+                                </li>
+                                <li>
+                                  <h3><font><font>Serviços de firewalls</font></font></h3>
+                                  <p><font><font>Um firewall é o primeiro elemento em uma solução segura de hospedagem. </font><font>É um filtro entre o servidor e a Internet, que bloqueia as tentativas de acesso maliciosos, permitindo que o tráfego seja legítimo.</font></font></p>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content recwindows">
+                            <!-- TAB -->
+                          	{% include "WebsiteBundle:Produtos:include.dedicado.recursos.windows.html" %}
+                            <!-- END TAB -->
+                        </div>
+                        <div class="content reclinux">
+                            <!-- TAB -->
+                            {% include "WebsiteBundle:Produtos:include.dedicado.recursos.linux.html" %}
+                            <!-- END TAB -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

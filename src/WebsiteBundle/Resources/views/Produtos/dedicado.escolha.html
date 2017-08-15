@@ -1,0 +1,49 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Servidores Dedicados e Cloud com Gerenciamento Avançado - Wtis</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+<meta name="description" content="Servidores Dedicados e Cloud com Gerenciamento Avançado" />
+<meta property="og:title" content="Produtos Wtis | Servidores Cloud e Dedicados" />
+<meta property="og:description" content="Servidores Dedicados e Cloud com Gerenciamento Avançado." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/page.dedicado.css') }}" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/dedicado.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content dedicado">
+
+    <div class="dedicado-header">
+    	<div id="service-description" class="center-1156">
+            <h2>Foque no que realmente interessa</h2>
+            <h1>Esqueça os problemas para hospedar seu site e aplicações, contrate um servidor dedicado</h1>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+    
+    <section id="contrate">
+    	<div class="center-977">
+            <h2>A Wtis oferece infraestrutura em nuvem ou bare metal</h2>
+            <p data-sr="enter top ease-in-out wait 3s">Mesmo que você tenha muita experiência no assunto e somente quer contratar um servidor, recomendamos falar com um dos nossos consultores para entender melhor sua necessidade e oferecer a solução ideal, compatível e econômica para seu negócio.</p>
+            <a data-sr="enter top ease-in-out wait 3.2s" href="#chat" class="chat init-chat">Fale conosco via chat</a> 
+            <a data-sr="enter top ease-in-out wait 3.2s" href="#" class="meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Servidores Dedicados">Nós ligamos para você</a>
+        </div>
+    </section>
+    
+</div>
+
+{% endblock %}

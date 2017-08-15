@@ -1,0 +1,184 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>SMS Marketing - Envie SMS para Clientes - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Envie SMS para Clientes. SMS Marketing. Comunique-se com seu cliente onde ele estiver via SMS" />
+<meta property="og:title" content="Produtos Wtis | SMS Marketing" />
+<meta property="og:description" content="Envie SMS para Clientes. SMS Marketing com sistema completo. Crie Campanhas de SMS." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.sms-mkt.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content sms-mkt">
+
+    <div class="fullscreen background sms-header-bg">
+    </div>
+    
+    <div class="center-1156 relative">
+    	<div class="header-img2" data-sr="enter top ease-in-out 6rem wait 0.4s"><img src="{{ asset('images/pages/sms/exemplo1.png') }}" alt="SMS Exemplo"></div>
+    	<div class="atendimento-opcoes"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="SMS Marketing" class="button10 laranja no-icon meligue">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?a=add&pid=26" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+    </div>
+    
+	<section id="vantagens" class="center-977">
+    	<div class="default-title">
+        	<h1>Comunique-se com seu cliente onde ele estiver via SMS Marketing</h1>
+            <h2>Chegue a qualquer cliente em qualquer telefone móvel, em qualquer lugar. Uma solução para envio de SMS que se adapta ao seu negócio</h2>
+        </div>      
+        <span>
+        Imagine que você deseje enviar uma mensagem SMS para todos os seus clientes ou funcionários, todos eles com operadoras diferentes e podendo estar em qualquer lugar do mundo. Você precisaria enviar o seu SMS acrescentando o número de celular de todos os contatos à lista de contatos do seu telefone.<br><br>
+Mas fazê-lo desta forma seria bastante demorado e caro. Há outras coisas que você também precisa considerar. Por exemplo, o que você faria se centenas de pessoas respondeu a sua mensagem? E se eles queriam cancelar a inscrição de novas mensagens? Como você iria se certificar de que eles não irão mais receber um SMS no meio da noite?<br><br>
+A maneira mais simples e barata para enviar o seu SMS a todos, seria a de enviar a mensagem para WTIS SMS, através de uma das nossas APIs ou aplicativos de mensagens desenvolvido por nós.<br><br>
+O sistema WTIS SMS inteligentemente se certifica de que o SMS é entregue no momento certo, para o número do celular correto, no telefone correto, no país correto, em qualquer lugar do mundo. É simples assim.
+        </span>  
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="remetente-personalizado" class="pres-default right large center-1156">
+    	<div class="img" data-sr="enter bottom ease-in-out 60rem"><img src="{{ asset('images/pages/sms/img1.jpg') }}" alt="Remetente Personalizado"></div>
+        <div class="pcontent">
+            <h2>Remetente personalizado</h2>
+            <span>As suas mensagens de SMS podem aparecer com o nome, endereço ou número que quiser (desde que devidamente configurado).<br><br>Envie mensagens personalizadas e aumente ainda mais a credibilidade com seus clientes.</span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="preco" class="price-new center-1156">
+    	
+        <div class="default-title">
+        	<p class="h1">Nosso serviço é pré-pago e você paga pelo que utiliza</p>
+            <h2>Não há mensalidade, você compra envios que não expiram! O custo do envio é de <strong>R$ 0,15</strong> por SMS entregue.<br>Oferecemos desconto para grandes volumes.</h2>
+        </div>
+        
+        <div class="table-price-new">
+        	<div class="tips">
+            	<span class="tip tip1">Suporte comum</span>
+                <span class="tip tip2 color2">Suporte avançado</span>
+                <span class="service">SMS-SaaS</span>
+            </div>
+            <div class="ul-border"></div>
+            <div class="ptable">
+            <ul>
+            	<li>
+                	<div class="phover">
+                    	<div class="vtable">
+                        	<div class="cell">
+                    		<span><strong>5 envios</strong> para você testar nossa ferramenta</span>
+                            <a href="http://c.wtis.com.br/cart.php?a=add&pid=26" class="btn btn-success">Envie grátis</a>
+                            </div>
+                        </div>
+                    </div>
+                	<div class="pcell-padding">
+                        <p class="h3"></p>
+                        <p class="h1">5</p>
+                        <p class="h2">envios</p>
+                        <div class="price price free">Grátis</div>
+                        </div>
+                </li>
+                <li>
+                	<div class="phover">
+                    	<div class="vtable">
+                        	<div class="cell">
+                    		<span>Apenas <strong>R$ 675,00</strong></span>
+                            <a href="http://c.wtis.com.br/cart.php?a=add&pid=27" class="btn btn-primary btn-blue">Contratar agora</a>
+                            </div>
+                        </div>
+                    </div>
+                	<div class="pcell-padding">
+                        <p class="h3"></p>
+                        <p class="h1">5 mil</p>
+                        <p class="h2">envios</p>
+                        <div class="price">R$ 675</div>
+                        <div class="price price2">R$ 0,135 por envio</div>
+                    </div>
+                </li>
+                <li>
+                	<div class="phover">
+                    	<div class="vtable">
+                        	<div class="cell">
+                    		<span>Apenas <strong>R$ 1.275,00</strong></span>
+                            <a href="http://c.wtis.com.br/cart.php?a=add&pid=28" class="btn btn-primary btn-blue">Contratar agora</a>
+                            </div>
+                        </div>
+                    </div>
+                	<div class="pcell-padding">
+                        <p class="h3"></p>
+                        <p class="h1">10 mil</p>
+                        <p class="h2">envios</p>
+                        <div class="price">R$ 1.275</div>
+                        <div class="price price2">R$ 0,1275 por envio</div>
+                    </div>
+                </li>
+                <li>
+                	<div class="phover">
+                    	<div class="vtable">
+                        	<div class="cell">
+                    		<span>Apenas <strong>R$ 6.150,00</strong></span>
+                            <a href="http://c.wtis.com.br/cart.php?a=add&pid=29" class="btn btn-primary btn-blue">Contratar agora</a>
+                            </div>
+                        </div>
+                    </div>
+                	<div class="pcell-padding">
+                        <p class="h3"></p>
+                        <p class="h1">50 mil</p>
+                        <p class="h2">envios</p>
+                        <div class="price">R$ 6.150</div>
+                        <div class="price price2">R$ 0,12 por envio</div>
+                    </div>
+                </li>
+                <li>
+                	<div class="phover">
+                    	<div class="vtable">
+                        	<div class="cell">
+                    		<span>Apenas <strong>R$ 11.250,00</strong></span>
+                            <a href="http://c.wtis.com.br/cart.php?a=add&pid=30" class="btn btn-primary btn-blue">Contratar agora</a>
+                            </div>
+                        </div>
+                    </div>
+                	<div class="pcell-padding">
+                        <p class="h3"></p>
+                        <p class="h1">100 mil</p>
+                        <p class="h2">envios</p>
+                        <div class="price">R$ 11.250</div>
+                        <div class="price price2">R$ 0,1125 por envio</div>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            <div class="text-left">Clientes a partir de 50 mil envios tem direito ao <a href="{{ path('suporte') }}#avancado" target="_blank">Suporte Avançado</a>: Atendimento prioritário, visita presencial de um consultor, atendimento por email, chat ou telefone 24x7 pelo Contact Center. </div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="teste" class="center-1156">
+    	
+        <div class="default-title">
+        	<p class="h1">Faça um teste grátis e ganhe 5 envios!</p>
+            <p class="h2">Sem compromisso ou cobranças adicionais</p>
+            <div class="text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=26" class="btn btn-sucess btn-success btn-lg btn-verde">TESTAR GRÁTIS</a></div>
+        </div>
+        
+    </section>
+
+</div>
+{% endblock %}

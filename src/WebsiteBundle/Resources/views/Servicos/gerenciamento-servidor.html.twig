@@ -1,0 +1,174 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Gerenciamento e Monitoramento 24x7 de Servidores - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Gerenciamento e Monitoração 24x7 do seu Servidor." />
+<meta property="og:title" content="Serviços Wtis | Gerenciamento de Servidores" />
+<meta property="og:description" content="Gerenciamento e Monitoração 24x7 do seu Servidor." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.gerenciamento-servidores.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content gerserv">
+
+    <div class="fullscreen background gerserv-header-bg">
+    	<div class="bg-overlay"></div>
+    	<div class="center-1156">
+         <div class="fcontent">
+         	<h1 data-sr="enter top ease-in-out 6rem wait 0.1s"><strong>Gerenciamento</strong> de Servidores</h1>
+            <span data-sr="enter bottom ease-in-out 6rem wait 0.2s">Um serviço de consultoria especializada que acompanha o servidor do cliente, com ele, a WTIS disponibiliza uma equipe que se responsabiliza pelo gerenciamento e monitoração 24x7 do seu servidor.</span>
+            <div class="atendimento-opcoes"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Gerenciamento Servidores" class="button10 laranja no-icon meligue">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?gid=2" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+          </div>     
+         </div> 
+    </div>
+    
+    <section id="page-menu" class="page-menu">
+    	<ul>
+        	<li class="selected"><a href="#vantagens" class="scroll"><i class="icon2 r like focus"></i><span>Vantagens</span></a></li>
+            <li><a href="#recursos" class="scroll"><i class="icon2 r checked"></i><span>Módulos</span></a></li>
+            <li><a href="#price" class="scroll"><i class="icon2 r preco"></i><span>Preço</span></a></li>
+        </ul>
+    </section>
+    
+	<section id="vantagens" class="center-1156">
+    	<h2 class="h1">Cuide apenas do seu negócio e deixe que a WTIS gerencie o seu servidor</h2>
+        <ul>
+        	<li>
+            	<img data-sr="enter top ease-in-out 6rem wait 0.2s" src="{{ asset('images/pages/gerenciamento-servidor/monitoramento.jpg') }}" alt="Monitoramento">
+            	<h2>Monitoramento e gerenciamento pró-ativo</h2>
+				<span>Com o monitoramento e gerenciamento pró-ativo, um especialista irá garantir que seus servidores trabalhem com ótima velocidade e eficiência, monitorando RAM, CPU, espaço em disco e o bom funcionamento dos serviços em execução no servidor, e alertá-lo com antecedência da necessidade de aumentar a infraestrutura, evitando problemas inesperados.</span>
+            </li>
+          <li>
+            	<img data-sr="enter top ease-in-out 6rem wait 0.4s" src="{{ asset('images/pages/gerenciamento-servidor/seguranca.jpg') }}" alt="Atualização e Segurança">
+            	<h2>Atualização e Segurança</h2>
+				<span>O sistema operacional e os softwares instalados são atualizados assim que atualizações e patches de segurança tornam disponíveis. Configuração e monitoramento do Firewall.</span>
+            </li>
+          <li>
+            	<img data-sr="enter top ease-in-out 6rem wait 0.6s" src="{{ asset('images/pages/gerenciamento-servidor/relatorios.jpg') }}" alt="Relatórios mensais">
+            	<h2>Relatórios mensais</h2>
+				<span>Um relatório é entregue mensalmente com gráficos com estatísticas, tráfego de rede, uso de CPU e RAM e recomendações técnicas para intensificação do seu servidor.</span>
+            </li>
+            <li>
+            	<img data-sr="enter top ease-in-out 6rem wait 0.8s" src="{{ asset('images/pages/gerenciamento-servidor/contact-center.jpg') }}" alt="Consultoria especializada">
+            	<h2>Consultoria especializada</h2>
+				<span>Através do Contact Center, que pode ser por painel ou telefone, faça solicitações de ação em sua infraestrutura diretamente ao especialista.</span>
+            </li>
+        </ul>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="recursos" class="center-full azul">
+    	<div class="center-1156">
+    		<p class="h1">Módulos de gerenciamento disponíveis</p>
+            <ul>
+            	<li>
+                    <i data-sr="enter left ease-in-out 6rem" class="icon3 m2 webserver"></i>
+                    <h2>Gerenciamento Servidor Web</h2>
+                    <span><strong>Servidor Web</strong> Apache, Nginx ou IIS<br>
+                    <strong>Servidor FTP ou SSH</strong> publicação de arquivos<br>
+                    <strong>Aplicações em Linux</strong> PHP, Python, Ruby com banco MySQL ou PostgreSQL<br>
+                    <strong>Aplicações em Windows</strong> PHP, ASP.Net com MySQL ou SQL Server</span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem wait 0.2s" class="icon3 m2 config"></i>
+                    <h2>Gerenciamento Servidor Web com painel de controle</h2>
+                    <span><strong>cPanel: Hospedagem Linux para múltiplos sites</strong> com painel para gerência de múltiplos  domínios, servidor email, bancos de dados, FTP<br><br><strong>Plesk: Hospedagem Windows para múltiplos sites</strong> com painel para gerência de múltiplos  domínios, servidor email, bancos de dados, FTP</span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem wait 0.4s" class="icon3 m2 emailserver"></i>
+                    <h2>Gerenciamento Servidor Email</h2>
+                    <span><strong>Servidor de Email</strong><br>SmarterMail ou Zimbra<br>Antispam e Antivírus Premium<br>Commtouch<br>Features: Activesync, email mobile com push, colaboração, compartilhamento de contatos, calendários, chat online</span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem wait 0.6s" class="icon3 m2 streaming"></i>
+                    <h2>Gerenciamento Servidor Streaming</h2>
+                    <span><strong>Wowza media server</strong><br>Vídeo, áudio, ao vivo, on-demand, Compressão H.264/MPEG-4, Adaptive Bitrate, Stream direto de Câmeras IP, roda com clientes Flash, iPhone, Siverlight, Quicktime, Windows, Linux, Mac.<br><br><strong>Windows IIS Media Services</strong><br>Vídeo, áudio, ao vivo, on-demand, clientes Windows.</span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem wait 0.8s" class="icon3 m2 database"></i>
+                    <h2>Gerenciamento Servidor Banco de Dados</h2>
+                    <span><strong>Servidor MySQL</strong> Community Server ou Enterprise Edition<br><strong>Servidor PostgreSQL</strong> Opensource<br><strong>Servidor Firebird</strong> Opensource<br><strong>Servidor MongoDB</strongt> Opensource<br><br>Serviços opcionais como Replicação MySQL, Cluster MySQL e SQL Server <a href="#chat" class="init-chat" data-product="Replicação MySQL, Cluster MySQL e SQL Server">clique aqui</a>.</span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem wait 1.0s" class="icon3 m2 virtualization"></i>
+                    <h2>Gerenciamento de Virtualizadores</h2>
+                    <span>
+                    	<strong><i class=""></i>Openstack<br>
+                        Citrix XenServer<br>                        
+                        VMWare<br>                        
+                        Microsoft Hyper-V<br></strong>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="price" class="center-1156">
+   	<p class="h1">Preço</p>
+      <table class="table table-price">
+        <thead>
+       	  <tr>
+           	  <th class="item"></th>
+              <th class="descricao">Detalhes</th>
+              <th class="preco">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for produto in produtos %}
+       	  <tr>
+           	  <td>{{ produto.nome }}</td>
+              <td>{{ produto.descricao }}</td>
+              <td>R$ {{ produto.valor|number_format(2,',','.') }}/mês</td>
+          </tr>
+          {% endfor %}
+          <!--<tr>
+           	  <td>Gerenciamento Servidor Web com painel de controle</td>
+              <td>cPanel ou Plesk</td>
+              <td>R$ 200,00/mês</td>
+          </tr>
+          <tr>
+           	  <td>Gerenciamento Servidor Email</td>
+              <td>SmarterMail ou Zimbra</td>
+              <td>R$ 200,00/mês</td>
+          </tr>
+          <tr>
+           	  <td>Gerenciamento Servidor Streaming</td>
+              <td>Wowza media server ou Windows IIS Media Services</td>
+              <td>R$ 150,00/mês</td>
+          </tr>
+          <tr>
+            <td>Gerenciamento Servidor Banco de Dados</td>
+            <td>MySQL, PostgreSQL, Firebird e MongoDB</td>
+            <td>R$ 200,00/mês</td>
+          </tr>
+          <tr>
+            <td>Gerenciamento de Virtualizadores</td>
+            <td>Openstack, Citrix XenServer, VMWare e Microsoft Hyper-V</td>
+            <td>R$ 300,00/mês</td>
+          </tr>-->
+        </tbody>
+      </table>
+      <div class="text-right"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Gerenciamento Servidores" class="button10 laranja no-icon meligue">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?gid=2" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+      <!--<div class="price-alert">* Migração grátis para contas de email de no máximo 1GB de emails. Taxa adicional de R$ 4,90 por cada GB a ser migrado</div>-->
+    </section>
+
+</div>
+{% endblock %}

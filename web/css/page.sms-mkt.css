@@ -1,0 +1,99 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.sms-header-bg{
+	background:url(../images/pages/sms/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:374px;
+	position:relative;
+}
+.header-img2{
+	position:absolute;
+	top:-360px;
+	left:170px;
+}
+.atendimento-opcoes{
+	position:absolute;
+	top:-70px;
+	right:395px;
+}
+
+#vantagens{
+	margin:100px auto 40px auto;
+}
+#vantagens span{
+	display:block;
+	margin-top:34px;
+	font-size:16px;
+}
+#remetente-personalizado{
+	margin:30px auto;
+}
+#remetente-personalizado .pcontent{
+	margin-top:60px;
+	padding-left:60px;
+}
+#remetente-personalizado .img img{
+	margin-left:100px;
+}
+#preco{
+	margin-top:40px;
+}
+#teste .btn{
+	margin:20px 0 40px;
+}
+.table-price-new .text-left{
+	width:100%;
+}
+.table-price-new{
+	margin-bottom:60px;
+}
+.table-price-new h2, .table-price-new .h2{
+	padding-bottom:60px;
+}
+.table-price-new ul li .price{bottom:25px;}
+.table-price-new ul li .price2{
+	font-weight:300;
+	font-size:13px;
+	bottom:10px;
+}
+@media screen and (max-width: 767px) {
+	.sms-header-bg {
+	  height: 300px;
+	  position: relative;
+	}
+	.header-img2 {
+		display:none;
+	}
+	.atendimento-opcoes {
+	  position: relative;
+	  top: 0;
+	  right: 0;
+	}
+	#vantagens {
+	  margin: 0;
+	  padding:15px;
+	}
+	#remetente-personalizado .pcontent {
+	  margin-top: 20px;
+	  padding-left: 0;
+	  padding:15px;
+	}
+	.pres-default.large .pcontent {
+	  width: 100% !important;
+	  float: none !important;
+	}
+	#remetente-personalizado .img img {
+	  margin-left: 0;
+	}
+	.pres-default.large .img {
+	  width: 100% !important;
+	}
+	.pres-default.right .img, .pres-default.right .pcontent {
+	  float: none !important;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

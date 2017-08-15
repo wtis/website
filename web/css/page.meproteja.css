@@ -1,0 +1,301 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.meproteja-header{
+	background:url(../images/pages/meproteja/header-bg.jpg) top center no-repeat;
+	height:560px;
+	position:relative;
+}
+.meproteja-header #service-description{
+	padding-top:100px;
+}
+
+.meproteja-header h2{
+	display:block;
+	overflow:hidden;
+	background:url(../images/pages/meproteja/logo.png) no-repeat;
+	width:309px;
+	height:53px;
+	text-indent:-5000px;
+}
+.meproteja-header h1{
+	font-size:26px;
+	font-weight:300;
+	color:#666;
+	margin-bottom:4px;
+	max-width:539px;
+}
+.meproteja-header p{
+	font-size:18px;
+	font-weight:300;
+}
+.meproteja-header a.contrate{
+	display:inline-block;
+	background-color:#00B259;
+	margin:20px 0 0 0;
+	padding:8px 16px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:15px;
+	text-decoration:none !important;
+}
+.meproteja-header a:hover.contrate{
+	opacity:0.6;
+}
+.meproteja-header a.contrate.contato{
+	background-color:#FFF;
+	color:#666;
+}
+
+i.el{
+	display:block;
+	background:url(../images/pages/meproteja/icons.png);
+	height:86px;
+	max-width:120px;
+	margin:auto;
+}
+i.el.i1{
+	background-position:0 0;
+	width:98px;
+}
+i.el.i2{
+	background-position:-98px 0;
+	width:119px;
+}
+i.el.i3{
+	background-position:-217px 0;
+	width:88px;
+}
+ul.features{
+	margin:42px auto 0;
+	padding:0;
+}
+ul.features li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+ul.features li a{
+	display:block;
+	float:left;
+	font-size:15px;
+	color:#666;
+	font-weight:500;
+	text-decoration:none !important;
+	text-align:center;
+	width:141px;
+	margin-left:48px;
+	position:relative;
+}
+ul.features li a:after{
+	content:"";
+	width:40px;
+	height:1px;
+	background-color:#333333;
+	position:absolute;
+	right:-45px;
+	top:50px;
+}
+ul.features li:last-child a:after{
+	display:none;
+}
+ul.features li a:hover{
+	opacity:0.8;
+}
+ul.features li:first-child a{
+	margin-left:0;
+}
+ul.features li i{
+	margin-bottom:18px;
+}
+
+.full-description{
+	padding:70px 0 0 0;
+}
+.full-description .item-desc{
+	margin-bottom:82px
+}
+.full-description img.pull-right{
+	margin:0 0 100px 20px;
+}
+.full-description img.pull-left{
+	margin:0 20px 100px 0;
+}
+
+#quanto-custa .default-title{
+	padding:20px 0 20px 0;
+}
+#quanto-custa .box{
+	padding:0 25px 35px 25px !important;
+}
+#quanto-custa .box h1, #quanto-custa .box .h1{
+	font-size:26px;
+	color:#333;
+}
+#quanto-custa .btn-left{
+	float:left;
+	width:24%;
+}
+#quanto-custa .btn-text-right{
+	float:left;
+	font-size:11px;
+	width:70%;
+}
+.table-price-new .tips .tip1{width:312px;left:174px}
+.table-price-new .tips .tip2{width:270px;left:755px}
+.table-price-new .text-left{width:100%}
+#servicos-adicionais{
+	margin:20px 0;
+}
+#servicos-adicionais .default-title h2, #servicos-adicionais .default-title .h2{
+	color:#666666 !important;
+}
+#servicos-adicionais .exemplos{
+	text-align:center;
+}
+#servicos-adicionais .exemplos .img1{
+	padding-right:42px;
+}
+#servicos-adicionais h3, #servicos-adicionais .h3{
+	text-align:center;
+	margin:25px 0;
+}
+.table-price-new.min{
+	width:462px;
+	margin:auto;
+}
+.table-price-new.min .price{
+	position:inherit;
+	margin-top:30px;
+	text-align:center;
+}
+.table-price-new.min .pcell-padding{
+	padding-bottom:0;
+}
+.table-price-new.min a{
+	padding-top:10px;
+	display:block;
+	font-size:18px;
+}
+.table-price-new {
+    margin-top: 20px;
+}
+.default-title > h1, .default-title > .h1 {
+    margin-top:50px;
+}
+
+@media screen and (max-width: 1000px) {
+	#service-description{
+		padding-left:20px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.meproteja-header #service-description{
+		padding-top:40px;
+	}
+	.meproteja-header h1{
+		font-size:18px;
+	}
+	.full-description{
+		padding:20px;
+	}
+	ul.features li a{
+		width:20%;
+		font-size:13px;
+	}
+	i.el.i1, i.el.i2, i.el.i3{
+		width:100%;
+		background-size:300%;
+		background-repeat:no-repeat;
+		margin-bottom:0;
+	}
+	i.el.i2{
+		background-size:270%;
+		background-position:-62px 0;
+	}
+	i.el.i3{
+		background-size:280%;
+		background-position:-138px 0;
+	}
+	ul.features li a:after{
+		display:none;
+	}
+	.full-description img.pull-right, .full-description img.pull-left{
+		float:none !important;
+		display:block;
+		margin:auto;
+		margin-bottom:15px;
+	}
+	.box {
+	  display: block;
+	  padding:15px;
+	  text-align:center;
+	  width: 100%;
+	  margin: 17px auto;
+	  background-color: #FFFFFF;
+	  padding: 15px;
+	  padding-left: 15px;
+	  position: relative;
+	  min-height: auto;
+	}
+	.box.etapa1 .img {
+	  left: 0;
+	}
+	.box .img {
+	  position: relative;
+	  left: 0;
+	  top: 0;
+	}
+	.lista-vantagens{
+		padding:15px;
+	}
+	.lista-vantagens li {
+	  display: block;
+	  position: relative;
+	  width: 100%;
+	  float: none;
+	  height: auto;
+	  padding-left: 78px;
+	  text-align:left;
+	  margin-bottom:25px;
+	}
+	.box .img{
+		margin-bottom:20px !important;
+	}
+	.box .img img{
+		width:100% !important;
+	}
+	.box.box2 .img {
+	  right: 0;
+	  left: none !important;
+	  margin-bottom:20px;
+	}
+	.box.box2 {
+	  padding: 15px !important;
+	  padding-left: 15px;
+	  padding-right: 15px !important;
+	}
+	.box.etapa4 span {
+	  display: block;
+	  padding-right: 0 !important;
+	}
+	#quanto-custa .btn-left, #quanto-custa .btn-text-right {
+	  float: none;
+	  width: 100%;
+	  margin-bottom:10px;
+	}
+	#servicos-adicionais .exemplos img{
+		width:100%;
+	}
+	#servicos-adicionais .exemplos .img1 {
+	  padding-right: 0;
+	}
+	.table-price-new.min {
+	  width: 100%;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

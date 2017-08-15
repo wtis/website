@@ -1,0 +1,235 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Servidores Dedicados - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.dedicado.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0">Servidores e tecnologia que se <strong>encaixam às suas necessidades</strong></h1>
+        <h2 class="title0b">Garantimos a disponibilidade 24 horas por dia, 7 dias por semana</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <h2 class="box-title">Servidores dedicados</h2>
+                <hr size="1" color="#CCCCCC">
+                
+                <div class="content-dedicado-dl">
+
+                    <dl class="server-content">
+                    	
+                        <dt class="server-name segoeUI">
+                        	Servidores Inteligentes <span style="font-size:16px">Um novo tipo de dedicado</span>
+                        </dt>
+                        <dd class="server-img">
+                       	  <a href="{{ path('dedicado_smart') }}"> <img src="{{ asset('images/2012/smart-servers-l.png') }}"> </a>
+                            <span>Apenas</span> R$ 299/mês
+                        </dd>
+                        <dd class="products-specs">
+                            <p>É um novo tipo de servidor dedicado que oferece tanto o poder de um Servidor Dedicado clássico e a flexibilidade da computação em nuvem. Ele usa virtualização, mas você tem o seu próprio hardware 100% dedicado.</p>
+                            <ul>
+                                <li>Instalação relâmpago <span style="font-size:80%">(no máximo 15 min.)</span></li>
+                                <li>Migração fácil</li>
+                                <li>100% de hardware dedicado</li>
+                                <li>Centro de Controle</li>
+                                <li>Opção SuperSmart</li>
+                                <li>Virtual Console</li>
+                            </ul>
+                        </dd>
+                        <dd class="actions">
+                       	  <a class="btn btn-primary btn-blue" href="{{ path('dedicado_smart') }}"><strong>Veja as opções e contrate</strong></a>
+                        </dd>
+                        
+                    </dl>
+                    
+                    <div class="clearfloat"></div>
+
+                </div>
+                
+                <hr size="1" color="#CCCCCC">
+                
+              <div class="content-dedicado-dl">
+
+                    <dl class="server-content">
+                    	
+                        <dt class="server-name segoeUI">
+                        	Servidores Clássicos <span style="font-size:16px">Simplesmente Dedicado</span>
+                      </dt>
+                        <dd class="server-img">
+                        	<a href="{{ path('dedicado_classico') }}"> <img src="{{ asset('images/2012/classic-servers-l.png') }}"> </a>
+                            <span>Apenas</span> R$ 299/mes
+                        </dd>
+                        <dd class="products-specs">
+                            <p>Uma grande variedade de servidores dedicados que oferece uma alta performance e confiabilidade para qualquer aplicação.</p>
+                            <ul>
+                                <li>Totalmente customizável</li>
+                                <li>Reinicialização remota</li>
+                                <li>Suporte 24/7/365</li>
+                                <li>Garantia de substituição de hardware</li>
+                                <li>Banda extrema</li>
+                            </ul>
+                        </dd>
+                        <dd class="actions">
+                        	<a class="btn btn-primary btn-blue" href="{{ path('dedicado_classico') }}"><strong>Veja as opções e contrate</strong></a>
+                        </dd>
+                        
+                    </dl>
+                    
+                    <div class="clearfloat"></div>
+
+                </div>
+                
+                <hr size="1" color="#CCCCCC">
+                
+                <div class="content-dedicado-dl">
+
+                    <dl class="server-content">
+                    	
+                        <dt class="server-name segoeUI">
+                        	Cloud Servers <span style="font-size:16px">O poder da nuvem</span>
+                        </dt>
+                        <dd class="server-img">
+                        	<a href="{{ path('dedicado_cloud') }}"> <img src="{{ asset('images/2012/cloud-servers-l.png') }}"> </a>
+                            <span>Apenas</span> R$ 299/mes
+                        </dd>
+                        <dd class="products-specs">
+                            <p>Aproveite de todo o poder da nuvem e não tenha encargos inesperados.</p>
+                            <ul>
+                                <li>Tráfego local ilimitado</li>
+                                <li> Armazenamento de alto desempenho</li>
+                                <li>Suporte 24/7/365</li>
+                                <li>Você paga apenas o que usar</li>
+                            </ul>
+                        </dd>
+                        <dd class="actions">
+                        	<a class="btn btn-primary btn-blue" href="{{ path('dedicado_cloud') }}"><strong>Veja as opções e contrate</strong></a>
+                        </dd>
+                        
+                    </dl>
+                    
+                    <div class="clearfloat"></div>
+
+              </div>
+                
+                <hr size="1" color="#CCCCCC">
+                
+              <div class="content-dedicado-dl">
+
+                    <dl class="server-content">
+                    	
+                        <dt class="server-name segoeUI">
+                        	Virtualization Ready. <span style="font-size:14px">vmware, Hyper-V, Parallels ou Xen</span>
+                        </dt>
+                        <dd class="server-img">
+                        	<a href="{{ path('dedicado_virtualization') }}"> <img src="{{ asset('images/2012/vready-servers-l.png') }}"> </a>
+                            <span>Apenas</span> R$ 299/mes
+                        </dd>
+                        <dd class="products-specs">
+                            <p>Maximize a eficiência de sua infra-estrutura com as nossas soluções de virtualização.</p>
+                            <ul>
+                                <li>Redução do risco operacional</li>
+                                <li>Padronize todos os seus sistemas</li>
+                                <li>Totalmente escalável</li>
+                                <li>Economize tempo e dinheiro</li>
+                            </ul>
+                        </dd>
+                        <dd class="actions">
+                        	<a class="btn btn-primary btn-blue" href="{{ path('dedicado_virtualization') }}"><strong>Veja as opções e contrate</strong></a>
+                        </dd>
+                        
+                    </dl>
+                    
+                    <div class="clearfloat"></div>
+
+                </div>
+                
+                <hr size="1" color="#CCCCCC">
+                <div class="content-dedicado-dl">
+
+                    <dl class="server-content">
+                    	
+                        <dt class="server-name segoeUI">
+                        	Servidores <span>Windows</span>
+                        </dt>
+                        <dd class="server-img">
+                        	<a href="{{ path('dedicado_windows') }}"> <img src="{{ asset('images/2012/windows-servers-l.png') }}"> </a>
+                            <span>Apenas</span> R$ 299/mes
+                        </dd>
+                        <dd class="products-specs">
+                            <p>Use a interface do Windows e outras soluções da Microsoft para construir aplicações rápidas e seguras de nível empresarial e serviços web.</p>
+                            <ul>
+                                <li>Grande variedade de edições</li>
+                                <li>Ferramentas de banco de dados</li>
+                                <li>Plataforma Web da Microsoft</li>
+                                <li>Fácil de usar e instalar</li>
+                                <li>Pronto para revender</li>
+                                <li>Soluções de alta disponibilidade</li>
+                            </ul>
+                        </dd>
+                        <dd class="actions">
+                        	<a class="btn btn-primary btn-blue" href="{{ path('dedicado_windows') }}"><strong>Veja as opções e contrate</strong></a>
+                        </dd>
+                        
+                    </dl>
+                    
+                    <div class="clearfloat"></div>
+
+                </div>
+                
+            </div>
+			
+            <!-- RIGHT -->
+            <div class="box mineRight">
+                <h2 class="box-title">Soluções avançadas</h2>
+                <hr size="1" color="#CCCCCC">
+                <div style="padding:25px; padding-top:15px; color:#666666;">
+                    <div class="solucoes1">
+                        <strong>Seu negócio está crescendo muito rápido: Você está preparado?</strong><br />
+                        Quaisquer que seja os desafios tecnológicos da sua empresa, a equipe de especialistas da WTIS está pronto para ajudá-lo a fazer um investimento lógico em sua infra-estrutura de hospedagem.
+                        <br /><br />
+                        Fale agora com um dos nossos especialistas
+                    </div>
+                </div>
+                <img src="{{ asset('images/2012/challenges.jpg') }}" />
+                <div class="clearfloat"></div>
+            </div>
+            
+            <div class="box mineRight mine">
+                <div style="padding:27px; padding-bottom:18px">
+                    <div class="leftTitle segoiUI">Fale conosco via chat</div>
+                </div>
+                <div style="text-align:center"><img src="{{ asset('images/2012/img_chat.jpg') }}" width="298" height="122" alt="Chat" /></div>
+                <div style="padding:27px; clear:both">
+                    <a href="#" class="btn btn-primary btn-blue blue2"><i class="glyphicon glyphicon-earphone"></i> Me ligue</a> <a href="#" class="btn btn-primary btn-blue blue2"><i class="glyphicon glyphicon-comment"></i> Fale via chat</a>
+                </div>
+            </div>
+            <!-- END RIGHT -->
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

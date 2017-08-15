@@ -1,0 +1,172 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+body{
+	background:url(../images/pages/ong/header-bg.png) top center no-repeat;
+}
+.center-884{
+	max-width:884px;
+	margin:auto;
+}
+.ong-header #service-description{
+	padding:179px 0 0 0;
+	color:#FFF;
+}
+#service-description{
+}
+.ong-header .spacefix{
+}
+.ong-header h2{
+	font-size:18px;
+	text-align:left;
+	color:#fff;
+	font-weight:500;
+	display:none;
+}
+.ong-header h2:after{
+	content:"_";
+	-moz-animation:cursor-blink 1s step-end infinite;
+	-webkit-animation:cursor-blink 1s step-end infinite;
+	animation:cursor-blink 1s step-end infinite;
+}
+.ong-header h2.nocursor:after{
+	content:"";
+}
+.ong-header h1{
+	font-size:28px;
+	font-weight:500;
+	color:#FFF;
+	margin-bottom:56px;
+	text-align:left;
+	display:none;
+}
+.ong-header h1:after{
+	content:"_";
+	-moz-animation:cursor-blink 1s step-end infinite;
+	-webkit-animation:cursor-blink 1s step-end infinite;
+	animation:cursor-blink 1s step-end infinite;
+}
+
+#service-description .col1{
+	float:left;
+	max-width:420px;
+	font-weight:500;
+	padding-top:42px;
+	visibility:hidden;
+}
+#service-description a.inscricao{
+	display:inline-block;
+	padding:10px 20px;
+	color:#FFF;
+	text-decoration:none !important;
+	font-size:15px;
+	font-weight:500;
+	background-color:#3CB02F;
+	margin-top:60px;
+	margin-right:6px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#service-description a.inscricao:hover{
+	background-color:#369F2B;
+}
+#service-description .col2{
+	float:right;
+	height:345px;
+	width:407px;
+	background:url(../images/pages/ong/col2-bg.png) center no-repeat;
+	visibility:hidden;
+}
+#service-description .col2 .title{
+	float:right;
+	display:block;
+	background-color:#FF8000;
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:16px;
+	padding:8px 14px 8px 25px;
+	text-align:right;
+	margin:20px 20px 0 0;
+}
+#service-description .col2 ul, #service-description .col2 li{
+	list-style:none;
+}
+#service-description .col2 ul{
+	padding:25px 20px 0;
+}
+#service-description .col2 ul li{
+	display:block;
+	font-size:15px;
+	color:#666;
+	font-weight:500;
+	padding:25px 0 6px 0;
+	border-bottom:#FCBA77 1px dashed;
+}
+#service-description .col2 ul li a{
+	color:#666;
+}
+.social-bg{
+	width:100%;
+	display:block;
+	max-width:1920px;
+	height:606px;
+	background:url(../images/pages/ong/social-bg.png) top center no-repeat;
+}
+.bgwhite{
+	background-color:#FFF;
+	display:block;
+	width:100%;
+}
+.bgwhite .center{
+	max-width:500px;
+	display:block;
+	margin:auto;
+	padding:50px 20px;
+}
+
+@-moz-keyframes cursor-blink {
+	from,to {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+@-webkit-keyframes cursor-blink {
+	from,to {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+@keyframes cursor-blink {
+	from,to {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.ong-header{
+		padding:20px;
+	}
+	#service-description .col1, #service-description .col2 {
+		float: none;
+		display:block;
+		width: 100%;
+		visibility:visible;
+		background-size:cover;
+	}
+	#service-description .col2{
+		margin-top:30px;
+	}
+	.social-bg{
+		display:none;
+	}
+}

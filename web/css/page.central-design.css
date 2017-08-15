@@ -1,0 +1,250 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.cdesign-header-bg{
+	background:url(../images/pages/cdesign/header-bg.jpg) top center no-repeat;
+	height:1038px;
+	position:relative;
+	margin-top:-10px;
+}
+.fcontent{
+	padding-top:287px;
+	width:650px;
+}
+.fcontent h2, .fcontent h3, .fcontent .h2, .fcontent .h3{
+	display:none;
+}
+.fcontent h1, .fcontent .h1{
+	font-size:22px;
+	color:#666666;
+	font-weight:300;
+	margin-bottom:50px;
+}
+.fcontent h1 strong, .fcontent .h1 strong{
+	font-weight:400;
+}
+.fcontent h2, .fcontent .h2{
+	font-size:30px;
+	color:#333333;
+	font-weight:300;
+	margin-bottom:0;
+}
+.fcontent h3, .fcontent .h3{
+	font-size:50px;
+	color:#333333;
+	font-weight:400;
+	margin-bottom:0;
+}
+.fcontent h3:after, .fcontent .h3:after {
+	-moz-animation:cursor-blink 1s step-end infinite;
+	-webkit-animation:cursor-blink 1s step-end infinite;
+	animation:cursor-blink 1s step-end infinite;
+	content:"";
+	border-left:1px solid #000;
+	padding-left:3px;
+	width:1px;
+	height:1em
+}
+.fcontent a.link{
+	display:block;
+	width:175px;
+	padding:8px 20px;
+	border:#e4e4e4 2px solid;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	position:relative;
+	font-size:17px;
+	color:#545454;
+	text-decoration:none;
+	margin-left:260px;
+	margin-top:20px;
+}
+.fcontent a.link i{
+	position:absolute;
+	right:5px;
+	top:7px;
+}
+.fcontent a.link i:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #999999;
+}
+
+.tab{
+	float:left;
+	width:25%;
+	padding:20px;
+	color:#FFF;
+	min-height:280px;
+}
+.tab h1, .tab .h1{
+	color:#FFF;
+}
+.tab.ivisual{
+	background-color:#28A9E2;
+}
+.tab.mimpressa{
+	background-color:#3A3A3A;
+}
+.tab.cpublicitaria{
+	background-color:#F45349;
+}
+.tab.ieanimacao{
+	background-color:#59C325; /*#EEC348;*/
+}
+#video{
+	width:100%;
+	height:600px;
+	position:relative;
+}
+#video .pcontent{
+	width:700px;
+	height:400px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	z-index:10;
+	color:#fff;
+	overflow:hidden;
+}
+#video .pcontent h1, #video .pcontent .h1{
+	color:#FFF;
+	text-align:center;
+}
+#video .pcontent span{
+	font-size:22px;
+	color:#FFF;
+	text-align:center;
+	display:block;
+	float:left;
+	border:#FFF 2px solid;
+	padding:30px;
+	width:49%;
+}
+#video .pcontent span.right{
+	float:right;
+}
+#video .cicle{
+	float:left;
+	width:32%;
+	border:#FFF 2px solid;
+	padding:20px;
+	text-align:center;
+	display:block;
+	margin-left:14px;
+	margin-top:10px;
+}
+#video .cicle.no-margin{
+	margin-left:0;
+}
+.bg-overlay.bgo0{
+	background-color:rgba(10,10,10,0.6);
+}
+#contato{
+	margin-bottom:30px;
+}
+#contato h1, #contato .h1{
+	text-align:center;
+	color:#666;
+	font-size:32px;
+	margin-top:30px;
+}
+#contato h2,#contato .h2{
+	margin-bottom:12px
+}
+
+@-moz-keyframes cursor-blink {
+	from,to {
+		border-color:transparent
+	}
+	50% {
+		border-color:#000
+	}
+}
+@-webkit-keyframes cursor-blink {
+	from,to {
+		border-color:transparent
+	}
+	50% {
+		border-color:#000
+	}
+}
+@keyframes cursor-blink {
+	from,to {
+		border-color:transparent
+	}
+	50% {
+		border-color:#000
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.tab{
+		width:50%;
+	}
+	.cdesign-header-bg{
+		background:#FFF;
+		height:auto;
+		margin-top:0;
+	}
+	.cdesign-header-bg .fcontent{
+		padding:20px !important;
+		text-align:center;
+		width:100% !important;
+	}
+	.cdesign-header-bg .fcontent h1,.cdesign-header-bg .fcontent .h1{
+		padding-top:50px;
+	}
+	.cdesign-header-bg .fcontent h2,.cdesign-header-bg .fcontent .h2{
+		text-align:center;
+		font-size:26px;
+	}
+	.fcontent a.link {
+	  margin-left: auto;
+	  margin-right:auto;
+	}
+	#video .pcontent {
+	  width: 100%;
+	  height: auto;
+	  position: relative;
+	  padding:20px;
+	}
+	#video .pcontent span, #video .pcontent span.right, #video .cicle {
+	  float: none;
+	  width: 100%;
+	  margin:8px auto;
+	  font-size: 22px;
+	}
+	#video {
+	  width: 100%;
+	  height: auto;
+	  position: relative;
+	}
+}
+@media screen and (max-width: 399px) {
+	.tab{
+		width:100%;
+		float:none;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+	.cdesign-header-bg .fcontent{
+		padding-left:20px;
+		padding-right:20px;
+	}
+	.cdesign-header-bg .fcontent h2, .cdesign-header-bg .fcontent .h2{
+		background-color:#FFF;
+	}
+}

@@ -1,0 +1,84 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Criador de Sites Grátis - Faça seu Site - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Crie sites completos com poucos cliques. É grátis." />
+<meta property="og:title" content="Produtos Wtis | Criador de Sites Grátis" />
+<meta property="og:description" content="Crie sites completos com poucos cliques. É grátis." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-criador').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>Criador de Sites</strong> Grátis</h1>
+        <h2 class="title0b">Simplicidade e facilidade para criar seu site sem pagar nada</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px">
+					
+                    Com o Criador de Sites você pode produzir e atualizar seu site com facilidade, são centenas de templates totalmente customizáveis. Esta ferramenta é bastante simples e amigável, sem precisar se preocupar com questões técnicas muito menos com alguma experiência em desenvolvimento web.
+                    <br />
+                    <br />
+                    <div class="clearfloat"></div>
+                    <div style="text-align:center"><img src="{{ asset('images/2012/construtor_sitebuilder.gif') }}" style="float:none; display:inline-block" /></div>
+                    <br />
+                    <h1 class="h1 segoeUI">Vantagens</h1>
+                    <br />
+                    <div class="features">
+                        <ul>
+                            <li>Várias opções de layouts</li>
+                            <li>Personalize as páginas do site</li>
+                            <li>Edite o conteúdo de forma rápida com opções avançadas</li>
+                            <li>Defina o título, descrição e palavras-chave para o site.</li>
+                            <li>Customize as meta tags do seu site.</li>
+                    	</ul>
+                    </div>
+                    <div class="clearfloat"></div>
+
+                </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Cloud Servers - Hospedagem em Nuvem - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.dedicado.classico.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBannerSmart">
+    <div><img src="{{ asset('images/2012/pages/b_smart.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="hospedagemContent">
+
+	<h1 class="title0">Começe dentro de uma <strong>nuvem</strong></h1>
+	<h2 class="title0b">Beneficie-se de uma nuvem poderosa e confiável, que não vai te encher de encargos inesperados.</h2>
+	
+    <div class="clearfloat"></div>
+    
+	<div class="default-features">
+    	<section class="main-features row grid-12 highlight">
+          <div class="wrapper">
+            <div class="col-3 first text-center">
+              <figure>
+                <img alt="Tráfego ilimitado" src="{{ asset('images/2012/icons/icon-unmetered.png') }}">
+              </figure>
+              <h3><font><font class="">Tráfego ilimitado</font></font></h3>
+              <p><font><font>Ligue servidores inteligentes e em nuvem juntos sem se preocupar com taxas de transferência de dados.</font></font></p>
+            </div>
+            <div class="col-3 text-center">
+              <figure>
+                <img alt="Grande experiência do usuário" src="{{ asset('images/2012/icons/icon-ux.png') }}">
+              </figure>
+              <h3><font><font>Grande experiência do usuário</font></font></h3>
+              <p><font><font>Nós colocamos muito amor em nossa interface do usuário do Centro de Controle. A experiência do gerenciamento do servidor deve ser perfeita.</font></font></p>
+            </div>
+            <div class="col-3 text-center">
+              <figure>
+                <img alt="Rock-Solid Network" src="{{ asset('images/2012/icons/icon-solid-network.png') }}">
+              </figure>
+              <h3><font><font>Rock-Solid Network</font></font></h3>
+              <p><font><font>A infra-estrutura do nosso datacenter foi classificada entre as 10 mais confiáveis do mundo. Hospede em uma nuvem que você pode confiar.</font></font></p>
+            </div>
+            <div class="col-3 last text-center">
+              <figure>
+                <img alt="Armazenamento de Alto desempenho" src="{{ asset('images/2012/icons/icon-high-performance.png') }}">
+              </figure>
+              <h3><font><font>Armazenamento de alto desempenho</font></font></h3>
+              <p><font><font>Nós criamos uma nuvem elegante que está projetada para a velocidade. Dedicado e disco altamente redundante? Confira.</font></font></p>
+            </div>
+          </div>
+        </section>
+    </div>
+    
+    <div class="clearfloat"></div>
+
+<div class="boxesCenter">
+    <div class="boxesCenter box">
+        <div class="boxesCenterPadding" style="min-height:500px">
+            
+          	<div class="clearfloat"></div>
+       	  <!-- LISTA PLANOS -->
+            <div class="table-default dedicado">
+                <table class="views-table">
+                    <thead>
+                        <tr>
+                            <th class="views-field views-field-title"><font><font>CPU</font></font></th>
+                            <th class="views-field views-field-field-cpu-specs-value"><font><font>Memória</font></font></th>
+                            <th class="views-field views-field-field-ram-value"><font><font>Storage</font></font></th>
+                            <th class="views-field views-field-field-traffic-value"><font><font>
+                                Tráfego        </font></font>
+                          </th>
+                            <th class="views-field views-field-field-traffic-value"><font><font>
+                          OS        </font></font></th>
+                            <th class="server-price"><font><font>
+                                Preço        </font></font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	{% set i = 0 %}
+                    	{% for plano in planos %}
+                        <tr {% if i==1%}class="even"{% endif %}>
+                            <td><font>{{ plano.cpu }}</font></td>
+                            <td><font style="font-size:18px">{{ plano.ram }}</font></td>
+                            <td><font>{{ plano.storage }}</font></td>
+                            <td>
+                            	<font>{{ plano.trafego }}</font>
+                            </td>
+                            <td>
+                            	<strong>CentOS</strong> Linux
+                            </td>
+                          <td class="server-price" width="180">
+                            	<strong>R${{ plano.preco }}</strong>&nbsp;<a href="#" class="btn btn-primary btn-blue" style="margin:0"><font>Contratar</font></a>
+                            </td>
+                        </tr>
+                            {% if i==0 %}
+                                {% set i = i+1 %}
+                            {% else %}
+                                {% set i = 0 %}
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- FIM LISTA PLANOS -->
+            
+            <div class="extra-features">
+                <p class="text-center">
+                    <strong>Incluso em todos os planos:</strong> um endereço IP + Tráfego Ilimitado + Rede sólida contínua + Suporte 24h para hardware e rede
+                </p>
+            </div>
+
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

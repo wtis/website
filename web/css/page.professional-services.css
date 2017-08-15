@@ -1,0 +1,381 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.psw-header-bg{
+	background:url(../images/pages/psw/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:630px;
+	position:relative;
+}
+.header-content{
+	text-align:right;
+	padding-top:16px;
+	padding-right:20px;
+}
+.header-content h1, .header-content .h1{
+	font-size:32px;
+	color:#666666;
+}
+.header-content h2, .header-content .h2{
+	padding-right:200px;
+	margin-top:-12px;
+	color:#666666;
+}
+.pos-header{
+	background-color:#F7F7F7;
+	text-align:center;
+	padding:12px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.pos-header h1, .pos-header .h1{
+	font-size:22px;
+	color:#666666;
+	margin:0;
+}
+.pos-header h1 strong, .pos-header .h1 strong{
+	font-size:28px;
+	font-weight:400;
+}
+.pos-header h1 span, .pos-header .h1 span{
+	font-size:14px;
+	color:#666666;
+}
+#service-description{
+	padding-top:40px;
+}
+#service-description .col1{
+	float:left;
+	width:523px;
+}
+#service-description .col1 h1, #service-description .col1 .h1{
+	color:#666666;
+}
+#service-description .col1 span{
+	font-size:14px;
+	display:block;
+	padding-bottom:30px;
+	
+}
+#service-description .col2{
+	float:right;
+	width:596px;
+}
+#service-description .col2 ul{
+	list-style:none;
+	list-style-type:none
+}
+#service-description .col2 ul li{
+	background-color:#F7F7F7;
+	display:block;
+	padding:20px 20px 20px 100px;
+	margin-bottom:10px;
+	position:relative;
+	font-size:14px;
+}
+#service-description .sd-icon{
+	position:absolute;
+	left:20px;
+	margin:auto;
+	top:0;
+	bottom:0;
+	overflow:hidden;
+}
+#vantagens{
+	margin-top:40px;
+}
+#vantagens .title h1, #vantagens .title .h1{
+	margin-bottom:40px;
+}
+#vantagens .title h1 strong, #vantagens .title .h1 strong{
+	font-weight:400;
+}
+#vantagens .vantagens{
+	background-color:#FFFFFF;
+	padding:25px 48px;
+}
+#vantagens .vantagens ul{
+	list-style:none;
+}
+#vantagens .vantagens ul li{
+	width:68px;
+	margin-left:52px;
+	display:inline-block;
+	text-align:center;
+}
+#vantagens .vantagens ul li:first-child{
+	margin-left:0;
+}
+#vantagens .vantagens .descricao{
+	padding-top:20px;
+}
+#price{
+	padding:40px 0 0 0 !important;
+}
+#price .col1{
+	width:744px;
+	float:left;
+}
+#price span{
+	font-size:13px;
+}
+#price form{
+	padding:24px;
+	margin:24px 0;
+	border:#DDDDDD 1px solid;
+	display:block;
+}
+#price .col2{
+	width:360px;
+	float:right;
+}
+#price .selo-garantia h2, #price .selo-garantia .h2{
+	font-size:26px;
+}
+#price ul.services{
+	list-style-type:none;
+	padding:3px 0 8px 0;
+}
+#price ul.services li a{
+	display:block;
+	background-color:#5D5D5D;
+	padding:14px 52px 14px 17px;
+	color:#FFFFFF;
+	font-size:14px;
+	margin:3px 0;
+	text-decoration:none;
+	position:relative;
+}
+#price ul.services li a:hover{
+	background-color:#7FBA00;
+}
+#price ul.services li a i{
+	display:block;
+	position:absolute;
+	overflow:hidden;
+	width:25px;
+	height:25px;
+	text-indent:-5000px;
+	background:url(../images/icons1.png) -29px 0 no-repeat;
+	top:0;
+	right:8px;
+	bottom:0;
+	margin:auto;
+}
+#price ul.services li a:hover i{
+	background-position:-54px 0;
+}
+.form1 label, .form1 legend{
+	border:0;
+	padding:0;
+	margin:0;
+}
+form.disp label{
+	width:438px;
+	float:left;
+	margin-bottom:10px;
+}
+.form1 label legend{
+	float:left;
+	font-size:13px;
+	text-align:left;
+	font-weight:300;
+	vertical-align:middle !important;
+	width:35%;
+	padding-right:20px;
+	padding-top:5px;
+}
+form.disp .disp-item-form{display:inline-block;}
+#partner-list{
+	width:744px;
+	height:512px;
+	background-color:#ECECEC;
+	position:relative;
+	overflow:auto;
+}
+#partner-list ul{
+	list-style:none;
+}
+#partner-list ul li a{
+	display:block;
+	padding:25px;
+	border-bottom:#FFF 1px solid;
+	color:#333;
+	text-decoration:none;
+	position:relative;
+	background-color:#f2f2f2;
+	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    inset 0px -1px 0px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         inset 0px -1px 0px 0px rgba(50, 50, 50, 0.3);
+}
+#partner-list ul li a:hover{
+	background-color:#f9f9f9;
+}
+#partner-list ul li a i{
+	display:block;
+	float:left;
+	background:url(../images/point.png) no-repeat;
+	width:37px;
+	height:34px;
+	margin-right:10px;
+}
+#partner-list ul li a span{
+	position:absolute;
+	right:20px;
+	top:0;
+	bottom:0;
+	height:35%;
+	margin:auto;
+	font-size:12px;
+	text-align:right;
+}
+#partner-list.loading{
+	overflow:hidden;
+	text-indent:-5000px;
+	background:url(../images/loadbar.gif) #ECECEC center no-repeat
+}
+#partner-list .error{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:80%;
+	height:30%;
+	text-align:center;
+}
+@media screen and (max-width: 767px) {
+	.psw-header-bg {
+	  background: url(../images/pages/psw/header-bg.jpg) center no-repeat;
+	  height: auto;
+	  position:relative;
+	}
+	.header-content{
+		position:relative;
+		z-index:10 !important;
+		color:#FFF;
+		text-align:center;
+	}
+	.header-content h1, .header-content h2, .header-content .h1, .header-content .h2{
+		color:#FFF;
+		position:relative;
+		z-index:11;
+		text-align:center;
+		padding:15px;
+		margin:0;
+	}
+	.pos-header {
+	  position: relative;
+	  z-index:12;
+	}
+	#service-description{
+		padding:15px;
+	}
+	#service-description .col1, #service-description .col2 {
+	  float: none;
+	  width: 100%;
+	  margin-bottom:20px;
+	}
+	#vantagens .title h1, #vantagens .title .h1 {
+	  padding:15px;
+	}
+	.icon2 {
+	  display: block;
+	  margin:auto;
+	}
+	#vantagens .vantagens ul li {
+	  width: 50%;
+	  float:left;
+	  margin-left: 0;
+	  margin-bottom:20px;
+	  display: inline-block;
+	  text-align: center;
+	}
+	#vantagens .vantagens .descricao {
+		display:block;
+		clear:both;
+		padding-top: 20px;
+	}
+	#vantagens-comparativo .content h1, #vantagens-comparativo .content .h1 {
+	  padding:0 15px 15px;
+	}
+	#price{
+		padding:15px !important;
+	}
+	.btn-checar{
+		display:none;
+	}
+	#partner-list {
+	  width: 100%;
+	  height: 512px;
+	}
+	#vantagens-comparativo{
+		display:none;
+	}
+	#partner-list .bg-map{
+		width:100% !important;
+	}
+	#price .col1, #price .col2 {
+	  width: 100%;
+	  float: none;
+	}
+	form.disp label {
+	  width: 100%;
+	  float: none;
+	}
+	form.disp label select{
+		width:100%;
+	}
+	.form1 label legend {
+	  float: none;
+	  display:block;
+	  clear:both;
+	  width:100%;
+	}
+	form.disp .disp-item-form {
+	  display: block;
+	  width:100%;
+	}
+	#depoimentos ul li {
+	  width: 100%;
+	  padding: 30px 30px 30px 60px;
+	  float: none;
+	  margin-left: 0;
+	  margin-bottom:2px;
+	  height: auto;
+	}
+	#partner-list ul li a span {
+	  position: relative;
+	  right:0;
+	  display:block;
+	  text-align:left;
+	  clear:both;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1167px) {
+	#service-description .col1, #service-description .col2{
+		float:none;
+		width:100%;
+		padding:15px;
+	}
+	#price .col1, #price .col2 {
+	  width: 100%;
+	  float: none;
+	  padding:15px;
+	}
+	#depoimentos ul li {
+	  width: 100%;
+	  padding: 30px 30px 30px 60px;
+	  float: none;
+	  margin-left: 0;
+	  margin-bottom:2px;
+	  height: auto;
+	}
+	.btn-checar{
+		display:none;
+	}
+}

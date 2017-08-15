@@ -1,0 +1,329 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.facebook-header-bg{
+	background:url(../images/pages/facebook/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:425px;
+	position:relative;
+}
+.bg-overlay{
+	background-color:rgba(19,19,19,0.1) !important;
+}
+.fcontent{
+	padding-top:220px;
+	color:#FFF !important;
+	z-index:2;
+	position:relative;
+	text-align:center;
+}
+.fcontent h1{
+	font-size:32px;
+	font-weight:400;
+	color:#FFF;
+	text-align:center;
+}
+.fcontent h1 span{
+	display:block;
+}
+.fcontent .atendimento-opcoes{
+	margin-top:26px;
+}
+.fcontent .atendimento-opcoes a{
+	margin-right:20px;
+}
+.fcontent .atendimento-opcoes .telefone{
+	display:block;
+	clear:both;
+	font-size:18px;
+	margin:15px 0 8px 0;
+}
+.fcontent .atendimento-opcoes .telefone strong{
+	font-size:22px;
+	font-weight:400;
+}
+.page-menu-facebook{
+	display:block;
+	width:100%;
+	background-color:#3B5998;
+	height:46px;
+}
+.page-menu-facebook ul{
+	list-style:none;
+	text-align:center;
+}
+.page-menu-facebook ul li{
+	display:inline-block;
+}
+.page-menu-facebook ul li a{
+	display:inline-block;
+	line-height:46px;
+	height:46px;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	font-size:13px;
+	font-weight:400;
+	padding:0 15px;
+	text-decoration:none;
+}
+.page-menu-facebook ul li:first-child{
+	margin-left:-45px;
+}
+.page-menu-facebook ul li a:hover{
+	background-color:#314A80;
+}
+.bg-header-menu{
+	margin-top:-14px
+}
+#vantagens{
+	margin-top:40px;
+}
+#vantagens .resumo .h1, #vantagens .resumo h3{
+	text-align:center;
+}
+#vantagens .analista{
+	margin-top:20px;
+	padding:85px 0 0 353px;
+	min-height:452px;
+	background:url(../images/pages/facebook/grilproject.jpg) left bottom no-repeat;
+}
+#vantagens .analista span{
+	font-size:13px;
+}
+.center-full.facebook{
+	position:relative;
+	background-color:#3B5998;
+}
+.box{
+	display:block;
+	width:100%;
+	margin:17px auto;
+	background-color:#FFFFFF;
+	padding:35px 25px 35px 25px;
+	padding-left:390px;
+	position:relative;
+	min-height:350px;
+}
+.box .img{
+	position:absolute;
+	left:20px;
+	top:60px;
+}
+.box span{
+	font-size:13px;
+}
+.box.box2{
+	padding:35px 25px 35px 25px !important;
+	padding-left:35px;
+	padding-right:380px !important;
+}
+.box.box2 .img{
+	right:40px;
+	left:auto !important;
+}
+.box.etapa1 .img{left:40px}
+.box.conteudo{}
+.box.etapa4 span{display:block; padding-right:180px !important;}
+.box.etapa4{padding-right:200px !important;}
+.default-title{
+	padding:40px 0 20px 0;
+}
+.default-title h1, .default-title h2, .default-title .h1, .default-title .h2{
+	color:#FFFFFF;
+}
+.lista-vantagens{
+	list-style:none;
+}
+.lista-vantagens li{
+	display:block;
+	position:relative;
+	width:50%;
+	float:left;
+	height:119px;
+	padding-left:78px;
+}
+.lista-vantagens li h4, .lista-vantagens li .h4{
+	font-size:14px;
+	font-weight:400;
+	margin-bottom:4px;
+}
+.lista-vantagens li span{
+	font-size:13px;
+}
+.lista-vantagens li .icon{
+	display:block;
+	width:59px;
+	height:59px;
+	position:absolute;
+	left:0;
+	background-color:#3B5998;
+	border-radius:50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+.lista-vantagens li .icon i{
+	display:block;
+	width:59px;
+	height:59px;
+	line-height:59px;
+	font-size:26px;
+	color:#FFFFFF;
+	text-align:center;
+	font-weight:300;
+}
+#quanto-custa .default-title{
+	padding:20px 0 20px 0;
+}
+#quanto-custa .box{
+	padding:35px 25px 35px 25px !important;
+}
+#quanto-custa .box h1, #quanto-custa .box .h1{
+	font-size:26px;
+	color:#333;
+}
+#quanto-custa .btn-left{
+	float:left;
+	width:24%;
+}
+#quanto-custa .btn-text-right{
+	float:left;
+	font-size:11px;
+	width:70%;
+}
+.table-price-new .tips .tip1{width:312px;left:174px}
+.table-price-new .tips .tip2{width:270px;left:755px}
+.table-price-new .text-left{width:100%}
+#servicos-adicionais{
+	margin:20px 0;
+}
+#servicos-adicionais .default-title h2, #servicos-adicionais .default-title .h2{
+	color:#666666 !important;
+}
+#servicos-adicionais .exemplos{
+	text-align:center;
+}
+#servicos-adicionais .exemplos .img1{
+	padding-right:42px;
+}
+#servicos-adicionais h3, #servicos-adicionais .h3{
+	text-align:center;
+	margin:25px 0;
+}
+.table-price-new.min{
+	width:462px;
+	margin:auto;
+}
+.table-price-new.min .price{
+	position:inherit;
+	margin-top:30px;
+	text-align:center;
+}
+.table-price-new.min .pcell-padding{
+	padding-bottom:0;
+}
+.table-price-new.min a{
+	padding-top:10px;
+	display:block;
+	font-size:18px;
+}
+.final-contato{
+	text-align:center;
+	padding-top:30px;
+}
+@media screen and (max-width: 767px) {
+	.facebook-header-bg {
+	  height: auto;
+	}
+	.fcontent {
+	  padding-top: 0;
+	  padding:15px;
+	}
+	#page-menu-facebook{
+		display:none;
+	}
+	.fcontent .atendimento-opcoes a {
+	  margin-right: 0;
+	}
+	#vantagens{
+		padding:15px;
+	}
+	#vantagens .analista {
+	  margin-top: 0;
+	  padding: 0;
+	  min-height: 0;
+	  display:block;
+	  clear:both;
+	  background:none;
+	}
+	.box {
+	  display: block;
+	  padding:15px;
+	  text-align:center;
+	  width: 100%;
+	  margin: 17px auto;
+	  background-color: #FFFFFF;
+	  padding: 15px;
+	  padding-left: 15px;
+	  position: relative;
+	  min-height: auto;
+	}
+	.box.etapa1 .img {
+	  left: 0;
+	}
+	.box .img {
+	  position: relative;
+	  left: 0;
+	  top: 0;
+	}
+	.lista-vantagens{
+		padding:15px;
+	}
+	.lista-vantagens li {
+	  display: block;
+	  position: relative;
+	  width: 100%;
+	  float: none;
+	  height: auto;
+	  padding-left: 78px;
+	  text-align:left;
+	  margin-bottom:25px;
+	}
+	.box .img{
+		margin-bottom:20px !important;
+	}
+	.box .img img{
+		width:100% !important;
+	}
+	.box.box2 .img {
+	  right: 0;
+	  left: none !important;
+	  margin-bottom:20px;
+	}
+	.box.box2 {
+	  padding: 15px !important;
+	  padding-left: 15px;
+	  padding-right: 15px !important;
+	}
+	.box.etapa4 span {
+	  display: block;
+	  padding-right: 0 !important;
+	}
+	#quanto-custa .btn-left, #quanto-custa .btn-text-right {
+	  float: none;
+	  width: 100%;
+	  margin-bottom:10px;
+	}
+	#servicos-adicionais .exemplos img{
+		width:100%;
+	}
+	#servicos-adicionais .exemplos .img1 {
+	  padding-right: 0;
+	}
+	.table-price-new.min {
+	  width: 100%;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

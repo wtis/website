@@ -1,0 +1,77 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>SMS Marketing Grátis - Crie campanhas e envie SMS para seus contatos - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Crie campanhas e envie SMS para seus contatos grátis." />
+<meta property="og:title" content="Produtos Wtis | SMS Marketing Grátis" />
+<meta property="og:description" content="Crie campanhas e envie SMS para seus contatos grátis." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-smsmkt').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>SMS Mobile Marketing Grátis</strong></h1>
+        <h2 class="title0b">Clientes de hospedagem podem criar campanhas e enviar SMS marketing</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px">
+                	<div class="default-title">
+                        <h1>Comunique com seu cliente onde ele estiver</h1>
+                        <h2>Chegue a qualquer cliente em qualquer telefone móvel, em qualquer lugar. Uma solução para envio de SMS que se adapta ao seu negócio</h2>
+                    </div>  
+                        <div class="img"><img src="{{ asset('images/pages/sms/img1.jpg') }}" class="rimg2" alt="Remetente Personalizado"></div>
+                        <div class="pcontent">
+                        	<br /><br />
+                            <h2>Remetente personalizado</h2>
+                            <span>As suas mensagens de SMS podem aparecer com o nome, endereço ou número que quiser (desde que devidamente configurado).<br><br>Envie mensagens personalizadas e aumente ainda mais a credibilidade com seus clientes.</span>
+                        </div>
+                        <div class="clearfloat"></div>
+                    <br />
+                    <a href="{{ path('sms-marketing') }}" class="link-img">Saiba mais sobre este produto</a>
+                </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

@@ -1,0 +1,358 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+/* CONSULTORIA */
+.consultoria .page-options{
+	height:53px;
+	width:100%;
+	background-color:#1A87C0;
+	position:relative;
+	z-index:1;
+}
+.consultoria .page-options-ul li{
+	list-style:none;
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.consultoria .page-options-ul li a{
+	display:block;
+	float:right;
+	height:53px;
+	line-height:53px;
+	color:#FFFFFF;
+	font-size:17px;
+	margin:0 12px;
+	padding:0 10px;
+	text-decoration:none;
+	font-weight:400;
+}
+.consultoria .page-options-ul li:first-child a{
+	margin-right:20px !important;
+}
+.consultoria .page-options-ul li a:hover, .consultoria .page-options-ul li.selected a{
+	text-decoration:none;
+	background-color:#0A609C;
+}
+.consultoria-header-bg{
+	background:url(../images/pages/consultoria/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:478px;
+	position:relative;
+}
+.consultoria-header-bg .header-content{
+	max-width:566px;
+	position:absolute;
+	top:16%;
+	left:20%;
+	padding:10px;
+}
+.consultoria-header-bg .header-content h1{
+	font-size:46px;
+	color:#EC5931;
+	font-weight:400;
+	margin-top:20px;
+}
+.consultoria-header-bg .header-content h2{
+	font-size:26px;
+	color:#666666;
+	font-weight:300;
+	margin-top:20px;
+}
+.consultoria-header-bg .pos-header{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:92px;
+	background:url(../images/pages/consultoria/pos-header-bg.jpg) center;
+}
+.consultoria-header-bg .pos-header .h1{
+	color:#FFFFFF;
+	font-size:22px;
+	font-weight:300;
+	display:block;
+	float:left;
+	width:65%;
+	text-align:center;
+	margin-top:20px;
+}
+.consultoria-header-bg .pos-header a.meligue{
+	float:right;
+	display:block;
+	text-indent:-5000px;
+	overflow:hidden;
+	background:url(../images/pages/consultoria/btn-meligue.png) center no-repeat;
+	width:288px;
+	height:34px;
+	margin-top:30px;
+}
+#service-description{
+	margin-top:42px;
+}
+#service-description .img{
+	float:right;
+}
+#service-description .description{
+	padding:42px 0 0 0;	
+	display:block;
+	width:502px;
+}
+#service-description .description .h1{
+	font-size:32px;
+	color:#333333;
+	font-weight:300;
+}
+#service-description .description span{
+	font-size:16px;
+	color:#333333;
+	font-weight:300;
+}
+#vantagens ul, #vantagens li{
+	list-style:none;
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+#vantagens ul{
+	padding-top:60px;
+}
+#vantagens li{
+	float:left;
+	width:45%;
+	margin-bottom:50px;
+	position:relative;
+	padding-left:150px;
+}
+#vantagens li span{
+	display:block;
+	clear:both;
+	font-size:14px;
+	color:#333333;
+	font-weight:300;
+}
+#vantagens li h2{
+	font-weight:400;
+	font-size:16px;
+}
+#vantagens li i{
+	display:block;
+	background:url(../images/pages/consultoria/icons1.png);
+	overflow:hidden;
+	text-indent:-5000px;
+	width:137px;
+	height:115px;
+	position:absolute;
+	left:0;
+	top:10px;
+}
+#vantagens li i.governanca{
+	background-position:0;
+}
+#vantagens li.infraestrutura i{
+	background-position:-137px 0;
+}
+#vantagens li.bi i{
+	background-position:-274px 0;
+}
+#vantagens li.dev i{
+	background-position:-411px 0;
+}
+.produtividade-digital-list{
+	margin-top:40px;
+}
+.produtividade-digital-list li{
+	float:left;
+	display:block;
+	width:244px;
+	margin-right:60px;
+}
+.produtividade-digital-list li:last-child{
+	margin-right:0;
+}
+.produtividade-digital-list li .h4{
+	margin-top:20px;
+	clear:both;
+	display:block;
+	font-weight:400;
+}
+.produtividade-digital-list li span{
+	font-size:14px;
+}
+#recursos{
+	margin-top:38px
+}
+#recursos .col1{
+	width:570px;
+	float:left;
+}
+#recursos .col2{
+	width:570px;
+	float:right;
+}
+#recursos dl{
+	padding-bottom:22px;
+	margin-bottom:22px;
+	border-bottom:#DDDDDD 1px solid;
+}
+#recursos dt{
+	font-size:13px;
+	margin-bottom:12px;
+}
+#recursos ul li{
+	list-style-type:none;
+	padding-bottom:2px;
+	font-size:13px;
+	padding-left:16px;
+	background:url(../images/pages/consultoria/ico-ok1.jpg) top left no-repeat;
+}
+#recursos ul li.separator{
+	background:none;
+	padding:10px 0;
+	text-decoration:underline;
+}
+#recursos ul li.separator:first-child{
+	padding-top:0;
+}
+#recursos ul li.tree{
+	margin-left:15px;
+	font-size:12px;
+}
+#contact .contato{
+	padding-top:20px;
+}
+#contact .contato .liguetexto{
+	clear:both;
+	font-size:18px;
+	padding-top:12px;
+}
+#contact .contato .liguetexto strong{
+	font-size:22px;
+	font-weight:300;
+}
+#contact .contato .liguetexto-mais{
+	font-size:12px;
+	text-decoration:underline;
+	font-weight:600;
+	padding-top:6px;
+}
+.footer{
+	margin-top:60px;
+}
+@media screen and (max-width: 767px) {
+	.button10 {
+	  display:block;
+	  width:100%;
+	}
+	.page-options{ display:none }
+	.consultoria-header-bg {
+	  background: url(../images/pages/consultoria/header-bg.jpg) 0 0 no-repeat;
+	  background-size:cover;
+	  height: auto;
+	  position: relative;
+	}
+	.consultoria-header-bg .header-content {
+	  position: relative;
+	  top: 0;
+	  left: 0;
+	}
+	.consultoria-header-bg .header-content h1 {
+	  font-size: 30px;
+	  color: #EC5931;
+	  font-weight: 400;
+	  margin-top: 20px;
+	}
+	.consultoria-header-bg .pos-header {
+	  position: relative;
+	  padding-bottom:15px;
+	  height: auto;
+	  background: url(../images/pages/consultoria/pos-header-bg.jpg) center;
+	}
+	.consultoria-header-bg .pos-header .h1 {
+	  font-size: 22px;
+	  display: block;
+	  float: none;
+	  width: 100%;
+	  padding: 10px;
+	  margin:auto;
+	}
+	.consultoria-header-bg .pos-header a.meligue {
+	  float: none;
+	  text-indent: -5000px;
+	  overflow: hidden;
+	  background: url(../images/pages/consultoria/btn-meligue.png) center no-repeat;
+	  width: 288px;
+	  height: 34px;
+	  margin: auto;
+	}
+	#service-description .img {
+	  float: none;
+	}
+	#service-description .description {
+	  padding: 20px;
+	  display: block;
+	  width: 100%;
+	}
+	.default-title > h1, .default-title > h2, .default-title > h3, .default-title > .h1, .default-title > .h2, .default-title > .h3 {
+	  padding: 0 10px;
+	}
+	#vantagens ul {
+	  padding:10px
+	}
+	#vantagens li {
+	  float: none;
+	  width: 100%;
+	  margin-bottom: 50px;
+	  padding-left: 0;
+	  text-align:center;
+	}
+	#vantagens li i {
+	  width: 137px;
+	  height: 115px;
+	  position: relative;
+	  left: 0;
+	  top: 0;
+	  margin:auto;
+	}
+	.produtividade-digital-list li {
+	  float: none;
+	  width: 100%;
+	  margin-right: 0;
+	  padding:15px;
+	}
+	#recursos {
+	  padding:15px;
+	}
+	#recursos .col1, #recursos .col2 {
+	  width: 100%;
+	  float: none;
+	  padding:15px
+	}
+	#price{
+		padding:15px;
+	}
+	.table-price tbody td {
+	  vertical-align:top !important;
+	}
+	#contact .contato {
+	  padding: 20px;
+	}
+	.footer {
+	  margin-top: 20px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	#service-description {
+	  padding: 15px;
+	}
+	#contact{
+		padding:15px;
+	}
+	#recursos .col1, #recursos .col2 {
+	  width: 100%;
+	  float: none;
+	  padding:15px
+	}
+}
+/*//// CONSULTORIA */

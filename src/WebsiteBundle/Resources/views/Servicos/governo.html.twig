@@ -1,0 +1,240 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+    <title>Soluções para Governo Federal, Estadual e Municipal - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+    {% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {{ parent() }}
+    <meta name="description"
+          content="Portal Transparência, Site para Municípios, Ouvidoria, Softwares Livres e muitas outras soluções para municípios."/>
+    <meta name="keywords"
+          content="software livre, e-cidade, portal transparência, portal para prefeitura, portal para município, diário oficial, diário oficial para município, software para municipio, enota, sistema para municipio"/>
+    <meta property="og:title" content="Wtis para Governo | Softwares Livres"/>
+    <meta property="og:description"
+          content="Softwares Livres para a Administração Pública. A Wtis tem Soluções para Governo Federal, Estadual e Municipal."/>
+    <meta property="og:url" content="{{ url(app.request.get('_route')) }}"/>
+    <meta property="og:image"
+          content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}"/>
+    <meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/page.governo.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset("js/typed.min.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/pages/governo.js") }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="content governo">
+
+        <div class="fabrica-header-bg">
+            <div class="header-content center-977">
+                <h1>Soluções inteligentes para governar com eficiência.</h1>
+                <h2>Um gestor precisa de <span class="gestorTxt">TI, e a Wtis tem tudo pronto :)</span></h2>
+            </div>
+        </div>
+
+        <section id="produtos" class="center-977">
+            <ul>
+                <li>
+                    <a href="#meligue"
+                       data-toggle="modal"
+                       data-target="#meLigueModal"
+                       data-product="GOVERNO - Portal de Transparência">
+                        <img src="{{ asset("images/pages/governo/ip1.png") }}" alt="Portal Transparência">
+                        <div class="ptitle">Portal de Transparência</div>
+                        <div class="pdesc">Implantação do portal de transparência com total integração com o software de
+                            gestão atual do município.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.ocmbrasil.com">
+                        <img src="{{ asset("images/pages/governo/ip2.png") }}" alt="Ouvidoria Municipal">
+                        <div class="ptitle">Ouvidoria Municipal</div>
+                        <div class="pdesc">Software completo para atendimento ao cidadão (SAC) georreferenciado, com
+                            intranet para os servidores públicos.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#meligue"
+                       data-toggle="modal"
+                       data-target="#meLigueModal"
+                       data-product="GOVERNO - DOM">
+                        <img src="{{ asset("images/pages/governo/ip3.png") }}" alt="Dário Oficial Municipal">
+                        <div class="ptitle">Diário Oficial</div>
+                        <div class="pdesc">Software para o Diário Oficial do Município, o que propociona publicações
+                            legais em meio eletrônico.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#meligue"
+                       data-toggle="modal"
+                       data-target="#meLigueModal"
+                       data-product="GOVERNO - PORTAL">
+                        <img src="{{ asset("images/pages/governo/ip4.png") }}" alt="Portal para Municípios">
+                        <div class="ptitle">Portal Web Municipal</div>
+                        <div class="pdesc">Portal/Site completo para município, integrado com nosso portal de
+                            transparência.
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfloat"></div>
+        </section>
+
+        <div class="div-bg"></div>
+
+        <section id="service-list" class="center-1156">
+            <p class="h1">Nossas soluções utilizando softwares públicos</p>
+            <div class="links">
+                <a href="{{ path('ecidade') }}"><img src="{{ asset('images/pages/governo/iecidade.jpg') }}"
+                                                     alt="e-cidade"></a>
+                <a href="#chat" class="init-chat" data-product="Urbem"><img
+                            src="{{ asset('images/pages/governo/iurbem.jpg') }}" alt="Urbem"></a>
+                <a href="#chat" class="init-chat" data-product="Citsmart"><img
+                            src="{{ asset('images/pages/governo/icitsmart.jpg') }}" alt="Citsmart"></a>
+                <a href="#chat" class="init-chat" data-product="e-Nota"><img
+                            src="{{ asset('images/pages/governo/ienota.jpg') }}" alt="e-nota"></a>
+            </div>
+        </section>
+
+        <section id="service-description" class="center-full cinza">
+            <div class="center-1156">
+                <div class="img"><img src="{{ asset('images/pages/governo/consultoria.jpg') }}" alt="Consultoria"></div>
+                <div class="pcontent">
+                    <p class="h1">Uma consultoria que faz a diferença para seu governo, seja ele Federal, Estadual ou
+                        Municipal</p>
+                    <span>A administração pública é toda a estrutura com a qual o governante conta para promover os serviços para a população, e nos últimos anos, a presença do TI na gerência dos processos e auxílio na administração além de essencial se tornou obrigatório. A má infraestrutura de rede, servidores e sistemas, principalmente nos municípios brasileiros gera prejuízos enormes para a administração pública. A WTIS Consulting disponibiliza especialistas certificados no ambiente físico do cliente para fazer uma análise detalhada de como está sua TI atual, infraestrutura de rede, servidores, segurança, sistemas e processos e apresentaremos um relatório completo propondo o máximo de melhorias possíveis para a administração, aperfeiçoando suas práticas e operações, seja no cumprimento de normas e regulamentos ou na aplicação de melhores práticas existentes no mercado. Propor soluções de governança para automação e redução de custos e agilidade nos processos, incentivando ao máximo o uso de ferramentas livres e a <a
+                                href="{{ path('consultoria') }}#produtividade-digital">Produtividade Digital</a>. Buscar controle e capacitação dos profissionais envolvidos.</span>
+                </div>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+        <div class="div-title text-center"><span class="h1">Nossos serviços</span></div>
+
+        <section id="pws" class="pres-default large center-1156">
+            <div class="img"><img src="{{ asset('images/pages/governo/pws.jpg') }}" alt="Professional Services"></div>
+            <div class="pcontent">
+                <h2>Professional Services WTIS</h2>
+                <span>O Professional Services oferece a alocação de profissionais especializados e certificados nas mais diversas áreas de atuação. Por meio de Professional Services, a equipe contratada realiza suas atividades no ambiente físico dos clientes, o que possibilita um melhor conhecimento de todo o contexto envolvido, permitindo-o desenvolver os serviços necessários para atender às demandas da organização.<br><br>
+            <strong>Analista de negócio para municípios nas mais diversas áreas: </strong><br><br>
+            Contábil e Financeiro, RH, Operação e administração de redes, Gerenciamento de infraestrutura em datacenters e bancos de dados, Segurança da informação, Monitoramento de infraestrutura e aplicações, Desenvolvimento, manutenção e testes de sistemas, Mapeamento e implementação de processos, Implantação e operação de modelos de governança corporativa, Operação de escritório de projetos, Técnicos em informática em geral<br><br>
+            <a href="{{ path('psw') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a href="#meligue"
+                                                                                                 data-toggle="modal"
+                                                                                                 data-target="#meLigueModal"
+                                                                                                 data-product="GOVERNO - Professional Services"
+                                                                                                 class="btn btn-primary btn-blue blue2"><i
+                                class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+</span>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+        <section id="hospedagem" class="pres-default right large center-full">
+            <div class="center-1156">
+                <div class="img"><img src="{{ asset('images/pages/governo/cloud.jpg') }}"
+                                      alt="Hospedagem e Armazenamento na Nuvem"></div>
+                <div class="pcontent">
+                    <h2>Hospedagem e armazenamento em nuvem</h2>
+                    <span>Temos soluções de hospedagem e armazenamento em nuvem para órgãos e entidades do governo, principalmente para municípios, soluções completas para hospedagem em nuvem de softwares livres e públicos, com data center no Brasil, com alta segurança e criptografia dos dados.</span><br><br>
+                    <a href="{{ path('hospedagem') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a
+                            href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                            data-product="GOVERNO - Hospedagem" class="btn btn-primary btn-blue blue2"><i
+                                class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+                </div>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+        <section id="emailpro" class="pres-default large center-1156">
+            <div class="img"><img src="{{ asset('images/pages/governo/emailpro.jpg') }}" alt="Email Profissional"></div>
+            <div class="pcontent">
+                <h2>Email Profissional</h2>
+                <span>No governo, principalmente em municípios existem várias instituições e um grupo enorme de pessoas envolvidas transformando-os em uma grande corporação. O uso do serviço de Email se tornou inevitável e é um grande desafio mantê-lo com o enorme tráfego de dados e a grande quantidade de mensagens enviadas e recebidas diariamente. A WTIS oferece uma solução completa de Email Profissional e Colaborativo que vai facilitar e agilizar os trabalhos em grupo. Compartilhe pastas, compromissos, tarefas e anotações com outros usuários. Suporte a iPhone, iPad, BlackBerry, Android e Windows Mobile. Segurança e monitoramento do serviço 24x7.<br><br>
+            <a href="{{ path('email-profissional') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a
+                            href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                            data-product="GOVERNO - E-mail Profissional" class="btn btn-primary btn-blue blue2"><i
+                                class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+</span>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+        <section id="sms" class="pres-default right large center-full">
+            <div class="center-1156">
+                <div class="img"><img src="{{ asset('images/pages/governo/sms.jpg') }}" alt="SMS Marketing"></div>
+                <div class="pcontent">
+                    <h2>SMS Marketing</h2>
+                    <span>Comunique-se por SMS com o público, uma comunicação direta e eficiente, passe mais credibilidade e confiança para o público alvo, seja ele contribuintes, servidores públicos, fornecedores e outros.
+</span><br><br>
+                    <a href="{{ path('sms-marketing') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a
+                            href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                            data-product="GOVERNO - SMS Marketing" class="btn btn-primary btn-blue blue2"><i
+                                class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+                </div>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+        <section id="facebook" class="pres-default large center-1156">
+            <div class="img"><img src="{{ asset('images/pages/governo/facebook.jpg') }}"
+                                  alt="Criação e gerenciamento de página no facebook"></div>
+            <div class="pcontent">
+                <h2>Criação e gerenciamento de página no facebook</h2>
+                <span>Uma administração ainda mais transparente. Por meio do Facebook informe todos os trabalhos ao público e torne o relacionamento ainda melhor. Nossa equipe prepara as estratégias de marketing, campanhas e acompanhamento da página na rede social.<br><br>
+            <a href="{{ path('facebook') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a href="#meligue"
+                                                                                                      data-toggle="modal"
+                                                                                                      data-target="#meLigueModal"
+                                                                                                      data-product="GOVERNO - Página no Facebook"
+                                                                                                      class="btn btn-primary btn-blue blue2"><i
+                                class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+</span>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+        {#<section id="streaming" class="pres-default right large center-full">#}
+            {#<div class="center-1156">#}
+                {#<div class="img"><img src="{{ asset('images/pages/governo/streaming.jpg') }}" width="600"#}
+                                      {#alt="Streaming de Áudio de Vídeo"></div>#}
+                {#<div class="pcontent">#}
+                    {#<h2>Streaming de Áudio de Vídeo</h2>#}
+                    {#<span>Transmita reuniões e eventos ao vivo.  Web TV, Web Rádio, Mobile TV, Mobile Rádio.</span><br><br>#}
+                    {#<a href="{{ path('streaming') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a#}
+                            {#href="#meligue" data-toggle="modal" data-target="#meLigueModal"#}
+                            {#data-product="GOVERNO - Streaming" class="btn btn-primary btn-blue blue2"><i#}
+                                {#class="glyphicon glyphicon-earphone"></i> Me ligue</a>#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="clearfloat"></div>#}
+        {#</section>#}
+
+        <section id="cdesign" class="pres-default large center-1156">
+            <div class="img"><img src="{{ asset('images/pages/governo/central-do-design.jpg') }}"
+                                  alt="Central do Design"></div>
+            <div class="pcontent">
+                <h2>Central do Design</h2>
+                <span>Somos especialistas em design. Identidade visual (logo, cartão de visitas, envelopes, papel timbrado, pastas, assinatura de e-mail), artes gráfica (banners, folders, cartazes, panfletos, carnês), vídeos publicitários e vários outros serviços.<br><br>
+            <a href="{{ path('central-design') }}" class="btn btn-primary btn-blue blue2">Saiba mais</a> <a
+                            href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                            data-product="GOVERNO - Central do Design" class="btn btn-primary btn-blue blue2"><i
+                                class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+</span>
+            </div>
+            <div class="clearfloat"></div>
+        </section>
+
+    </div>
+{% endblock %}

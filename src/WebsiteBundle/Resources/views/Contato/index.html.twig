@@ -1,0 +1,61 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Contato list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Data</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Celular</th>
+                <th>Newsletter</th>
+                <th>Mensagem</th>
+                <th>Ip</th>
+                <th>Localidade</th>
+                <th>Dadosnavegador</th>
+                <th>Historico</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('contato_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.data|date('d/m/Y H:i:s') }}</td>
+                <td>{{ entity.nome }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.telefone }}</td>
+                <td>{{ entity.celular }}</td>
+                <td>{{ entity.newsletter }}</td>
+                <td>{{ entity.mensagem }}</td>
+                <td>{{ entity.ip }}</td>
+                <td>{{ entity.localidade }}</td>
+                <td>{{ entity.dadosNavegador }}</td>
+                <td>{{ entity.historico }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('contato_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('contato_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('contato_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

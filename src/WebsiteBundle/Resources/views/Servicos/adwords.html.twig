@@ -1,0 +1,221 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Divulgue no Google - Google AdWords - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Divulgue no Google AdWords. Digulgue sua empresa no Google e aumente suas vendas." />
+<meta property="og:title" content="Soluções Wtis | Google AdWords" />
+<meta property="og:description" content="Divulgue no Google AdWords e aumente suas Vendas. Seja encontrato por milhões de clientes" />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.adwords.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/adwords.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content adwords">
+
+    <div class="adwords-header-bg">
+        <div class="page-options">
+            <ul class="page-options-ul center-977">
+                <li><a href="#plano-mensal" class="scroll">Preços</a></li>
+                <li><a href="#como-funciona" class="scroll">Como funciona</a></li>
+                <li><a href="#vantagens" class="scroll">Vantagens</a></li>
+                <li class="selected"><a href="#porque" class="scroll">Visão geral</a></li>            
+            </ul>
+            <div class="div-bg-center bottom"></div>
+        </div>
+        <div class="header-content center-977">
+        	<div class="col1">
+                <h1>Anuncie no Google e atraia mais clientes</h1>
+                <h2>Com a WTIS, você anuncia no Google e atrai mais visitas para o seu site. Seja encontrado por clientes no exato momento em que eles pesquisarem no Google pelo que você oferece.</h2>
+                <a href="http://c.wtis.com.br/cart.php?gid=9" class="btn btn-primary btn-blue">Contratar agora</a>
+            </div>
+        </div>
+   	</div>
+    <div class="absolute-browser">
+    	<div class="sample-browser">
+        	<div class="overview-ad">
+            <span class="ad-search-query" data-custom="ad-query" id="ad-search-query" style="display: none;">restaurante em brasília</span>
+            <div class="ad-search-results" id="ad-search-results" style="display:none">
+              <div class="ad-search-container">
+                <p class="ad-content">
+                  <span class="ad-headline" data-custom="ad-headline">Comida Italiana em Brasília</span><br>
+                  <span class="ad-url-display"><span class="ads-badge">Anúncio</span> <span class="ad-url" data-custom="ad-url">www.restaurantedotiago.com.br</span><br></span>
+                  <span class="ad-description"><span data-custom="ad-description-line1">Especializado em massas e pizzas.</span>
+                  <span data-custom="ad-description-line2">Entregamos em domicílio.</span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+	<section id="porque" class="center-977">
+    	<h2 class="h1">Por que o Google AdWords?</h2>
+        <ul class="beneficios">
+        	<li>
+            	<i class="glyphicon glyphicon-search"></i>
+            	<h3>Atraia mais clientes</h3>
+                <span>Se você deseja atrair novos visitantes para sua página na internet, aumentar suas vendas, receber mais ligações ou fazer com que seus clientes interajam mais com sua marca, o Google AdWords pode ajudar.</span>
+            </li>
+            <li>
+            	<i class="glyphicon glyphicon-time"></i>
+            	<h3>Alcance as pessoas certas no momento certo</h3>
+                <span>Faça com que sua empresa seja encontrada no Google quando potenciais clientes estiverem pesquisando sobre o que você oferece.</span>
+            </li>
+            <li>
+            	<i class="glyphicon glyphicon-globe"></i>
+            	<h3>Anuncie local ou globalmente</h3>
+                <span>Segmente seus anúncios para clientes em determinados países, cidades, bairros ou a apenas algumas quadras de sua empresa ou loja.</span>
+            </li>
+            <li>
+            	<i class="glyphicon glyphicon-earphone"></i>
+            	<h3>Estamos aqui para ajudar sempre que você precisar</h3>
+                <span>Com o Google AdWords você pode gerenciar sua campanha sozinho ou através de nosso suporte gratuito. Ligue para {{ telefoneComercial }} e receba ajuda de nossos especialistas para configurar sua conta e montar sua primeira campanha.</span>
+            </li>
+        </ul>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="vantagens" class="center-977">
+    	<h2 class="h1">Vantagens do gerenciamento WTIS</h2>
+        <ul>
+        	<li>
+            	<i data-sr="enter left ease-in-out 12rem wait 0.1s" class="icon2 m3 ideia"></i>
+            	<span>Criamos a sua campanha de acordo com o seu objetivo</span>
+            </li>
+            <li>
+            	<i data-sr="enter left ease-in-out 12rem wait 0.2s" class="icon2 m3 clique"></i>
+            	<span>Otimizamos a performance da sua campanha para gerar mais cliques</span>
+            </li>
+            <li>
+            	<i data-sr="enter left ease-in-out 12rem wait 0.3s" class="icon2 m3 relatorios1"></i>
+            	<span>Monitoramos o andamento e resultados dos seus anúncios e controlamos o seu orçamento diário para que o seu investimento tenha 100% de aproveitamento</span>
+            </li>
+            <li>
+            	<i data-sr="enter left ease-in-out 12rem wait 0.4s" class="icon2 m3 relatorios2"></i>
+            	<span>Relatório mensal para acompanhamento dos resultados</span>
+            </li>
+            <li>
+            	<i data-sr="enter left ease-in-out 12rem wait 0.5s" class="icon2 m3 suporte"></i>
+            	<span>Suporte pelo Contact Center por painel ou pelo telefone</span>
+            </li>
+        </ul>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="como-funciona" class="center-1156">
+    	<div class="center-977">
+            <p class="h1">Como funciona?</p>
+            <span>Após a contratação, a WTIS escolhe um especialista que ficará sempre a sua disposição para este serviço. Ele vai te ligar e conversar com você para conhecer sobre seu negócio e solicitar algumas informações, como segmento de atuação e região. A partir daí, nossa equipe certificada vai criar a campanha e os anúncios baseados nas palavras-chave relacionadas , dividindo o seu orçamento diariamente para que o seu site esteja sempre em evidência. Depois, é só você acompanhar os resultados da campanha nos relatórios mensais.</span>
+        </div>
+        <br><br>
+        <img src="{{ asset('images/pages/adwords/passos.png') }}" class="img-responsive" alt="Passos">
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="plano-mensal" class="price-new center-1156">
+    	
+        <div class="default-title">
+        	<p class="h1">Quanto maior o investimento mais visitas para seu site!</p>
+            <p class="h2">Escolha um plano mensal que melhor encaixa no perfil do seu negócio.</p>
+        </div>
+        
+        <div class="table-price-new">
+        	<div class="tips">
+            	<span class="tip tip1">Investimento inicial</span>
+                <span class="tip tip2 color2">Investimento avançado</span>
+                <span class="service">Goo-Adw</span>
+            </div>
+            <div class="ul-border"></div>
+            <div class="ptable">
+            <ul>
+            	<li>
+                	<div class="pcell-padding">
+                        <p class="h3">invista</p>
+                        <p class="h1">R$ 399</p>
+                        <p class="h2">por mês</p>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=38" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>60% de investimento em mídia no Google</span>
+                            <span>40% de taxa de gerenciamento WTIS</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">invista</p>
+                        <p class="h1">R$ 599</p>
+                        <p class="h2">por mês</p>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=39" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>60% de investimento em mídia no Google</span>
+                            <span>40% de taxa de gerenciamento WTIS</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">invista</p>
+                        <p class="h1">R$ 799</p>
+                        <p class="h2">por mês</p>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=40" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>60% de investimento em mídia no Google</span>
+                            <span>40% de taxa de gerenciamento WTIS</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">invista</p>
+                        <p class="h1">R$ 1.099</p>
+                        <p class="h2">por mês</p>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=41" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>65% de investimento em mídia no Google</span>
+                            <span>35% de taxa de gerenciamento WTIS</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">invista</p>
+                        <p class="h1">R$ 1.999</p>
+                        <p class="h2">por mês</p>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=42" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>65% de investimento em mídia no Google</span>
+                            <span>35% de taxa de gerenciamento WTIS</span>
+                        </div>
+                     </div>
+                </li>
+            </ul>
+            </div>
+            <div class="text-left">Dependendo da sua localidade nosso consultor pode visitar a sua empresa, consulte a disponibilidade de visita presencial em sua localidade. <a href="{{ path('suporte') }}#avancado">Clique aqui</a></div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+
+</div>
+{% endblock %}

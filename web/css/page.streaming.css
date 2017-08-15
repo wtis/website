@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.streaming-header-bg{
+	background:url(../images/pages/cloudstorage/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:334px;
+	position:relative;
+}
+.fcontent{
+	padding-top:90px;
+	color:#FFF !important;
+	z-index:2;
+	position:relative;
+	text-align:center;
+}
+.fcontent h1{
+	font-size:50px;
+	font-weight:400;
+	color:#FFF;
+	text-align:center;
+}
+.fcontent h1 strong{
+	color:#FF7F00;
+}
+.fcontent h2{
+	font-size:24px;
+	margin-top:-14px;
+	display:block;
+	color:#FFF;
+}
+.fcontent .atendimento-opcoes{
+	margin-top:26px;
+}
+.fcontent .atendimento-opcoes a{
+	margin-right:20px;
+}
+.fcontent .atendimento-opcoes .telefone{
+	display:block;
+	clear:both;
+	font-size:18px;
+	margin:15px 0 8px 0;
+}
+.fcontent .atendimento-opcoes .telefone strong{
+	font-size:22px;
+	font-weight:400;
+}
+#vantagens{
+	margin:72px auto 40px auto;
+}
+#vantagens ul{
+	list-style:none;
+	text-align:center;
+}
+#vantagens ul li{
+	display:inline-block;
+	height:149px;
+	width:33%;
+	vertical-align:top;
+}
+#vantagens ul li span{
+	display:block;
+	clear:both;
+	padding:4px 22px;
+	font-size:16px;
+}
+.list1, #plano-mensal{
+	margin:30px auto;
+}
+.list1 ul{
+	list-style:none;
+	vertical-align:top !important;
+	margin-top:40px;
+}
+.list1 ul li{
+	display:block;
+	float:left;
+	width:33%;
+	position:relative;
+}
+.list1.two ul li{
+	width:50%;
+}
+.list1 ul li i{
+	position:absolute;
+	left:0;
+	top:18px;
+}
+.list1 ul li span{
+	display:block;
+	padding:0 30px 0 80px;
+	font-size:13px;
+}
+.list1 ul li span strong{
+	font-size:14px;
+}
+.icon-streaming{
+	width:60px;
+	height:60px;
+	display:inline-block;
+	overflow:hidden;
+	text-indent:-5000;
+	background:url(../images/pages/streaming/icon.jpg);
+}
+.icon-streaming.wowza{
+	background-position:0 0;
+}
+.icon-streaming.adobe{
+	background-position:-60px 0;
+}
+.icon-streaming.iis{
+	background-position:-172px 0;
+	width:71px;
+}
+.icon-streaming.mss{
+	background-position:-244px -1px;
+	width:62px;
+}
+.icon-streaming.rtmp{
+	background-position:-120px 0;
+	width:52px;
+}
+#plano-mensal .table-price-new{
+	margin-top:0;
+}
+@media screen and (max-width: 767px) {
+	.streaming-header-bg {
+	  background: url(../images/pages/cloudstorage/header-bg.jpg) center no-repeat;
+	  height: auto;
+	  position: relative;
+	}
+	.fcontent {
+	  padding: 25px 15px 15px !important;
+	  color: #FFF !important;
+	}
+	.fcontent h1 {
+	  font-size: 32px;
+	  padding-bottom:15px;
+	}
+	#vantagens ul li {
+	  display: block;
+	  height: auto;
+	  width: 100%;
+	  margin-bottom:25px;
+	}
+	.list1 ul li {
+	  display: block;
+	  float: none;
+	  width: 100%;
+	  margin-bottom:25px;
+	}
+	.list1.two ul li {
+	  width: 100%;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

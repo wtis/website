@@ -1,0 +1,103 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>E-cidade - Software Público de Gestão Municipal - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Somos especialistas na implantação, treinamento e customização do software Público de Gestão Municipal E-cidade, apoiado pelo Ministério do Planejamento." />
+<meta property="og:title" content="Soluções Wtis | E-cidade" />
+<meta property="og:description" content="Somos especialistas na implantação, treinamento e customização do software E-cidade." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.ecidade.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content ecidade">
+
+    <div class="ecidade-header-bg">
+    	<h1>Somos especialistas na implantação, treinamento e customização do <strong>Software Público de Gestão Municipal E-cidade</strong></h1>
+    	<div class="logo"><img src="{{ asset('images/pages/e-cidade/ecidade-logo.png') }}" alt="E-cidade"></div>
+        <div class="servicos">
+        	<a href="#service1" class="scroll"><img src="{{ asset('images/pages/e-cidade/produto1.png') }}" alt="Produto1"></a>
+            <a href="#hospedagem" class="scroll"><img src="{{ asset('images/pages/e-cidade/produto2.png') }}" alt="Produto2"></a>
+            <a href="#outros-servicos" class="scroll"><img src="{{ asset('images/pages/e-cidade/produto3.png') }}" alt="Produto3"></a>
+        </div>
+    </div>
+    
+    <div class="" style="position:relative">
+    <section id="service1" class="fullscreen2 service s1">
+    	<div class="pcontent center-1156">
+        	<h2>Implantação, suporte e treinamento</h2>
+            <span>
+            	O e-cidade destina-se a informatizar a gestão dos Municípios Brasileiros de forma integrada. Esta informatização contempla a integração entre os entes municipais: Prefeitura Municipal, Câmara Municipal, Autarquias, Fundações e outros.<br><br>
+                A economia de recursos é somente uma das vantagens na adoção do e-cidade, além da liberdade de escolha dos fornecedores e garantia de continuidade do sistema, uma vez apoiado pelo Ministério do Planejamento.<br><br>                
+                Nós auxiliamos em todo processo necessário para utilização do sistema, com uma qualificada equipe de analistas.
+                <div class="svantagens">
+                	<i class="marcar b">Planejamento</i> 
+                    <i class="marcar b">Implantação</i>
+                    <i class="marcar b">Migração de dados</i>
+                    <i class="marcar b">Suporte, acompanhamento e treinamento</i>
+                    <i class="marcar b">Customização para adequar às leis municipais</i>
+                    <div class="clearfloat"></div>
+                </div>
+                <a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Implantação e-cidade" class="btn btn-primary btn-blue blue2"><i class="glyphicon glyphicon-earphone"></i> Me ligue</a> <a href="#chat" class="btn btn-primary btn-blue blue2 init-chat" data-product="Implantação e-cidade"><i class="glyphicon glyphicon-comment"></i> Fale via chat</a>
+            </span>
+        </div>
+    </section>
+    </div>
+    
+    <section id="migracao" class="pres-default right large center-full">
+    	<div class="center-1156">
+          <div class="pcontent">
+                <h2>Migração dos dados de outras bases para o e-cidade</h2>
+                <span>Conte com nossos especialistas em banco de dados para fazer toda a conversão dos dados armazenados em uma ou mais base de dados de outros sistemas para o e-cidade.<br><br>Utilizando o “Kettle - Data Integration” da Pentaho, com uma abordagem baseada em metadados, a extração, transformação e carregamento é feita de forma ágil, organizada e segura.<br><br><strong>Tem interesse em nosso serviço de conversão de dados?</strong>
+</span><br><br>
+                <a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Migração dados e-cidade" class="btn btn-primary btn-blue blue2"><i class="glyphicon glyphicon-earphone"></i> Me ligue</a> <a href="#chat" class="btn btn-primary btn-blue blue2 init-chat" data-product="Migração dados e-cidade"><i class="glyphicon glyphicon-comment"></i> Fale via chat</a>
+            </div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="hospedagem" class="pres-default large center-1156">
+    	<div class="img"><img src="{{ asset('images/pages/e-cidade/hospedagem.jpg') }}" alt="Hospedagem"></div>
+        <div class="pcontent">
+            <h2>Hospedagem e armazenamento em nuvem</h2>
+            <span>O funcionamento e performance do e-cidade é crucial para o bom funcionamento do software em qualquer município. Temos uma solução completa com alta segurança e criptografia dos dados para hospedar o e-cidade.<br><br>
+            &raquo; Monitorado <strong>24 horas por dia durante os 7 dias da semana</strong><br>
+            &raquo; Alta <strong>performance</strong><br>
+            &raquo; 100% de disponibilidade <strong>garantida</strong><br>
+            &raquo; Backup diário em storage<br>
+            &raquo; Suporte 24h por dia<br><br>
+            <!--<a href="#" class="btn btn-primary btn-blue blue2">Saiba mais</a> --><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Hospedagem e-cidade" class="btn btn-primary btn-blue blue2"><i class="glyphicon glyphicon-earphone"></i> Me ligue</a>
+</span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="outros-servicos" class="pres-default right large center-full">
+    	<div class="center-1156">
+            <div class="pcontent">
+                <h2>Serviços de programação e infraestrutura</h2>
+                <span><strong>Precisa de algo específico do e-cidade?</strong><br><br>Instalação e configuração, cluster, rotinas de segurança e backup, migração e prevenção de dados, melhorias e desenvolvimento de novas funcionalidades. Estes são alguns dos serviços que a WTIS pode oferecer.</span><br><br>
+                <a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Outros serviços e-cidade" class="btn btn-primary btn-blue blue2"><i class="glyphicon glyphicon-earphone"></i> Me ligue</a> <a href="#chat" class="btn btn-primary btn-blue blue2 init-chat" data-product="Outros serviços e-cidade"><i class="glyphicon glyphicon-comment"></i> Fale via chat</a>
+            </div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+
+</div>
+{% endblock %}

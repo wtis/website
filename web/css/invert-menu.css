@@ -1,0 +1,85 @@
+.menu{
+	background-color:transparent !important;
+	background:none !important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
+	position:absolute;
+	top:0;
+
+}
+.menu.fixed{
+}
+.menu.fixed.fixed1{
+}
+.menu a.logo{
+	background:url(../images/logo-white.png) center no-repeat;
+}
+.menu ul.menu1{
+}
+.menu ul.menu1 > li, .menu ul.menu2 li{
+}
+.menu ul.menu1 > li > a{
+	color:#FFFFFF !important;
+}
+.menu ul.menu1 > li:hover > a, .menu ul.menu1 > li.selected > a{
+	color:#333333 !important;
+	background-color:#FFFFFF !important;
+}
+.menu ul.menu1 > li .hover{
+}
+.menu ul.menu1 > li .hover .item{
+}
+.menu ul.menu1 > li .hover .item-col-left{
+}
+/*.menu ul.menu1 > li .hover .item:nth-of-type(4n+1) {
+  clear:left;
+}*/
+.menu ul.menu1 > li .hover .item-col-left:first-child, .menu ul.menu1 > li .hover .item-col-left.newline{
+	margin:0;
+}
+.menu ul.menu1 > li .hover ul .left{
+	float:left;
+}
+.menu ul.menu1 > li .hover h1{
+}
+.menu ul.menu1 > li .hover li{
+}
+.menu ul.menu1 > li .hover li a{
+}
+.menu ul.menu1 > li .hover li a b{
+}
+.menu ul.menu2{
+}
+.menu ul.menu2 li.chat a{
+	color:#FFFFFF !important;
+}
+.menu ul.menu2 li.chat a i{
+	background:url(../images/icons1.png) -97px -36px no-repeat;
+}
+.menu ul.menu2 li.chat.online a i{
+	background-position:0 -15px !important
+}
+.menu ul.menu2 li.chat a:hover{
+	text-decoration:underline;
+}
+.menu ul.menu2 li.entrar{
+	float:right;
+}
+.menu ul.menu2 li.entrar a{
+	border:#FFFFFF 1px solid;
+	color:#FFFFFF;
+}
+.menu ul.menu2 li.entrar a i{
+	background:url(../images/icons1.png) -16px -14px !important;
+}
+.menu ul.menu2 li.entrar a:hover{
+	background-color:#FFFFFF;
+	color:#333333;
+}
+.menu ul.menu2 li.entrar a:hover i{
+	background-position:-16px 0 !important
+}
+.navbutton {
+    background: url(../images/toogle-white.png) center no-repeat;
+}

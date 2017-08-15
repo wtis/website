@@ -1,0 +1,170 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Recursos da Hospedagem - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>Recursos</strong> da hospedagem</h1>
+        <h2 class="title0b">Compare tudo que oferecemos. São muitas vantagens em um só lugar</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px">
+
+                    <div class="resumo-box">
+                        <div class="hico email"></div>
+                        <h1 class="segoeUI">Email Colaborativo</h1>
+                        <h2>Email Exclusivo Incluso</h2>
+                        <h3>Com servidores exclusivos para email, compartilhe pastas, compromissos, tarefas e anotações com outros usuários. Suporte ao iPhone, Galaxy/Android BlackBerry, tablets e qualquer dispositivo móvel com um navegador web.<br /><br /><a href="{{ path('hospedagem_email') }}">[+] Saiba mais</a></h3>
+                    </div>
+                    
+                    <div class="resumo-box right">
+                        <div class="hico aplicativos"></div>
+                        <h1 class="segoeUI">Instaladores</h1>
+                        <h2>+ 180 Aplicativos Grátis</h2>
+                        <h3>Os melhores softwares gratuitos de comércio eletrônico, blog, CMS. Incluso em todos os planos Linux os instaladores mais completos do mercado: Fantastico e SoftAculous. <br /><br /><a href="{{ path('hospedagem_instaladores') }}">[+] Saiba mais</a></h3>
+                    </div>
+                    
+                    <div class="clearfloat" style="height:40px"></div>
+                    
+                    <div class="resumo-box">
+                        <div class="hico sitebuilder"></div>
+                      	<h1 class="segoeUI">Criador de Sites Grátis</h1>
+                        <h2>Sites Bonito e Rápido</h2>
+                        <h3>Com a feramenta simples e prática para criar sua página, em cinco passos você escolhe o layout que deseja e organiza suas informações. Modifique quantas vezes quiser.<br />
+                      <br /><a href="{{ path('hospedagem_criador') }}">[+] Saiba mais</a></h3>
+                    </div>
+                    
+                    <div class="resumo-box right">
+                        <div class="hico suporte"></div>
+                        <h1 class="segoeUI">Suporte 24 horas</h1>
+                        <h2>Atendimento diferenciado</h2>
+                        <h3>Nossos analistas e atendentes estão à sua disposição 24 horas por dia, incluindo feriados e finais de semana.  Zelamos pela qualidade e agilidade do nosso atendimento.<br />
+                          <br /><a href="{{ path('suporte') }}">[+] Saiba mais</a></h3>
+                    </div>
+                    
+                    <div class="clearfloat"></div>
+                    
+                    <div class="aba1 recursosDev">
+                        <ul class="aba">
+                            <li class="selected"><a href="javascript://" rel="linguagens">Linguagens</a></li>
+                            <li><a href="javascript://" rel="banco">Banco de Dados</a></li>
+                            <li><a href="javascript://" rel="ferramentas">Mais ferramentas</a></li>
+                            <li><a href="javascript://" rel="certificado">Certificado SSL</a></li>
+                        </ul>
+                        <div class="abas-divs">
+                            <div class="border left"></div>
+                            <div class="border right"></div>
+                            <div class="contentBlock">
+                                <div class="content linguagens" style="display:block">
+                                    <!-- CONTENT -->
+                                        <div class="table-default">	
+                                        <table class="recursos" summary="Lista de Recursos para Desenvolvedores">
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="{{ path('hospedagem_php') }}">PHP 5 com php.ini individual</a></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td><a href="{{ path('hospedagem_asp') }}">ASP</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="{{ path('hospedagem_asp') }}">ASP.net</a></td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td><a href="javascript: initChat()">* Para outras linguagens consulte-nos</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    <!-- END CONTENT -->
+                                </div>
+                                <div class="content banco">
+                                    <!-- CONTENT -->
+                                    <div class="table-default">	
+                                        <table class="recursos" summary="Banco de dados">
+                                            <tbody>
+                                                <tr>
+                                                    <td>MySQL</td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td>PostgreSQL</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SQL Server</td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td><a href="javascript: initChat()">* Para outras bancos consulte-nos</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    <!-- END CONTENT -->
+                                </div>
+                                <div class="content ferramentas">
+                                    <!-- CONTENT -->
+                                    <div class="table-default">	
+                                    <table class="recursos" summary="Banco de dados">
+                                        <tbody>
+                                            <tr>
+                                                <td>SSH e ferramentas</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td> Repositórios Git </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td><a href="javascript: initChat()">* Para outras ferramentas consulte-nos</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                    <!-- END CONTENT -->
+                                </div>
+                                <div class="content certificado">
+                                	<span class="segoeUI ssltitle">Criptografia SSL de 128/256 bits</span>
+                                    <img src="{{ asset('images/2012/https_certificado.png') }}" />
+                                    <div class="clearfloat"></div>
+                                    <br />
+                                    Tecnologia usada para garantir que suas informações não sejam interceptadas por fraudadores e/ou hackers. <strong>A WTIS faz toda a configuração no servidor</strong>. Seu desenvolvedor apenas precisa alterar os links/URLs das imagens, css, arquivos, etc de "http://" para "https://". <br /><br /><a href="{{ path('certificadossl') }}">[+] Clique e saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                  </div>	
+
+                </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

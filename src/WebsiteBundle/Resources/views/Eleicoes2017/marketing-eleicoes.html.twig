@@ -1,0 +1,230 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Marketing para Prefeito e Vereadores. Eleições 2016 - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Marketing para Prefeito e Vereadores. Gestão da campanha eleitoral. Conquiste eleitores, multiplique os votos. Gereciamento político para as Eleições 2016" />
+<meta property="og:title" content="Wtis para Governo | Softwares Livres" />
+<meta property="og:description" content="Softwares Livres para a Administração Pública. A Wtis tem Soluções para Governo Federal, Estadual e Municipal." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.eleicoes2016.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/estado-cidade.js') }}"></script>
+<script src="{{ asset('js/pages/eleicoes2016.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content eleicoes">
+
+    <div class="eleicoes-header">
+    	<div id="service-description" class="center-1156">
+            <h2>Eleições 2016</h2>
+            <h1>Marketing para Prefeito e Vereadores. Gestão da campanha eleitoral. Conquiste eleitores</h1>
+            <p>Deixe profissionais te ajudarem a fazer uma <strong>campanha inteligente</strong>, com um <strong>marketing político</strong> e <strong>marketing eleitoral</strong>, alinhados com tecnologia e utilizando os mais modernos recursos e conceitos, respeitando as leis eleitorais vigentes</p>
+            <ul class="features">
+            	<li><a href="#ntd"><i class="el i1"></i>Criação do website e integração com as principais redes sociais</a></li>
+                <li><a href="#ntd"><i class="el i2"></i>Captação de eleitores, relacionamento direto, gestão de pessoas e entidades </a></li>
+                <li><a href="#ntd"><i class="el i3"></i>Software completo integrado de gestão da campanha</a></li>
+                <li><a href="#ntd"><i class="el i4"></i>Pesquisas inteligentes  georreferenciadas e marketing multicanal</a></li>
+                <li><a href="#ntd"><i class="el i5"></i>Relatórios semanais de desempenho e monitoramento em tempo real</a></li>
+            </ul>
+            <div class="clearboth"></div>
+            <a href="#orcamento" class="contrate scroll">Fale com um consultor e solicite um orçamento</a>
+        </div>
+    </div>
+    
+    <div class="header2">
+    	<div class="center-977">
+    	<p class="center-1156">Utilizar <strong>métodos</strong> e <strong>estratégias inteligentes</strong> com apoio da tecnologia para desenvolver uma campanha eficaz que pode fazer grande diferença nas <strong>eleições 2016</strong>.</p>
+        </div>
+    </div>
+    
+    <div id="planeje" class="center-1156 dsection">
+    	<h2>Planeje, antecipe</h2>
+        <p>
+        	<img src="{{ asset('images/pages/eleicoes2016/pesquisa.png') }}" alt="Pesquisa Eleitoral" class="pull-right img-responsive" />
+        	Antes de qualquer ação, é importante entender o cenário atual e transformar estas informações em <strong>dados analíticos</strong>. Para isso, é necessário iniciar com antecedência uma <strong>pesquisa eleitoral</strong> porta a porta, coletando informações do eleitorado atual com algumas perguntas básicas para criar uma primeira análise com levantamento de informações importantes como: <strong>cadastro de eleitores</strong> com <strong>georreferenciamento</strong>, sendo possível visualizar um mapa da cidade com as informações, <strong>pesquisa de satisfação</strong> e vários outras informações de acordo com a necessidade da <strong>campanha</strong>. Nossa equipe de consultores e analistas estará em conjunto com a equipe do político planejando e executando todas as ações necessárias para se criar esta base de dados inicial e uma <strong>campanha eleitoral</strong> eficaz. <br /><br />
+            Com uso destes dados, alinhados com a tecnologia e aproveitando da ascensão das redes sociais no país, como o Facebook, iremos planejar e executar estratégias para conquistar o máximo de <strong>eleitores</strong> possíveis.
+        </p>
+        <div class="clearboth"></div>
+    </div>
+    
+    <div class="header-map"></div>
+    <div class="pos-header-map">
+    	<p class="center-1156">Com base nas informações coletadas na entrevista, o dispositivo utilizado para a coleta seja ele um tablet ou um celular possui localização GPS, esta informação é inserida automaticamente junto com os dados coletados e alimenta um banco de dados. Com estas informações é possível entender, planejar onde agir e ter grande vantagem utilizando as informações fornecidas por cada entrevistado. É possível direcionar um marketing para apenas um bairro ou rua, enviando uma mensagem para o celular (SMS) e e-mail de todos os moradores deste bairro, ou simplesmente gerar cartas impressas com propostas estratégicas direcionadas com base nos interesses do grupo entrevistado.<br /><br />
+        Resumindo, utilizamos estratégias com base nas informações para fazer uma campanha direcionada e inteligente.</p>
+    </div>
+    
+    <div id="full-desc" class="dsection">
+    	<div class="center-1156">
+        	<h2 class="h2destaque">Desenvolvimento e execução de estratégias inteligentes</h2>
+            <p class="h2subtitle">Somente desenvolver uma campanha multicanal não trás resultados, é preciso utilizar com inteligência estas ferramentas</p>
+            <div class="mc-marketing pdesc">
+            	<img src="{{ asset('images/pages/eleicoes2016/marketing1.jpg') }}" alt="E-mail e SMS Marketing" class="pull-left img-responsive" />
+                <p>
+                	<h2>Campanha por e-mail e sms marketing</h2>
+                    <span>Nosso sistema torna possível o envio de e-mail e sms personalizado, que pode ser enviado para um (one-to-one) ou para todos (one-to-many).</span>
+                </p>
+            </div>
+            <div class="sms-marketing pdesc center-977">
+            	<img src="{{ asset('images/pages/eleicoes2016/sms-marketing.jpg') }}" alt="SMS Marketing" class="pull-right img-responsive" />
+                <p>
+                	<h2>Mensagem direcionada impressiona o eleitor </h2>
+                    <span>É possível criar filtros e enviar a campanhas personalizadas para o eleitorado. Por exemplo, para eleitores com idade entre 30 a 50 anos e que moram no bairro Centro, é possível enviar mensagens personalizadas somente para eles. Este marketing direto trás muitos resultados.</span>
+                </p>
+            </div>
+            <div class="pesquisa-marketing pdesc center-977">
+            	<img src="{{ asset('images/pages/eleicoes2016/pesquisa2.jpg') }}" alt="Crie formulários de pesquisa inteligentes" class="pull-left img-responsive" />
+                <p>
+                	<h2>Crie formulários de pesquisa inteligentes </h2>
+                    <span>Possibilita ao candidato criar formulários de pesquisa e divulgá-los por email, sms, redes sociais, no site, tablets, celulares, totens espalhados pela cidade e de muitas outras formas.</span>
+                </p>
+                <ul class="features m2">
+                    <li><a href="#ntd"><i class="el b i1"></i><strong>Por email ou sms</strong><span>Integrado ao email marketing, o sistema faz a gestão dos envios dos emails, com análise avançada, como por exemplo, informar quem abriu a pesquisa, quem começou a respondê-la etc.</span></a></li>
+                    <li><a href="#ntd"><i class="el b i2"></i><strong>Totem, tablet ou celular</strong><span>Adquira um totem para exibir a pesquisa. Nosso sistema tem um layout responsivo e muito funcional em telas touch screen. Se a empresa tem um balcão no seu estabelecimento, basta acoplar um tablet para que seus eleitores possam responder diretamente no tablet</span></a></li>
+                    <li><a href="#ntd"><i class="el b i3"></i><strong>Redes sociais</strong><span>Divulgue automaticamente com poucos cliques a pesquisa em redes sociais, possibilitando que  atinja o maior número de eleitores.</span></a></li>
+                    <li><a href="#ntd"><i class="el b i4"></i><strong>Divulgue em sites</strong><span>Nosso sistema gera um código que pode ser anexado em qualquer site, blog, fórum etc., para que a pesquisa seja acoplada a ele. Além disso, também é possível disponibilizar um link público ou privado da pesquisa.</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="sac pdesc center-977">
+            	<img src="{{ asset('images/pages/eleicoes2016/sac.jpg') }}" alt="SAC 3.0" class="pull-left img-responsive" />
+                <p>
+                	<h2>O que estão falando nas redes sociais?</h2>
+                    <span>Devido ao uso constante da tecnologia, agora o relacionamento passa de um-para-um a um-para-muitos, uma vez que os eleitores podem divulgar a sua insatisfação ou opinião a milhares de amigos e seguidores, podendo essa mensagem ser replicada a mais outros milhares, gerando um efeito dominó.<br /><br />
+                    Nossa ferramenta monitora a reputação do candidato na web através de técnicas exclusivas. Soluções como SAC 3.0 unem o melhor dos sistemas de atendimento com web monitoramento e clipping tradicional, gerando indicadores únicos de percepção da campanha, melhorando de forma significante o atendimento ao eleitorado e conquistando novos eleitores e possibilitando criar planos estratégicos com base nestas informações.</span>
+                </p>
+            </div>
+            
+            <div class="monitoramento pdesc center-977">
+            	<img src="{{ asset('images/pages/eleicoes2016/monitor.jpg') }}" alt="Monitoramento de Nome de Político na Internet" class="pull-right img-responsive" />
+                <p>
+                	<h2>Tratamento exclusivo e resposta em tempo real</h2>
+                    <span>Perguntas, reclamações, papo sobre a política local, não importa o teor da conversa, se o assunto for do interesse do político vamos interagir!<br /><br />
+                    Colocando analistas de redes sociais e utilizando nossa ferramentas de monitoramento, iremos interagir com os eleitores em tempo real, sempre com respostas inteligentes e mostrando atenção com os eleitores. Esta ação retorna credibilidade para o candidato e conquista muitos votos.</span>
+                </p>
+            </div>
+            
+            <div class="mmc pdesc center-977">
+            	<img src="{{ asset('images/pages/eleicoes2016/multichannel.jpg') }}" alt="Marketing Multi Canal" class="pull-left img-responsive" />
+                <p>
+                	<h2>Desenvolvimento da campanha multicanal</h2>
+                    <span>Atualmente, não importa a idade, o eleitorado está conectado, acessando seu facebook, seu e-mail e sites. Vamos colocar o candidato e a campanha em todos os canais de comunicação online mais utilizados. <br /><br />
+                        <div class="subitem">
+                            <div class="item">
+                            <img src="{{ asset('images/pages/eleicoes2016/facebook.jpg') }}" alt="Facebook" class="" /> 
+                            </div>
+                            <div class="item">
+                            Criação da página no facebook e também de aplicativos para coletar dados do eleitorado e interação em tempo real com as pessoas
+                            </div>
+                        </div>
+                        <div class="subitem">
+                            <div class="item">
+                            <img src="{{ asset('images/pages/eleicoes2016/twitter.jpg') }}" alt="Twitter" class="" /> 
+                            </div>
+                            <div class="item">
+                            Criação da página no twitter para interação em tempo real com as pessoas
+                            </div>
+                        </div>
+                    </span>
+                        
+                </p>
+            </div>
+            
+        </div>
+        <div class="clearboth"></div>
+    </div>   
+    
+    <a name="orcamento"></a>
+    <section id="price-preview" class="center-full cinza">
+    	<div class="center-977">
+        	<p class="h1">Solicite um orçamento sem compromisso</p>
+            <div class="form center-full">
+            	<div class="preload bg-overlay"><div class="preload-div absolute-center"></div></div>
+                <form name="eleicoesForm" id="eleicoesForm" class="m1" data-parsley-validate>
+                    <label for="i-contato-regiao" class="i-contato-regiao clearboth">
+                    	<span>Sua região</span>
+                        <div class="disp-item-form disp-regiao">
+                            <select name="i-contato-regiao" id="i-contato-regiao" class="sm sm-default form-extra" data-nome="Estado" data-sigla="estado" data-valor="0">
+                                <option value="0">Selecione</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label for="i-contato-cidade" class="plataforma">
+                    	<span>Sua cidade</span>
+                        <div class="disp-item-form disp-cidade">
+                            <select name="i-contato-cidade" id="i-contato-cidade" class="sm sm-default form-extra" data-nome="Cidadde" data-sigla="cidade" data-valor="0" disabled="disabled">
+                                <option value="">Selecione</option>
+                            </select>
+                        </div>
+                    </label>
+                    <label for="i-contato-nome" class="nome clearboth">
+                    	<span>Seu nome</span>
+                        <input type="text" name="i-contato-nome" id="i-contato-nome" class="input-default" required="required">
+                    </label>
+                    <label for="i-contato-email" class="email">
+                    	<span>Email</span>
+                        <input type="email" name="i-contato-email" id="i-contato-email" class="input-default" required="required">
+                    </label>
+                    <label for="i-contato-telefone" class="telefonefixo clearboth">
+                    	<span>Telefone fixo</span>
+                        <input type="tel" name="i-contato-telefone" id="i-contato-telefone" class="input-default phoneMask" placeholder="DDD + Número">
+                    </label>
+                    <label for="i-contato-celular" class="celular">
+                    	<span>Celular</span>
+                        <input type="tel" name="i-contato-celular" id="i-contato-celular" class="input-default phoneMask" placeholder="DDD + Número">
+                    </label>
+                    
+                    <label for="i-contato-modalidade" class="i-contato-modalidade clearboth">
+                    	<span>O que você é?</span>
+                        <select name="i-contato-tipo" id="i-contato-tipo" class="sm sm-default form-extra" tabindex="1" data-nome="Tipo de Pessoa" data-sigla="tipo" data-valor="0">
+                            <option value="0" data-noselectable="1">Selecione</option>
+                            <option>Candidato</option>
+                            <option>Consultor Político/Agência</option>
+                            <option>Chefe de Gabinete</option>
+                            <option>Assessor</option>
+                            <option>Profissional de Campanha</option>
+                            <option>Outros</option>
+                        </select>
+                    </label>
+                    
+                    <label for="i-contato-newsletter" class="newsletter full clearboth">
+                        <input type="checkbox" name="i-contato-newsletter" id="i-contato-newsletter" value="1"> Assine nossa newsletter e receba novidades em seu email
+                    </label>
+                    
+                    <label class="text-right">
+                    	<span>Descreva um pouco a sua ideia sobre o site</span>
+                        <textarea maxlength="300" id="i-contato-mensagem" name="i-contato-mensagem" cols="60" rows="5" class="input-textarea"></textarea>
+                        <div class="description">máx. 800</div>
+                    </label>
+                    <div class="clearfloat"></div>
+                    <div class="atendimento-opcoes">
+                    	<a href="#meligue" class="link-img phone meligue-modal" data-toggle="modal" data-target="#meLigueModal" data-product="Criação de Sites">Nós ligamos para você<i></i></a> 
+                        <a href="#chat" class="link-img chat init-chat">Fale conosco via chat<i></i></a>
+                    </div>
+                    <div class="result">
+                    	<input type="hidden" name="i-contato-produto-interesse" id="i-contato-produto-interesse" value="Criação de Sites" data-nome="Produto de interesse" data-sigla="produto-interesse" data-valor="0" class="form-extra i-produto-interesse">
+                        <button type="submit" class="button10 min-radius verde no-icon submit-button">Enviar<i class="glyphicon glyphicon-envelope"></i></button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

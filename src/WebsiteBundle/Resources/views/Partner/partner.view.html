@@ -1,0 +1,155 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>{{ partner.pessoa.nome }} - Parceiros - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="{{ partner.pessoa.nome }} é um parceiro credenciado WTIS e pode nos representar em nossos produtos e serviços" />
+<meta property="og:title" content="Parceiros Wtis: {{ partner.pessoa.nome }}" />
+<meta property="og:description" content="{{ partner.pessoa.nome }} é um parceiro credenciado WTIS e pode nos representar em nossos produtos e serviços" />
+<meta property="og:url" content="{{ url(app.request.get('_route'), {slug:app.request.get('slug')}) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.partner.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/partner.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content partner">
+
+    <div class="partner-header-bg">
+    	<div class="center-1156">
+         <div class="fcontent">
+         	{% set arrNomeParceiro = partner.pessoa.nome|split(' ') %}
+            {% set i=0 %}
+         	<h1>{% for nome in arrNomeParceiro %}{% set i=i+1 %}{{ (i is divisible by(2) ? '<strong>'~nome~'</strong> ' : nome~' ')|raw }}{% endfor %}</h1>
+            <span>São parceiros como este que fazem a <strong>WTIS</strong> crescer cada dia mais com qualidade e excelência, expandindo nossos ideais para todo o país.</span>
+            <div class="atendimento-opcoes"><a href="{{ path('contato') }}"><strong>Seja você também nosso parceiro</strong> e tenha à sua disposição uma gama de produtos, serviços e soluções prontas para você vender para seus clientes.</a></div>
+          </div>     
+         </div> 
+    </div>
+    
+    <section id="map">
+    	{{ partner.map|raw }}
+    </section>
+    
+    <section id="gama" class="center-1156">
+    	<h1><strong>{{ partner.pessoa.nome }}</strong> é um parceiro <strong>credenciado WTIS</strong> e pode nos representar nos seguintes produtos e serviços</h1>
+        <ul>
+        	{% set i=0 %}
+        	{% for produto in partner.servicos %}
+            {% set i=i+1 %}
+        	<li data-sr="enter {{ i is divisible by(2) ? 'right' : 'left' }} bottom, and hustle 100px wait 0.{{ (i*2) }}s">
+            	<img src="{{ asset('images/produtos/'~produto.id~'.jpg') }}" alt="{{ produto.nome }}">
+            	<h2>{{ produto.nome }}</h2>
+				<span>{{ produto.descricao }} <a href="{{ produto.url }}" class="link-img">Conheça</a></span>
+            </li>
+            {% if i==4 %}{% set i=0 %}{% endif %}
+            {% endfor %}
+        </ul>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="enderecos" class="center-1156">
+   	<h1>Endereços</h1>
+      <table class="table table-price">
+        <thead>
+       	  <tr>
+           	  <th class="item">Cidade</th>
+              <th class="descricao">Endereço</th>
+              <th class="preco">Contato</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for endereco in partner.pessoa.enderecos %}
+          {% if endereco.tipoFinalidadeEndereco.descricao=='Principal' %}
+       	  <tr>
+           	  <td>{{ endereco.municipio.nome }}, {{ endereco.municipio.uf.nome }}</td>
+              <td>{{ endereco.logradouro }} {{ endereco.complemento }}, {{ endereco.numero }}, {{ endereco.bairro }}. CEP: {{ endereco.cep }}</td>
+              <td>{% set telefone = endereco.pessoa.telefoneByRefer(endereco.id) %}+{{ telefone.areaCode }} ({{ telefone.ddd }}) {{ telefone.telefone }}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </section>
+    
+    <section id="contato" class="center-full cinza dform-contato no-bg">
+    	<div class="center-1156">
+        	<h1>Fale com {{ partner.pessoa.nome }}</h1>
+            <div class="form center-full">
+            	<div class="preload bg-overlay"><div class="preload-div absolute-center"></div></div>
+                <form name="partnerForm" id="partnerForm" class="m1" data-parsley-validate>
+                    <label for="i-contato-produto" class="i-contato-produto clearboth">
+                    	<span>Produto/Serviço de interesse</span>
+                        <select name="i-contato-produto" id="i-contato-produto" class="sm sm-default form-extra" tabindex="1" data-nome="Produto" data-sigla="produto" data-valor="0">
+                            <option value="0" data-noselectable="1">Selecione</option>
+                            {% for produto in partner.servicos %}
+                            <option>{{ produto.nome }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                    <label for="i-contato-filial" class="filial">
+                    	<span>Filial</span>
+                        <select name="i-contato-filial" id="i-contato-plataforma" class="sm sm-default form-extra" data-nome="Filial" data-sigla="filial" data-valor="0">
+                            {% for endereco in partner.pessoa.enderecos %}
+                            <option>{{ endereco.municipio.nome }}, {{ endereco.municipio.uf.nome }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                    <label for="i-contato-nome" class="nome clearboth">
+                    	<span>Seu nome</span>
+                        <input type="text" name="i-contato-nome" id="i-contato-nome" class="input-default" required="required">
+                    </label>
+                    <label for="i-contato-email" class="email">
+                    	<span>Email</span>
+                        <input type="email" name="i-contato-email" id="i-contato-email" class="input-default" required="required">
+                    </label>
+                    <label for="i-contato-telefone" class="telefonefixo clearboth">
+                    	<span>Telefone fixo</span>
+                        <input type="tel" name="i-contato-telefone" id="i-contato-telefone" class="input-default phoneMask" placeholder="DDD + Número">
+                    </label>
+                    <label for="i-contato-celular" class="celular">
+                    	<span>Celular</span>
+                        <input type="tel" name="i-contato-celular" id="i-contato-celular" class="input-default phoneMask" placeholder="DDD + Número">
+                    </label>
+                    
+                    <label for="i-contato-newsletter" class="newsletter full clearboth">
+                        <input type="checkbox" name="i-contato-newsletter" id="i-contato-newsletter" value="1"> Assine nossa newsletter e receba novidades em seu email
+                    </label>
+                    
+                    <label for="i-contato-mensagem" class="text-right">
+                    	<span>Mensagem</span>
+                        <textarea maxlength="300" id="i-contato-mensagem" name="i-contato-mensagem" cols="60" rows="5" class="input-textarea"></textarea>
+                        <div class="description">máx. 800</div>
+                    </label>
+                    <div class="clearfloat"></div>
+                    <div class="atendimento-opcoes">
+                    	<a href="#meligue" class="link-img phone meligue-modal" data-toggle="modal" data-target="#meLigueModal" data-product="Fábrica de Software">Nós ligamos para você<i></i></a> 
+                        <a href="#chat" class="link-img chat init-chat">Fale conosco via chat<i></i></a>
+                    </div>
+                    <div class="result">
+                    	<input type="hidden" name="i-contato-partner" id="i-contato-partner" class="form-extra" tabindex="1" data-nome="Partner" data-sigla="partner" data-valor="0" value="{{ partner.id }}">
+                        <button type="submit" class="button10 min-radius verde no-icon submit-button">Enviar<i class="glyphicon glyphicon-envelope"></i></button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Streaming de Áudio e Video. Streaming On Demand ou Ao Vivo - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Web TV, Web Rádio, Mobile TV, Mobile Rádio - Streaming On Demand ou ao vivo." />
+<meta property="og:title" content="Produtos Wtis | Streaming de Áudio e Video" />
+<meta property="og:description" content="Web TV, Web Rádio, Mobile TV, Mobile Rádio - Streaming On Demand ou ao vivo." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.streaming.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content fabrica">
+
+    <div class="fullscreen background streaming-header-bg">
+    	<div class="bg-overlay"></div>
+    	<div class="center-1156">
+         <div class="fcontent">
+         	<h1><strong>Streaming</strong> de Áudio e Vídeo</h1>
+            <h2>Streaming de Áudio e Vídeo. <strong>Web TV</strong>, <strong>Web Rádio</strong>, <strong>Mobile TV</strong>, <strong>Mobile Rádio</strong><br>WTIS <strong>Streaming On Demand</strong> ou <strong>ao vivo</strong>.</h2>
+            <div class="atendimento-opcoes"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Streaming Audio e Video" class="button10 laranja no-icon meligue">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?gid=7" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+          </div>     
+         </div> 
+    </div>
+    
+	<section id="vantagens" class="center-977">
+    	<ul>
+        	<li><i data-sr="enter left ease-in-out 60rem wait 0.4s" class="icon2 s smultipla"></i><span>Suporta todos os players<br>IOS, Flash, Android, Windows, Mac e Linux</span></li>
+            <li><i data-sr="enter left ease-in-out 60rem wait 0.8s" class="icon2 s server"></i><span>CDN no Brasil, velocidade na transmissão</span></li>
+            <li><i data-sr="enter left ease-in-out 60rem wait 1.2s" class="icon2 s spc"></i><span>Com transmissão ao vivo ou on-demand com arquivos armazenados</span></li>
+        </ul>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="ao-vivo" class="list1 center-1156">
+    	
+        <div class="default-title">
+        	<h2 class="h1">Streaming ao vivo</h2>
+            <p class="h2">Nesta modalidade, assim que o conteúdo é gerado ele é encaminhado para os servidores CDN WTIS e retransmitidos para os usuários. Transmissão de Rádio e Web TV são alguns dos casos comuns de uso.</p>
+            <ul>
+            	<li>
+                	<i data-sr="enter left ease-in-out 60rem wait 0.2s" class="icon-streaming wowza"></i>
+                    <span><strong>Wowza Streaming Engine</strong><br>Combine os benefícios do software de streaming da Wowza® Media Systems, Wowza Streaming Engine™ e seu amplo leque de Wowza AddOns com a confiabilidade, escalabilidade, baixa latência e economia do WTIS Streaming. Os clientes podem escolher entre duas opções, um modelo traga sua própria licença (BYOL) ou AMIs cobradas do Amazon Marketplace. O sistema de configuração e gerenciamento torna mais rápida e fácil a entrega de múltiplos formatos de streaming pelos editores, incluindo Apple® HTTP Live Streaming (HLS), Adobe® HTTP Dynamic Streaming (HDS), Microsoft® Smooth Streaming e MPEG Dynamic Adaptive Streaming via HTTP (DASH).</span>
+                </li>
+                <li>
+                	<i data-sr="enter left ease-in-out 60rem wait 0.4s" class="icon-streaming adobe"></i>
+                    <span><strong>Adobe Media Server</strong><br>Os clientes que desejam executar o seu evento de streaming ao vivo usando o Adobe Media podem aproveitar sua integração com o WTIS Streaming para entregar streams usando Adobe® HTTP Dynamic Streaming (HDS) ou Apple® HTTP Live Streaming (HLS) a um público global. Essa solução também oferece suporte ao uso de recursos exclusivos do Adobe Media Server, como HDS protegido e compatibilidade com o Adobe Access 4 DRM.</span>
+                </li>
+                <li>
+                	<i data-sr="enter left ease-in-out 60rem wait 0.6s" class="icon-streaming iis"></i>
+                    <span><strong>IIS Live Smooth Streaming</strong><br>Instâncias nos nossos servidores executando o Microsoft Windows Server podem ser usadas para entregar mídia com os protocolos Smooth Streaming e Apple® HTTP Live Streaming (HLS). A integração dessa solução com o WTIS Streaming oferece aos clientes uma opção baseada no Microsoft Windows para eventos de streaming .</span>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+     </section>
+     
+     <div class="div-bg"></div>
+     
+     <section id="on-demand" class="list1 two center-1156">
+    	
+        <div class="default-title">
+        	<h2 class="h1">Streaming sob demanda (On Demand)</h2>
+            <p class="h2">Nesta modalidade, os arquivos de mídia são enviados por meio de um protocolo de transferência de arquivos (FTP)  para os servidores CDN WTIS previamente à execução e o usuário poderá carregar o conteúdo a qualquer momento.</p>
+            <ul>
+            	<li>
+                	<i data-sr="enter left ease-in-out 60rem wait 0.2s" class="icon-streaming mss"></i>
+                    <span><strong>Microsoft Smooth Streaming</strong><br>Usando o WTIS Streaming, os clientes podem fornecer vídeo com taxa de bits adaptável de uma forma escalável, de alto desempenho e econômica para públicos ao redor do mundo, enquanto se beneficiam da aderência total à especificação do formato Microsoft Smooth Streaming. Para usar esta solução não há necessidade de se passar pelo processo complexo e caro de configurar e gerenciar servidores de mídia de terceiros. Os clientes, de transmissores individuais a serviços on-line de assinatura de vídeo, podem simplesmente delegar toda sua área de transmissão em Smooth Streaming para o WTIS Streaming, com configurações iniciais mínimas. Além disso, com a integração do formato Smooth Streaming com sistemas de Gestão Digital de Direitos (DRM) e disponibilidade via HTTP, os editores de vídeo que utilizam o WTIS Streaming agora contam com mais uma solução de streaming, fácil de usar, segura e globalmente escalonável.</span>
+                </li>
+                <li>
+                	<i data-sr="enter left ease-in-out 60rem wait 0.4s" class="icon-streaming rtmp"></i>
+                    <span><strong>Streaming RTMP</strong><br>O WTIS Streaming desenvolveu distribuições especializadas do RTMP para os clientes que desejam usar esse protocolo para entregar mídia ao Flash Player, possibilitando o streaming de conteúdo armazenado no WTIS Storage Service.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+     </section>
+     
+     <div class="div-bg"></div>
+     
+     <section id="plano-mensal" class="price-new center-1156">
+    	
+        <div class="default-title">
+        	<p class="h1">Quanto custa?</p>
+            <p class="h2">Escolha um plano mensal que melhor encaixa no perfil do seu negócio.</p>
+        </div>
+        
+        <div class="table-price-new">
+        	<div class="tips">
+                <span class="service">Str-Pos</span>
+            </div>
+            <div class="ul-border"></div>
+            <div class="ptable">
+            <ul>
+            	<li>
+                	<div class="pcell-padding">
+                        <p class="h3">até</p>
+                        <p class="h1">100 GB</p>
+                        <p class="h2">de transferência de dados por mês</p>
+                        <div class="price">R$ 100/mês</div>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=31" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>Suporte e monitoramento 24x7</span>
+                            <span>Armazenamento R$ 0,35/GB</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">até</p>
+                        <p class="h1">300 GB</p>
+                        <p class="h2">de transferência de dados por mês</p>
+                        <div class="price">R$ 300/mês</div>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=32" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>Suporte e monitoramento 24x7</span>
+                            <span>Armazenamento R$ 0,33/GB</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">até</p>
+                        <p class="h1">500 GB</p>
+                        <p class="h2">de transferência de dados por mês</p>
+                        <div class="price">R$ 500/mês</div>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=33" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>Suporte e monitoramento 24x7</span>
+                            <span>Armazenamento R$ 0,29/GB</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">até</p>
+                        <p class="h1">1.000 GB</p>
+                        <p class="h2">de transferência de dados por mês</p>
+                        <div class="price">R$ 900/mês</div>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=34" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>Suporte e monitoramento 24x7</span>
+                            <span>Armazenamento R$ 0,27/GB</span>
+                        </div>
+                     </div>
+                </li>
+                <li>
+                	<div class="pcell-padding">
+                        <p class="h3">até</p>
+                        <p class="h1">2.000 GB</p>
+                        <p class="h2">de transferência de dados por mês</p>
+                        <div class="price">R$ 1.700/mês</div>
+                        <div class="options">
+                        	<div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=35" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                            <span>Suporte e monitoramento 24x7</span>
+                            <span>Armazenamento R$ 0,25/GB</span>
+                        </div>
+                     </div>
+                </li>
+            </ul>
+            </div>
+            <div class="text-left">Taxa de R$ 1,00 por cada GB de transferência de dados excedido</div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+
+</div>
+{% endblock %}

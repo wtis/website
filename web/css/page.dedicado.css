@@ -1,0 +1,141 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.dedicado-header{
+	background:url(../images/pages/dedicados/header-bg.png) top center no-repeat;
+	height:260px;
+	position:relative;
+}
+.dedicado-header #service-description{
+	padding:100px 25px 0;
+}
+
+.dedicado-header h2{
+	font-size:50px;
+	text-align:center;
+	color:#666;
+	font-weight:300;
+}
+.dedicado-header h1{
+	font-size:26px;
+	font-weight:300;
+	color:#666;
+	margin-bottom:4px;
+	text-align:center;
+}
+.dedicado-header a.contrate{
+	display:inline-block;
+	background-color:#00B259;
+	margin:20px 0 0 0;
+	padding:8px 16px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:15px;
+	text-decoration:none !important;
+}
+.dedicado-header a:hover.contrate{
+	opacity:0.6;
+}
+.meproteja-header a.contrate.contato{
+	background-color:#FFF;
+	color:#666;
+}
+
+#contrate{
+	min-height:600px;
+	background-color:#384047;
+	text-align:center;
+	border-top:#3079AB 4px solid;
+	color:#FFF;
+	padding:25px;
+}
+#contrate h2{
+	padding-top:103px;
+	font-size:28px;
+	color:#FFF;
+	font-weight:500;
+	display:none;
+}
+#contrate h2:after{
+	content:"_";
+	-moz-animation:cursor-blink 1s step-end infinite;
+	-webkit-animation:cursor-blink 1s step-end infinite;
+	animation:cursor-blink 1s step-end infinite;
+}
+#contrate p{
+	font-size:18px;
+	color:#FFF;
+	margin-top:90px;
+}
+#contrate a{
+	display:inline-block;
+	padding:10px 20px;
+	color:#FFF;
+	text-decoration:none !important;
+	font-size:15px;
+	font-weight:bold;
+	background-color:#3079AB;
+	margin-top:60px;
+	margin-right:6px;
+}
+#contrate a:hover{
+	background-color:#23587C;
+}
+#contrate a.meligue{
+	background-color:#AA9B31;
+}
+#contrate a:hover.meligue{
+	background-color:#877B27;
+}
+
+@-moz-keyframes cursor-blink {
+	from,to {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+@-webkit-keyframes cursor-blink {
+	from,to {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+@keyframes cursor-blink {
+	from,to {
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.dedicado-header h2{
+		font-size:32px;
+		text-align:center;
+		color:#666;
+		font-weight:300;
+	}
+	.dedicado-header h1{
+		font-size:18px;
+	}
+	.dedicado-header #service-description{
+		padding:50px 25px 0;
+	}
+	#contrate h2{
+		padding-top:40px;
+	}
+	#contrate a{
+		display:block;
+		padding:10px 20px;
+		margin-top:15px;
+		margin-right:0;
+	}
+
+}

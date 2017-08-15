@@ -1,0 +1,210 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Professional Services - Alocação de Profissionais em TI - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="O Professional Services WTIS oferece a alocação de profissionais especializados e certificados nas mais diversas áreas de atuação." />
+<meta name="keywords" content="aluguel de profissional de ti, programador, analista, especialista ti, profissional ti, professional services" />
+<meta property="og:title" content="Aluguel de Profissionais em TI | Professional Services Wtis" />
+<meta property="og:description" content="O Professional Services WTIS oferece a alocação de profissionais especializados e certificados nas mais diversas áreas de atuação." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.professional-services.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/estado-cidade.js') }}"></script>
+<script src="{{ asset('js/pages/psw.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content psw">
+
+    <div class="fullscreen background psw-header-bg">
+    	<div class="bg-overlay hide visible-xs"></div>
+        <div class="header-content center-1156" data-sr="enter right bottom, and hustle 100px wait 0.0s">
+            <h1>Alocação de profissionais de TI especializados</h1>
+            <p class="h2">Muito mais que um serviço</p>
+         </div>
+         <div class="pos-header">
+         	<p class="h1" data-sr="enter left bottom, and hustle 100px wait 0.2s">Ligue agora para e tire suas dúvidas: <strong>{{ telefoneComercial }}</strong> <span>ou nós <a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Professional Services">ligamos para você</a></span></p>
+         </div>        
+    </div>
+    
+    <section id="service-description" class="center-1156">
+    
+    	<div class="col1">
+        	<p class="h1">Um serviço diferente, inovador e eficiente</p>
+            <span>O <strong>Professional Services WTIS</strong> oferece a alocação de profissionais especializados e certificados nas mais diversas áreas de atuação. Por meio de Professional Services, a equipe contratada realiza suas atividades no ambiente físico dos clientes, o que possibilita um melhor conhecimento de todo o contexto envolvido, permitindo-o desenvolver os serviços necessários para atender às demandas da organização.
+
+As soluções de Professional Services WTIS (PSW) permitem a transferência total ou parcial de seus serviços para nossas equipes especializadas, conforme os perfis e requisitos previamente definidos pelos clientes.</span>
+			<a href="#chat" class="button10 verde init-chat" data-product="Professional Services">Fale conosco via chat<i></i></a> 
+            &nbsp; ou nós <a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Professional Services" class="meligue">ligamos para você</a>
+        </div>
+        <div class="col2">
+        	<ul>
+            	<li><i class="icon2 min pessoa sd-icon"></i>O profissional alocado e sua empresa terão à disposição o nosso Contact Center, onde uma equipe de profissionais em TI estarão disponíveis para auxiliar o profissional e a empresa.</li>
+                <li><i class="icon2 min gerencia sd-icon"></i>O profissional é avaliado por coordenadores, e de acordo a disponibilidade do cliente um coordenador junto com o profissional contratado farão reuniões de controle com o cliente para apresentar relatórios de atividades e evolução dos trabalhos.</li>
+                <li><i class="icon2 min troca sd-icon"></i>A relação custo x benefício é bem melhor do que contratando um profissional diretamente pela empresa. O cliente pode solicitar a troca do profissional quando for do interesse mesmo.</li>
+            </ul>
+        </div>
+    	<div class="clearfloat"></div>
+    </section>
+    
+    <div class="clearfloat"></div>
+    
+    <section id="vantagens" class="center-full azul">
+    	<div class="title center-977 text-center">
+        	<p class="h1">Qual a diferença de contratar um <strong>Professional Services WTIS</strong> ou contratar um profissional comum direto por minha empresa?</p>
+        </div>
+      <div class="center-1156 vantagens">
+          	<ul>
+            	<li data-sr="enter left bottom, and hustle 100px wait 0.2s"><i class="icon2 economia"></i>Economia</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 0.4s"><i class="icon2 agilidade"></i>Agilidade</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 0.6s"><i class="icon2 qualidade"></i>Qualidade</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 0.8s"><i class="icon2 suporte"></i>Suporte</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 1.0s"><i class="icon2 capacitacao"></i>Capacitação</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 1.2s"><i class="icon2 supervisao"></i>Supervisão</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 1.4s"><i class="icon2 controle"></i>Controle</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 1.6s"><i class="icon2 relatorios"></i>Relatórios</li>
+                <li data-sr="enter left bottom, and hustle 100px wait 1.8s"><i class="icon2 flexivel"></i>Flexível</li>
+            </ul>
+            <div class="descricao">
+            	Contratar um profissional direto além de gerar todos os encargos e riscos trabalhistas, é necessário conhecer as atividades a ser exercidas e avaliar a experiência do profissional a ser contratado. Muitas empresas perdem tempo e dinheiro contratando profissionais que não atendem os requisitos, e em muitos casos, em pequenas e médias empresas não existe um profissional com os mesmos conhecimentos em um cargo superior para avaliar os trabalhos do profissional contratado, e em alguns casos gera prejuízos significantes.
+
+                  <br>
+                  <br>
+        Um Professional Services realiza suas atividades no ambiente físico do cliente, porém, sob a supervisão de coordenadores e gerente de projetos WTIS com conhecimentos iguais ou superiores ao profissional, e cabe à estes supervisores avaliar o trabalho do profissional. Existem inúmeras vantagens para contratar um Professional Services WTIS: </div>
+          </div>
+    </section>
+    
+    <section id="vantagens-comparativo">
+    	<div class="center-977 content">
+        	<p class="h1 title">Aproveite o máximo de vantagens com o Professional Services</p>
+            <table class="table table-comparativo">
+              <thead>
+                <tr>
+                    <th class="item"></th>
+                    <th class="descricao">Contratação direta</th>
+                    <th class="preco text-center">Professional Services WTIS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Suporte e supervisão de uma equipe de profissionais da mesma área</td>
+                    <td><i class="nao">Não</i></td>
+                    <td><i data-sr="enter left bottom, and hustle 50px wait 0.1s" class="sim">Sim</i></td>
+                </tr>
+                <tr>
+                    <td>Facilidade na troca do profissional</td>
+                    <td><i class="nao">Não</i></td>
+                    <td><i data-sr="enter left bottom, and hustle 50px wait 0.2s" class="sim">Sim</i></td>
+                </tr>
+                <tr>
+                    <td>Capacitação grátis mensal</td>
+                    <td><i class="nao">Não</i></td>
+                    <td><i data-sr="enter left bottom, and hustle 50px wait 0.3s" class="sim">Sim</i></td>
+                </tr>
+                <tr>
+                    <td>Riscos jurídicos <img src="{{ asset('images/ico-help.png') }}" title="O profissional é funcionário registrado na WTIS. Existe um risco jurídico a partir do momento em que este profissional, mesmo contratado pela Wtis, trabalha nas dependências do nosso cliente, porém existe uma cláusula contratual entre o cliente contratante e a Wtis onde em situações que este profissional gere algum prejuízo financeiro ou encargos trabalhistas para nosso cliente a Wtis reembolsa os valores e assume todas as despesas. Então o risco de prejuízo é zero." alt="Ajuda sobre Riscos Jurídicos" class="tt"></td>
+                    <td><i data-sr="enter left bottom, and hustle 50px wait 0.4s" class="sim">Sim</i></td>
+                    <td><i class="nao">Não</i></td>
+                </tr>
+                <tr>
+                    <td>Gerência e coordenação sem custo adicional acompanhando os trabalhos</td>
+                    <td><i class="nao">Não</i></td>
+                    <td><i data-sr="enter left bottom, and hustle 50px wait 0.5s" class="sim">Sim</i></td>
+                </tr>
+                <tr>
+                    <td>Contrato baseado em SLA, suas demandas serão sempre entregues no prazo</td>
+                    <td><i class="nao">Não</i></td>
+                    <td><i data-sr="enter left bottom, and hustle 50px wait 0.6s" class="sim">Sim</i></td>
+                </tr>
+              </tbody>
+          	</table>
+            <div class="text-right"><a href="#price" class="btn btn-sucess btn-success btn-lg scroll">Contrate para sua empresa</a></div>
+        </div>
+    </section>
+
+	<section id="price" class="center-1156">
+    	
+        <div class="col1">
+        	<p class="h1">Preço e disponibilidade</p>
+            <span>Professional Services já está disponível de imediato em várias cidades do Brasil, por uma filial da WTIS ou por alguma empresa parceira credenciada. O preço pode variar de acordo a sua região, então pedimos que nos informe abaixo o estado e cidade onde você precisa do nosso serviço.</span>
+            <form class="form1 disp">
+            	<label class="lb1">
+                	<legend>Informe sua região:</legend>
+                    <div class="disp-item-form disp-regiao">
+                        <select name="disp-regiao" id="disp-regiao" class="sm sm-default">
+                            <option value="0">Selecione</option>
+                        </select>
+                    </div>
+                </label>
+                <label class="lb1">
+                	<legend>Informe sua cidade:</legend>
+                    <div class="disp-item-form disp-cidade">
+                        <select name="disp-cidade" id="disp-cidade" class="sm sm-default">
+                            <option value="">Selecione</option>
+                        </select>
+                    </div>
+                </label>
+              <button type="button" class="btn-checar">Checar Disponibilidade</button>
+              <div class="clearfloat"></div>
+            </form>
+            <ul id="partner-list-template" class="oculto">
+                	<li>
+                    	<a href="{URL}">
+                    	<i></i>
+                        <strong>{NOME}</strong><br />
+						{ENDERECO}, {CIDADE} - {UF}
+                        <span>{STATUS}</span>
+                        </a>
+                    </li>
+                </ul>
+            <div id="partner-list"><img src="{{ asset('images/pages/psw/map.jpg') }}" alt="Cobertura" class="bg-map"></div>
+        </div>
+        <div class="col2">
+        	<div class="selo-garantia caixa cinza sem-borda">
+            	<h2>Garantimos nossa qualidade</h2>
+                <span>Todos nossos profissionais passam por treinamentos específicos para atender os padrões de qualidade WTIS, seguindo as práticas e padrões mais conceituados. Temos profissionais em diversas áreas, como por exemplo:</span>
+            </div>
+            <ul class="services">
+            	{% for servico in servicos %}
+            	<li><a href="#atividade" data-toggle="modal" data-target="#defaultModal" data-whatever="{{ path('psw_atividade', {id:servico.id}) }}" data-title="{{ servico.atividade }}">{{ servico.atividade }}<i></i></a></li>
+                {% endfor %}
+            </ul>
+            Outras atividades <a href="#chat" class="init-chat" data-product="Professional Services">fale com nosso consultor</a>
+        </div>
+        <div class="clearfloat"></div>
+        
+    </section>
+    
+    <section id="depoimentos" class="center-full cinza">
+    	<div class="center-1156">
+    	<p class="h1 text-center">O que dizem as pessoas</p>
+            <ul>
+            	{% for depoimento in depoimentos %}
+                <li>
+                	<i>Depoimento</i>
+                    <p class="h2">{{ depoimento.texto }}</p>
+                    <p class="h3">{{ depoimento.nome }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+
+</div>
+{% endblock %}

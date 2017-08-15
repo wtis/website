@@ -1,0 +1,129 @@
+<!--
+.dedicado td.server-price {
+	font-size: 15px;
+	color: #06F;
+	text-align: right;
+}
+.dedicado tr td{
+	color:#333;
+}
+.table-default.features thead th{
+	font-size:13px !important;
+}
+.default-features{
+	width:984px;
+	margin:auto;
+}
+.grid-12 .col-3 {
+	width: 222px;
+	display: inline;
+	float: left;
+	position: relative;
+	margin-left: 0;
+	margin-right: 32px;
+	margin-bottom:18px;
+}
+.grid-12 .col-3:last-child{
+	margin-right:0;
+}
+.grid-12 figure {
+	height: 95px;
+}
+.grid-12 img{
+	display:inline-block;
+	float:none;
+}
+.grid-12 h3{
+	display:block;
+	margin:0;
+	padding:0;
+}
+.grid-12 p{
+	margin:5px 0 !important;
+}
+
+.abas-divs p{
+	display:block;
+	margin:10px 0 20px 0;
+}
+.abas-divs h3{
+	padding-left: 24px;
+	background: url("../images/2012/icons/icon-star.png") no-repeat left center;
+}
+.server-img{
+	width:55px;
+	height:65px;
+	margin:auto;
+	margin-top:25px;
+}
+.windows .dedicado-title{
+	padding-top:0;
+}
+.dedicado-title2{
+	font-size:17px !important;
+}
+.table-func .content .windows{
+	background:url(../images/2012/tabs/windowsDiscs.png) no-repeat right bottom !important;
+}
+.accordion{
+	width:380px !important;
+}
+.accordion h5{
+	margin:4px 0;
+	padding:0;
+	cursor:pointer;
+	font-weight:bold;
+	color:#000000;
+}
+.accordion .accordion-pane {
+	display: none;
+	padding: 5px;
+}
+.table-func.dedicado-windows .options li a{
+	background:none !important;
+	padding-left:15px !important;
+}
+.table-func.dedicado-windows .content #content3, .table-func.dedicado-windows .content #content4, .table-func.dedicado-windows .content #content7{
+	background:none !important;
+}
+.table-func.dedicado-windows .content #content4 ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.table-func.dedicado-windows .content #content4 ul li {
+	float: left;
+	width: 49%;
+	margin-top:20px;
+}
+.table-func.dedicado-windows .content #content4 ul li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+.table-func.dedicado-windows .content #content4 ul li p {
+	float: left;
+	margin-left: 80px;
+	margin-top: -50px;
+}
+.table-func.dedicado-windows .content #content5{
+	background:url(../images/2012/tabs/installer.png) no-repeat right bottom;
+}
+.table-func.dedicado-windows .content #content6{
+	background:url(../images/2012/tabs/resellerReady.png) no-repeat right bottom;
+}
+.escolha-title{
+	margin:10px 0 10px 0;
+	padding:0;
+}
+.dedicado .ios{
+	opacity: .5;
+}
+
+.pageFullBannerSmart{
+	text-align:center;
+	z-index:0;
+	background-color:#0A0408;
+	margin:0;
+	padding:0;
+}
+-->

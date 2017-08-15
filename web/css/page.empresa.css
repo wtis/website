@@ -1,0 +1,130 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+body{
+	background:url(../images/empresa-bg.png) #323355;
+}
+.empresa{
+	min-height:836px;
+	background:url(../images/empresa-mapa.png) center 120px no-repeat;
+}
+.content-cols{
+	padding-top:185px;
+}
+.tab{
+	background-color:#FFFFFF;
+	height:600px;
+	float:left;
+	margin-bottom:40px;
+	width:49%;
+}
+.tab h1, .tab .h1{
+	font-size:30px;
+	display:block;
+	padding:25px 20px;
+	background-color:#6C6DA4;
+	color:#FFFFFF;
+}
+.tab.tab2{
+	float:right;
+}
+.tab.tab2 h1, .tab.tab2 .h1{
+	background-color:#2C95A7;
+}
+.tab .content{
+	padding:0 25px 25px 25px;
+	height:480px;
+	overflow:auto;
+}
+.tab h2{
+	color:#333333;
+	font-size:22px;
+	margin-top:20px;
+}
+#clientes{
+	position:relative;
+	background:url(../images/empresa-bg2.jpg) no-repeat 0 0;
+	background-size:cover;
+	background-attachment:fixed;
+	margin:0;
+}
+#clientes .content{
+	position:relative;
+	padding:60px 0;
+	z-index:2;
+}
+#clientes p.h1{
+	text-align:center;
+	color:#FFF;
+	font-size:42px;
+	text-transform:uppercase;
+}
+#clientes p.h2{
+	color:#C2E9EF;
+	font-size:22px;
+	text-align:center;
+}
+.empresa-numeros{
+	margin-top:60px;
+}
+.empresa-numeros strong{
+	display:block;
+	font-size:32px;
+	color:#FFFFFF;
+	font-weight:400;
+	text-align:center;
+}
+.empresa-numeros span{
+	text-align:center;
+	color:#FFF;
+	display:block;
+	font-size:16px;
+	margin-top:-8px;
+	margin-bottom:30px;
+}
+.div-clientes{
+	width:20%;
+	height:1px;
+	background-color:#FFF;
+	display:block;
+	margin:40px auto 80px auto;
+}
+.clientes{
+	margin-top:60px;
+}
+.clientes div{
+	text-align:center;
+}
+a.btn-all-clients{
+	display:block;
+	width:210px;
+	text-align:center;
+	margin:auto;
+	padding:10px;
+	border:#FFF 1px solid;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-size:14px;
+	color:#FFF;
+	text-transform:uppercase;
+	margin-top:60px;
+	text-decoration:none;
+}
+a:hover.btn-all-clients{
+	background-color:rgba(10,10,10,0.3);
+}
+@media screen and (max-width: 767px) {
+	.tab {
+	  height: 650px;
+	  float: none;
+	  width: 100%;
+	}
+	.content-cols {
+	  padding-top: 80px;
+	}
+	.clientes > div{
+		margin-bottom:20px;
+	}
+}

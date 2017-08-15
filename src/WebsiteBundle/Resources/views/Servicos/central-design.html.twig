@@ -1,0 +1,96 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Central do Design - Ilustração, Mídia Impressa, Campanha Publicitária - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Identidade Visual, Logomarca, Mídia Impressa, Campanha Publicitária, Ilustração." />
+<meta property="og:title" content="Serviços Wtis | Central do Design" />
+<meta property="og:description" content="Identidade Visual, Logomarca, Mídia Impressa, Campanha Publicitária, Ilustração." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.central-design.css') }}" rel="stylesheet">
+<link href="{{ asset('css/YTPlayer.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/jquery.mb.YTPlayer.min.js') }}"></script>
+<script src="{{ asset('js/pages/central-design.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content marketing">
+
+    <div class="cdesign-header-bg">
+    	<div class="center-977">
+         <div class="fcontent">
+         	<h1 data-sr="enter left ease-in-out wait 3.5s">Central do <strong>Design</strong></h1>
+         	<h2>Dizem que a primeira impressão é a que fica.</h2>
+            <h3>Nós levamos isto a sério.</h3>
+            <a data-sr="enter left ease-in-out wait 4s" href="#o-que-fazemos" class="link scroll"><i></i>O que fazemos</a>
+          </div>     
+         </div> 
+    </div>
+    
+    <section id="o-que-fazemos">
+    
+    	<div class="tab ivisual">
+        	<h2 class="h1">Identidade Visual</h2>
+            <span>Uma boa apresentação visual torna sua empresa ainda mais conhecida e passa uma imagem de profissionalismo e qualidade para os clientes.<br /><br />
+            Logomarca, cartão de visitas, estrutura documental como papel timbrado, envelopes, pastas, folders, devem ser projetados com qualidade para passar uma imagem profissional e inovadora da empresa.</span>
+        </div>
+        
+        <div class="tab mimpressa">
+        	<h2 class="h1">Mídia Impressa</h2>
+            <span>Criação de mídia profissional e bem planejada, panfletos, folders, cartazes, outdoor, adesivo, banner e outros.</span>
+        </div>
+        
+        <div class="tab cpublicitaria">
+        	<h2 class="h1">Campanha Publicitária</h2>
+            <span>Um anúncio isolado, por mais criativo que seja, tem muito pouca eficácia comparada com uma campanha completa, com diversas peças diferentes, desde que mantenham o mesmo conceito criativo. Nós planejamos, criamos e executamos sua campanha publicitária. Normalmente esta campanha tem o intuito de divulgar seu produto ou serviço, seja ele promocional ou institucional.</span>
+        </div>
+        
+        <div class="tab ieanimacao">
+        	<h2 class="h1">Ilustração e Animação 3D</h2>
+            <span>Modelagem, animação e ilustração 3D, motion design e conteúdos digitais de alto impacto visual.</span>
+        </div>
+    	
+        <div class="clearfloat"></div>
+        
+    </section>
+    
+    <div id="bgndVideo" class="player" data-property="{videoURL:'http://www.youtube.com/watch?v=rrgKYhlO1j4',containment:'#video',autoPlay:true, mute:true, startAt:0, opacity:0.8, showControls: false, showYTLogo: false, addRaster:true}"></div>
+    
+    <section id="video">
+    	<div class="bg-overlay bgo0"></div>
+        <div class="pcontent">
+        	<p class="h1">Você sabia que ter um <strong>vídeo</strong> para divulgar sua empresa, produto ou serviço é muito importante?</p>
+            <span><strong>43%</strong> das empresas usam vídeo como estratégia de marketing</span>
+            <span class="right"><strong>100 milhões</strong> de pessoas assistem vídeos online por dia</span>
+            <div class="cicle no-margin">Aumenta a <strong>visibilidade</strong> da marca</div>
+            <div class="cicle">Aumenta a <strong>confiança</strong> na marca</div>
+            <div class="cicle">Aumenta a <strong>intenção de compra</strong></div>
+        </div>
+    </section>
+    <div class="clearfloat"></div>
+    
+    <section id="contato" class="center-977">
+        <div class="default-title">
+        	<p class="h1">Fale com nosso consultor</p>
+            <p class="h2">Solicite um orçamento sem compromisso, podemos te ajudar!</p>
+            <div class="text-center"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Central do Design" class="meligue btn btn-sucess btn-success btn-lg btn-verde">ENTRE EM CONTATO</a></div>
+        </div>
+    </section>
+    
+</div>
+{% endblock %}

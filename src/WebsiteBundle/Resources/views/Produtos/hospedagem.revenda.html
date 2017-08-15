@@ -1,0 +1,465 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+	<title>Revenda de Hospedagem - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Crie sua própria empresa de hospedagem. Revenda de Hospedagem." />
+<meta property="og:title" content="Produtos Wtis | Revenda de Hospedagem" />
+<meta property="og:description" content="Crie sua própria empresa de hospedagem. Revenda de Hospedagem." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+{% block stylesheets %}
+	{{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+    <style type="text/css">
+	.planoContent .recursos a{
+		display:none !important;
+	}
+	.planoContent .recursos{
+		display:block;
+		padding-bottom:50px;
+	}
+	.planoContent .fonte3{
+		font-size:22px !important;
+		padding:20px 0;
+	}
+	</style>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/pages/revenda.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	
+    <!--<div class="pageFullBanner">
+    	<div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.revenda.jpg') }}" style="float:none; margin:auto" /></div>
+        <div class="clearfloat"></div>
+    </div>-->
+    
+    <div class="hospedagemContent">
+    	
+		<h1 class="title0"><strong>Revenda</strong> de hospedagem</h1>
+		<h2 class="title0b">Garantimos a disponibilidade 24 horas por dia, 7 dias por semana</h2>
+        
+        <div class="boxesCenter">
+            <div class="boxesCenter box">
+                <div class="boxesCenterPadding" style="min-height:500px">
+                	
+                    <div class="table-func">
+        
+                        <ul class="options">
+                            <li id="selector1" class="active"><a href="javascript:void(0)">Tecnologia para seus clientes</a></li>
+                            <li id="selector2"><a href="javascript:void(0)">Email colaborativo</a></li>
+                            <li id="selector3"><a href="javascript:void(0)">Instalador de aplicativos</a></li>
+                            <li id="selector4"><a href="javascript:void(0)">Atendimento diferenciado</a></li>
+                            <li id="selector5"><a href="javascript:void(0)">Migramos seus sites</a></li>
+                            <li id="selector6"><a href="javascript:void(0)">Backup em storage</a></li>
+                            <li id="selector7"><a href="javascript:void(0)">Estabilidade e segurança</a></li>
+                            <li id="selector8"><a href="javascript:void(0)">Ferramentas especiais inclusas</a></li>
+                        </ul>
+                        
+                        <div class="content">
+                            <div id="content1">
+                                <div style="position:absolute; z-index:999; width:204px; height:320px; right:0; top:20px;"><img src="{{ asset('images/2012/pages/hospedagem/abas/tab1.jpg') }}" alt="Tab1" /></div>
+                                <div class="tab-content-title segoiUI">Recursos ilimitados!</div>
+                              <div style="font-size:13px">
+                                   	Aproveite da infraestrutura altamente confiável e segura com <br />recursos ilimitados para você e seus clientes. Garantimos os <br />sites de seus clientes no ar 24h por dia, 7 dias por semana sem <br />interrupções. Conte também com um storage exclusivo que faz <br />backups diários de todos os sites, banco de dados e emails.<br />
+                                    <br />
+                                    <span class="ok">100% de uptime garantido</span>
+                                    <span class="ok">Backup diário</span>
+                                    <span class="ok">Analistas monitorando 24h por dia os servidores</span>
+                                    <span class="ok">Links redundantes de alta performance</span>
+                                    <span class="ok">Tráfego de dados sem limites</span>
+                              </div>
+                          </div>
+                            <div id="content2" class="oculto">
+                                <div class="tab-content-title segoiUI">Aumente a produtividade de sua empresa</div>
+                                <div style="font-size:13px">
+                                    Conecte-se com clientes, funcionários e parceiros. Compartilhamento de calendários, contatos, tarefas e notas entre departamentos ou grupos de usuários.<br /><br />
+                                    Acesse o email, calendários, contatos, notas e tarefas a partir <br />de qualquer dispositivo com um navegador.<br /><br />
+                                    <span class="ok">Compartilhamento de Informações</span>
+                                    <span class="ok">Calendário Intuitivo</span>
+                                    <span class="ok">Gerenciamento de Contatos</span>
+                                    <span class="ok">Antispam e Antivírus</span>
+                                    <span class="ok">Servidor exclusivo</span>
+                                    <span style="font-size:10px">* Disponível apenas para o proprietário da <br />revenda</span>
+                                </div>
+                            </div>
+                            <div id="content3" class="oculto">
+                                <div class="tab-content-title segoiUI">Instale scripts com apenas um clique. </div>
+                                <div style="font-size:13px">
+                                    O instaladores <strong>Fantastico DeLuxe e Softaculous</strong> possuem diversos scripts pré-instalados que não exigem conhecimento técnico para serem habilitados nos seus sites. O acesso a esta opção pode ser realizado diretamente do painel de controle do servidor.<br /><br />
+Entre dentro do cPanel e com apenas um passo selecione qual<br /> script deseja instalar, e o Softaculous ou Fantastico, fará todo <br />o processo para você de instalação do script.<br /><br />
+                                    <span class="ok">Mais de 180 scripts instaláveis.</span>
+                                    <span class="ok">Extremamente rápido.</span>
+                                    <span class="ok">Teste uma demonstração antes de usar (Softaculous).</span>
+                                    <span class="ok"><strong>Mantenha seus scripts mais seguros:</strong> o Instalador Softaculous <br />atualiza eles por você</span>
+                                    
+                                </div>
+                            </div>
+                            <div id="content4" class="oculto">
+                                <div class="tab-content-title segoiUI">Suporte 24x7 (24 horas, 7 dias por semana)</div>
+                                <div style="font-size:13px">
+                                    Visando a excelência no atendimento, nossos analistas estão preparados e à disposição todos os dias da semana, inclusive em feriados, 24 horas.<br /><br />
+                                    Canais de atendimento:<br /><br />
+                                    <span class="ok">Email ou painel do client</span>
+                                    <span class="ok">Chat</span>
+                                    <span class="ok">Telefone 0800</span>
+                                    <span class="ok">Whatsapp</span><br /><br />
+                                    <a href="#chat" class="init-chat">Dúvidas? Clique e fale conosco via chat</a>
+                                </div>
+                            </div>
+                            <div id="content5" class="oculto">
+                                <div class="tab-content-title segoiUI">Seu provedor atual está te dando dor de cabeça? Migre facilmente</div>
+                                <div style="font-size:13px">
+                                    Nosso Migrador copia seu site e e-mails automaticamente para a WTIS.<br /><br />
+                                    Nossos analistas estão à disposição para auxiliar com a transferência <br />do seu site, arquivos e e-mails do atual servidor para a WTIS.<br /><br />
+                                    <a href="#chat" class="init-chat">Dúvidas? Clique e fale conosco via chat</a>
+                                </div>
+                            </div>
+                            <div id="content6" class="oculto">
+                                <div class="tab-content-title segoiUI">Fique despreocupado! Fazemos backup diariamente do seu site e e-mails</div>
+                                <div style="font-size:13px">
+                                    Para maior segurança na prevenção e preservação dos dados do seu site, temos um storage que está funcionando fora da infraestrutura principal da WTIS. <br />Então se por acaso acontecer algum problema grave no <br />datacenter principal todos os seus dados estarão <br />preservados no storage em outra infraestrutura.<br /><br />
+                                    <span class="ok">Backup diário automático</span>
+                                    <span class="ok">Verificação da integridade dos dados</span>
+                                    <br />
+                                    <span style="font-size:10px">* Todos os planos possuem storage.</span>
+                                </div>
+                            </div>
+                            <div id="content7" class="oculto">
+                                <div class="tab-content-title segoiUI">Estabilidade e segurança baseada em cloud</div>
+                                <div style="font-size:13px">
+                                    Seu site hospedado em servidor Cloud com o sistema operacional <br /><strong>CloudLinux</strong> pode contar com mais segurança e estabilidade. Não <br />usamos servidores físicos	nos servidores de hospedagem web, <br />mas sim servidores virtualizados, o que provê benefícios:<br /><br />
+                                    <span class="ok tip1" title=""><strong>Mais disponibilidade:</strong> não dependente de um único hardware. <br />Se um de nossos equipamentos falhar, outro irá assumir.</span>
+                                    <span class="ok">Escalabilidade</span>
+                                    <span class="ok">Serviços independentes</span>
+                                </div>
+                            </div>
+                            <div id="content8" class="oculto">
+                                <div class="tab-content-title segoiUI">Aproveite nossas ferramentas exclusivas</div>
+                              	<div style="font-size:13px">
+                                    Clientes de hospedagem da WTIS ganham créditos para utilização das nossas ferramentas de marketing.<br /><br />
+                                    <span class="ok">Envio de E-mail Marketing</span>
+                                    <span class="ok">Envio de SMS Marketing</span>
+                                    <span class="ok">Otimização do site e cadastro em buscadores</span>
+                                    <span class="ok">Criador de Sites</span><br />
+                                    <span style="font-size:10px">* Certifique-se que o plano escolhido inclui estes benefícios.</span><br /><br />
+                                </div>
+                            </div>
+                      </div>
+                    
+                  </div>
+                  
+                  <h2 class="title1">Você pode <strong>hospedar diversos sites</strong> de sua empresa e seus clientes.</h2>
+                  <h3 class="title2">Em todos os planos você pode hospedar quantos sites quiser, é ilimitado!</h3>
+                  
+                  <!-- Planos -->
+                  <a name="preco"></a>
+                  
+                  <div class="tipoPagamento">
+                  	<form>
+                        <div id="tipoPagamento">
+                            <input type="radio" id="pagamentoMensal" rel="1" name="tipoPagamento" /><label for="pagamentoMensal">Mensal</label> 
+                            <input type="radio" id="pagamentoAnual" rel="12" name="tipoPagamento" checked="checked" /><label for="pagamentoAnual">Anual</label> 
+                            <input type="radio" id="pagamentoTrianual" rel="36" name="tipoPagamento" /><label for="pagamentoTrianual">Trianual</label> 
+                        </div>
+                    </form>
+                  </div>
+                  
+                  <div class="planos">
+                  
+                  	<!-- PLANO -->
+                  	<div class="plano plano1">
+                    	<div class="planoContent">
+                            <div class="nome">
+                                <p class="h1 fonte3">REVENDA <span>I</span></p>
+                              	<p class="h2 preco">R$ <span>0</span>,00</p>
+                              	<p class="h3 paymentType0">mensal</p>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="disco">
+                                <p class="h1">50GB</p>
+                                <p class="h2">Espaço em disco</p>
+                            </div>
+                            <div class="trafego">
+                                <p class="h1">Ilimitado</p>
+                                <p class="h2">Transferência mensal</p>
+                            </div>
+                            <div class="recursos">
+                                <a href="#recursos" class="plano-ico rec-email tip scroll" title="25 contas de email">25 contas de email</a>
+                                <a href="#recursos" class="plano-ico rec-banco tip scroll" title="Banco de dados ilimitado">Banco de dados ilimitado</a>
+                            </div>
+                            <div class="contratar">
+                            	<a href="http://c.wtis.com.br/cart.php?a=add&pid=11" class="btn btn-primary btn-blue blue2">Contratar</a>
+                            </div>
+                            <div class="saiba-mais">
+                            	<a href="#recursos" class="scroll">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIM PLANO -->
+                    
+                    <!-- OUTROS PLANOS -->
+                    <div class="plano plano2">
+                    	<div class="planoContent">
+                            <div class="nome">
+                                <p class="h1 fonte3">REVENDA <span>II</span></p>
+                                <p class="h2 preco">R$ <span>0</span>,00</p>
+                                <p class="h3 paymentType0">mensal</p>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="disco">
+                                <p class="h1">100GB</p>
+                                <p class="h2">Espaço em disco</p>
+                            </div>
+                            <div class="trafego">
+                                <p class="h1">Ilimitado</p>
+                                <p class="h2">Transferência mensal</p>
+                            </div>
+                            <div class="recursos">
+                                <a href="#recursos" class="plano-ico rec-email tip scroll" title="50 contas de email">50 contas de email</a>
+                                <a href="#recursos" class="plano-ico rec-banco tip scroll" title="Banco de dados ilimitado">Banco de dados ilimitado</a>
+                            </div>
+                            <div class="contratar">
+                            	<a href="http://c.wtis.com.br/cart.php?a=add&pid=12" class="btn btn-primary btn-blue blue2">Contratar</a>
+                            </div>
+                            <div class="saiba-mais">
+                            	<a href="#recursos" class="scroll">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="plano plano3">
+                    	<div class="recomendado">recomendado</div>
+                    	<div class="planoContent">
+                            <div class="nome">
+                                <p class="h1 fonte3">REVENDA <span>PRO</span></p>
+                                <p class="h2 preco">R$ <span>0</span>,00</p>
+                                <p class="h3 paymentType0">mensal</p>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="disco">
+                                <p class="h1">300GB</p>
+                                <p class="h2">Espaço em disco</p>
+                            </div>
+                            <div class="trafego">
+                                <p class="h1">Ilimitado</p>
+                                <p class="h2">Transferência mensal</p>
+                            </div>
+                            <div class="recursos">
+                                <a href="#recursos" class="plano-ico rec-email tip scroll" title="150 contas de email">150 contas de email</a>
+                                <a href="#recursos" class="plano-ico rec-banco tip scroll" title="Banco de dados ilimitado">Banco de dados ilimitado</a>
+                                <a href="#recursos" class="plano-ico rec-sms tip scroll" title="Envio de SMS Marketing incluso">Envio de SMS Marketing incluso</a>
+                                <a href="#recursos" class="plano-ico rec-emarketing tip scroll" title="Envio de Email Marketing incluso">Envio de Email Marketing incluso</a>
+                            </div>
+                            <div class="contratar">
+                            	<a href="http://c.wtis.com.br/cart.php?a=add&pid=13" class="btn btn-primary btn-blue blue2">Contratar</a>
+                            </div>
+                            <div class="saiba-mais">
+                            	<a href="#recursos" class="scroll">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="plano plano4">
+                    	<div class="planoContent">
+                            <div class="nome">
+                                <p class="h1 fonte3">REVENDA <span>FULL</span></p>
+                                <p class="h2 preco">R$ <span>0</span>,00</p>
+                                <p class="h3 paymentType0">mensal</p>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="disco">
+                                <p class="h1">1.000 GB</p>
+                                <p class="h2">Espaço em disco</p>
+                            </div>
+                            <div class="trafego">
+                                <p class="h1">Ilimitado</p>
+                                <p class="h2">Transferência mensal</p>
+                            </div>
+                            <div class="recursos">
+                                <a href="#recursos" class="plano-ico rec-email tip scroll" title="Ilimitadas contas de email">Ilimitadas contas de email</a>
+                                <a href="#recursos" class="plano-ico rec-banco tip scroll" title="Banco de dados ilimitado">Banco de dados ilimitado</a>
+                                <a href="#recursos" class="plano-ico rec-sms tip scroll" title="Envio de SMS Marketing incluso">Envio de SMS Marketing incluso</a>
+                                <a href="#recursos" class="plano-ico rec-emarketing tip scroll" title="Envio de Email Marketing incluso">Envio de Email Marketing incluso</a>
+                            </div>
+                            <div class="contratar">
+                            	<a href="http://c.wtis.com.br/cart.php?a=add&pid=14" class="btn btn-primary btn-blue blue2">Contratar</a>
+                            </div>
+                            <div class="saiba-mais">
+                            	<a href="#recursos" class="scroll">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIM OUTROS PLANOS -->
+                    
+                    <div class="clearfloat"></div>
+                    
+                    <div class="plano-details plano1">
+                    	<div class="plano-details-seta"></div>
+                        <div class="table-default">
+                            <table>
+                                <tbody>
+                                    <tr class="no-even">
+                                        <td width="25%">
+                                            <ul class="plano-options">
+                                                <li><span class="price"><strong>Valor mensal:</strong> <span class="precoMensal">R$ 0,00</span></span></li>
+                                                <li><span class="price"><strong>Valor total:</strong> <span class="precoTotal">R$ 0,00</span> <span class="paymentType">mensal</span></span></li>
+                                                <li><span class="ok">Hospede <strong>ilimitados sites</strong></span></li>
+                                                <li><span class="ok"><strong>SO:</strong> Linux ou Windows</span></li>
+                                                <!--<li><span class="ok"><strong>Caixas de Email:</strong> 25</span></li>
+                                                <li><span class="ok"><strong>Espaço:</strong> 1GB</span></li>-->
+                                                <li><span class="ok"><strong>Transferência:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Banco de dados:</strong> Ilimitado</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                
+                        </div>
+                    </div>
+                    
+                    <div class="plano-details plano2">
+                    	<div class="plano-details-seta"></div>
+                        <div class="table-default">
+                            <table>
+                                <tbody>
+                                    <tr class="no-even">
+                                        <td width="25%">
+                                            <ul class="plano-options">
+                                                <li><span class="price"><strong>Valor mensal:</strong> <span class="precoMensal">R$ 0,00</span></span></li>
+                                                <li><span class="price"><strong>Valor total:</strong> <span class="precoTotal">R$ 0,00</span> <span class="paymentType">mensal</span></span></li>
+                                                <li><span class="ok">Hospede <strong>ilimitados sites</strong></span></li>
+                                                <li><span class="ok"><strong>SO:</strong> Linux ou Windows</span></li>
+                                                <!--<li><span class="ok"><strong>Caixas de Email:</strong> 50</span></li>
+                                                <li><span class="ok"><strong>Espaço:</strong> 100GB</span></li>-->
+                                                <li><span class="ok"><strong>Transferência:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Banco de dados:</strong> Ilimitado</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                
+                        </div>
+                    </div>
+                    
+                    <div class="plano-details plano3">
+                    	<div class="plano-details-seta"></div>
+                        <div class="table-default">
+                            <table>
+                                <tbody>
+                                    <tr class="no-even">
+                                        <td width="25%">
+                                            <ul class="plano-options">
+                                                <li><span class="price"><strong>Valor mensal:</strong> <span class="precoMensal">R$ 0,00</span></span></li>
+                                                <li><span class="price"><strong>Total:</strong> <span class="precoTotal">R$ 0,00</span> <span class="paymentType">mensal</span></span></li>
+                                                <li><span class="ok">Hospede <strong>ilimitados sites</strong></span></li>
+                                                <li><span class="ok"><strong>SO:</strong> Linux ou Windows</span></li>
+                                                <!--<li><span class="ok"><strong>Caixas de Email:</strong> 150</span></li>
+                                                <li><span class="ok"><strong>Espaço:</strong> 300GB</span></li>-->
+                                                <li><span class="ok"><strong>Transferência:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Banco de dados:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Créditos para envio de SMS Marketing:</strong> 250</span></li>
+                                                <li><span class="ok"><strong>Créditos para envio de Email Marketing:</strong> 10 mil</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                
+                        </div>
+                    </div>
+                    
+                    <div class="plano-details plano4">
+                    	<div class="plano-details-seta"></div>
+                        <div class="table-default">
+                            <table>
+                                <tbody>
+                                    <tr class="no-even">
+                                        <td width="25%">
+                                            <ul class="plano-options">
+                                                <li><span class="price"><strong>Valor mensal:</strong> <span class="precoMensal">R$ 0,00</span></span></li>
+                                                <li><span class="price"><strong>Total:</strong> <span class="precoTotal">R$ 0,00</span> <span class="paymentType">mensal</span></span></li>
+                                                <li><span class="ok">Hospede <strong>ilimitados sites</strong></span></li>
+                                                <li><span class="ok"><strong>SO:</strong> Linux ou Windows</span></li>
+                                                <!--<li><span class="ok"><strong>Caixas de Email:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Espaço:</strong> Ilimitado</span></li>-->
+                                                <li><span class="ok"><strong>Transferência:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Banco de dados:</strong> Ilimitado</span></li>
+                                                <li><span class="ok"><strong>Créditos para envio de SMS Marketing:</strong> 500</span></li>
+                                                <li><span class="ok"><strong>Créditos para envio de Email Marketing:</strong> 25 mil</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                
+                        </div>
+                    </div>
+                  
+                  </div>
+                  
+              
+                  <div class="clearfloat"></div>
+                  
+                  <div class="relative">
+                      <div class="plano-personalizado">
+                     	<br />
+                        <div class="plano-personalizado-icon"></div>
+                        <h3 class="title0 text-center no-margin-top">Precisa de um <strong>plano personalizado?</strong></h3>
+                        <h4 class="text-center">Fale com um dos nossos analistas, <a href="#chat" class="init-chat">clique aqui</a>.</h4>
+                      </div>
+                  </div>
+                  
+                  <hr size="1" color="#CCCCCC" />
+                  
+                  <div class="recursos-title segoeUI">Recursos da revenda</div>
+                  <a name="recursos"></a>
+                  
+                  <div class="aba1">
+                  	<ul class="aba">
+                    	<li class="selected"><a href="javascript://" rel="resumo">Resumo</a></li>
+                        <li><a href="javascript://" rel="email">Email</a></li>
+                        <li><a href="javascript://" rel="recursos">Recursos</a></li>
+                        <li><a href="javascript://" rel="aplicativos">Aplicativos grátis</a></li>
+                        <li><a href="javascript://" rel="recursosdev">Recursos para desenvolvedores</a></li>
+                    </ul>
+                    <div class="abas-divs">
+                    	<div class="border left"></div>
+                        <div class="border right"></div>
+                        <div class="contentBlock">
+                            <div class="content resumo" style="display:block">
+                                {% include "WebsiteBundle:Produtos:hospedagem.ajax.resumo.html" %}
+                            </div>
+                            <div class="content email">
+                                {% include "WebsiteBundle:Produtos:hospedagem.ajax.email.html" %}
+                            </div>
+                            <div class="content recursos">
+                                {% include "WebsiteBundle:Produtos:hospedagem.ajax.recursos.html" %}
+                            </div>
+                            <div class="content aplicativos">
+                                {% include "WebsiteBundle:Produtos:hospedagem.ajax.instaladores.html" %}
+                            </div>
+                            <div class="content recursosdev">
+                                {% include "WebsiteBundle:Produtos:hospedagem.ajax.recursos.dev.html" %}
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                    
+              </div>
+              
+            </div>
+        </div>
+        
+    </div>
+    
+{% endblock %}

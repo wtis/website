@@ -1,0 +1,79 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Clientes de Hospedagem tem grátis um Email Profissional e Colaborativo - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Clientes de Hospedagem tem um Email Profissional e Colaborativo grátis." />
+<meta property="og:title" content="Produtos Wtis | Email Colaborativo Grátis" />
+<meta property="og:description" content="Clientes de Hospedagem tem um Email Profissional e Colaborativo grátis." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-email').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>Email Profissional Colaborativo</strong></h1>
+        <h2 class="title0b">Clientes de hospedagem tem grátis um serviço de email diferente</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+                <div style="padding:25px">
+                	Para clientes que possuem o plano de hospedagem PRO ou superior, oferecemos este bônus incrível.<br /><br />
+                    Mantenha-se conectado com o e-mail empresarial em qualquer lugar a partir de qualquer dispositivo.<br /><br />
+                    Compartilhe pastas, compromissos, tarefas e anotações com outros usuários. Suporte a iPhone, iPad, BlackBerry, Android e Windows Mobile.<br /><br />
+                    Aumente a produtividade com um conjunto completo de ferramentas de colaboração, mantendo o controle total sobre a segurança e privacidade de sua empresa.<br /><br />
+                    <div class="text-center"><img src="{{ asset('images/pages/emailpro/email-cloud.jpg') }}" class="img-block img-responsive rimg1" alt="Nuvem WTIS"></div>
+                    Sua empresa não pode parar, muito menos o serviço de e-mail. Oferecemos um serviço seguro e confiável, com uma infraestrutura em nuvem moderna de alta disponibilidade e um suporte Contact Center WTIS e monitoramento 24 horas por dia durante os 7 dias da semana.
+
+Nosso contrato de serviço é baseado em SLA (Service Level Agreements, em português Acordo de Nível de Serviço) onde garantimos o tempo de disponibilidade do serviço de e-mail.<br /><br />
+Mais credibilidade para você e seu negócio.<br /><br />
+Um e-mail personalizado com a sua marca passa muito mais credibilidade para você e para o seu negócio. E você pode criar um e-mail de contato para cada área de sua empresa, veja alguns exemplos:<br /><br />
+
+<i class="glyphicon glyphicon-envelope"></i> voce@suaempresa.com.br<br />
+<i class="glyphicon glyphicon-envelope"></i> contato@suaempresa.com.br<br />
+<i class="glyphicon glyphicon-envelope"></i> financeiro@suaempresa.com.br<br /><br />
+<a href="{{ path('email-profissional') }}">Saiba mais sobre este serviço</a>
+                </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

@@ -1,0 +1,214 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.emailpro-header-bg{
+	background:url(../images/pages/emailpro/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:477px;
+	position:relative;
+}
+.fcontent{
+	width:551px;
+	padding-top:90px;
+	color:#333 !important;
+}
+.fcontent h1, .fcontent .h1{
+	color:#666 !important;
+	font-weight:300;
+}
+.fcontent .atendimento-opcoes{
+	margin-top:26px;
+}
+.fcontent .atendimento-opcoes a{
+	margin-right:20px;
+}
+.fcontent .atendimento-opcoes .telefone{
+	display:block;
+	clear:both;
+	font-size:18px;
+	margin:15px 0 8px 0;
+}
+.fcontent .atendimento-opcoes .telefone strong{
+	font-size:22px;
+	font-weight:400;
+}
+.emailpro-header-bg .pos-header{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:92px;
+	background:url(../images/pages/emailpro/pos-header-bg.jpg) center;
+}
+.emailpro-header-bg .pos-header h1, .emailpro-header-bg .pos-header .h1{
+	color:#FFFFFF;
+	font-size:22px;
+	font-weight:300;
+	display:block;
+	float:left;
+	width:65%;
+	text-align:center;
+	margin-top:20px;
+}
+.emailpro-header-bg .pos-header a.meligue{
+	float:right;
+	display:block;
+	text-indent:-5000px;
+	overflow:hidden;
+	background:url(../images/pages/consultoria/btn-meligue.png) center no-repeat;
+	width:288px;
+	height:34px;
+	margin-top:30px;
+}
+.pres-default span{font-size:16px !important}
+#email-cloud{
+	margin-top:67px;
+	margin-bottom:18px;
+}
+#email-personalizado{
+	margin-top:40px;
+}
+#email-personalizado .img img{
+	margin-left:130px;
+}
+#email-personalizado .pcontent{
+	margin-top:50px;
+}
+#email-personalizado .glyphicon{
+	color:#0270BC !important;
+}
+#colaboracao, #multiplataforma, #migrador{
+	margin-top:60px;
+}
+#multiplataforma .pcontent{
+	margin-left:0 !important;
+	float:left !important;
+}
+#multiplataforma .img img{
+	margin-left:15px !important;
+}
+#price{
+	margin-top:60px;
+}
+#price-preview{
+	margin:39px auto;
+}
+@media screen and (max-width: 767px) {
+	.emailpro-header-bg {
+	  background: url(../images/pages/emailpro/header-bg.jpg) 50% 0 no-repeat fixed;
+	  height: auto;
+	  position: relative;
+	}
+	.fcontent {
+	  width: 100%;
+	  padding: 20px;
+	  color: #FFF !important;
+	  position:relative;
+	  z-index:3;
+	}
+	.fcontent h1, .fcontent .h1{
+		color:#FFF !important;
+		position:relative;
+		z-index:3;
+	}
+	.emailpro-header-bg .pos-header {
+	  position: relative;
+	  z-index:3;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: auto;
+	  background: url(../images/pages/emailpro/pos-header-bg.jpg) center;
+	  padding-bottom:20px;
+	}
+	.emailpro-header-bg .pos-header h1, .emailpro-header-bg .pos-header .h1 {
+	  float: none;
+	  width: 100%;
+	  text-align: center;
+	  margin-top: 20px;
+	  padding:15px;
+	}
+	.emailpro-header-bg .pos-header a.meligue {
+	  float: none;
+	  display: block;
+	  margin:auto;
+	  text-indent: -5000px;
+	  width: 288px;
+	  height: 34px;
+	  margin-top: 0;
+	}
+	.btn-position .btn-testegratis {
+	  position: absolute;
+	  z-index:3;
+	  right: 0;
+	  top: -36px;
+	  display: block;
+	  width: 289px;
+	  height: 36px;
+	  text-indent: -5000px;
+	  overflow: hidden;
+	  background: url(../images/pages/emkt/btn-testegratis.png);
+	}
+	.pres-default .img {
+	  float: none !important;
+	  width: 100%;
+	}
+	.pres-default.large .img {
+	  width: 100% !important;
+	}
+	.pres-default .img img {
+		width:100% !important;
+	}
+	.pres-default.large .pcontent {
+	  width: 100% !important;
+	  float: none !important;
+	}
+	.pres-default .pcontent {
+	  float: none;
+	  width: 100%;
+	}
+	.pres-default{
+		padding:15px;
+	}
+	.pcontent {
+	  margin-top: 20px !important;
+	}
+	.pres-default.right .img img {
+	  margin-left: 0;
+	}
+	.pres-default.right .img, .pres-default.right .pcontent {
+	  float: none !important;
+	}
+	#relatorios{
+		padding:15px;
+	}
+	#vantagens ul li {
+	  float: none;
+	  width: 100%;
+	  height: auto;
+	  margin-bottom:20px;
+	}	
+	#plano-prepago .pcell-padding {
+	  margin-bottom: 0;
+	  padding-bottom:60px;
+	}
+	#vantagens-comparativo .btn-sucess {
+	  font-size: 13px;
+	  display:block;
+	  margin:auto 10px;
+	  padding: 16px 20px;
+	  border: none;
+	  background-color: #8FC564 !important;
+	}
+	#email-personalizado .img img {
+		width:50% !important;
+		margin-left: 0;
+	}
+	#price{
+		padding:15px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

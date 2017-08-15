@@ -1,0 +1,81 @@
+<!--
+.dedicado-title{
+	font-size:32px !important;
+}
+.content-dedicado-dl{
+	padding:25px 25px 0 25px !important;
+}
+.server-content .server-name{
+	font-size:22px;
+	color:#000000;
+	font-weight:normal;
+}
+.server-content .server-name span{
+	 color:#666666;
+}
+dl.server-content, dl.server-content dt, dl.server-content dd{
+	margin:0;
+	padding:0;
+}
+dl.server-content dt {
+	float: left;
+	width: 440px;
+}
+.server-img {
+	width: 120px;
+	float: right;
+	font-size: 24px;
+	line-height: 18px;
+	font-weight: 100!important;
+	text-align: center;
+	color: #666666;
+	letter-spacing: -1px;
+}
+.server-img span {
+	display: block;
+	font-size: 50%;
+	font-weight: 400;
+	color: #999;
+	letter-spacing: 0;
+}
+dd.products-specs {
+	float: left;
+	width: 410px;
+	margin-right: 30px;
+}
+.box dd {
+	
+}
+dd.products-specs p{
+	font-style: normal;
+	font-size: 12px;
+	font-weight:normal;
+	color:#333333;
+	margin: 4px 0 12px 0;
+}
+dd.products-specs ul {
+width: 420px;
+float: left;
+margin-bottom: 30px;
+}
+dd.products-specs li {
+	background: transparent url("../images/2012/li_triangle.png") no-repeat left 5px;
+	border: 0 none;
+	margin: 0;
+	padding: 0 0 0 15px;
+	width: 195px;
+	float: left;
+	line-height: 1.3em;
+	font-size:11px;
+}
+dl.server-content dd.actions {
+	width: 618px;
+	padding: 30px 0 15px 0;
+	float:left;
+}
+
+.solucoes1 h1{
+	font-size:15px;
+	color:#333;
+}
+-->

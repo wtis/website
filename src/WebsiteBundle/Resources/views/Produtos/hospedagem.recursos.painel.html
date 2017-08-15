@@ -1,0 +1,173 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Painel de Controle da Hospedagem com cPanel ou Plesk - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="cPanel e Plesk são os nossos painéis de controle." />
+<meta property="og:title" content="Produtos Wtis | Painel de Controle" />
+<meta property="og:description" content="cPanel e Plesk são os nossos painéis de controle." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.css') }}" type="text/css" media="screen" />
+<link rel="stylesheet" href="{{ asset('css/v2012.hospedagem.recursos.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/pages/hospedagem.recursos.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p-painel').attr('style', 'font-weight:bold; font-size:16px');
+});
+</script>
+{% endblock %}
+
+{% block body %}
+
+<!--<div class="pageFullBanner">
+    <div style="padding-top:10px"><img src="{{ asset('images/2012/pages/b_hospedagem.recursos.jpg') }}" style="float:none; margin:auto" /></div>
+    <div class="clearfloat"></div>
+</div>-->
+
+<div class="recursosContent">
+
+    <a name="aparencia"></a>
+    <div class="aparencia">
+
+        <h1 class="title0"><strong>Controle</strong> todos os recursos em poucos cliques</h1>
+        <h2 class="title0b">Linux ou Windows, ambos você pode contar com um painel moderno e seguro</h2>
+
+        <div class="boxesCenter2">
+            <div class="box centerLeft">
+              <div style="padding:25px">
+
+                    Em ambiente Linux utilizamos <strong>cPanel</strong>, em Windows o <strong>Plesk</strong>. Ambos automatizam todo o processo de administração e controle da hospedagem como criar e-mails, contas de FTP (File Transfer Protocol), gerenciar arquivos, atribuir proteções de diretórios, adicionar tarefas cron, redirecionar e-mails, entre outras funções.
+                    <br /><br />
+                    <!-- RECURSOS -->
+                  	<div class="table-default">
+
+                        <div class="recursos-completos">
+                            <!--<h2>Recursos Completos de nossa Hospedagem</h2>	-->
+                            
+                            <div class="relative">
+                            	<span class="ico-so linux painel-so-linux">Linux</span>
+                            	<span class="ico-so windows painel-so-windows">Windows</span>
+                            </div>
+                            <div style="clear:both">
+                            <table class="recursos" summary="Recursos Completos de nossa Hospedagem">
+                                    <tbody> 
+                                    <tr>
+                                        <th colspan="3" class="recurso-destaque">Principais Recursos do Painel do Servidor</th>
+                                    </tr>
+                                    <tr>
+                                        <td width="66%">PhpMyAdmin</td>
+                                        <td width="90"><span class="ico-sim">sim</span></td>
+                                        <td width="90"><span class="ico-sim">sim</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Gerenciador de arquivos pela web</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr>
+                                        <td>Estatísticas Gráficas (AWStats)</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Adicionar/remover subdomínios;</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr>
+                                        <td>Gerenciar banco de dados e seus usuários</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Adicionar/remover alias de domínio</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr>
+                                        <td>Gerenciar contas POP3</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Adicionar/remover auto respostas</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr>
+                                        <td>Alterar senha do usuário de FTP/painel</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Gerenciar redirecionamentos de email</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                                    <tr>
+                                        <td>Consultar estatísticas do site</td>
+                                        <td><span class="ico-sim">sim</span></td>
+                                        <td><span class="ico-sim">sim</span></td>                    
+                                    </tr>
+                             
+                                </tbody>
+                            </table>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                	</div>
+                    <!-- FIM RECURSOS -->
+                    <strong>Página dos softwares lista completa de funções:</strong><br /><br />
+                    cPanel: <a class="external" target="_blank" href="http://www.cpanel.net/docs/cpanel/">http://www.cpanel.net/docs/cpanel/</a>.<br />
+                    Plesk: <a class="external" target="_blank" href="http://www.parallels.com/products/plesk/">http://www.parallels.com/products/plesk/</a>.
+                    
+                    <div class="boxCenterDiv">
+                   	  <hr size="1" color="#CCCCCC">
+                    </div>
+                    
+                    <a name="subdominios"></a>
+                	<div class="subtitleFull segoiUI" style="margin-bottom:20px;">Crie Ilimitados Subdomínios</div>
+                    
+                    Organize os endereços de acesso ao seu site facilmente criando subdomínios, como <strong>http://www.seusite.com.br</strong> para o site principal, <strong>http://atendimento.seusite.com.br</strong> para o atendimento <strong>https://cliente.seusite.com.br</strong> para os clientes.<br /><br />
+			      <strong>A criação de subdomínios</strong> fica à  critério do cliente e <strong>é ilimitado</strong>.
+                  
+                  <div class="boxCenterDiv">
+                  	<hr size="1" color="#CCCCCC">
+                  </div>
+                  
+                  <a name="estatisticas"></a>
+                  <div class="subtitleFull segoiUI" style="margin-bottom:20px;">Estatísticas Avançadas de Acesso (AWStats)</div>
+                    
+                    O Advanced Web Statistics (AWStats) é um sistema de estatísticas avançadas, que analisará de tráfego do seu site e emitirá relatórios completos de acesso.<br /><br />
+                    Veja uma demonstração da ferramenta em ação: <a class="external" href="http://www.nltechno.com/awstats/awstats.pl?config=destailleur.fr" target="_blank">http://www.nltechno.com/awstats/awstats.pl?config=destailleur.fr</a>
+                  
+
+              </div>
+            </div>
+			
+            {% include "WebsiteBundle:Produtos:include.hospedagem.recursos.right.html" %}
+            
+        </div>
+
+    </div>
+
+</div>
+<div class="clearfloat"></div>
+{% endblock %}

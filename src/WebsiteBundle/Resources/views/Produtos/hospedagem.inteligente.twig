@@ -1,0 +1,117 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+    <title>Hospedagem de Sites com suporte 24x7 e presencial - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+    {% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {{ parent() }}
+    <meta name="description" content="Hospedagem de sites com espaço, e-mail e domínios ilimitados."/>
+    <meta name="keywords" content="Hospedagem de sites, web host, web hosting, hospedagem montes claros, email profissional, zimbra, email zimbra, email dedicado."/>
+    <meta property="og:title" content="Produtos Wtis | Hospedagem de Sites"/>
+    <meta property="og:description" content="Hospedagem de sites com espaço, e-mail e domínios ilimitados."/>
+    <meta property="og:url" content="{{ url(app.request.get('_route')) }}"/>
+    <meta property="og:image"
+          content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}"/>
+    <meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/hospedagem.inteligente.css') }}" type="text/css" media="screen"/>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/pages/hospedagem.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="hospedagemContent">
+
+        <div class="section__larger homepage__cta u__o-hidden u__relative">
+            <div class="homepage__cta-bg"></div>
+            <div class="container">
+
+                <div class="cta ">
+                    <h1 class="h2 blue">Hospede sem limites, com segurança e suporte incrível </h1>
+                    <h2 class="preco"><span><i>R$</i> 49,90</span> mensais</h2>
+
+                    <span class="t__h5 c__blue u__hide" data-signup="success">Não perca mais tempo instalando, configurando, preocupando com limites e segurança, oferecemos suporte sem custo em tudo, desde instalar um simples site e até corrigir problemas em código de sites e aplicativos, mesmo sendo sites que não fomos nós que fizemos. Nosso suporte é incrível e indiscutível, com inovação disruptiva faz qualquer um ficar impressionado. Um pequeno investimento para um retorno impressionante para seu negócio.</span>
+                    <div class="sp__2"></div>
+                    <div class="btn-contratar text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=60"
+                                                              class="btn btn-primary btn-blue">Experimente grátis por 10
+                            dias</a></div>
+                    <div class="cta__hr"></div>
+                    <img
+                            src="{{ asset('images/pages/hospedagem/logos-clientes.png') }}" alt="grupo ressonar, fundação milton campos, san jorge jeans, frigorífico maísa"
+                            width="688">
+                    <div class="sp__3"></div>
+                    <div class="f__center u__center" style="max-width: 550px;">Faça como estes clientes e muitos outros
+                        e escolha uma hospedagem que garanta a segurança e estabilidade dos seus serviços na web, com um
+                        suporte incomparável :)
+                    </div>
+                    <div class="sp__2"></div>
+                    <a class="t__smaller f__und c__blue" href="{{ path('hospedagem') }}">Sou desenvolvedor, quero
+                        autonomia e escolher um plano</a><span class="t__small c__blue">&nbsp;→</span>
+
+                </div>
+
+            </div>
+            <div class="sp__10 sp__8--md sp__7--sm"></div>
+        </div>
+
+        <div class="bg-itens">
+            <div class="center-977">
+                <div class="card cardBig wow fadeIn animated">
+                    <div class="inteligente text-center" style="min-height:40px;background:#2196f3">
+                        <h4 class="branco" style="margin:0;padding:20px;opacity:1;">O que está incluso?</h4>
+                    </div>
+
+                    <div class="row text-left" style="padding:20px 40px 0 40px">
+                        <img src="{{ asset('images/pages/hospedagem/web-hosting.png') }}" width="80" alt="web hosting"
+                             class="pull-left img-itens">
+                        <h5 class="primary" style="font-size:18px">Hospedagem do seu site e aplicativos</h5>
+                        <p class="texto wow fadeIn animated"
+                           style="margin-bottom: 25px;">Vamos hospedar seu site e aplicativos em nosso data center,
+                            independente da tecnologia necessária (PHP, Python, Java, Ruby, ASP etc) sem nenhum limite
+                            de recurso.
+                        </p>
+                    </div>
+                    <div class="cta__hr2"></div>
+                    <div class="row text-left" style="padding:20px 40px 0 40px">
+                        <img src="{{ asset('images/pages/hospedagem/mail.png') }}" width="80" alt="zimbra email"
+                             class="pull-left img-itens">
+                        <h5 class="primary" style="font-size:18px">Um email colaborativo especial</h5>
+                        <p class="texto wow fadeIn animated"
+                           style="margin-bottom: 25px;">Com emails próprios @suaempresa.com.br, mantenha-se conectado
+                            com o e-mail empresarial em qualquer lugar a partir de qualquer dispositivo. Compartilhe
+                            pastas, compromissos, tarefas e anotações com outros usuários. Suporte a iPhone,
+                            iPad, BlackBerry, Android e Windows Mobile..
+                        </p>
+                    </div>
+                    <div class="cta__hr2"></div>
+                    <div class="row text-left" style="padding:20px 40px 0 40px">
+                        <img src="{{ asset('images/pages/hospedagem/oc_support_icon.png') }}" width="80"
+                             alt="suporte 24x7"
+                             class="pull-left img-itens">
+                        <h5 class="primary" style="font-size:18px">Um suporte incrível</h5>
+                        <p class="texto wow fadeIn animated"
+                           style="margin-bottom: 25px;">O que você precisar, a qualquer hora, sempre terá alguém por
+                            telefone, helpdesk ou whatsapp para te atender em qualquer tipo de problema ou solicitação.
+                        </p>
+                    </div>
+                </div>
+                <p class="direitos">A Wtis se reserva ao direito de rejeitar uma conta de serviço de hospedagem de
+                    qualquer cliente, mesmo já ativo, desde que nossos analistas considerem os
+                    recursos utilizados pelo cliente prejudiciais à nossa infraestrutura, sendo assim, nossa equipe irá
+                    recomendar uma infraestrutura dedicada para o cliente.</p>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

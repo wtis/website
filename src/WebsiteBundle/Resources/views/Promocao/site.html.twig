@@ -1,0 +1,350 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Site + Mobile + Marketing + Redes Sociais. R$ 997,00 - Wtis</title>
+{% endblock %}
+
+{% block metas %}
+{{ parent() }}
+<meta name="description" content="Criação do site + SEO + Marketing em Redes Sociais + Google e muito mais."/>
+<meta name="keywords"
+      content="criação do site, seo, marketing, marketing redes sociais, marketing facebook, desenvolvimento de site, site rápido, site barato, site mobile"/>
+<meta property="og:title" content="Criação do Site + Mobile + Marketing - Apenas 6x de 250,00"/>
+<meta property="og:description"
+      content="Foque no que realmente te interessa: vender, e deixe que fazemos todo o resto, inclusive aumentar suas vendas."/>
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}"/>
+<meta property="og:image"
+      content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}"/>
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.marketing.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/page.promocaosite.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/promocaosite.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content promosite">
+
+    <div class="promosite-header">
+        <div id="service-description" class="center-1156">
+            <h2>Criamos seu Site em 15 dias<br>
+                <span>+ Versão Mobile + Marketing + 1º Lugar no Google</span></h2>
+            <h1>Foque no que realmente te interessa: Vender, e deixe que fazemos todo o resto, inclusive aumentar suas
+                vendas</h1>
+            <p class="preco">
+                <span class="ptitle">Apenas <b>6x</b> de </span>
+                <strong>R$ 250,00</strong>
+                <span class="desconto">ou pagamento à vista com desconto: <b>R$ 1.200,00</b></span>
+                <a href="https://c.wtis.com.br/cart.php?a=add&pid=57" class="contrate">Aproveite, contrate</a>
+                <!--<span class="alert-header">Promoção válida somente para os 50 primeiros clientes participantes</span>-->
+            </p>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+    <!--<div class="posheader"><span>Saiba Mais</span></div>-->
+
+    <section id="promo-content" class="center-1156">
+        <p class="dtitle">O que está incluso</p>
+        <ul class="features">
+            <li><a href="#ntd"><i class="el i1"></i>Criação do website e versão mobile com a qualidade Wtis</a></li>
+            <li><a href="#ntd"><i class="el i2"></i>Disponibilização de Analista de Mídias Sociais, Designer,
+                Especialista em SEO durante um mês inteiro sem custos adicionais</a></li>
+            <li><a href="#ntd"><i class="el i3"></i>Cadastro do seu negócio em todos os mecanismos de busca, criação da
+                página no Facebook, Linkedin e Google+</a></li>
+            <li><a href="#ntd"><i class="el i4"></i>Otimização SEO do site para aparecer entre os primeiros do Google
+            </a></li>
+            <li><a href="#ntd"><i class="el i5"></i>Ações para melhorar a visibilidade da sua empresa e dos seus
+                produtos, melhorando suas vendas</a></li>
+        </ul>
+        <div class="clearboth"></div>
+        <a href="https://c.wtis.com.br/cart.php?a=add&pid=57" class="contrate">Contrate agora</a>
+
+        <div class="rocket">
+            <p class="r1" data-sr="enter left ease-in-out 6rem wait 0.2s">Somos rápidos como um</p>
+            <p class="r2" data-sr="enter right ease-in-out 6rem wait 0.6s">Foguete</p>
+            <p class="r3"><img width="200px" data-sr="enter bottom ease-in-out 6rem wait 0.8s"
+                               src="{{asset('images/icon_rocket.png')}}" alt="Foguete"></p>
+            <div id="project-roadmap">
+                <h3>Nosso prazo para criação de um site e trabalhos de marketing e SEO é imbatível</h3>
+
+                <div class="diagram">
+                    <!--<div class="segment">
+                        <div class="circle c-e1"></div>
+                        <div class="circle c-e2"></div>
+                    </div>-->
+                    <div class="segment dashed">
+                        <div class="circle c-e1"></div>
+                        <div class="circle c-e2"></div>
+                        <div class="circle c-e3"></div>
+                    </div>
+                </div>
+
+                <div class="etapas">
+                    <p class="e1">
+                        1º dia
+                        <small>Estudo sobre o seu negócio e início da criação dos layouts de exemplo</small>
+                    </p>
+                    <p class="e2">
+                        4º dia
+                        <small>Apresentação de layouts do site para aprovação</small>
+                    </p>
+                    <p class="e3">
+                        15º dia
+                        <small>Entrega do site, publicação e treinamento</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="iproducts">
+        Esta promoção inclui as seguintes soluções, produtos e serviços da Wtis:<br/>
+        <a href="{{ path('presenca-web') }}" target="_blank">Presença na Web</a>, <a href="{{ path('google-adwords') }}"
+                                                                                     target="_blank">Google Adwords</a>,
+        <a href="{{ path('facebook') }}" target="_blank">Facebook</a> e <a href="{{ path('marketing') }}"
+                                                                           target="_blank">Marketing Cloud Services</a>
+    </div>
+
+    <section id="simular" class="center-977">
+        <!--<div class="card cardBig wow fadeIn animated">
+            <div class="inteligente text-center" style="min-height:40px;background:#2196f3">
+                <h4 class="branco" style="margin:0;padding:20px;opacity:1;">O que nós fazemos por você?</h4>
+            </div>
+
+            <div class="row text-left" style="padding:20px 40px 0 40px">
+                <h5 class="primary" style="font-size:18px">Ganhe o registro do domínio grátis.</h5>
+                <p class="texto wow fadeIn animated" data-wow-delay="0.1s"
+                   style="margin-bottom: 25px; visibility: visible; animation-delay: 0.1s;">Fazemos todos os documentos
+                    necessários e te orientamos passo-a-passo durante o processo.
+                </p>
+            </div>
+        </div>-->
+
+        <div class="itens-sim">
+            <div class="adwords">
+                <h2>Quando alguém buscar sua empresa ou qualquer atividade que ela exerça no google, sua empresa estará
+                    na primeira página e ainda como link patrocinado</h2>
+                <div class="absolute-browser">
+                    <div class="sample-browser">
+                        <div class="overview-ad">
+                            <span class="ad-search-query" data-custom="ad-query" id="ad-search-query"
+                                  style="display: none;">restaurante em brasília</span>
+                            <div class="ad-search-results" id="ad-search-results" style="display:none">
+                                <div class="ad-search-container">
+                                    <p class="ad-content">
+                                        <span class="ad-headline"
+                                              data-custom="ad-headline">Comida Italiana em Brasília</span><br>
+                                        <span class="ad-url-display"><span class="ads-badge">Anúncio</span> <span
+                                                class="ad-url" data-custom="ad-url">www.restaurantedotiago.com.br</span><br></span>
+                                        <span class="ad-description"><span data-custom="ad-description-line1">Descritivo sobre sua empresa.</span>
+                              <span data-custom="ad-description-line2"></span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ap facebook">
+                <p class="h2">Quando alguém pesquisar na internet em buscadores, redes sociais ou sites de compra por
+                    assuntos que estejam relacionados aos serviços ou produtos vendidos por sua empresa, esta pessoa ao
+                    entrar em seu Facebook e Instagram verá um anúncio atrativo mostrando o que ele estava pesquisando,
+                    trata-se do mecanismo de ADS do Facebook que utiliza os dados de pesquisa e cookies: </p>
+                <div class="facebook-browser">
+                    <div class="itens1">
+                        <p class="a fenome"></p>
+                        <p class="b empresaurlfull"></p>
+                        <p class="c">Uma descrição sobre o produto ou serviço de sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ap instagram">
+                <p class="h2">O mesmo com o Instagram...</p>
+                <div class="instagram-browser">
+                    <p class="a fenome"></p>
+                    <p class="b">Uma descrição sobre o produto ou serviço de sua empresa. É possível até criar um link
+                        direto para a compra do produto ou contratação do serviço.</p>
+                </div>
+            </div>
+
+            <div class="midias-sociais">
+                <h2>Vamos criar uma página de sua empresa nas principais redes sociais e também criar campanhas
+                    promocionais, fazer publicações diárias de notícias sobre sua empresa, seus produtos e serviços,
+                    sempre de uma maneira intuitiva e atrativa para engajar as pessoas com a sua marca. Ao mesmo tempo,
+                    vamos manter um relacionamento direto com seus clientes por meio destas redes sociais</h2>
+                <ul class="midias-list">
+                    <li class="selected">
+                        <a href="#facebook">
+                            <img src="{{ asset('images/pages/marketing/ifacebook.jpg') }}" alt="Facebook"/>
+                            <div>facebook.com<span class="hidden-xs">/</span><span class="empresaurl hidden-xs">suaempresa</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#twitter">
+                            <img src="{{ asset('images/pages/marketing/itwitter.jpg') }}" alt="Twitter"/>
+                            <div>twitter.com<span class="hidden-xs">/</span><span class="empresaurl hidden-xs">suaempresa</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#instagram">
+                            <img src="{{ asset('images/pages/marketing/iinstagram.jpg') }}" alt="Instagram"/>
+                            <div>instagram.com<span class="hidden-xs">/</span><span class="empresaurl hidden-xs">suaempresa</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clearfloat"></div>
+                <div class="midias-divs">
+
+                    <div class="mfacebook mdef selected">
+                        <div class="col1">
+                            <div class="sample-facebook">
+                                <div class="fenome fenomeval fdestaque">Sua Empresa</div>
+                                <div class="fmessage"><span class="f-name fdestaque">Edson Amorim</span> Fico um pouco
+                                    preocupado com empresas que encontro pela internet mas vejo que vocês são atenciosos
+                                    com as pessoas e semprem respondem rapidamente. Estou interessado no trabalho de
+                                    vocês, dei uma olhada no site, poderiam me enviar um orçamento?
+                                </div>
+                                <div class="freply"><span class="f-name fenomeval fdestaque">Sua Empresa</span> Olá
+                                    <span class="f-name-mark">Edson Amorim</span> tudo bem? Ficamos felizes com sua
+                                    observação sobre nós. Podemos fazer seu orçamento sim, nos envie inbox seu telefone
+                                    que vamos te ligar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <h3>O que fazemos:</h3>
+                            <ul>
+                                <li>Criação de Página e Apps</li>
+                                <li>Publicação de conteúdo</li>
+                                <li>Criação de campanhas promocionais e incentivo para a opção Curtir</li>
+                                <li class="tip"
+                                    title="Iremos disponibilizar um analista de redes sociais dedicado à sua empresa para atender e interagir com seus clientes">
+                                    <strong>Interação com as pessoas em tempo real</strong></li>
+                                <li>Monitoramento do que falam sobre a empresa no Facebook</li>
+                            </ul>
+                        </div>
+                        <div class="clearfloat"></div>
+                    </div>
+
+                    <div class="mtwitter mdef">
+                        <div class="col1">
+                            <div class="sample-twitter">
+                                <div class="tpublic"><span class="fenome tfullname">Sua Empresa</span> @<span
+                                        class="turl empresaurl">suaempresa</span> <span class="ttimer">- 11 min</span>
+                                </div>
+                                <div class="tmessage"><span class="tfullname">Edson Amorim</span> <span class="turl">@edamorim</span>
+                                    <span class="ttimer">- 6 min</span>
+                                    <div class="message">Quentão, baião de dois, pé de moleque, quindim e ainda subir no
+                                        pau de cebo para pegar dinheiro kkk.. obrigado por lembrar @<span
+                                                class="empresaurl">suaempresa</span></div>
+                                </div>
+                                <div class="treply"><span class="fenome tfullname">Sua Empresa</span> @<span
+                                        class="turl empresaurl">suaempresa</span> <span class="ttimer">- 4 min</span>
+                                    <div class="message">Isso mesmo @edamorim, acho a melhor época do ano. Boas festas
+                                        para você.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <h3>O que fazemos:</h3>
+                            <ul>
+                                <li>Criação de Página</li>
+                                <li>Publicação de conteúdo</li>
+                                <li>Criação de campanhas promocionais e incentivo para a opção Retweetar e Curtir</li>
+                                <li class="tip"
+                                    title="Iremos disponibilizar um analista de redes sociais dedicado à sua empresa para atender e interagir com seus clientes">
+                                    <strong>Interação com as pessoas em tempo real</strong></li>
+                                <li>Monitoramento do que falam sobre a empresa no Facebook</li>
+                            </ul>
+                        </div>
+                        <div class="clearfloat"></div>
+                    </div>
+
+                    <div class="minstagram mdef">
+                        <h2>Vamos ajudar você a construir uma imagem agradável da sua empresa, publicando fotos
+                            estratégias no instagram e possibilitando aos clientes se sentirem familiarizados com sua
+                            empresa e seu pessoal</h2>
+                        <div class="sample-instagram">
+                            <div class="itext">
+                                <div class="inome fenome">Sua Empresa</div>
+                                <div class="idesc">Descritivo sobre a sua empresa</div>
+                                <div class="iurl empresaurlfull">www.suaempresa.com.br</div>
+                            </div>
+                        </div>
+                        <div class="clearfloat"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <p class="text-center"><a href="https://c.wtis.com.br/cart.php?a=add&pid=57" class="contrate">Contrate agora</a></p>
+
+    <div class="palert2">
+        <!--Promoção válida somente para os 50 primeiros clientes.--> Promoção válida somente para micro, pequenos e
+        médios negócios. O parcelamento pode ser feito com cheque ou cartão de crédito nas bandeiras Visa, Elo,
+        Mastercard ou American Express em 6 parcelas de R$ 250,00 ou à vista no valor de R$ 1200,00. A contratação
+        refere-se ao trabalho completo de criação do website, desde a criação do layout até a programação e publicação
+        em um domínio. O registro do nome de domínio não está incluso no valor. Crédito para publicidades pagas,
+        chamadas ADS, do Google, Facebook e Instagram não está incluso no valor, o cliente poderá investir nestas
+        publicidades pagas quanto quiser, ou decidir por não investir. Iremos disponibilizar durante um mês todos os
+        profissionais necessários para administrar seu site e executar o plano inicial de marketing que envolve
+        publicações e acompanhamento no Facebook. Estes profissionais irão trabalhar durante este período sem nenhum
+        custo adicional, após este mês o próprio cliente poderá administrar todos os serviços, iremos disponibilizar
+        todos os acessos: Painel administrativo do site, Administrador do Facebook e Instagram, Login do Google AdWords
+        e qualquer outro acesso necessário para que o próprio cliente possa assumir tudo sem intervenção da Wtis. Se o
+        cliente quiser continuar com nossos serviços onde nossos profissionais farão todos os trabalhos para o cliente,
+        desde a publicação de um conteúdo em texto até a criação de imagens, programação e qualquer outro serviço
+        solicitado pelo cliente. Nosso serviço é cobrado mensal e taxado pelas horas trabalhadas dos profissionais
+        envolvidos, por exemplo, um Web Desiger tem um custo de R$20,00 por hora, se o cliente solicitou uma publicação
+        no Facebook e esse Web Designer gastou 30 minutos para fazer a atividade será cobrado do cliente R$ 10,00
+        referente a 30 minutos trabalhados por este Web Designer. Assim será com qualquer outro profissional, tais como
+        Analista de Mídias Sociais, Analista/Programador etc. O cliente poderá definir um gasto máximo mensal com estes
+        profissionais, por exemplo, R$ 50,00 mensais, se este valor chegar ao limite nós avisaremos o cliente antes de
+        taxar em qualquer outro serviço. Para publicação do site é necessário a contratação de um <a
+            href="{{ path('hospedagem') }}">plano de hospedagem</a> para hospedar o site e o serviço de e-mails.
+    </div>
+
+    <section id="contrate">
+        <div class="center-977">
+            <h2>Mas por que tão barato assim?</h2>
+            <p data-sr="enter top ease-in-out">A Wtis não está poupando esforços para mostrar que um marketing digital
+                bem trabalhado pode melhorar de forma significativa as vendas e a vida financeira das
+                empresas.<br/><br/>
+                Entendemos que, atualmente, muitas empresas investem dinheiro em serviços digitais de forma incorreta,
+                criando um site e achando que somente ele, estando online, poderá alcançar resultados. Com esta
+                promoção, iremos trazer para a Wtis novos clientes e poderemos provar para eles que, com uma equipe de
+                consultoria apoiando seus negócios, os resultados serão impressionantes. O site é somente a vitrine
+                principal da empresa, mas é necessário meios e estratégias inteligentes de prospecção e engajamento,
+                para que estes clientes possam chegar e enxergar esta vitrine, com uma visão mais atrativa, trazendo
+                resultados positivos para a empresa. <br/><br/>
+
+                Então, para nós este preço é simbólico e considerado um investimento para trazer novos clientes,
+                melhorar seus negócios e assim torná-los clientes fiéis na utilização dos serviços da Wtis.
+            </p>
+            <a data-sr="enter top ease-in-out wait 1s" href="#chat" class="chat init-chat">Fale conosco via chat</a>
+            <a data-sr="enter top ease-in-out wait 1s" href="#" class="meligue meligue-modal" data-toggle="modal"
+               data-target="#meLigueModal" data-product="Site Promocional">Nós ligamos para você</a>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

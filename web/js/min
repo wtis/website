@@ -1,0 +1,12 @@
+echo "Compactando arquivos..."
+uglifyjs jquery-ui.min.js \
+	bootstrap.min.js fullscreenbg.js \
+	jquery.parallax-1.1.3.js \
+	jquery.localscroll-1.2.7-min.js \
+	jquery.scrollTo-1.4.2-min.js \
+	jquery.tipTip.minified.js \
+	scrollReveal.min.js \
+	jquery.mask.min.js parsley.min.js \
+	fixed.js \
+	-o app.min.js
+echo "Concluido"

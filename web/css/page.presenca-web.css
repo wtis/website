@@ -1,0 +1,191 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+.pweb-header-bg{
+	background:url(../images/pages/presenca-web/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:320px;
+	position:relative;
+}
+
+.pos-header{
+	text-align:center;
+	position:absolute;
+	bottom:30px;
+	left:0;
+	right:0;
+}
+#service-description .title h1{
+	text-align:center;
+	padding-top:28px;
+}
+#service-description .title h2{
+	display:block;
+	background-color:#F5F5F5;
+	text-align:center;
+	padding:16px;
+	font-size:14px;
+	-webkit-border-radius:20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	margin-bottom:50px;
+}
+#posvenda .h1{
+	text-align:center;
+	margin:56px auto 43px auto;
+}
+#posvenda span{
+	font-size:14px;
+	display:block;
+	margin-bottom:70px;
+}
+#posvenda .comparativo-basico{
+	background:url(../images/div-vertical.jpg) center no-repeat;
+	height:400px;
+}
+#posvenda ul{
+	list-style:none;
+}
+#posvenda .gratis{
+	width:46%;
+	float:left;
+}
+#posvenda .pro{
+	width:46%;
+	float:right;
+}
+#posvenda h2, #posvenda .h2{
+	font-size:22px;
+	text-align:center;
+	margin-bottom:50px;
+}
+#posvenda .gratis h2 strong, #posvenda .gratis .h2 strong{
+	color:#218C00;
+}
+#posvenda li{
+	height:120px;
+	position:relative;
+	padding-left:90px;
+}
+#posvenda li i{
+	position:absolute;
+	left:0;
+	top:0;
+}
+#posvenda .pro li:last-child{
+	margin-bottom:-20px;
+}
+.posvenda-details{
+	font-size:11px;
+	text-align:center;
+	padding-bottom:26px;
+	margin-bottom:16px;
+	margin-top:14px;
+	background:url(../images/div-center2.png) bottom center no-repeat;
+}
+#posvenda-desc{
+	padding:36px 0 0 0;
+	margin-bottom:-50px;
+}
+#posvenda-desc ul{
+	list-style:none;
+	text-align:center;
+	vertical-align:top !important;
+	margin-top:86px;
+	margin-left:-35px;
+}
+#posvenda-desc ul li{
+	float:left;
+	width:384px;
+	height:380px;
+	margin-left:94px;
+}
+#posvenda-desc ul li h4{
+	font-weight:400;
+}
+#posvenda-desc i{
+	margin-bottom:25px;
+}
+.header-title{
+	display:none;
+	position:relative;
+	z-index:2;
+	color:#FFF;
+	font-size:32px;
+	font-weight:400;
+	padding:35px 15px 15px;
+	text-align:center;
+}
+@media screen and (max-width: 767px) {
+	#page-menu{
+		display:none;
+	}
+	.pos-header a{
+		display:block;
+		margin:4px;
+		position:relative;
+		z-index:2;
+	}
+	#posvenda{
+		padding:15px;
+	}
+	#posvenda .comparativo-basico {
+	  background: none;
+	  height: auto;
+	}
+	#posvenda .gratis,#posvenda .pro {
+	  width: 100%;
+	  float: none;
+	}
+	#posvenda li {
+	  height: auto;
+	  position: relative;
+	  padding-left: 90px;
+	  margin-bottom:20px;
+	}
+	.posvenda-details{
+		padding:15px;
+	}
+	#vantagens-comparativo .text-right{
+		text-align:center !important;
+	}
+	#posvenda-desc {
+	  margin-bottom: 0;
+	}
+	#posvenda-desc{
+		padding:36px 15px 0;
+	}
+	#posvenda-desc ul {
+	  margin-left: 0;
+	}
+	#posvenda-desc ul li {
+	  float: none;
+	  width: 100%;
+	  height: auto;
+	  margin-left: 0;
+	  padding:15px;
+	}
+	#service-description{
+		padding:15px;
+	}
+	.pres-default .img {
+	  float: none !important;
+	  width: 100%;
+	  text-align:center;
+	}
+	.pres-default .img img{
+		width:90% !important;
+		margin:auto;
+	}
+	.pres-default .pcontent {
+	  float: none;
+	  width: 100%;
+	  padding: 15px;
+	}
+	.pres-default.right .img img {
+	  margin-left: 0;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

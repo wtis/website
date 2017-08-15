@@ -1,0 +1,297 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Criação e Gerenciamento de Páginas no Facebook - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Criação e Gerenciamento de Páginas no Facebook. Divulgue no Facebook e aumente suas vendas." />
+<meta property="og:title" content="Soluções Wtis | Sua Empresa no Facebook" />
+<meta property="og:description" content="Criação e Gerenciamento de Páginas no Facebook." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.facebook.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="content facebook">
+
+    <div class="fullscreen background facebook-header-bg">
+    	<div class="bg-overlay"></div>
+    	<div class="center-1156">
+         <div class="fcontent">
+         	<h1>Divulgue no Facebook e alcance todas as <span>pessoas que interessam para a sua empresa</span></h1>
+            <div class="atendimento-opcoes"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Página Facebook" class="meligue button10 laranja no-icon">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?gid=10" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+          </div>     
+         </div> 
+    </div>
+    
+    <section id="page-menu-facebook" class="page-menu-facebook">
+    	<ul>
+        	<li class="selected"><a href="#vantagens" class="scroll"><span>Vantagens</span></a></li>
+            <li><a href="#como-funciona" class="scroll"><span>Como Funciona</span></a></li>
+            <li><a href="#quanto-custa" class="scroll"><span>Preços</span></a></li>
+        </ul>
+    </section>
+    <div class="div-bg bg-header-menu"></div>
+    
+    <section id="vantagens" class="center-1156">
+    	<div class="center-977 resumo">
+        	<p class="h1">Por que a WTIS para gerenciar minha página no facebook?</p>
+            <h3>Uma equipe de especialistas que entendem tudo do assunto irá planejar e executar todo o trabalho para sua empresa. Usaremos o que há de mais moderno e as melhores práticas para conectar sua empresa no Facebook. Garantimos que nosso trabalho fará um plus em sua marca, é certeza que seu negócio irá crescer ainda mais e seus clientes vão admirar.</h3>
+        </div>
+        <div class="analista">
+        	<h2><strong>Analista</strong> de Redes Sociais <strong>dedicado à sua empresa</strong></h2>
+            <span>
+            	Responsável pelas estratégias de sua empresa nas principais redes sociais, ele será a ligação da empresa com as redes sociais, ele irá representar sua empresa sempre visando passar uma boa impressão para os clientes e trazer lucros, seja em curto prazo com ações virais ou em longo prazo com ações de branding.<br><br>
+                <strong>Em resumo, esse profissional saberá:</strong> <br><br>               
+                    <i class="marcar">Usar as redes sociais e tirar o maior proveito de suas funcionalidades;</i>
+                    <i class="marcar">Criar um bom conteúdo;</i>
+                    <i class="marcar">Entender de marketing;</i>
+                    <i class="marcar">Conseguir mesclar tudo isso para divulgação e crescimento do seu negócio.</i><br>                
+                A WTIS disponibilizará um Analista de Redes Sociais para sua empresa, para falar por e-mail, telefone e até mesmo presencialmente com você. Ele irá estudar sua empresa, marca, produtos e serviços para interagir com seus clientes pelo Facebook, sempre seguindo os padrões de qualidade de atendimento para passar uma ótima imagem da sua empresa para os seus clientes. Toda interação com clientes ficará armazenada em um painel onde você poderá acompanhar e fazer sugestões.
+            </span>
+        </div>
+    </section>
+    
+    <div class="center-full facebook">
+    	
+        <div class="center-1156">
+        
+        <section id="como-funciona">
+        	<div class="default-title">
+                <p class="h1">Como funciona?</p>
+                <h2>Configuramos sua página, Identificamos seu público, Criamos um conteúdo atrativo e Anunciamos para você</h2>
+            </div>
+        	<div class="box box1 etapa1">
+            	<div class="img"><img data-sr="enter top ease-in-out 6rem" src="{{ asset('images/pages/facebook/etapa1.jpg') }}" alt="Configuramos sua página"></div>
+            	<h2>Criamos o ponto de conexão da sua empresa no Facebook</h2>
+                <span>Configuramos sua página com um endereço da Web como facebook.com/nomedasuaempresa, que facilita a localização da empresa.<br><br>Lembre-se: sua página é uma extensão da sua empresa. É um jeito fácil de compartilhar atualizações com as pessoas que mais interessam. Ela irá ajudar você a interagir com os clientes, seja por desktop ou dispositivos móveis.<br><br>
+                Sua página do Facebook torna a sua empresa:<br><br><br>
+                </span>
+                <ul class="lista-vantagens">
+                	<li>
+                    	<div class="icon"><i class="glyphicon glyphicon-search"></i></div>
+                    	<h4>Localizável</h4>
+                        <span>Quando as pessoas procurarem você no Facebook, conseguirão encontrar.</span>
+                    </li>
+                    <li>
+                    	<div class="icon"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    	<h4>Oportuna</h4>
+                        <span>Sua página pode ajudá-lo a atrair grandes grupos de pessoas frequentemente, com mensagens personalizadas conforme suas necessidades e interesses.</span>
+                    </li>
+                    <li>
+                    	<div class="icon"><i class="glyphicon glyphicon-user"></i></div>
+                    	<h4>Conectada</h4>
+                        <span>Converse pessoalmente com os clientes que curtem sua página, leem as publicações e as compartilham com amigos e que fazem check-in quando visitam o estabelecimento.</span>
+                    </li>
+                    <li>
+                    	<div class="icon"><i class="glyphicon glyphicon-dashboard"></i></div>
+                    	<h4>Atenta</h4>
+                        <span>As análises da sua página fornecerão a você um conhecimento mais amplo sobre seus clientes e atividades de marketing.</span>
+                    </li>
+                </ul>
+                <div class="clearfloat"></div>
+            </div>
+            
+            <div class="box box2">
+            	<div class="img"><img data-sr="enter top ease-in-out 6rem" src="{{ asset('images/pages/facebook/etapa2.jpg') }}" alt="Identificamos seu público"></div>
+            	<h2>Ajudamos você a pensar em quem você deseja se conectar e o apresentamos</h2>
+                <span>Além de se conectar com mais pessoas pelo Facebook, você alcança pessoas específicas que possivelmente se tornarão seus clientes.<br><br>
+                Para ajudar você a se conectar, leve em conta o seguinte:<br><br>                
+                <strong>- O que seus clientes ideais têm em comum?<br>
+                - Qual a idade deles e onde vivem?<br>
+                - Como a sua empresa pode ajudá-los?<br>
+                - Um dos grupos tem mais interesse em mensagens, produtos ou serviços específicos? Ou talvez uma venda ou oferta?</strong><br><br>
+                Para formar seu público, nós incentivamos os atuais clientes e defensores da marca a curtir sua página. São elas que verão suas publicações em seus Feeds de Notícias. Explore também as opções do botão Criar Público:<br><br>                
+               <strong> Convide seus amigos:</strong> Auxilie seus contatos a conhecerem sua página para divulgá-la por meio da opção “Curtir”. Esse público inicial ajuda você a estabelecer credibilidade<br>
+                <strong>Compartilhe sua página—</strong> e não se esqueça de curtir. Seja um porta-voz para o seu negócio.<br>
+                <strong>Convide seus contatos profissionais:</strong> Carregue uma lista para enviar às pessoas um e-mail sobre sua nova página.<br><br>                
+                Nossos especialistas fazem todo o trabalho para sua empresa, mas claro, com seu acompanhamento, ajuda e informações.</span>
+                <div class="clearfloat"></div>
+            </div>
+            
+            <div class="box box1 conteudo">
+            	<div class="img"><img data-sr="enter top ease-in-out 6rem" src="{{ asset('images/pages/facebook/etapa3.jpg') }}" alt="Criamos um conteúdo atrativo"></div>
+            	<h2>Dê vida à sua empresa no Facebook, nós fazemos todo o trabalho</h2>
+                <span>Pensamos para você no que os clientes podem achar interessante e inspirador, nossa equipe cria e publica atualizações, fotos e vídeos. Como você os abordará? O que deseja comunicar a respeito da sua empresa? Nós fazemos todo o trabalho para você e você somente acompanha.<br><br>
+                Experimente diferentes tipos de publicações. Seu público prefere fotos ou links úteis? Logo você descobrirá. Use as Informações da página para saber quais publicações têm melhor desempenho.<br><br>                
+                Buscamos seguir as boas práticas e recomendações na página de sua empresa no Facebook:<br><br>                
+                <i class="marcar"><strong>Ser autêntico:</strong> Compartilhar aquilo que o agrada e que agrada seus clientes.</i><br>
+                <i class="marcar"><strong>Ser proativo:</strong> Quando as pessoas comentarem publicações, mostramos que sua empresa está prestando atenção e que você se importa. Se precisarmos de mais tempo para responder, demonstramos dedicação.</i><br>
+                <i class="marcar"><strong>Ser consistente:</strong> Quanto maior a frequência de publicações, mais oportunidades você terá de se conectar com as pessoas e gerar confiança. Nós publicamos o quanto você precisar e pedir.</i><br>
+                <i class="marcar"><strong>Fazemos o que funciona:</strong> Replicamos o sucesso em publicações que geram mais interação.</i><br>
+                <i class="marcar"><strong>Transformamos publicações de sucesso em promoções promissoras:</strong> Quando percebermos que certa publicação está gerando interação, a  promoveremos para atrair ainda mais pessoas. Quando as pessoas curtem, comentam e compartilham suas publicações, os amigos delas também veem o conteúdo da sua página no Feed de notícias.</i><br>
+                Lembre-se: A receita do seu sucesso é criar publicações de páginas e anúncios que sejam interessantes e valiosos aos clientes, além de direcionar suas mensagens para as pessoas certas. Por isso a WTIS é fundamental neste processo pois já temos experiência no assunto.
+</span>
+                <div class="clearfloat"></div>
+            </div>
+            
+            <div class="box box2 etapa4">
+            	<div class="img"><img data-sr="enter top ease-in-out 6rem" src="{{ asset('images/pages/facebook/etapa4.jpg') }}" alt="Anunciamos para você"></div>
+            	<h2>Alcance mais pessoas do seu interesse</h2>
+                <span>Quando começar a se conectar com os clientes pelo Facebook, você ainda poderá encontrar outras pessoas que tenham interesse em seu produto ou serviço. Você pode usar os anúncios do Facebook para enviar a mensagem certa para as pessoas certas, assim que elas estiverem mais abertas a conhecer melhor sua empresa.<br><br>Anunciamos para você no facebook. Aproveite do direcionamento dedicado e mostre seu anúncio somente para quem tem interesse.</span>
+                <br><br>
+                <img src="{{ asset('images/pages/facebook/exemplo1.jpg') }}" alt="Exemplo 1"> &nbsp; <img src="{{ asset('images/pages/facebook/exemplo2.jpg') }}" alt="Exemplo 2"> <img src="{{ asset('images/pages/facebook/exempo-desc.jpg') }}" alt="Veja os exemplos ao lado">
+                <div class="clearfloat"></div>
+            </div>
+            
+        </section>
+        
+        <section id="quanto-custa">
+        	<div class="default-title">
+                <p class="h1">Quanto custa?</p>
+                <h2>Garantimos que o investimento vale os benefícios e retorno</h2>
+            </div>
+        	<div class="box box1 quanto-custa">
+            	<h2>Para <strong>estudo da marca</strong>, <strong>planejamento</strong>, <strong>criação do layout</strong>, <strong>criação da página no facebook</strong> e <strong>integrações</strong> cobramos uma parcela única de <strong>R$ 99,00</strong></h2>
+                <div class="btn-left"><a href="http://c.wtis.com.br/cart.php?a=add&pid=44" class="btn btn-primary btn-blue">Contratar somente a criação da página</a></div>
+                <div class="btn-text-right">Isto significa que você não quer contratar nosso serviço de gerenciamento mas quer que nós criemos a página do facebook para sua empresa
+Recomendamos escolher um plano de gerenciamento abaixo, um serviço ideal para seu negócio</div>
+				<div class="clearfloat"></div>
+                <hr>
+                <p class="h1"><strong>Custo para gerenciamento da página</strong></p>
+                <span>Disponibilização de um Analista de Redes Sociais, que entenderá sua empresa, marca, produtos e serviços e irá interagir com os clientes pelo Facebook. Ele será responsável pelos seguintes serviços:<br><br>
+                <i class="marcar"><strong>Interagir com os clientes pelo facebook</strong></i>
+                <i class="marcar"><strong>Sugerir novas publicações (fotos, vídeos e outros)</strong></i>
+                <i class="marcar"><strong>Confeccionar o conteúdo (foto, imagem ilustrativa digital etc)</strong></i>
+                <i class="marcar"><strong>Fazer as publicações*</strong></i><br>                
+                <!--* O Analista de Redes Sociais incluso no plano de Gerenciamento de páginas no Facebook não é responsável por criar o layout das publicações, editar fotos e vídeos ou qualquer outro trabalho que envolva o serviço de um webdesign ou programador. Para isso consulte nosso serviço de <a href="#">criação de conteúdo</a> e <a href="#">aplicativos para o facebook</a>.--></span>
+                
+                <!-- PRICE -->
+                <div class="table-price-new">
+                    <div class="tips">
+                        <span class="tip tip1">Suporte comum</span>
+                        <span class="tip tip2 color2">Suporte avançado</span>
+                        <span class="service">Fcb-Pag</span>
+                    </div>
+                    <div class="ul-border"></div>
+                    <div class="ptable">
+                    <ul>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">até</p>
+                                <p class="h1">2</p>
+                                <p class="h2">publicações<br>por mês</p>
+                                <div class="price">R$ 99/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=45" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    {#<span>20 interações de usuários</span>#}
+                                    <span>Suporte por email e painel</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">até</p>
+                                <p class="h1">4</p>
+                                <p class="h2">publicações<br>por mês</p>
+                                <div class="price">R$ 189/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=46" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    <span>40 interações de usuários</span>
+                                    <span>Suporte por email e painel</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">até</p>
+                                <p class="h1">8</p>
+                                <p class="h2">publicações<br>por mês</p>
+                                <div class="price">R$ 349/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=47" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    {#<span>100 interações de usuários</span>#}
+                                    <span>Suporte por email e painel</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">até</p>
+                                <p class="h1">30</p>
+                                <p class="h2">publicações<br>por mês</p>
+                                <div class="price">R$ 649/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=48" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    {#<span>200 interações de usuários</span>#}
+                                    <span>Suporte por email, telefone e presencial*</span>
+                                </div>
+                             </div>
+                        </li>
+                        <li>
+                            <div class="pcell-padding">
+                                <p class="h3">até</p>
+                                <p class="h1">60</p>
+                                <p class="h2">publicações<br>por mês</p>
+                                <div class="price">R$ 999/mês</div>
+                                <div class="options">
+                                    <div class="btn-contratar text-center"><a href="http://c.wtis.com.br/cart.php?a=add&pid=49" class="btn btn-primary btn-blue">Contratar agora</a></div>
+                                    {#<span>1.000 interações de usuários</span>#}
+                                    <span>Suporte por email, telefone e presencial*</span>
+                                </div>
+                             </div>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="text-left">* Dependendo da sua localidade nosso consultor pode visitar a sua empresa, consulte a disponibilidade de visita presencial em sua localidade. <a href="{{ path('suporte') }}#disponibilidade">Clique aqui</a></div>                   
+                    
+                </div>
+                
+                <div class="clearfloat"></div>
+                
+                <section id="servicos-adicionais">
+                    <div class="default-title">
+                        <p class="h1">Nós podemos fazer ainda mais</p>
+                        <p class="h2">Nossos designers fazem todo trabalho para você</p>
+                    </div>
+                    <div class="exemplos">
+                    	<img src="{{ asset('images/pages/facebook/exemplo3.jpg') }}" alt="Exemplo Banner 1" class="img1"> 
+                        <img src="{{ asset('images/pages/facebook/exemplo4.jpg') }}" alt="Exemplo Banner 2">
+                    </div>
+                    <h3>Reparou nos dois exemplos de publicações no Facebook acima? Uma possui o texto do anúncio e uma imagem, a outra possui um vídeo.<br><br>Nós fazemos este trabalho para você. Temos designers e editores de vídeo qualificados e rápidos.</h3>
+                    <div class="table-price-new min">
+                    <div class="ul-border"></div>
+                        <div class="ptable">
+                            <ul>
+                                <li>
+                                    <div class="pcell-padding">
+                                        <h2>Criação de <strong>imagem</strong> para publicação</h2>
+                                        <div class="price">R$ 49<br><h4>por criação</h4></div>
+                                     </div>
+                                </li>
+                                <li>
+                                    <div class="pcell-padding">
+                                        <h2>Criação de <strong>vídeo</strong> para publicação</h2>
+                                        <div class="price"><a href="#chat" class="init-chat" data-product="Criação de vídeo para publicação">Consulte-nos</a></div>
+                                     </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="final-contato"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Página Facebook" class="meligue button10 laranja no-icon">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?gid=10" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+                </section> 
+                <!--//// PRICE -->
+                
+            </div>
+          </section>
+        
+        </div>
+        <div class="clearfloat"></div>
+        .
+    </div>
+</div>
+{% endblock %}

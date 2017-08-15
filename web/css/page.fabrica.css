@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.fabrica-header-bg{
+	background:url(../images/pages/fabrica/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:857px;
+	position:relative;
+}
+.fcontent{
+	width:551px;
+	padding-top:130px;
+	color:#333 !important;
+}
+.fcontent h1, .fcontent .h1{
+	color:#333 !important;
+	font-weight:400;
+}
+.fcontent .atendimento-opcoes{
+	margin-top:26px;
+}
+.fcontent .atendimento-opcoes a{
+	margin-right:20px;
+}
+.fcontent .atendimento-opcoes .telefone{
+	display:block;
+	clear:both;
+	font-size:18px;
+	margin:15px 0 8px 0;
+}
+.fcontent .atendimento-opcoes .telefone strong{
+	font-size:22px;
+	font-weight:400;
+}
+#service-description{
+	margin:60px auto !important;
+}
+#service-description .h1{
+	text-align:center;
+}
+#service-description ul{
+	list-style:none;
+	text-align:center;
+	margin-top:60px;
+}
+#service-description ul li{
+	float:left;
+	width:149px;
+	margin-left:40px;
+	text-align:center;
+}
+#service-description ul li span{
+	display:block;
+	clear:both;
+	font-size:13px;
+}
+@media screen and (max-width: 767px) {
+	.fabrica-header-bg {
+	  background: url(../images/pages/fabrica/header-bg.jpg) center no-repeat;
+	  height: auto;
+	}
+	.fcontent {
+	  width: 100%;
+	  position:relative;
+	  z-index:10;
+	  color: #FFF !important;
+	  padding:15px;
+	}
+	.fcontent .h1, .fcontent h1 {
+	  color: #FFF !important;
+	}
+	a.link-img.phone, a.link-img.chat {
+	  background-color:#FFF;
+	  padding:15px;
+	  height:50px;
+	  width:200px;
+     line-height: 20px;
+	 background-position:right 8px center;
+	 margin-bottom:2px
+	}
+	a.mais-telefones{
+		display:none;
+	}
+	#service-description{
+		padding:15px;
+	}
+	#service-description ul li {
+	  float: none;
+	  width: 100%;
+	  margin-left: 0;
+	  margin-bottom:10px;
+	}	
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	.fcontent {
+	  width: 451px;
+	  padding:60px 20px 0;
+	  color: #333 !important;
+	}
+}

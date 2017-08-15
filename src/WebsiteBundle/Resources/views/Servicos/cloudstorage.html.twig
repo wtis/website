@@ -1,0 +1,196 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Cloud Storage - Backup na Nuvem Seguro e Econômico - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Armazenamento na Nuvem segura e econômica para seu site e arquivos." />
+<meta property="og:title" content="Produtos Wtis | Cloud Storage" />
+<meta property="og:description" content="Armazenamento na Nuvem segura e econômica para seu site e arquivos." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.cloudstorage.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/cloudstorage.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content fabrica">
+
+    <div class="fullscreen background cloudstorage-header-bg">
+    	<div class="bg-overlay"></div>
+    	<div class="center-1156">
+         <div class="fcontent">
+         	<strong>Cloud <span>Storage</span></strong>
+            <h1>Armazenamento de arquivos na nuvem confiável, escalável, altamente segura e econômica</h1>
+            <div class="atendimento-opcoes"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Cloud Storage" class="meligue button10 laranja no-icon">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?a=add&pid=15" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+          </div>     
+         </div> 
+    </div>
+    
+    <section id="page-menu" class="page-menu">
+    	<ul>
+        	<li class="selected"><a href="#"><i class="icon2 r like focus"></i><span>Vantagens</span></a></li>
+            <li><a href="#recursos" class="scroll"><i class="icon2 r checked"></i><span>Recursos</span></a></li>
+            <li><a href="#casosdeuso" class="scroll"><i class="icon2 r pos"></i><span>Casos de uso</span></a></li>
+            <li><a href="#price" class="scroll"><i class="icon2 r preco"></i><span>Preço</span></a></li>
+        </ul>
+    </section>
+    
+	<section id="vantagens" class="center-1156">
+    	<h2 class="h1">O poder da nuvem para proteger seus dados</h2>
+        <ul>
+        	<li>
+            	<i data-sr="enter top ease-in-out 6rem" class="icon3 duravel"></i>
+            	<h2>Durável</h2>
+				<span>O WTIS Storage Service proporciona infraestrutura durável para armazenar dados importantes e foi projetado para oferecer durabilidade contra falhas de 99,999999999%. Seus dados são armazenados com redundância em várias instalações e diversos dispositivos em cada instalação.</span>
+            </li>
+            <li>
+            	<i data-sr="enter top ease-in-out 6rem" class="icon3 economico"></i>
+            	<h2>Baixo custo e fácil de usar</h2>
+				<span>O Storage Service permite armazenar grandes quantidades de dados com custo muito baixo. Você paga pelo que precisa e usa, sem compromissos mínimos nem taxas iniciais além de ser fácil de usar, com um console de gerenciamento com base na web e em aplicativo móvel, bem como APIs REST e SDKs para facilitar a integração com tecnologias de terceiros.</span>
+            </li>
+            <li>
+            	<i data-sr="enter top ease-in-out 6rem" class="icon3 seguro"></i>
+            	<h2>Seguro</h2>
+				<span>O Storage Service oferece suporte a transferência de dados usando SSL e criptografia automática dos dados após o upload. Você também pode configurar políticas de bucket para gerenciar permissões de objetos e controlar o acesso a seus dados.</span>
+            </li>
+            <li>
+            	<i data-sr="enter top ease-in-out 6rem" class="icon3 escalonavel"></i>
+            	<h2>Escalonável</h2>
+				<span>Com o Storage Service, você pode armazenar a quantidade de dados desejada e acessá-los quando precisar. Não é mais necessário adivinhar as necessidades futuras de armazenamento. Você pode aumentar e diminuir a escala de acordo com a necessidade, aumentando consideravelmente a agilidade empresarial.</span>
+            </li>
+            <li>
+            	<i data-sr="enter top ease-in-out 6rem" class="icon3 notificacoes"></i>
+            	<h2>Envie notificações de eventos</h2>
+				<span>O Storage Service pode enviar notificações de eventos quando objetos são carregados no storage. Permitindo acionar fluxos de trabalho, alertas ou outros processamentos.</span>
+            </li>
+            <li>
+            	<i data-sr="enter top ease-in-out 6rem" class="icon3 desempenho"></i>
+            	<h2>Alto desempenho</h2>
+				<span>O Storage Service possui Datacenter no Brasil com baixa latência e oferece suporte a multipart uploads para ajudar a maximizar a taxa de transferência e a resiliência da rede.</span>
+            </li>
+        </ul>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="recursos" class="center-full azul">
+    	<div class="center-1156">
+    		<h2 class="h1">Principais recursos</h2>
+            <ul>
+            	<li>
+                    <i data-sr="enter top ease-in-out 6rem" class="icon3 m2 transfira"></i>
+                    <h2>Transfira facilmente dados de e para o Storage Service</h2>
+                    <span>A WTIS oferece suporte a diversos métodos de carga e recuperação de dados no Storage Service, incluindo a Internet pública, o Direct Connect e o serviço Import/Export. E o Storage Gateway faz backup automático de dados locais para o Storage Service. <!--<a href="#">Saiba mais</a>--></span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem" class="icon3 m2 versionamento"></i>
+                    <h2>Versionamento</h2>
+                    <span>O Storage Service permite ativar o versionamento para que você possa preservar, recuperar e restaurar todas as versões de cada objeto armazenado. <br><br><!--<a href="#">Saiba mais</a>--></span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem" class="icon3 m2 criptografia"></i>
+                    <h2>Criptografia</h2>
+                    <span>Você pode fazer download/upload de seus dados de/para o Storage Service usando endpoints criptografados com SSL.<br><br><!--<a href="#">Saiba mais</a>--></span>
+                </li>
+                <li>
+                    <i data-sr="enter top ease-in-out 6rem" class="icon3 m2 seguranca"></i>
+                    <h2>Gerenciamento de segurança e acesso</h2>
+                    <span>O Storage Service oferece vários mecanismos para controlar e monitorar quem acessa seus dados e como, quando e onde esse acesso pode ocorrer.<br><br><!--<a href="#">Saiba mais</a>--></span>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="casosdeuso" class="center-full cinza">
+    	<div class="center-1156">
+        	<h2 class="h1">Casos de uso da tecnologia</h2>
+            <ul class="casu-options">
+            	<li class="selected"><a href="#1">Backup e arquivamento<i></i></a></li>
+                <li><a href="#2">Armazenamento e distribuição de conteúdo<i></i></a></li>
+                <li><a href="#3">Análise de big data<i></i></a></li>
+                <li><a href="#4">Hospedagem de site estático<i></i></a></li>
+                <li><a href="#5">Dados de aplicativos nativos da nuvem<i></i></a></li>
+                <li><a href="#6">Recuperação de desastres<i></i></a></li>
+            </ul>
+            <div class="casu-item item1 selected">
+            	<h2>Soluções seguras e totalmente flexíveis</h2>
+                <span>O Storage Service oferece uma solução altamente durável, escalonável e segura para backup e arquivamento de dados críticos. <br><br>Você pode usar o recurso de versionamento do Storage Service para oferecer ainda mais proteção aos seus dados armazenados.</span>
+            </div>
+            <div class="casu-item item2">
+            	<h2>Confiável, Durável e disponível</h2>
+                <span>O Storage WTIS oferece armazenamento altamente durável e disponível para diversos conteúdos. Permite que você transfira a sua infraestrutura de armazenamento completa para a nuvem, onde você pode tirar proveito da escalabilidade do Storage e da definição de preço com pagamento conforme o uso para atender às suas crescentes necessidades de armazenamento. <br /><br />Você pode distribuir seu conteúdo diretamente do Storage ou usar o Storage como um arquivo de origem para entregar seu conteúdo.</span>
+            </div>
+            <div class="casu-item item3">
+            	<h2>Análise big data</h2>
+                <span>Se você está armazenando dados farmacêuticos ou financeiros, ou arquivos multimídia como fotografias e vídeos, o Storage Wtis pode ser usado como armazenamento de objetos de big data. <br /><br />A Wtis Web Services oferece um portfólio abrangente de serviços que ajudam a gerenciar big data reduzindo custos, oferecendo escalabilidade para atender à demanda e acelerando a inovação.</span>
+            </div>
+            <div class="casu-item item4">
+            	<h2>Hospedagem de site estático altamente disponível</h2>
+                <span>Você pode hospedar seu site estático inteiro no Storage Wtis para obter uma solução de hospedagem altamente disponível e econômica, com escalabilidade automática para atender a demandas de tráfego. <br /><br />Com o Storage Wtis você pode atender ao seu tráfego com confiabilidade e lidar com picos imprevistos sem se preocupar com a escalabilidade de sua infraestrutura.</span>
+            </div>
+            <div class="casu-item item5">
+            	<h2>Dados de aplicativos nativos da nuvem</h2>
+                <span>O Storage Wtis oferece armazenamento de alto desempenho e disponibilidade que facilita a escalabilidade e a manutenção de aplicativos de rápida execução, econômicos e baseados na Internet. <br /><br />Com o Storage Wtis você pode adicionar qualquer quantidade de conteúdo e acessá-lo de qualquer lugar, possibilitando implementar aplicativos com maior rapidez e alcançar mais clientes.</span>
+            </div>
+            <div class="casu-item item6">
+            	<h2>Recuperação de desastres</h2>
+                <span>A infraestrutura altamente durável, segura e global do Storage Wtis oferece uma solução de recuperação de desastres robusta e projetada para oferecer a melhor proteção para os seus dados. <br /><br />Se você está procurando recuperação de desastres na nuvem, ou de seu datacenter corporativo para o Storage, a Wtis tem a solução certa para você.</span>
+            </div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="price" class="center-1156">
+   	<span class="h2">Preço</span>
+      <table class="table table-price">
+        <thead>
+       	  <tr>
+           	  <th class="item"></th>
+              <th class="descricao">Detalhes</th>
+              <th class="preco">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+       	  <tr>
+           	  <td>Armazenamento</td>
+              <td>Datacenter no Brasil</td>
+              <td>R$ 0,3672 por GB</td>
+          </tr>
+          <tr>
+           	  <td>Solicitações PUT, COPY, POST ou LIST</td>
+              <td>Excluir solicitações é grátis</td>
+              <td>R$ 0,021 por 1.000 solicitações</td>
+          </tr>
+          <tr>
+           	  <td>Solicitações GET e todas as outras</td>
+              <td>...</td>
+              <td>R$ 0,0168 por 10.000 solicitações</td>
+          </tr>
+          <tr>
+           	  <td>Transferência de dados</td>
+              <td>Primeiro 1 GB do mês grátis</td>
+              <td>R$ 0,675 por GB</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-right"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Cloud Storage" class="button10 laranja no-icon meligue">Me ligue<i class="glyphicon glyphicon-earphone"></i></a> <a href="http://c.wtis.com.br/cart.php?a=add&pid=15" class="button10 verde no-icon">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a></div>
+      <!--<div class="price-alert">* Migração grátis para contas de email de no máximo 1GB de emails. Taxa adicional de R$ 4,90 por cada GB a ser migrado</div>-->
+
+    </section>
+
+</div>
+{% endblock %}

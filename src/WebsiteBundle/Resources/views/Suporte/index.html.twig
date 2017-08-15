@@ -1,0 +1,201 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Contato e Suporte - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Uma empresa diferente com um atendimento e suporte diferente. Somos excelente." />
+<meta property="og:title" content="Atendimento e Suporte Wtis" />
+<meta property="og:description" content="Uma empresa diferente com um atendimento e suporte diferente. Somos excelente." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.suporte.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/estado-cidade.js') }}"></script>
+<script src="{{ asset('js/pages/suporte.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content hsuporte">
+
+    <div class="suporte-header-bg">
+    	<div class="pcontent center-977">
+    		<h1>Uma empresa diferente deve ter um atendimento e suporte diferente, somos excelentes :)</h1>
+            <h2 class="h2">Se você já é nosso cliente acesse nosso centro de contato</h2>
+            <a href="http://c.wtis.com.br" class="contact-center">Contact Center</a>
+        </div>
+    </div>
+
+    <div class="center-977">
+        <div class="box1">
+        	<span>
+            	Um grande problema que persiste na maioria das empresas é o atendimento e suporte pós-venda, mas na WTIS levamos isto a sério:<br />
+                <i class="destaque top">Atendimento e suporte <strong>ultra rápido</strong> e acompanhamento <a href="#" class="tt" title="Significa que nossa equipe sempre estará analisando os trabalhos entregues aos clientes, e quando necessário fazer recomendações de segurança, melhorias e alerta de problemas."><strong>proativo</strong></a> da nossa equipe</i>
+                <i class="destaque">Atendimento <strong>pré e pós-venda iguais</strong>, com excelência</i>
+                <i class="destaque">Não importa o serviço ou produto, caso seja necessário nossos consultores e  
+    técnicos <strong>vão até sua empresa presencialmente</strong></i>
+            </span>
+        	<a href="#suporte-avancado" class="btnlaranja1 scroll">Conheça o <strong>Suporte Avançado</strong></a>
+        </div>
+
+        <section id="contato">
+        	<p class="h1">Ainda não é nosso cliente e deseja falar conosco?</p>
+            <p class="h2">Temos vários meios para nos comunicar</p>
+            <div class="contato-item col-md-3 col-sm-3 col-xs-6">
+            	<span>Por meio do telefone</span>
+                <strong>{{ telefoneComercial }}</strong>
+            </div>
+            <div class="contato-item col-md-3 col-sm-3 col-xs-6">
+                <span>Nós ligamos para você</span>
+                <strong><a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Página de Contato">Me ligue</a></strong>
+            </div>
+            <div class="contato-item col-md-3 col-sm-3 col-xs-6">
+            	<span>Por meio do chat online</span>
+                <strong><a href="#chat" class="init-chat">Clique aqui</a></strong>
+            </div>
+            <div class="contato-item col-md-3 col-sm-3 col-xs-6">
+                <span>Por WhatsApp</span>
+                <strong><img height="20" src="{{ asset("images/ico-whatsapp.png") }}" alt="WhatsApp"> <a href="tel:038998971395" class="telefone-min">{{ telefoneWhatsapp }}</a></strong>
+            </div>
+            <div class="clearfloat"></div>
+            <p class="h2 top no-mb">Ou pelo formulário de contato abaixo:</p>
+            <section id="price-preview" class="center-full cinza no-bg">
+            <div class="center-977">
+                <div class="form center-full">
+                    <div class="preload bg-overlay"><div class="preload-div absolute-center"></div></div>
+                    <span class="desc"></span>
+                    <form name="contato1Form" id="contato1Form" class="m1" data-parsley-validate>
+                        <label for="i-contato-regiao" class="i-contato-regiao clearboth">
+                            <span>Sua região</span>
+                            <div class="disp-item-form disp-regiao">
+                                <select name="i-contato-regiao" id="i-contato-regiao" class="sm sm-default form-extra" data-nome="Estado" data-sigla="estado" data-valor="0">
+                                    <option value="0">Selecione</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label for="i-contato-cidade" class="plataforma">
+                            <span>Sua cidade</span>
+                            <div class="disp-item-form disp-cidade">
+                                <select name="i-contato-cidade" id="i-contato-cidade" class="sm sm-default form-extra" data-nome="Cidadde" data-sigla="cidade" data-valor="0" disabled="disabled">
+                                    <option value="">Selecione</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label for="i-contato-nome" class="nome clearboth">
+                            <span>Seu nome</span>
+                            <input type="text" name="i-contato-nome" id="i-contato-nome" class="input-default" required="required">
+                        </label>
+                        <label for="i-contato-email" class="email">
+                            <span>Email</span>
+                            <input type="email" name="i-contato-email" id="i-contato-email" class="input-default" required="required">
+                        </label>
+                        <label for="i-contato-telefone" class="telefonefixo clearboth">
+                            <span>Telefone fixo</span>
+                            <input type="tel" name="i-contato-telefone" id="i-contato-telefone" class="input-default phoneMask" placeholder="DDD + Número">
+                        </label>
+                        <label for="i-contato-celular" class="celular">
+                            <span>Celular</span>
+                            <input type="tel" name="i-contato-celular" id="i-contato-celular" class="input-default phoneMask" placeholder="DDD + Número">
+                        </label>
+
+                        <label for="i-contato-newsletter" class="newsletter full clearboth">
+                            <input type="checkbox" name="i-contato-newsletter" id="i-contato-newsletter" value="1"> Assine nossa newsletter e receba novidades em seu email
+                        </label>
+
+                        <label class="text-right">
+                            <span>Mensagem</span>
+                            <textarea maxlength="300" id="i-contato-mensagem" name="i-contato-mensagem" cols="60" rows="5" class="input-textarea"></textarea>
+                            <div class="description">máx. 800</div>
+                        </label>
+                        <div class="clearfloat"></div>
+                        <div class="atendimento-opcoes"></div>
+                        <div class="result">
+                            <input type="hidden" name="i-contato-contratar-produto" id="i-contato-contratar-produto" value="Formulario Contato" data-nome="Contato" data-sigla="contato" data-valor="0" class="form-extra i-produto-interesse">
+                            <button type="submit" class="button10 min-radius verde no-icon submit-button">Enviar<i class="glyphicon glyphicon-envelope"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+    </section>
+    </div>
+
+    <a name="avancado"></a>
+    <section id="suporte-avancado">
+    	<div class="bg-overlay bgo3"></div>
+        <div class="bg">
+        	<div class="pcontent center-977">
+            	<p class="h1 t1">Já ouviu falar no nosso <strong>Suporte Avançado</strong>?</p>
+            	<p class="h2 t1 t2">Não importa se você é nosso cliente ou não, pode nos chamar que <span>vamos até sua empresa e tiramos suas dúvidas, ajudamos a encontrar a melhor solução para seu negócio, <strong>sem nenhum custo</strong></p>.<br /><br />
+                <div class="h2 t1 t2"> Nosso suporte avançado inclui:</div><br /><br /><br />
+
+                <div class="text-center">
+                <div class="chamada a tt" title="Nossos consultores, técnicos e analistas vão até sua empresa para executar o suporte presencialmente">Suporte Presencial</div>
+                <div class="chamada b tt" title="Capacitação dos colaboradores da sua empresa para utilização dos produtos e serviços entregues pela Wtis">Treinamento a Acompanhamento Presencial</div>
+                <div class="chamada c tt" title="Respostas para suas solicitações de suporte em no máximo 10 minutos">RESPOSTA RELÂMPAGO</div>
+                <div class="chamada d tt" title="Trinamento, suporte e reuniões com nossos consultores, analistas e técnicos por videoconferência">Videoconferência</div>
+                <div class="chamada e tt" title="No primeiro contato do cliente com a WTIS nós selecionamos um consultor para ele, este consultor será sempre o mesmo e responsável pela interação do cliente com os produtos e serviços da WTIS">Consultor dedicado especial</div>
+                </div>
+
+
+                <br /><br />
+                <div class="text-center"> <a href="#chat" class="sabtn chat init-chat"><i class="glyphicon glyphicon-comment"></i> Agende sua visita via chat</a> <a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Agendar Visita" class="sabtn meligue"><i class="glyphicon glyphicon-phone"></i> Agende sua visita por telefone</a></div>
+                <!-- Disponibilidade -->
+                <div class="disp tab">
+                	<a name="disponibilidade"></a>
+                    <p class="h1">Consulte a disponibilidade de visita para sua região</p>
+                    <div class="tab-content">
+                    <span class="desc">Estamos presentes em todos os estados do país e em várias cidades, selecione abaixo o seu estado e cidade para verificar se já existe um consultor, técnico ou representante disponível para te atender. Mas não se preocupe, caso ainda não tenha pedimos que entre em contato conosco, podemos deslocar da cidade mais próxima para te visitar.</span>
+                    <form class="form1 disp">
+                        <label class="lb1">
+                            <legend>Informe sua região:</legend>
+                            <div class="disp-item-form disp-regiao">
+                                <select name="disp-regiao" id="disp-regiao" class="sm sm-default">
+                                    <option value="0">Selecione</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label class="lb1">
+                            <legend>Informe sua cidade:</legend>
+                            <div class="disp-item-form disp-cidade">
+                                <select name="disp-cidade" id="disp-cidade" class="sm sm-default">
+                                    <option value="">Selecione</option>
+                                </select>
+                            </div>
+                        </label>
+                      <div class="clearfloat"></div>
+                    </form>
+                    <ul id="partner-list-template" class="oculto">
+                            <li>
+                                <a href="{URL}">
+                                <i></i>
+                                <strong>{NOME}</strong><br />
+                                {ENDERECO}, {CIDADE} - {UF}
+                                <span>{STATUS}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="partner-list"><div class="text-center"><img src="{{ asset('images/point.png') }}" class="img-block" alt="Map Point" /><br />Selecione sua região e cidade acima</div></div>
+                </div>
+                <div class="clearfloat"></div>
+                <!-- //Disponibilidade -->
+            </div>
+        </div>
+
+    </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Sobre nós - A empresa - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Conheça a Wtis, ampla gama de produtos e serviços para web e marketing digital, uma empresa de tecnologia inovadora." />
+<meta property="og:title" content="Sobre nós - Wtis Soluções em Tecnologia para Web" />
+<meta property="og:description" content="Conheça a Wtis, ampla gama de produtos e serviços para web e marketing digital, uma empresa de tecnologia inovadora." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/invert-menu.css') }}" rel="stylesheet">
+<link href="{{ asset('css/page.empresa.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript">var whoisURL = "{{ path('empresa_whois') }}";</script>
+<script type="text/javascript" src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('js/pages/empresa.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content empresa">
+
+	<section id="sobre" class="content-cols center-977">
+        <div class="tab tab1">
+            <h1>Missão, Visão e valores</h1>
+            <div class="content">
+            	<h2>Missão</h2>
+                <span>Oferecer uma consultoria, serviços e produtos diferenciados em tecnologia da informação e tornar possível para todos o uso da tecnologia para auxiliar, gerenciar, qualificar e crescer o negócio com excelência nos resultados.</span>
+                <h2>Visão</h2>
+                <span>Independente do negócio, pequeno, médio ou grande, desejamos estar presentes no dia a dia auxiliando em tudo que se tratar de tecnologia, melhorando os processos, buscando controle, capacitação, organização e inovação para que possam alcançar o crescimento e lucratividade.</span>
+                <h2>Valores</h2>
+                <span>Buscamos sempre <strong>excelência</strong> e <strong>inovação</strong> no que fazemos. <strong>Valorizamos</strong> nosso trabalho com o máximo de <strong>comprometimento</strong> com nossos clientes.</span>
+            </div>
+        </div>
+        <div class="tab tab2">
+            <p class="h1">Um pouco sobre nós</p>
+            <div class="content">
+            	Em 2005, o fundador que é apaixonado por tecnologia resolveu abrir uma pequena empresa chamada MBServer para oferecer serviços de hospedagem de sites. <br /><br />
+                Em pouco tempo conseguiu uma boa quantidade de clientes que o fez enxergar que este mercado era promissor. Com um tempo os clientes começaram a solicitar outros tipos de serviços como desenvolvimento de sites, animações em flash e criação de imagens como banners e folders. <br /><br />
+                Em 2009 a MBServer se tornou 10mb Tecnologia, abrangendo vários serviços web como hospedagem, revenda de hospedagem, desenvolvimento de sites, sistemas customizados e alguns outros. <br /><br />
+                Da 10mb surgiram outros negócios como o AlugueSites e PHPGratis.com e em 2010 acabaram unidos à 10mb. Em 2013 a 10mb iniciou uma nova jornada entrando no mercado de software para gestão municipal, implantando em municípios o software público de gestão municipal e-cidade. No final de 2014 o fundador resolveu deixar a 10mb e abrir uma nova empresa que pudesse superar todos os desafios.<br /><br />Assim surgiu a WTIS, uma empresa nova porém experiente, são 9 anos de ideias, soluções e conceitos dentro da WTIS para seus clientes.
+            </div>
+        </div>
+    </section>
+    
+    <div class="clearfloat"></div>
+    
+    <section id="clientes">
+    	<div class="bg-overlay bgo2"></div>
+        <div class="content center-977">
+        	<p class="h1">Clientes</p>
+            <p class="h2">Com uma ampla gama de produtos e serviços, com representantes em várias cidades do país, atendemos milhares de clientes e tratamos cada um como se fosse o único.</p>
+            <div id="empresa-numeros" class="empresa-numeros hide"> <!-- TODO: Implementar com ERP -->
+                <div id="n-clientes" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Clientes</span>
+                </div>
+                <div id="n-clientes-mes" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Novos clientes este mês</span>
+                </div>
+                <div id="n-sites" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Sites desenvolvidos</span>
+                </div>
+                <div id="n-hospedagem" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Clientes de hospedagem</span>
+                </div>
+                <div id="n-rsociais" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Redes sociais gerenciadas por nós</span>
+                </div>
+                <div id="n-servidores" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Servidores gerenciados</span>
+                </div>
+                <div id="n-emkt" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Envios de e-mail marketing</span>
+                </div>
+                <div id="n-sms" class="col-md-3 col-sm-3  col-xs-6">
+                    <strong>?</strong>
+                    <span>Envios de SMS marketing</span>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+            <div class="div-clientes"></div>
+            <p class="h2">Alguns clientes que temos orgulho em atender</p>
+            <div class="clientes">
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <img src="{{ asset('images/clientes/rnp.png') }}" class="img-block img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3  col-xs-12">
+                    <img src="{{ asset('images/clientes/capes.png') }}" class="img-block img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3  col-xs-12">
+                    <img src="{{ asset('images/clientes/sibbr.png') }}" class="img-block img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3  col-xs-12">
+                    <img src="{{ asset('images/clientes/sebrae.png') }}" class="img-block img-responsive" />
+                </div>
+                <div class="clearfloat"></div>
+                <!--<a href="#" class="btn-all-clients">Ver todos os clientes</a>-->
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

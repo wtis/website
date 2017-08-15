@@ -1,0 +1,202 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.emkt-header-bg{
+	background:url(../images/pages/emkt/header-bg.jpg) 50% 0 no-repeat fixed;
+	height:480px;
+	position:relative;
+}
+.btn-position{
+	position:relative;
+}
+.btn-position .btn-testegratis{
+	position:absolute;
+	right:0;
+	top:-36px;
+	display:block;
+	width:289px;
+	height:36px;
+	text-indent:-5000px;
+	overflow:hidden;
+	background:url(../images/pages/emkt/btn-testegratis.png);
+}
+
+
+
+.pres-default span{font-size:16px !important}
+#email-mkt{
+	margin-top:67px;
+	margin-bottom:18px;
+}
+#email-mkt .pcontent{
+	margin-top:50px;
+}
+#relatorios{
+	background-color:#F5F5F5;
+	padding:24px 0;
+	margin-top:30px;
+}
+#relatorios .pcontent{
+	margin-top:80px;
+}
+#multicanal .pcontent{
+	margin-top:70px;
+}
+#vantagens{
+	margin-top:40px;
+}
+#vantagens ul{
+	list-style:none;
+	text-align:center;
+	vertical-align:top !important;
+	margin-top:80px;
+}
+#vantagens ul li{
+	float:left;
+	width:384px;
+	height:230px;
+}
+#vantagens ul li h2{
+	font-weight:300;
+	color:#666;
+	font-size:16px !important;
+	margin-bottom:6px;
+}
+#vantagens ul li h2, #vantagens ul li span{
+	padding:0 30px !important;
+	display:block;
+	text-align:center;
+	font-size:13px;
+}
+#vantagens i{
+	margin-bottom:10px;
+}
+#price{
+	margin-top:40px;
+}
+#price-preview{
+	margin:39px auto 0 auto;
+}
+#plano-mensal{
+	margin:40px auto;
+}
+.table-price-new .tips .tip1{width:312px;left:189px}
+.table-price-new .tips .tip2{width:241px;left:805px}
+#plano-prepago{
+	margin-top:80px !important;
+}
+#plano-prepago .table-price-new .text-left{
+	width:100%
+}
+#plano-prepago .table-price-new .text-left a{
+	text-decoration:underline;
+}
+#plano-prepago .pcell-padding{
+	margin-bottom:60px;
+}
+#price-preview label.tipo-contratacao{
+	width:400px !important;
+}
+#teste{
+	margin-top:40px;
+}
+#teste .btn{
+	margin:20px 0 40px;
+}
+
+@media screen and (max-width: 767px) {
+	.emkt-header-bg {
+	  background: url(../images/pages/emkt/header-bg.jpg) cebter no-repeat;
+	  height: auto;
+	  position: relative;
+	}
+	.header-title{
+		margin:auto;
+		display:block;
+		padding:30px;
+		position:relative;
+		z-index:3;
+		color:#FFF;
+		font-size:32px;
+		padding-bottom:50px;
+	}
+	.page-menu {
+	  width: 100%;
+	  background:none;
+	  height: 0;
+	}
+	#page-menu ul{
+		display:none;
+	}
+	#email-mkt {
+	  margin-top: 20px;
+	}
+	.btn-position .btn-testegratis {
+	  position: absolute;
+	  z-index:3;
+	  right: 0;
+	  top: -36px;
+	  display: block;
+	  width: 289px;
+	  height: 36px;
+	  text-indent: -5000px;
+	  overflow: hidden;
+	  background: url(../images/pages/emkt/btn-testegratis.png);
+	}
+	.pres-default .img {
+	  float: none !important;
+	  width: 100%;
+	}
+	.pres-default.large .img {
+	  width: 100% !important;
+	}
+	.pres-default .img img {
+		width:100% !important;
+	}
+	.pres-default.large .pcontent {
+	  width: 100% !important;
+	  float: none !important;
+	}
+	.pres-default .pcontent {
+	  float: none;
+	  width: 100%;
+	}
+	.pres-default{
+		padding:15px;
+	}
+	.pcontent {
+	  margin-top: 20px !important;
+	}
+	.pres-default.right .img img {
+	  margin-left: 0;
+	}
+	.pres-default.right .img, .pres-default.right .pcontent {
+	  float: none !important;
+	}
+	#relatorios{
+		padding:15px;
+	}
+	#vantagens ul li {
+	  float: none;
+	  width: 100%;
+	  height: auto;
+	  margin-bottom:20px;
+	}	
+	#plano-prepago .pcell-padding {
+	  margin-bottom: 0;
+	  padding-bottom:60px;
+	}
+	#vantagens-comparativo .btn-sucess {
+	  font-size: 13px;
+	  display:block;
+	  margin:auto 10px;
+	  padding: 16px 20px;
+	  border: none;
+	  background-color: #8FC564 !important;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

@@ -1,0 +1,205 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.devsite-header-bg{
+	background:url(../images/pages/desenvolvimento-de-sites/header-bg.jpg) top center no-repeat;
+	background-size:cover;
+	height:888px;
+	position:relative;
+}
+.devsite-header-bg .center-1156{
+	padding-top:40px;
+}
+.header-anim{
+	position:relative;
+}
+.header-anim .mapa{
+	position:absolute;
+	top:120px;
+	left:0;
+}
+.header-anim .cli{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+}
+.header-anim .cli0{
+	top:300px;
+	left:500px;
+	z-index:3;
+}
+
+.header-anim .cli1{
+	top:149px;
+	left:300px;
+}
+.header-anim .cli2{
+	top:159px;
+	left:180px;
+}
+.header-anim .cli3{
+	top:199px;
+	left:210px;
+}
+.header-anim .cli4{
+	top:80px;
+	left:130px;
+}
+.header-anim .cli5{
+	top:140px;
+	left:20px;
+}
+.header-anim .cli6{
+	top:250px;
+	left:370px;
+}
+.header-anim .cli7{
+	top:250px;
+	left:205px;
+}
+.header-anim .cli8{
+	top:220px;
+	left:100px;
+}
+.header-anim .cli9{
+	top:260px;
+	left:80px;
+}
+.header-anim .cli10{
+	top:290px;
+	left:80px;
+}
+
+.devsite-header-bg .pos-header{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:92px;
+	background:url(../images/pages/emailpro/pos-header-bg.jpg) center;
+}
+.devsite-header-bg .pos-header .h1{
+	color:#FFFFFF;
+	font-size:22px;
+	font-weight:300;
+	display:block;
+	float:left;
+	width:65%;
+	text-align:center;
+	margin-top:20px;
+}
+.devsite-header-bg .pos-header a.meligue{
+	float:right;
+	display:block;
+	text-indent:-5000px;
+	overflow:hidden;
+	background:url(../images/pages/consultoria/btn-meligue.png) center no-repeat;
+	width:288px;
+	height:34px;
+	margin-top:30px;
+}
+#service-description{
+	margin:60px auto !important;
+}
+ul.temsite{
+	list-style:none;
+}
+ul.temsite li{
+	float:left;
+	width:50%;
+	text-align:center;
+}
+ul.temsite li .h2{
+	display:block;
+	padding:15px;
+}
+ul.temsite li span{
+	display:block;
+	padding:0 15px;
+}
+i.i0{
+	width:150px;
+	height:126px;
+	display:inline-block;
+	overflow:hidden;
+	background:url(../images/pages/desenvolvimento-de-sites/icons.jpg);
+}
+i.i0.nosite{
+	background-position:0 -1px;
+}
+i.i0.site{
+	background-position:-150px -1px;
+}
+i.i0.responsive{
+	width:298px;
+	height:164px;
+	background-position:-306px 0;
+	float:left;
+	margin-right:20px;
+}
+#service-description2{
+	margin-top:60px;
+}
+#service-description2 .clear{
+	clear:left;
+	padding:20px 0 40px 0;
+}
+#price-preview{
+	margin:40px 0;
+}
+.header-title{
+	padding:80px 20px;
+	text-align:center;
+	color:#FFF;
+	font-size:32px;
+	position:relative;
+	z-index:2;
+}
+@media screen and (max-width: 767px) {
+	.header-anim{
+		display:none;
+	}
+	.devsite-header-bg {
+	  height: auto;
+	  position: relative;
+	}
+	.devsite-header-bg .pos-header {
+	  position: relative;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: auto;
+	  text-align:center;
+	  padding-bottom:10px;
+	}
+	.devsite-header-bg .pos-header .h1 {
+	  color: #FFFFFF;
+	  font-size: 22px;
+	  font-weight: 300;
+	  display: block;
+	  float: none;
+	  width: 100%;
+	  text-align: center;
+	  margin-top: 0;
+	  padding:10px;
+	  position:relative;
+	  z-index:3;
+	}
+	.devsite-header-bg .pos-header a.meligue {
+	  float: none;
+	  width: 288px;
+	  height: 34px;
+	  margin:10px auto;
+	  position:relative;
+	  z-index:3;
+	}
+	#service-description2{
+		padding:15px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1167px) {
+	
+}

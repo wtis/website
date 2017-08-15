@@ -1,0 +1,125 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+.partner-header-bg{
+	background:url(../images/pages/partner/header-bg.jpg);
+	background-size:contain;
+	height:280px;
+	position:relative;
+}
+.fcontent{
+	padding-top:40px;
+	padding-left:250px !important;
+	color:#FFF !important;
+	z-index:2;
+	position:relative;
+	text-align:left;
+}
+.fcontent h1{
+	font-size:50px;
+	font-weight:400;
+	color:#FFF;
+	text-align:left;
+}
+.fcontent h1 strong{
+	color:#FF7F00;
+}
+.fcontent span{
+	font-size:24px;
+	margin-top:-14px;
+	display:block;
+}
+.fcontent .atendimento-opcoes{
+	margin-top:26px;
+}
+.fcontent .atendimento-opcoes a{
+	margin-right:20px;
+	color:#ffffff;
+	color:#FFC
+}
+#gama h1{
+	margin:46px 0;
+	text-align:center;
+}
+#gama{
+	margin-bottom:50px;
+}
+#gama ul{
+	list-style:none;
+}
+#gama ul li{
+	width:244px;
+	display:block;
+	float:left;
+	margin-right:60px;
+	margin-bottom:20px;
+}
+#gama ul li:nth-of-type(4n){
+	margin-right:0;
+}
+#gama ul li:nth-of-type(5n){
+	clear:left;
+}
+#gama ul li:first-child{
+	margin-left:0 !important;
+}
+#gama ul li h2{
+	font-size:16px;
+	color:#333333;
+	font-weight:400;
+	margin:15px 0 8px 0;
+}
+label[for="i-contato-mensagem"]{
+	width:560px !important
+}
+label[for="i-contato-mensagem"] textarea{
+	width:100% !important;
+}
+.partindex{
+	padding:40px 0;
+}
+.partindex h1{
+	text-align:center;
+	margin-bottom:40px;
+}
+.partindex .item-parceiro{
+	display:block;
+	background-color:#f2f2f2;
+	padding:15px;
+	margin-bottom:4px;
+	
+}
+@media screen and (max-width: 767px) {
+	.partner-header-bg {
+	  height: auto;
+	}
+	.fcontent {
+		padding:15px !important;
+		padding-top: 40px;
+	}
+	.fcontent .atendimento-opcoes a {
+	  color: #333;
+	}
+	#gama h1 {
+	  padding:15px;
+	}
+	#gama ul li {
+	  width: 100%;
+	  float: none;
+	  margin-right: 0;
+	  margin-bottom: 20px;
+	  padding:15px;
+	  text-align:center;
+	}
+	#enderecos{
+		padding:15px;
+	}
+	.center-1156 > h1{
+		padding:15px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1167px) {
+	
+}

@@ -1,0 +1,202 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+    <title>Marketing e Soluções em Tecnologia para Web - Wtis</title>
+{% endblock %}
+
+{% block metas %}
+    {% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {{ parent() }}
+    <meta name="description"
+          content="Marketing, SEO, AdWords, Analytics, Redes Sociais, Sistemas, Consultoria especializada em TI"/>
+    <meta name="keywords"
+          content="marketing, SEO, AdWords, Analytics, Redes Sociais, Sistemas, Consultoria em TI, criação de sites, desenvolvimento de sites, criação de aplicativos, mobile"/>
+    <meta property="og:title" content="Marketing e Soluções em Tecnologia para Web - Wtis"/>
+    <meta property="og:description"
+          content="Marketing, SEO, AdWords, Analytics, Redes Sociais, Sistemas, Consultoria especializada em TIs"/>
+    <meta property="og:url" content="{{ url(app.request.get('_route')) }}"/>
+    <meta property="og:image"
+          content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}"/>
+    <meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/page.home.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/pages/home.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="home">
+
+        <div class="main-slider">
+
+            <div class="s-consultoria anim">
+                <div class="pcontent def1">
+                    <p class="h2">Tenha seu site em 15 dias por apenas 6x R$ 250,00</p>
+                    <p class="h1">Site completo até com versão mobile, consultoria especializada para aumentar suas
+                        vendas, marketing e trabalhos de SEO para uma melhor posição no Google.</p>
+                    <a href="{{ path('desenvolvimento-sites') }}" class="lnk">Conheça e tenha seu site</a>
+                </div>
+            </div>
+
+            <div class="s-mkt anim">
+                <div class="pcontent def1">
+                    <p class="h1">
+                        <span>Divulgue de forma exclusiva no Facebook, Google e Instagram. Engaje sua marca, aumente suas vendas e cresça seu negócio.</span>
+                    </p>
+                    <p class="h2">Serviço completo de Marketing Cloud</p>
+                    <a href="{{ path('marketing') }}" class="lnk">Conheça e contrate</a>
+                </div>
+            </div>
+
+            <div class="s-psw anim">
+                <div class="pcontent def1">
+                    <p class="h2">Evite prejuízos, dor de cabeça e tempo.</p>
+                    <p class="h1">
+                        <span><strong>Alugue profissionais WTIS</strong> para trabalhar na sua empresa e conte com uma equipe de coordenação, gerência e controle sem custos adicionais</span>
+                    </p>
+                    <a href="{{ path('psw') }}" class="lnk">Saiba mais sobre o serviço</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfloat"></div>
+
+        <section id="servicos-destaque" class="home-marcas-destaque">
+
+            <div class="pcontent-def">
+                <div class="marcas center">
+                    <img src="{{ asset('images/pages/hospedagem/logos-clientes.png') }}" class="img-responsive" alt="Marcas Wtis">
+                    <p class="home-marcas">Faça como estas marcas, confie na Wtis e foque somente no que interessa em seu negócio.</p>
+                </div>
+
+                <div class="clearfloat"></div>
+            </div>
+        </section>
+
+        <section id="empresa" class="htab">
+            <p class="h1">Uma empresa diferente</p>
+            <p class="h2">Nós pensamos diferente e oferecemos muito mais que produtos e serviços</p>
+            <span>Buscamos entender o negócio do cliente e o que será melhor para ele, oferecendo soluções prontas e serviços totalmente voltados para o seu negócio e que irão realmente se tornar uma solução para o seu crescimento e lucratividade.
+        <br/>
+        <a href="{{ path('empresa') }}">Conheça um pouco sobre nós</a></span>
+            <div class="clearfloat"></div>
+        </section>
+
+        <section id="sites" class="htab">
+            <div class="s-hospedagem mdef">
+                <div class="pcontent">
+                    <p class="h1"><strong>Hospede seu site</strong> com recursos ilimitados, programadores e analistas à
+                        sua disposição</p>
+                    <div class="img"><img src="{{ asset('images/pages/home/slide-hospedagem.png') }}"
+                                          alt="Hospedagem de sites R$ 9,90"/></div>
+                    <p class="h2">Instale o <strong>Wordpress</strong> e vários outros aplicativos com 1 clique</p>
+                    <a href="{{ path('hospedagem_inteligente') }}" class="lnk">Começe a hospedar agora</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing" class="htab">
+            <h2 class="h1">Somos especialistas em marketing cloud, podemos aumentar suas vendas e impulsionar o seu
+                negócio</h2>
+            <span>Utilizando tecnologia e com estratégias avançadas, como Cross Channel, além de processos como automação de marketing, inbound marketing entre outros, criamos campanhas online resultando em uma solução para impulsionar as vendas e melhorar o atendimento e relacionamento com os clientes de qualquer negócio.<br/><br/>
+    Tornamos possível para empresas atingir clientes além de fronteiras nunca esperadas, projetando de forma eficaz o engajamento dos clientes com a marca.</span>
+            <br/>
+            <a href="{{ path('marketing') }}">Conheça</a>
+        </section>
+
+        <section id="fabrica" class="htab">
+            <p class="h1">Nós projetamos pensando no futuro, nós construímos aplicações web <strong>rápidas</strong> e
+                <strong>escalonáveis</strong></p>
+            <span>É necessário pensar nos limites, fazemos isto e projetamos uma arquitetura robusta, de alto desempenho para suportar a grandeza de qualquer negócio.</span>
+            <br/>
+            <a href="{{ path('fabrica-software') }}">Saiba mais</a>
+        </section>
+
+        <section id="presenca-web" class="htab">
+            <p class="h1">Resultados surpreendentes com uma consultoria que entende o seu negócio</p>
+            <span>Buscamos entender a marca do cliente e posicioná-la dentro do meio digital. Uma solução completa que envolve vários produtos e serviços.</span>
+            <br/>
+            <a href="{{ path('presenca-web') }}">Saiba mais</a>
+        </section>
+        <div class="clearfloat"></div>
+        <section id="servicos-destaque">
+            <div class="pcontent-def">
+                <div class="destaque col-md-3 col-sm-3 col-xs-12">
+                    <a href="{{ path('google-adwords') }}"><i class="dicon adwords">Google Adwords</i></a>
+                    <p class="h2">Divulgue no Google</p>
+                    <span>Seu site entre os primeiros do Google e como link patrocinado</span>
+                    <a href="{{ path('google-adwords') }}" class="lnk2">saiba mais</a>
+                </div>
+                <div class="destaque col-md-3 col-sm-3 col-xs-12">
+                    <a href="{{ path('facebook') }}"><i class="dicon facebook">Facebook</i></a>
+                    <p class="h2">Página no facebook</p>
+                    <span>Criamos e gerenciamos sua página no facebook, com atendente dedicado para seus clientes</span>
+                    <a href="{{ path('facebook') }}" class="lnk2">saiba mais</a>
+                </div>
+                <div class="destaque col-md-3 col-sm-3 col-xs-12">
+                    <a href="{{ path('pos-venda') }}"><i class="dicon manutencao-site">Manutenção de sites</i></a>
+                    <p class="h2">Manutenção de sites</p>
+                    <span>Deixe que nossa equipe cuide do seu site e foque apenas no seu negócio</span>
+                    <a href="{{ path('pos-venda') }}" class="lnk2">saiba mais</a>
+                </div>
+                <div class="destaque col-md-3 col-sm-3 col-xs-12">
+                    <a href="{{ path('email-profissional') }}"><i class="dicon emailpro">E-mail Pro</i></a>
+                    <p class="h2">Seu próprio e-mail</p>
+                    <span>Profissionalize seu negócio com um e-mail próprio,  colaborativo e seguro</span>
+                    <a href="{{ path('email-profissional') }}" class="lnk2">saiba mais</a>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        </section>
+
+        <section id="ambiente">
+            <div class="pcontent-def">
+
+                <p class="h1">Ambientes seguros, estáveis e com suporte avançado</p>
+                <p class="h2">Conte sempre com um consultor Wtis para falar com você por telefone, e-mail, chat ou
+                    presencialmente para te auxiliar em tudo quando o assunto for tecnologia</p>
+                <div class="destaque col-md-4 col-sm-4 col-xs-12">
+                    <a href="{{ path('hospedagem_inteligente') }}"><i class="dicon i2 hospedagem">Hospedagem</i></a>
+                    <span><a href="{{ path('hospedagem_inteligente') }}">Hospedagem e armazenamento em nuvem</a></span>
+                </div>
+                <div class="destaque col-md-4 col-sm-4 col-xs-12">
+                    <a href="{{ path('email-profissional') }}"><i class="dicon i2 email">E-mail Marketing</i></a>
+                    <span><a href="{{ path('email-profissional') }}">Serviços de e-mail colaborativo e marketing</a></span>
+                </div>
+                <!--<div class="destaque col-md-3 col-sm-4 col-xs-6">
+                    <a><i class="dicon i2 cdn">CDN</i></a>
+                    <span><a>Fornecimento de conteúdo para streaming de áudio e video</a></span>
+                </div>-->
+                <div class="destaque col-md-4 col-sm-4 col-xs-12">
+                    <a href="{{ path('dedicado') }}"><i class="dicon i2 idc">IDC</i></a>
+                    <span><a href="{{ path('dedicado') }}">Servidores dedicados, cloud ou bare-metal</a></span>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="pcontent-def">
+                <p class="h1">Vamos tomar um café e conversar?</p>
+                <span>Fale com um dos nossos consultores, se o assunto é tecnologia podemos te ajudar, auxiliar e oferecer soluções rápidas e inteligentes para seu negócio.</span>
+                <div class="line">
+                    <a href="#chat" class="init-chat">Fale via <strong>chat</strong></a>
+                    <a href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                       data-product="Home"><strong>Ligue</strong> para mim</a>
+                </div>
+
+            </div>
+            <img src="{{ asset('images/pages/home/f2.png') }}" class="img-responsive img-block" alt="Café"/>
+        </section>
+
+    </div>
+{% endblock %}

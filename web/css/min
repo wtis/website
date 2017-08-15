@@ -1,0 +1,7 @@
+echo "Compactando arquivos..."
+uglifycss jquery-ui.css \
+	bootstrap.min.css \
+	tipTip.css \
+	style.css \
+	> app.min.css
+echo "Concluido"

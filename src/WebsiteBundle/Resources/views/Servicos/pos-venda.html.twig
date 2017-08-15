@@ -1,0 +1,55 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Administração e Manutenção de Sites - Pós-venda - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Administramos e mantemos seu site atualizado, concentre-se apenas em seu negócio." />
+<meta name="keywords" content="administração de site, gerenciamento de site, manutenção de site, publicação de site, gerenciador de conteúdo para site, pos-venda site" />
+<meta property="og:title" content="Serviços Wtis | Manutenção de Sites" />
+<meta property="og:description" content="Administramos e mantemos seu site atualizado, concentre-se apenas em seu negócio." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.presenca-web.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/presenca-web.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content psw">
+
+    <div class="fullscreen background pweb-header-bg">
+    	<div class="header-title hide visible-xs">Sua marca presente na Web</div>
+    	<div class="bg-overlay visible-xs"></div>
+         <div class="pos-header">
+         	<a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="Presença na Web" class="button10 meligue">Nós ligamos para você<i></i></a>
+            <a href="#chat" class="button10 verde init-chat">Fale conosco via chat<i></i></a>
+         </div>        
+    </div>
+    
+	<section id="page-menu" class="page-menu">
+    	<ul>
+        	<li><a href="{{ path('presenca-web') }}"><i class="icon2 r like"></i><span>Vantagens</span></a></li>
+            <!--<li><a href="#"><i class="icon2 r checked"></i><span>Avaliação</span></a></li>-->
+            <li class="selected"><a href="#"><i class="icon2 r pos focus"></i><span>Pós-venda</span></a></li>
+            <li><a href="{{ path('presenca-web') }}#price-preview"><i class="icon2 r contratar"></i><span>Contrate</span></a></li>
+        </ul>
+    </section>
+        
+    <!-- POS VENDA -->
+    {% include "WebsiteBundle:Servicos:include.pos-venda.html" %}
+
+</div>
+{% endblock %}

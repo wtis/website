@@ -1,0 +1,179 @@
+<!--
+body{
+	background:url('../images/2012/pages/bg01.jpg') #EEEEEE top repeat-x;
+}
+
+.box{
+	position: relative;
+	display: inline-block;
+	background: white;
+	border: 1px solid #CCC;
+	margin-bottom: 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+.box::after {
+	content: "";
+	height: 6px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-image: -webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,rgba(0, 0, 0, 0.01)),color-stop(100%,rgba(0, 0, 0, 0.1)));
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.1));
+	background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.1));
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.1));
+	background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.1));
+	background-image: linear-gradient(rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.1));
+}
+
+.recursosContent{
+	background:url(../images/2012/pages/bg01.png) no-repeat;
+	background-position:center 20px;
+	min-height:380px;
+}
+.linksPosButton{
+	text-align:center;
+	font-size:13px;
+	margin-top:4px;
+}
+.btn.laranja.chat{
+	float:left;
+	margin-right:8px
+}
+.features ul li{
+	display:block;
+	border-bottom:#CCCCCC 1px dotted;
+	background:url(../images/2012/ico_ok.jpg) no-repeat right center;
+	padding:7px 0 7px 0;
+}
+.features ul li a{
+	display:block;
+	font-size:13px;
+}
+
+/**/
+.resumo-box{
+	width:260px;
+	display:block;
+	float:left;
+	position:relative;
+	text-align:center;
+	margin-bottom:15px;
+	margin-left:0;
+}
+.resumo-box .hico{
+	display:block;
+	height:130px;
+}
+.resumo-box .hico.sitebuilder{
+	background:url(../images/2012/ico_construtor.jpg) center top no-repeat;
+}
+.resumo-box .hico.aplicativos{
+	background:url(../images/2012/ico_aplicativos.jpg) center top no-repeat;
+}
+.resumo-box .hico.email{
+	background:url(../images/2012/ico_email.jpg) center top no-repeat;
+}
+.resumo-box .hico.suporte{
+	background:url(../images/2012/ico_suporte.jpg) center top no-repeat;
+}
+.resumo-box.right{
+	float:right;
+}
+.resumo-box h1{
+	font-weight:normal;
+	clear:both;
+	font-size:22px;
+}
+.resumo-box h2{
+	font-weight:normal;
+	font-size:16px;
+	color:#999;
+	font-family: "Segoe UI","Segoe UI Web Regular","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+}
+.resumo-box h3{
+	clear:both;
+	display:block;
+	padding-top:5px;
+	font-weight:normal;
+	font-size:12px;
+	text-align:center;
+	color:#666;
+	font-family: "Segoe UI","Segoe UI Web Regular","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+}
+
+.recursosDev{
+	margin-top:20px;
+}
+.recursosDev .abas-divs .contentBlock{
+	height:200px;
+	overflow:auto
+}
+.ssltitle{
+	font-size:16px;
+	display:block;
+	padding-bottom:8px;
+}
+
+.comparativoInstaladores{
+	margin-top:40px;
+}
+.comparativoInstaladores .abas-divs .contentBlock{
+	height:400px;
+	overflow:auto
+}
+.softaculous, .fantastico{
+	display:block;
+	text-indent:-5000px;
+	overflow:hidden;
+	background:url(../images/2012/instaladores_logotipo.png) no-repeat;
+	padding:0;
+	margin:0;
+	float:right;
+	margin-bottom:-33px;
+	display:block;
+}
+.softaculous{
+	background-position:0 0;
+	width:105px;
+	height:44px;
+	margin-right:40px;
+}
+.fantastico{
+	background-position:-105px 0;
+	width:138px;
+	height:44px;
+	margin-right:15px;
+}
+
+.painel-so-linux{
+	position:absolute;
+	top:-15px;
+	right:123px;
+}
+.painel-so-windows{
+	position:absolute;
+	top:-15px;
+	right:27px;
+}
+
+.backup-nuvem{
+	width:122px;
+	margin:auto;
+	display:block;
+	padding-top:20px;
+}
+.titleFull{
+	margin-top:10px;
+}
+
+-->

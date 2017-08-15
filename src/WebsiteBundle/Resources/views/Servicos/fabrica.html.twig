@@ -1,0 +1,130 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Desenvolvimento de Software para Empresas e Startups - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Desenvolvimento de software customizado para sua empresa. Apoiamos Startups" />
+<meta name="keywords" content="desenvolvimento de software, software montes claros, software brasil, startups, software para startups, criação de programa, programa de computador, criação de software, software, aplicativo" />
+<meta property="og:title" content="Serviços Wtis | Fábrica de Software" />
+<meta property="og:description" content="Desenvolvimento de software customizado para empresas e startups." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.fabrica.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript">
+	var formSelectPlataforma = []
+		{% for k,p in contatoForm['plataforma'] %}
+			formSelectPlataforma['{{ k }}'] = [{% for v in p %}'{{ v }}'{% if not loop.last %},{% endif %}{% endfor %}];
+		{% endfor %}
+</script>
+<script src="{{ asset('js/pages/fabrica.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content fabrica">
+
+    <div class="fullscreen background fabrica-header-bg">
+    	<div class="bg-overlay hide visible-xs"></div>
+    	<div class="center-1156">
+         <div class="fcontent">
+         	<h1 data-sr="enter top please, and hustle 100px wait 0.1s">Desenvolvimento de software sob medida para seu negócio e startup</h1>
+            <span data-sr="enter left bottom, and hustle 100px wait 0.2s">Conte com <strong>profissionais experientes</strong> no desenvolvimento, manutenção e teste de software nas mais diversas plataformas. A metodologia WTIS é certificada e aderente às <strong>melhores práticas e padrões de qualidade</strong>. Independentemente de tecnologia ou arquitetura, a Fábrica de Software trabalha de forma a alinhar suas soluções às expectativas do cliente, respeitando os <strong>prazos</strong> acordados e a <strong>qualidade</strong> esperada. Nós projetamos pensando no futuro, nós construímos aplicações rápidas e escalonáveis.</span>
+            <div class="atendimento-opcoes">
+                <a href="#meligue" class="link-img phone meligue-modal" data-toggle="modal" data-target="#meLigueModal" data-product="Fábrica de Software" data-sr="enter left please, and hustle 100px wait 0.2s">Nós ligamos para você<i></i></a> 
+                <a href="#chat" class="link-img chat init-chat" data-sr="enter left please, and hustle 100px wait 0.4s" data-product="Fábrica de Software">Fale conosco via chat<i></i></a>
+                <span class="telefone" data-sr="enter right please, and hustle 100px wait 0.6s">Ou ligue <strong>{{ telefoneComercial }}</strong></span>
+                <a href="#telefones" class="mais-telefones" data-sr="enter left please, and hustle 100px wait 0.8s">Mais telefones</a>
+            </div>
+          </div>     
+         </div> 
+    </div>
+    
+	<section id="service-description" class="center-977">
+    	<h2 class="h1" data-sr="enter top ease-in-out 6rem wait 0.2s">Análise, especificação, arquitetura, codificação, teste, documentação e treinamento</h2>
+        <ul>
+        	<li><i class="icon2 m2 treinamento" data-sr="enter left please, and hustle 20px wait 0.4s"></i><span>Investimento constante em certificações, capacitação dos profissionais e atualização tecnológica</span></li>
+            <li><i class="icon2 m2 contratar" data-sr="enter left please, and hustle 20px wait 0.8s"></i><span>Contratos baseados em SLAs (Acordo de nível de serviço) e Flexibilidade no modelo da contratação e na entrega dos serviços</span></li>
+            <li><i class="icon2 m2 mplataforma" data-sr="enter left please, and hustle 20px wait 1.2s"></i><span>Experiência multiplataforma Desktop, Web, IOS, Android, Windows Phone e outros</span></li>
+            <li><i class="icon2 m2 agilidade" data-sr="enter left please, and hustle 20px wait 1.6s"></i><span>Agilidade nos processos de manutenção, nas modalidades de sustentação e evolução, com garantia de qualidade e segurança</span></li>
+            <li><i class="icon2 m2 relatorios" data-sr="enter left please, and hustle 20px wait 2.0s"></i><span>Aumento da produtividade e melhoria da relação custo-benefício dos processos de manutenção de sistemas</span></li>
+        </ul>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <section id="price-preview" class="center-full cinza">
+    	<div class="center-977">
+        	<p class="h1">Solicite um orçamento sem compromisso</p>
+            <div class="form center-full">
+            	<div class="preload bg-overlay"><div class="preload-div absolute-center"></div></div>
+                <form name="fabricaForm" id="fabricaForm" class="m1" data-parsley-validate>
+                    <label for="i-contato-modalidade" class="i-contato-modalidade clearboth">
+                    	<span>Modalidade do software</span>
+                        <select name="i-contato-modalidade" id="i-contato-modalidade" class="sm sm-default form-extra" tabindex="1" data-nome="Modalidade do Software" data-sigla="modalidade" data-valor="0">
+                            <option value="0" data-noselectable="1">Selecione</option>
+                            {% for m in contatoForm['modalidade'] %}
+                            <option>{{ m }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                    <label for="i-contato-plataforma" class="plataforma">
+                    	<span>Plataforma</span>
+                        <select name="i-contato-plataforma" id="i-contato-plataforma" class="sm sm-default form-extra" data-nome="Plataforma" data-sigla="plataforma" data-valor="0" disabled>
+                            <option value="">Selecione</option>
+                        </select>
+                    </label>
+                    <label for="i-contato-nome" class="nome clearboth">
+                    	<span>Seu nome</span>
+                        <input type="text" name="i-contato-nome" id="i-contato-nome" class="input-default" required="required">
+                    </label>
+                    <label for="i-contato-email" class="email">
+                    	<span>Email</span>
+                        <input type="email" name="i-contato-email" id="i-contato-email" class="input-default" required="required">
+                    </label>
+                    <label for="i-contato-telefone" class="telefonefixo clearboth">
+                    	<span>Telefone fixo</span>
+                        <input type="tel" name="i-contato-telefone" id="i-contato-telefone" class="input-default phoneMask" placeholder="DDD + Número">
+                    </label>
+                    <label for="i-contato-celular" class="celular">
+                    	<span>Celular</span>
+                        <input type="tel" name="i-contato-celular" id="i-contato-celular" class="input-default phoneMask" placeholder="DDD + Número">
+                    </label>
+                    
+                    <label for="i-contato-newsletter" class="newsletter full clearboth">
+                        <input type="checkbox" name="i-contato-newsletter" id="i-contato-newsletter" value="1"> Assine nossa newsletter e receba novidades em seu email
+                    </label>
+                    
+                    <label class="text-right">
+                    	<span>Descreva um pouco a sua ideia sobre o software</span>
+                        <textarea maxlength="300" id="i-contato-mensagem" name="i-contato-mensagem" cols="60" rows="5" class="input-textarea"></textarea>
+                        <div class="description">máx. 800</div>
+                    </label>
+                    <div class="clearfloat"></div>
+                    <div class="atendimento-opcoes">
+                    	<a href="#meligue" class="link-img phone meligue-modal" data-toggle="modal" data-target="#meLigueModal" data-product="Fábrica de Software">Nós ligamos para você<i></i></a> 
+                        <a href="#chat" class="link-img chat init-chat">Fale conosco via chat<i></i></a>
+                    </div>
+                    <div class="result">
+                    	<input type="hidden" name="i-contato-produto-interesse" id="i-contato-produto-interesse" value="Fábrica de Software" data-nome="Produto de interesse" data-sigla="produto-interesse" data-valor="0" class="form-extra i-produto-interesse">
+                        <button type="submit" class="button10 min-radius verde no-icon submit-button">Enviar<i class="glyphicon glyphicon-envelope"></i></button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

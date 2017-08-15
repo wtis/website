@@ -1,0 +1,189 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title>Email Profissional - Email Colaborativo, Dedicado e Seguro - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+<meta name="description" content="Email Colaborativo, Dedicado e Seguro para sua empresa e seu negócio." />
+<meta property="og:title" content="Produtos Wtis | Email Profissional" />
+<meta property="og:description" content="Email Colaborativo, Dedicado e Seguro para sua empresa e seu negócio." />
+<meta property="og:url" content="{{ url(app.request.get('_route')) }}" />
+<meta property="og:image" content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}" />
+<meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.emailpro.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript">
+var urlProduto = Array("https://c.wtis.com.br/cart.php?a=add&pid=36", "https://c.wtis.com.br/cart.php?a=add&pid=37");
+</script>
+<script src="{{ asset('js/pages/emailpro.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="content fabrica">
+
+    <div class="fullscreen background emailpro-header-bg">
+    	<div class="bg-overlay hide visible-xs"></div>
+    	<div class="center-1156">
+         <div class="fcontent">
+         	<h1>Mantenha-se conectado com o e-mail empresarial em qualquer lugar a partir de qualquer dispositivo</h1>
+            <span>Compartilhe pastas, compromissos, tarefas e anotações com outros usuários. Suporte a iPhone, iPad, BlackBerry, Android e Windows Mobile.<br><br>Aumente a produtividade com um conjunto completo de ferramentas de colaboração, mantendo o controle total sobre a segurança e privacidade de sua empresa.</span>
+          </div>     
+         </div> 
+         <div class="pos-header">
+            <div class="div-bg-center top"></div>
+            <div class="content center-977">
+                <p class="h1">Se preferir podemos <strong>apresentar</strong> este produto em sua empresa ou por uma video conferência via web.</p>
+                <a class="meligue" href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="E-mail Profissional">Me ligue</a>
+            </div>
+         </div>
+    </div>
+    
+	<section id="email-cloud" class="pres-default large center-1156">
+    	<div class="img" data-sr="enter left ease-in-out 60rem wait 0.4s"><img src="{{ asset('images/pages/emailpro/email-cloud.jpg') }}" alt="Nuvem WTIS"></div>
+        <div class="pcontent">
+            <h2>O poder da nuvem para o e-mail da sua empresa</h2>
+            <span>Sua empresa não pode parar, muito menos o serviço de e-mail. Oferecemos um serviço seguro e confiável, com uma infraestrutura em nuvem moderna de alta disponibilidade e um suporte Contact Center WTIS e monitoramento 24 horas por dia durante os 7 dias da semana.<br><br>Nosso contrato de serviço é baseado em SLA (Service Level Agreements, em português Acordo de Nível de Serviço) onde garantimos o tempo de disponibilidade do serviço de e-mail.</span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="email-personalizado" class="pres-default right large center-1156">
+    	<div class="img" data-sr="enter right ease-in-out 60rem wait 0.4s"><img src="{{ asset('images/pages/emailpro/emailpro1.jpg') }}" alt="Email Personalizado"></div>
+        <div class="pcontent">
+            <h2>Mais credibilidade para você e seu negócio</h2>
+            <span>Um e-mail personalizado com a sua marca passa muito mais credibilidade para você e para o seu negócio. E você pode criar um e-mail de contato para cada área de sua empresa, veja alguns exemplos:<br><br>
+            <i class="glyphicon glyphicon-envelope"></i> voce@suaempresa.com.br<br>
+            <i class="glyphicon glyphicon-envelope"></i> contato@suaempresa.com.br<br>
+            <i class="glyphicon glyphicon-envelope"></i> financeiro@suaempresa.com.br<br>
+            </span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="colaboracao" class="pres-default large center-1156">
+    	<div class="img" data-sr="enter left ease-in-out 60rem wait 0.4s"><img src="{{ asset('images/pages/emailpro/colaboracao.jpg') }}" alt="Email Colaborativo"></div>
+        <div class="pcontent">
+            <h2>Colaboração segura, controle completo</h2>
+            <span>Aumente a produtividade com um conjunto completo de ferramentas de colaboração, mantendo o controle total sobre a segurança e privacidade de sua empresa.<br><br>Calendário que lhe avisa via email dos seus compromissos pendentes, informações completas dos seus contatos e um controle de tarefas ideal para pequenas equipes.</span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="multiplataforma" class="pres-default right large center-1156">
+    	<div class="img" data-sr="enter top ease-in-out 6rem wait 0.4s"><img src="{{ asset('images/pages/emailpro/multiplataforma.jpg') }}" alt="Multiplataforma"></div>
+        <div class="pcontent">
+            <h2>Receba seus e-mails pelo programa que quiser</h2>
+            <span>Você pode acessar seus e-mails no programa que preferir: Outlook, Incredimail, Eudora, Mozilla Thunderbird, dentre outros.<br><br>Sincronize seu email com os principais dispositivos móveis do mercado, incluindo o iPhone, iPad, BlackBerry, o Android do Google e o Windows Mobile.</span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+    <section id="migrador" class="pres-default large center-1156">
+    	<div class="img" data-sr="enter bottom ease-in-out 6rem wait 0.4s"><img src="{{ asset('images/pages/emailpro/migrador.jpg') }}" alt="Migre Fácil"></div>
+        <div class="pcontent">
+            <h2>Migrador de Email</h2>
+            <span>Migre suas mensagens facilmente. Basta informar alguns dados que a ferramenta transfere todas suas mensagens para seu novo Email Colaborativo.</span>
+		</div>
+        <div class="clearfloat"></div>
+    </section>
+    
+    <div class="div-bg"></div>
+    
+  <section id="price" class="center-1156">
+   	<p class="h1">Preço</p>
+      <table class="table table-price">
+        <thead>
+       	  <tr>
+           	  <th class="item"></th>
+              <th class="descricao">Detalhes</th>
+              <th class="preco">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+       	  <tr>
+           	  <td>E-mail Colaborativo Compartilhado</td>
+              <td>Servidor de e-mail em uma máquina virtual compartilhada<br>
+                Monitoramento e suporte 24x7<br>
+                Suporte pelo Contact Center WTIS<br>
+              Manutenção preventiva e evolutiva do servidor</td>
+              <td>R$ 4,90 por conta de e-mail<br>
+              <span>migração grátis*</span></td>
+          </tr>
+          <tr>
+           	  <td>E-mail Colaborativo Dedicado</td>
+              <td>Servidor dedicado de e-mail <br>
+                Monitoramento e suporte 24x7<br>
+                Suporte pelo Contact Center WTIS<br>
+              Manutenção preventiva e evolutiva do servidor</td>
+              <td>R$ 249,90/mês <br>
+                <span>Direito a 10 contas de e-mail<br>
+                R$ 4,90 por conta de e-mail adicional<br>
+              migração grátis*</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="price-alert">* Migração grátis para contas de email de no máximo 1GB de emails. Taxa adicional de R$ 4,90 por cada GB a ser migrado</div>
+    </section>
+    
+    <section id="price-preview" class="no-bg center-1156">
+    	<div class="center-1156">
+        	<p class="h1">Faça uma estimativa de custo e contrate</p>
+            <div class="form center-full">
+            	<span class="desc">Nosso serviço é <strong>flexível</strong> e você <strong>paga pela quantidade de contas de email utilizadas</strong> mas, com base em informações fornecidas por você podemos fazer uma previsão do custo estimado mensal. Nosso contrato é baseado em SLA, que para o serviço de email existe uma garantia de funcionamento e inatividade e é sempre respeitado, sujeito a penalidades em caso do não cumprimento.</span>
+                <form>
+                	<label for="s-cliente" class="cliente clearboth">
+                    	<span>Você é cliente WTIS?</span>
+                        <input type="radio" name="s-cliente" id="s-cliente_sim" value="1"> Sim
+                        <input type="radio" name="s-cliente" id="s-cliente_nao" value="0"> Não
+                    </label>
+                    
+                    <label for="s-tipo-servidor" class="servidor clearboth">
+                    	<span>Qual tipo de servidor? <a href="#" class="tt" title="O servidor compartilhado será utilizado por você e por outros clientes, por ser compartilhado tem um custo mais baixo. Já o servidor dedicado, você terá a aplicação totalmente dedicada para seu negócio, garantido ainda mais segurança e estabilidade para o serviço.">pra que?</a></span>
+                        <select name="s-tipo-servidor" id="s-tipo-servidor" class="sm sm-default">
+                            <option value="1" selected="selected">Compartilhado</option>
+                            <option value="2">Dedicado</option>
+                        </select>
+                    </label>
+                    <label for="s-contas-email" class="contas-email">
+                    	<span>Quantas contas de e-mail precisa?</span>
+                        <input type="number" name="s-contas-email" id="s-contas-email" class="input-default" value="10" min="1" required="required">
+                    </label>
+                    
+                    <div class="clearfloat"></div>
+                    <div class="atendimento-opcoes">
+                    	<a href="#meligue" data-toggle="modal" data-target="#meLigueModal" data-product="E-mail Profissional" class="link-img phone">Nós ligamos para você<i></i></a> 
+                        <a href="#chat" class="link-img chat init-chat" data-product="E-mail Profissional">Fale conosco via chat<i></i></a>
+                    </div>
+                    <div class="result">
+                    	<span class="desc1">Custo mensal</span>
+                        <span class="price price-preview-input">R$ <strong>0,00</strong></span>
+                        <a href="http://c.wtis.com.br/cart.php?a=add&pid=36" class="button10 min-radius verde no-icon" id="emailpro_contratar">Contratar<i class="glyphicon glyphicon-shopping-cart"></i></a>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <div class="price-alert2">Temos outras soluções colaborativas e de email como o <strong>Google Apps</strong> e <strong>Exchange</strong>. <a href="#chat" class="init-chat" data-product="E-mail Profissional">Clique aqui e fale conosco via chat</a>.</div>
+    </section>
+
+</div>
+{% endblock %}

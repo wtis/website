@@ -1,0 +1,363 @@
+@charset "utf-8";
+/*	developed by tiagofelipe.com
+	v0.1 stylesheet
+*/
+
+/* ADWORDS */
+.adwords .page-options{
+	height:53px;
+	width:100%;
+	background-color:#1A87C0;
+	position:relative;
+	z-index:1;
+}
+.adwords .page-options-ul li{
+	list-style:none;
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.adwords .page-options-ul li a{
+	display:block;
+	float:right;
+	height:53px;
+	line-height:53px;
+	color:#FFFFFF;
+	font-size:17px;
+	margin:0 12px;
+	padding:0 10px;
+	text-decoration:none;
+	font-weight:400;
+}
+.adwords .page-options-ul li:first-child a{
+	margin-right:20px !important;
+}
+.adwords .page-options-ul li a:hover, .adwords .page-options-ul li.selected a{
+	text-decoration:none;
+	background-color:#0A609C;
+}
+.adwords-header-bg{
+	background:url(../images/pages/adwords/header-bg.jpg) top;
+	height:508px;
+	position:relative;
+	border-bottom:#EBEBEB 1px solid;
+}
+.adwords-header-bg .header-content{
+	position:relative;
+	z-index:2;
+}
+.adwords-header-bg .header-content h1, .adwords-header-bg .header-content .h1{
+	font-weight:400;
+	margin-top:20px;
+}
+.adwords-header-bg .header-content h2, .adwords-header-bg .header-content .h2{
+	font-size:16px;
+	color:#666666;
+	font-weight:300;
+	margin-top:20px;
+}
+.adwords-header-bg .header-content .col1{
+	width:389px;
+	margin-top:130px;
+}
+.absolute-browser{
+	position:absolute;
+	z-index:1;
+	top:140px;
+	left:0;
+	right:0;
+	height:460px;
+	overflow:hidden;
+}
+.sample-browser{
+	width:816px;
+	height:436px;
+	display:block;
+	position:absolute;
+	background:url(../images/pages/adwords/overview-browser.png);
+	background-size:100%;
+	bottom:0;
+	right:-140px
+}
+#porque, #vantagens, #como-funciona{
+	margin:40px auto 0 auto;
+}
+#porque h1, #vantagens h1, #como-funciona h1, #porque .h1, #vantagens .h1, #como-funciona .h1{
+	text-align:center;
+	margin-bottom:60px;
+}
+#porque .beneficios{
+	list-style:none;
+	display:block;
+}
+#porque .beneficios li{
+	float:left;
+	width:50%;
+	height:150px;
+	padding-left:40px;
+	position:relative;
+}
+#porque .beneficios li i{
+	position:absolute;
+	font-size:18px;
+	color:#999999;
+	left:0;
+	top:12px;
+}
+#porque .beneficios li h3{
+	font-size:16px;
+	font-weight:400;
+	margin:0 0 4px 0;
+}
+#porque .beneficios li h3, #porque .beneficios li span{
+	display:block;
+	padding-right:20px
+}
+#vantagens ul{
+	list-style:none;
+}
+#vantagens ul li{
+	width:20%;
+	float:left;
+	height:250px;
+	text-align:center;
+}
+#vantagens ul li i{
+	display:inline-block;
+}
+#vantagens ul li span{
+	display:block;
+	clear:both;
+	padding:4px 15px;
+}
+#como-funciona h1, #como-funciona .h1{
+	margin-bottom:15px
+}
+#como-funciona{
+	margin-bottom:20px;
+}
+#plano-mensal{
+	margin:60px auto;
+}
+.table-price-new .tips .tip1{width:312px;left:189px}
+.table-price-new .tips .tip2{width:280px;left:780px}
+.table-price-new ul li .options{
+	margin:32px 0 10px 0;
+}
+.table-price-new .options span{
+	text-align:left !important;
+	display:block;
+	margin-bottom:10px !important;
+}
+.table-price-new .text-left{
+	width:100%;
+}
+
+.overview-ad {
+	left:0;
+	position:absolute;
+	top:0
+}
+[dir=rtl] .overview-ad {
+	left:auto;
+	right:0
+}
+.overview-ad .ad-search-query {
+	font-size:16px;
+	left:116px;
+	overflow:hidden;
+	position:relative;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	top:53px;
+	white-space:nowrap;
+	width:550px;
+	z-index:90
+}
+.ad-search-query:after {
+	-moz-animation:cursor-blink 1s step-end infinite;
+	-webkit-animation:cursor-blink 1s step-end infinite;
+	animation:cursor-blink 1s step-end infinite;
+	content:"";
+	border-left:1px solid #000;
+	padding-left:3px;
+	width:1px;
+	height:1em
+}
+[dir=rtl] .ad-search-query:after {
+	border-left:0;
+	border-right:1px solid #000;
+	padding-left:0;
+	padding-right:3px
+}
+[dir=rtl] .overview-ad .ad-search-query {
+	left:auto;
+	right:142px
+}
+.overview-ad .ad-search-results {
+	background:url(../images/overview-search-results.png) no-repeat 0 -27px;
+	height:283px;
+	left:106px;
+	position:relative;
+	top:128px;
+	width:786px;
+	z-index:90
+}
+[dir=rtl] .overview-ad .ad-search-results {
+	background:url(../images/overview-search-results.rtl.png) no-repeat 33px -27px;
+	left:auto;
+	right:129px
+}
+.overview-ad .ad-search-results.example-results {
+	background:url(../images/overview-search-results-text-1x.png) no-repeat 3px 90px;
+	background:url(../images/overview-search-results-text.png) no-repeat 3px 90px/517px 204px
+}
+.overview-ad .ad-search-container {
+	background:#fff;
+	left:0;
+	padding:3px 6px 8px 4px;
+	position:relative;
+	top:3px;
+	width:510px;
+	z-index:90
+}
+[dir=rtl] .overview-ad .ad-search-container {
+	left:auto;
+	right:4px
+}
+.overview-ad .ad-headline {
+	font-size:18px;
+}
+.ad-search-query, .overview-ad .ad-headline, .ad-url-display, .ad-description{
+	font-family:arial,sans-serif !important;
+}
+.overview-ad .ad-related-to-search {
+	margin:0;
+	padding-bottom:4px
+}
+.overview-ad .ad-related-to-search-query {
+	font-weight:bold
+}
+.overview-ad .ad-related-to-search:after {
+	content:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAzklEQVQoz23SywnCUBAF0KQEf2jELATFTz9WoIikHONKa1DSgNiAiohEdKW48NOD6B24Dy4hiwOTmXlk3scrDLYeVWEKJ9jAmnEMNdfnmrvwgj2MoQktmDD3gb5bUIQHJPK3HbnvhD1F%2B5jDTYohHCmU/N16LbjCUAo%2BlMmXvPVcLEihLYUKN7xm7PLWk1pwho4U6vClet4CG2kkhQb8qJE3UnbTARwokLz1LPRYV5mxdJwle0ou0YMnLymSU4qYe%2BvF6dOI%2BRxSsnimT%2BMP%2Bubf3Q16QV0AAAAASUVORK5CYII%3D");
+	height:12px;
+	left:1px;
+	overflow:hidden;
+	position:relative;
+	top:1px;
+	width:12px
+}
+[dir=rtl] .overview-ad .ad-related-to-search:after {
+	left:auto;
+	right:1px
+}
+
+.ad-content {
+	background:#fff;
+	margin:0
+}
+.ad-headline {
+	color:#2518b5;
+	font-size:medium
+}
+.ads-badge {
+	background-color:#edb802;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	color:#fff;
+	display:inline-block;
+	font-size:13px;
+	line-height:15px;
+	padding:0 3px;
+	vertical-align:baseline
+}
+.ad-url {
+	color:#00802a
+}
+@-moz-keyframes cursor-blink {
+	from,to {
+		border-color:transparent
+	}
+	50% {
+		border-color:#000
+	}
+}
+@-webkit-keyframes cursor-blink {
+	from,to {
+		border-color:transparent
+	}
+	50% {
+		border-color:#000
+	}
+}
+@keyframes cursor-blink {
+	from,to {
+		border-color:transparent
+	}
+	50% {
+		border-color:#000
+	}
+}
+@media screen and (max-width: 767px) {
+	.adwords-header-bg {
+	  height: auto;
+	}
+	.page-options{
+		display:none;
+	}
+	.adwords-header-bg .header-content .col1 {
+	  width: 100%;
+	  display:block;
+	  clear:both;
+	  text-align:center;
+	  margin-top: 0;
+	  padding:30px 15px;
+	}
+	.absolute-browser {
+	  display:none
+	}
+	#porque{
+		padding:15px;
+	}
+	#porque .beneficios li {
+	  float: none;
+	  width: 100%;
+	  height: auto;
+	  padding-left: 40px;
+	  margin-bottom:20px;
+	}
+	#vantagens ul li {
+	  width: 100%;
+	  float: none;
+	  height: auto;
+	  text-align: center;
+	  margin-bottom:20px;
+	}
+	#como-funciona{
+		padding:15px;
+	}
+	#como-funciona img{
+		display:none;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+	.adwords-header-bg .header-content .col1 {
+	  width: 100%;
+	  display:block;
+	  clear:both;
+	  text-align:center;
+	  margin-top: 0;
+	  padding:30px 15px;
+	}
+	.absolute-browser {
+		position:relative;
+		top:-250px;
+	}
+	#porque{
+		margin-top:-220px;
+	}
+	body{
+		overflow-x: hidden;
+	}
+}

@@ -1,0 +1,33 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+<title> Parceiros - WTIS</title>
+{% endblock %}
+
+{% block metas %}
+{% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+{{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset('css/page.partner.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/pages/partner.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="partindex center-977">
+<h1>Conheça quem colabora a cada dia para o crescimento e a qualidade da Wtis</h1>
+{% for p in entity %}
+    <div class="item-parceiro">
+        <h2>{{ p.nome }}</h2>
+        <a href="{{ url('partner_find_one', {slug:p.slug}) }}">{{ url('partner_find_one', {slug:p.slug}) }}</a>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
