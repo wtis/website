@@ -110,8 +110,8 @@ class DefaultController extends Controller {
             "Aplicação Web", "Mobile", "Desktop", "Não sei dizer"
         );
         $contatoForm['plataforma'] = array(
-            "Aplicação Web" => array('PHP', 'Python', 'Ruby', 'Java', 'Asp.NET', 'Outra'),
-            "Mobile" => array("iOS", "Android", "Windows Phone")
+            "Aplicação Web" => array('PHP', 'Javascript/React/Vue/Node', 'Python', 'Ruby', 'Java', 'Asp.NET', 'Outra', 'Não sei'),
+            "Mobile" => array("iOS", "Android", "Windows Phone", "Todas", "Não sei")
         );
         return array(
             'contatoForm'=>$contatoForm
@@ -178,8 +178,8 @@ class DefaultController extends Controller {
         //$servicos = $em->getRepository('WebsiteBundle:ProfessionalServiceAtividade')->findBy(array("principal"=>true), array('atividade'=>'ASC'));
         $depoimentos = array(
             array("nome"=>"Auiri Tiago - Frigo. Maisa","texto"=>"Tínhamos um site do Frigorífico  Maísa porém nunca conseguimos dar andamento em sua manutenção. Contratamos a Wtis para fazer todo o trabalho da Presença Digital e estão de parabéns, resolveram nossos problemas."),
-            array("nome"=>"Ellen - PP Mulher","texto"=>"A Wtis fez um ótimo trabalho com o novo portal do PP Mulher. O serviço de gerenciamento da página no Facebook é perteiro, todo dia acompanho novas publicações e interações de usuários."),
-            array("nome"=>"Juliano - Montenet","texto"=>"Profissionais altamente qualificados. Somente reclamo do número 0800 da empresa não poder atender ligações de celular, mas recomendo perfeitamente esta emrpesa.")
+            array("nome"=>"Claudionor - FMC","texto"=>"A Wtis fez um ótimo trabalho com o novo portal. O serviço de gerenciamento da página no Facebook é perfeito, todo dia acompanho novas publicações e interações de usuários."),
+            array("nome"=>"Juliano - Montenet","texto"=>"Profissionais altamente qualificados. Recomendo de olhos fechados esta empresa. O atendimento é ágil, simpático")
         );
         return array(
             "depoimentos" => $depoimentos
@@ -206,7 +206,7 @@ class DefaultController extends Controller {
         $depoimentos = array(
             array("nome"=>"Juliano Freire. Connections","texto"=>"Brilhante ideia! Eu precisava de uma pessoa para fazer a atualização do meu site, cheguei a contratar três e não deu certo. Com o profissional da WTIS meus problemas acabaram."),
             array("nome"=>"Yuri Castro. Íntegra","texto"=>"Precisei de um analista de redes para projetar minha rede interna, contratei o profissional da WTIS por 60 dias, ele projetou minha rede e configurou os servidores e também treinou meu pessoal para mantê-la. Obrigado."),
-            array("nome"=>"Ellen. FMC","texto"=>"Contratei dois técnicos em informática para suporte e manutenção dos computadores da minha empresa, a agilidade e eficiência é impressionante. Estão de parabéns!")
+            array("nome"=>"Wendell. Nortec","texto"=>"Contratei dois técnicos em informática para suporte e manutenção dos computadores da minha empresa, a agilidade e eficiência é impressionante. Estão de parabéns!")
         );
         return array(
             "servicos" => $servicos,

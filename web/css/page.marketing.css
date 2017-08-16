@@ -28,6 +28,13 @@
 	padding-bottom:40px;
 	color:#FFF;
 }
+.fcontent h2.nobottom{
+	margin-bottom: 0 !important;
+	padding-bottom: 20px;
+}
+.btn-marketing{
+	margin-bottom: 20px;
+}
 .fcontent img.flux{
 	display:block;
 	margin:auto;

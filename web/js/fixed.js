@@ -9,8 +9,8 @@ var appInit = function(){
 			msg = '.';
 		}
         //$zopim.livechat.say(msg);
-        //Tawk_API.maximize();
-        Intercom('showNewMessage', msg);
+        Tawk_API.maximize();
+        //Intercom('showNewMessage', msg);
     });
 }
 
