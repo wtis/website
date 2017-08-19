@@ -1,0 +1,81 @@
+{% extends "WebsiteBundle:Default:index.html.twig" %}
+
+{% block title %}
+    <title>Automação de Marketing - Gaste menos, venda muito mais - Wtis</title>
+{% endblock %}
+
+{% block metas %}
+    {% set metaPageTopic = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {% set metaPageClassification = 'Wtis Soluções em Tecnologia e Marketing para Web' %}
+    {{ parent() }}
+    <meta name="description"
+          content="Automatize seus processos de comunicação e marketing, gaste menos, venda mais."/>
+    <meta property="og:title" content="Automação de Marketing | Wtis"/>
+    <meta property="og:description"
+          content="Automatize seus processos de comunicação e marketing, gaste menos, venda mais."/>
+    <meta property="og:url" content="{{ url(app.request.get('_route')) }}"/>
+    <meta property="og:image"
+          content="{{ app.request.uriForPath('/images/facebook_s.gif') | replace({'/app_dev.php': ''}) }}"/>
+    <meta property="og:phone_number" content="{{ telefoneComercial }}">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/page.marketing.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {#<script src="{{ asset('js/estado-cidade.js') }}"></script>#}
+    {#<script src="{{ asset('js/pages/marketing.js') }}"></script>#}
+{% endblock %}
+
+{% block body %}
+    <div class="content marketing">
+
+        <div class="v2-content at">
+            <div class="center-977">
+                <div class="fcontent">
+                    <h1>Automatize seus processos de comunicação e vendas, gaste menos, venda muito mais</h1>
+                    <h2 class="nobottom">Um time de especialistas da Wtis, trabalhando diariamente para sua empresa para aumentar as vendas.</h2>
+                    <div class="v2-btn"><a href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                                           data-product="Marketing"
+                                           class="meligue btn btn-primary btn-marketing no-icon margin-bottom">Me ligue e me explique melhor
+                            <i class="glyphicon glyphicon-earphone"></i></a></div>
+                    <img src="{{ asset('images/pages/marketing/content-marketing.png') }}" width="400" alt="Marketing" class="mkt-img">
+                    <!--FLUXO REMOVED-->
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- -->
+
+        <div class="atm-images">
+            <img src="{{ asset('images/pages/marketing/atm1.png') }}">
+            <img src="{{ asset('images/pages/marketing/atm2.jpg') }}">
+            <img src="{{ asset('images/pages/marketing/atm3.jpg') }}">
+            <img src="{{ asset('images/pages/marketing/atm4.jpg') }}">
+        </div>
+
+        <section class="module-pathfinder bg-gradient-secondary">
+            <div class="contain">
+                <div class="card module-pathfinder__card bg-white">
+                    <div class="col-md-8">
+                        <h3 class="blue light mb-half">O futuro da sua empresa depende do marketing!</h3>
+                        <p class="mb-0">Nós te ajudamos e você precisa se preocupar somente com o que interessa, que é vender! Um time completo de especialisas e um custo de investimento baixíssimo em relação aos benefícios.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btnC" href="#meligue" data-toggle="modal" data-target="#meLigueModal"
+                           data-product="Automação de Marketing">Comece já!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <img src="{{ asset('images/pages/marketing/midias.png') }}" alt="Midias" class="midias"/>
+
+    </div>
+{% endblock %}

@@ -34,6 +34,7 @@
 }
 .btn-marketing{
 	margin-bottom: 20px;
+	float: left;
 }
 .fcontent img.flux{
 	display:block;
@@ -167,7 +168,7 @@
 }
 .s-input{
 	padding:20px;
-	width:50%;
+	width:100%;
 	display:block;
 	margin:auto;
 	margin-bottom:10px;
@@ -293,7 +294,7 @@ button:active.btn10{
 	position:relative;
 	top:3px;
 	width:510px;
-	z-index:90
+	z-index:90;
 }
 [dir=rtl] .overview-ad .ad-search-container {
 	left:auto;
@@ -629,4 +630,218 @@ img.midias{
 }
 @media screen and (min-width: 767px) and (max-width: 1167px) {
 	
+}
+
+.v2-content{
+	display: block;
+	text-align: left !important;
+	min-height: 660px;
+	/*background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);*/
+}
+.v2-content.at{
+	min-height: 0;
+}
+.v2-content .center-977{
+	padding: 20px;
+}
+
+.v2-content::before{
+	content: '';
+	width: 100%;
+	min-height: 660px;
+	z-index: -1000;
+	background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+	transform-origin: left bottom;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: skew(0deg, -15deg);
+}
+.v2-content h1, .v2-content h2{
+	text-align: left;
+	text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+.v2-content h1{
+	font-size: 50px;
+}
+.v2-content.at h1{
+	font-size: 44px;
+}
+
+.v2-card{
+	width: 40%;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	text-align: left;
+	background: #fff;
+	box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+	border-radius: 0.375rem;
+	transition: all 0.3s ease;
+	position: absolute;
+	right: 100px;
+}
+.v2-card-wrapper{
+	padding: 25px;
+}
+.v2-content .meligue{
+	padding: 15px;
+	font-size: 14px;
+}
+.v2-content .meligue i{
+	margin-left: 10px;
+}
+
+.mkt-img{
+	margin-top: 50px;
+	clear: left;
+	float: left;
+}
+.at .mkt-img{
+	margin-top: 30px;
+	margin-right: 0px;
+	clear: none;
+	float: none;
+}
+
+@media screen and (max-width: 920px) {
+	.mkt-img{
+		display: none;
+	}
+	.v2-card {
+		width: 80%;
+		margin: auto;
+		position: relative;
+		display: block;
+		clear: both;
+		right: 0;
+		float: none;
+	}
+	.v2-content::before{
+		content: '';
+		width: 100%;
+		z-index: -1000;
+		background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+		transform-origin: left bottom;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: none;
+	}
+	.v2-content h1, .v2-content h2, .v2-btn, .btn-marketing{
+		text-align: center;
+		margin: auto;
+		float: none;
+	}
+}
+@media screen and (max-width: 540px) {
+	.v2-content h1, .v2-content.at h1{
+		font-size: 32px;
+		margin-bottom: 14px;
+	}
+	.v2-content h2{
+		font-size: 26px;
+	}
+	.v2-card {
+		width: 95%;
+	}
+	.atm-images{
+		display: none;
+	}
+}
+
+.bg-gradient-secondary {
+	background-image: linear-gradient(to bottom right, #02b3e4, #02ccba);
+}
+.module-pathfinder .contain {
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+	font-size: 16px;
+}
+.contain::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+.card:last-child {
+	margin-bottom: 0;
+}
+.module-pathfinder__card {
+	float: left;
+	display: block;
+	margin-right: 1.6949152542%;
+	width: 83.0508474576%;
+	margin-left: 8.4745762712%;
+	padding: 3.75rem;
+}
+.card{
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	text-align: left;
+	position: relative;
+	background: #fff;
+	box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+	border-radius: 0.375rem;
+	transition: all 0.3s ease;
+}
+
+.atm-images{
+	margin-top: -130px;
+	position: relative;
+}
+.atm-images img{
+	width: 100% !important;
+	display: block;
+}
+
+.btnC{
+	float: right;
+	margin-top: 30px;
+	width: 200px;
+	color: #fff;
+	background-color: #02b3e4;
+	border: 0.125rem solid transparent;
+	display: block;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-align: center;
+	white-space: nowrap;
+	text-decoration: none !important;
+	vertical-align: middle;
+	height: 40px;
+	padding: 0 0.5rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 14px;
+	font-family: "Open Sans", sans-serif;
+	line-height: 36px;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 0.25rem;
+	letter-spacing: 0.125rem;
+	transition: all 0.3s ease;
+	box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+}
+.btnC:hover{
+	outline: none;
+	color: white;
+	border-color: transparent;
+	background-color: #029fcb;
+	box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
+}
+
+.light {
+	font-weight: 300 !important;
+}
+.blue {
+	color: #02b3e4 !important;
+}
+.mb-half {
+	margin-bottom: 0.75rem !important;
+	font-size: 26px;
+	line-height: 2.25rem;
 }

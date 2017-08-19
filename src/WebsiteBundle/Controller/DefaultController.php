@@ -820,8 +820,8 @@ class DefaultController extends Controller {
     }
     
     /**
-     * @Route("/marketing-cloud-services", name="marketing")
-     * @Route("/marketing-cloud-services/")
+     * @Route("/marketing", name="marketing")
+     * @Route("/marketing/")
      * @Template("WebsiteBundle:Servicos:marketing-cloud.html.twig")
      */
     public function marketingCloudAction() {
@@ -833,11 +833,11 @@ class DefaultController extends Controller {
      * @Route("/marketing-cloud/")
      * @Route("/mcs/")
      * @Route("/mcs")
-     * @Route("/marketing/")
-     * @Route("/marketing")
+     * @Route("/marketing-cloud-services/")
+     * @Route("/marketing-cloud-services")
      */
     public function marketingRACloudAction() {
-        return $this->redirectToRoute("marketing");
+        return $this->redirectToRoute("marketing", array(), 301);
     }
     
     /**
@@ -901,6 +901,15 @@ class DefaultController extends Controller {
     public function mailMktRedirectAction(Request $request) {
         $url = urldecode($request->get("url"));
         return $this->redirect($url);
+    }
+
+    /**
+     * @Route("/automacao-de-marketing", name="marketing")
+     * @Route("/automacao-de-marketing/")
+     * @Template("WebsiteBundle:Servicos:automacao-marketing.html.twig")
+     */
+    public function automacaoMarketingAction() {
+        return array();
     }
 
 }
