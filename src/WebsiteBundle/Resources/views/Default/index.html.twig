@@ -114,7 +114,7 @@
             <input type="hidden" name="i-meligue-produto-interesse" id="i-meligue-produto-interesse" value="" data-nome="Produto de interesse" data-sigla="produto-interesse" data-valor="0" class="form-extra i-produto-interesse">
             <input type="hidden" name="i-meligue-meLigue" id="i-meligue-meLigue" value="1">
             <input type="hidden" name="slash" value="i-meligue-">
-            <button id="meLigueFormCancel" type="button" class="btn-bottom white" data-dismiss="modal">Cancelar</button> 
+            <button id="meLigueFormCancel" type="button" class="btn-bottom white" data-dismiss="modal">Cancelar</button>
             <button id="meLigueFormSubmit" type="submit" class="btn-bottom submit-button"><i class="glyphicon glyphicon-earphone"></i>&nbsp; Me ligue</button>
           </div>
           </form>
@@ -150,7 +150,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="defaultModalLabel">...</h4>
       </div>
-      <div class="modal-body">        
+      <div class="modal-body">
       </div>
      <div class="modal-footer bottom-tab">
         <button type="button" class="btn-bottom white" data-dismiss="modal">Fechar</button>
@@ -175,6 +175,15 @@
                     <div class="center-977">
                     	<div class="item-col-left">
                             <div class="item">
+                                <span>Marketing</span>
+                                <ul>
+                                    <li><a href="{{ path('marketing') }}">Marketing Digital</a></li>
+                                    <li><a href="{{ path('automacao_marketing') }}">Automação de Marketing</a></li>
+                                    <li><a href="{{ path('google-adwords') }}">Divulgue no Google <b>adwords</b></a></li>
+                                    <li><a href="{{ path('facebook') }}">Gerenciamento de Página no Facebook</a></li>
+                                </ul>
+                            </div>
+                            <div class="item">
                                 <span>Consultoria</span>
                                 <ul>
                                     <li><a href="{{ path('consultoria') }}#produtividade-digital">Produtividade Digital</a></li>
@@ -184,16 +193,9 @@
                                     <!--<li><a href="#">Business Intelligence (BI)</a></li>-->
                                 </ul>
                             </div>
-                            
-                            <div class="item">
-                                <span>Negócios</span>
-                                <ul>
-                                    <li><a href="{{ path('psw') }}">Professional Services <b>(Alocação de profissionais)</b></a></li>
-                                    <li><a href="{{ path('fabrica-software') }}">Fábrica de Software</a></li>
-                                </ul>
-                            </div>
+
                         </div>
-                        
+
                         <div class="item-col-left">
                             <div class="item">
                                 <span>Web</span>
@@ -203,7 +205,18 @@
                                     <li><a href="{{ path('gerenciamento-servidor') }}">Gerenciamento de servidores</a></li>
                                 </ul>
                             </div>
-                            
+
+                            <div class="item">
+                                <span>Negócios</span>
+                                <ul>
+                                    <li><a href="{{ path('psw') }}">Professional Services <b>(Alocação de profissionais)</b></a></li>
+                                    <li><a href="{{ path('fabrica-software') }}">Fábrica de Software</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="item-col-left">
                             <div class="item ">
                                 <span>Central do Design</span>
                                 <ul>
@@ -214,7 +227,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </li>
@@ -232,7 +245,7 @@
                                     <li><a href="{{ path('dedicado') }}">Servidores dedicados e cloud</a></li>
                                 </ul>
                             </div>
-                            
+
                             <div class="item">
                                 <span>Marketing Online</span>
                                 <ul>
@@ -241,7 +254,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="item-col-left">
                             <!--<div class="item">
                                 <span>Fornecimento de conteúdo</span>
@@ -249,7 +262,7 @@
                                     <li><a href="">Streaming de Áudio e Video</a></li>
                                 </ul>
                             </div>-->
-                            
+
                             <div class="item ">
                                 <span>Mais produtos</span>
                                 <ul>
@@ -269,22 +282,24 @@
                     <div class="center-977">
                     	<div class="item-col-left">
                             <div class="item">
+                                <span>Marketing</span>
+                                <ul>
+                                    <li><a href="{{ path('marketing') }}">Marketing Digital</a></li>
+                                    <li><a href="{{ path('automacao_marketing') }}">Automação de Marketing</a></li>
+                                    <li><a href="{{ path('google-adwords') }}">Divulgue no Google <b>adwords</b></a></li>
+                                    <li><a href="{{ path('facebook') }}">Gerenciamento de Página no Facebook</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="item">
                                 <span>Soluções completas</span>
                                 <ul>
                                     <li><a href="{{ path('presenca-web') }}">Presença na Web</a></li>
                                     <li><a href="{{ path('marketing') }}">Marketing Cloud Services</a></li>
                                 </ul>
                             </div>
-                            
-                            <div class="item">
-                                <span>Marketing</span>
-                                <ul>
-                                    <li><a href="{{ path('google-adwords') }}">Divulgue no Google <b>adwords</b></a></li>
-                                    <li><a href="{{ path('facebook') }}">Gerenciamento de Página no Facebook</a></li>
-                                </ul>
-                            </div>
                         </div>
-                        
+
                         <div class="item-col-left">
                             <div class="item">
                                 <span>Governo</span>
@@ -306,7 +321,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         {#<div class="item-col-left">#}
                             {#<div class="item">#}
                                 {#<span>Social</span>#}

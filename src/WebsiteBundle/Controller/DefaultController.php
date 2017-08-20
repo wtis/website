@@ -904,7 +904,7 @@ class DefaultController extends Controller {
     }
 
     /**
-     * @Route("/automacao-de-marketing", name="marketing")
+     * @Route("/automacao-de-marketing", name="automacao_marketing")
      * @Route("/automacao-de-marketing/")
      * @Template("WebsiteBundle:Servicos:automacao-marketing.html.twig")
      */
