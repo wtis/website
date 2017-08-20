@@ -21,8 +21,8 @@ parameters:
     telefone_comercial: "0800 887 0580"
     telefone_whatsapp: "(38) 9 9897 1395"
     slack.hooks:
-        vendas: ''
-        financeiro: 'https://hooks.slack.com/services/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'
+        vendas: ~
+        financeiro: ~
     mautic:
         url: "https://m.wtis.com.br"
         username: ~
